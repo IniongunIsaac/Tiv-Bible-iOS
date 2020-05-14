@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
+		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
+		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
+		14377BFB246DE214005B0795 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14377BF9246DE214005B0795 /* Main.storyboard */; };
+		14377BFD246DE218005B0795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14377BFC246DE218005B0795 /* Assets.xcassets */; };
+		14377C00246DE218005B0795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14377BFE246DE218005B0795 /* LaunchScreen.storyboard */; };
+		14377C0B246DE218005B0795 /* Tiv_BibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377C0A246DE218005B0795 /* Tiv_BibleTests.swift */; };
+		14377C16246DE218005B0795 /* Tiv_BibleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377C15246DE218005B0795 /* Tiv_BibleUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14377C07246DE218005B0795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14377BE8246DE214005B0795 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14377BEF246DE214005B0795;
+			remoteInfo = "Tiv Bible";
+		};
+		14377C12246DE218005B0795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14377BE8246DE214005B0795 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14377BEF246DE214005B0795;
+			remoteInfo = "Tiv Bible";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		14377BF7246DE214005B0795 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14377BFA246DE214005B0795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14377BFC246DE218005B0795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14377BFF246DE218005B0795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14377C01246DE218005B0795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14377C06246DE218005B0795 /* Tiv BibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tiv BibleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14377C0A246DE218005B0795 /* Tiv_BibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiv_BibleTests.swift; sourceTree = "<group>"; };
+		14377C0C246DE218005B0795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14377C11246DE218005B0795 /* Tiv BibleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tiv BibleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14377C15246DE218005B0795 /* Tiv_BibleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiv_BibleUITests.swift; sourceTree = "<group>"; };
+		14377C17246DE218005B0795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14377BED246DE214005B0795 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14377C03246DE218005B0795 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14377C0E246DE218005B0795 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14377BE7246DE213005B0795 = {
+			isa = PBXGroup;
+			children = (
+				14377BF2246DE214005B0795 /* Tiv Bible */,
+				14377C09246DE218005B0795 /* Tiv BibleTests */,
+				14377C14246DE218005B0795 /* Tiv BibleUITests */,
+				14377BF1246DE214005B0795 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14377BF1246DE214005B0795 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14377BF0246DE214005B0795 /* Tiv Bible.app */,
+				14377C06246DE218005B0795 /* Tiv BibleTests.xctest */,
+				14377C11246DE218005B0795 /* Tiv BibleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14377BF2246DE214005B0795 /* Tiv Bible */ = {
+			isa = PBXGroup;
+			children = (
+				14377BF3246DE214005B0795 /* AppDelegate.swift */,
+				14377BF5246DE214005B0795 /* SceneDelegate.swift */,
+				14377BF7246DE214005B0795 /* ViewController.swift */,
+				14377BF9246DE214005B0795 /* Main.storyboard */,
+				14377BFC246DE218005B0795 /* Assets.xcassets */,
+				14377BFE246DE218005B0795 /* LaunchScreen.storyboard */,
+				14377C01246DE218005B0795 /* Info.plist */,
+			);
+			path = "Tiv Bible";
+			sourceTree = "<group>";
+		};
+		14377C09246DE218005B0795 /* Tiv BibleTests */ = {
+			isa = PBXGroup;
+			children = (
+				14377C0A246DE218005B0795 /* Tiv_BibleTests.swift */,
+				14377C0C246DE218005B0795 /* Info.plist */,
+			);
+			path = "Tiv BibleTests";
+			sourceTree = "<group>";
+		};
+		14377C14246DE218005B0795 /* Tiv BibleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				14377C15246DE218005B0795 /* Tiv_BibleUITests.swift */,
+				14377C17246DE218005B0795 /* Info.plist */,
+			);
+			path = "Tiv BibleUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14377BEF246DE214005B0795 /* Tiv Bible */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14377C1A246DE218005B0795 /* Build configuration list for PBXNativeTarget "Tiv Bible" */;
+			buildPhases = (
+				14377BEC246DE214005B0795 /* Sources */,
+				14377BED246DE214005B0795 /* Frameworks */,
+				14377BEE246DE214005B0795 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tiv Bible";
+			productName = "Tiv Bible";
+			productReference = 14377BF0246DE214005B0795 /* Tiv Bible.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14377C05246DE218005B0795 /* Tiv BibleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14377C1D246DE218005B0795 /* Build configuration list for PBXNativeTarget "Tiv BibleTests" */;
+			buildPhases = (
+				14377C02246DE218005B0795 /* Sources */,
+				14377C03246DE218005B0795 /* Frameworks */,
+				14377C04246DE218005B0795 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14377C08246DE218005B0795 /* PBXTargetDependency */,
+			);
+			name = "Tiv BibleTests";
+			productName = "Tiv BibleTests";
+			productReference = 14377C06246DE218005B0795 /* Tiv BibleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14377C10246DE218005B0795 /* Tiv BibleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14377C20246DE218005B0795 /* Build configuration list for PBXNativeTarget "Tiv BibleUITests" */;
+			buildPhases = (
+				14377C0D246DE218005B0795 /* Sources */,
+				14377C0E246DE218005B0795 /* Frameworks */,
+				14377C0F246DE218005B0795 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14377C13246DE218005B0795 /* PBXTargetDependency */,
+			);
+			name = "Tiv BibleUITests";
+			productName = "Tiv BibleUITests";
+			productReference = 14377C11246DE218005B0795 /* Tiv BibleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14377BE8246DE214005B0795 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Iniongun Group";
+				TargetAttributes = {
+					14377BEF246DE214005B0795 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					14377C05246DE218005B0795 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 14377BEF246DE214005B0795;
+					};
+					14377C10246DE218005B0795 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 14377BEF246DE214005B0795;
+					};
+				};
+			};
+			buildConfigurationList = 14377BEB246DE214005B0795 /* Build configuration list for PBXProject "Tiv Bible" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14377BE7246DE213005B0795;
+			productRefGroup = 14377BF1246DE214005B0795 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14377BEF246DE214005B0795 /* Tiv Bible */,
+				14377C05246DE218005B0795 /* Tiv BibleTests */,
+				14377C10246DE218005B0795 /* Tiv BibleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14377BEE246DE214005B0795 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14377C00246DE218005B0795 /* LaunchScreen.storyboard in Resources */,
+				14377BFD246DE218005B0795 /* Assets.xcassets in Resources */,
+				14377BFB246DE214005B0795 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14377C04246DE218005B0795 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14377C0F246DE218005B0795 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14377BEC246DE214005B0795 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14377BF8246DE214005B0795 /* ViewController.swift in Sources */,
+				14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */,
+				14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14377C02246DE218005B0795 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14377C0B246DE218005B0795 /* Tiv_BibleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14377C0D246DE218005B0795 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14377C16246DE218005B0795 /* Tiv_BibleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14377C08246DE218005B0795 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14377BEF246DE214005B0795 /* Tiv Bible */;
+			targetProxy = 14377C07246DE218005B0795 /* PBXContainerItemProxy */;
+		};
+		14377C13246DE218005B0795 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14377BEF246DE214005B0795 /* Tiv Bible */;
+			targetProxy = 14377C12246DE218005B0795 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14377BF9246DE214005B0795 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14377BFA246DE214005B0795 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14377BFE246DE218005B0795 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14377BFF246DE218005B0795 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14377C18246DE218005B0795 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14377C19246DE218005B0795 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14377C1B246DE218005B0795 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3W6S8FM5ZF;
+				INFOPLIST_FILE = "Tiv Bible/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iniongungroup.mobile.ios.Tiv-Bible";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14377C1C246DE218005B0795 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3W6S8FM5ZF;
+				INFOPLIST_FILE = "Tiv Bible/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iniongungroup.mobile.ios.Tiv-Bible";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		14377C1E246DE218005B0795 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3W6S8FM5ZF;
+				INFOPLIST_FILE = "Tiv BibleTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iniongungroup.mobile.ios.Tiv-BibleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tiv Bible.app/Tiv Bible";
+			};
+			name = Debug;
+		};
+		14377C1F246DE218005B0795 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3W6S8FM5ZF;
+				INFOPLIST_FILE = "Tiv BibleTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iniongungroup.mobile.ios.Tiv-BibleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tiv Bible.app/Tiv Bible";
+			};
+			name = Release;
+		};
+		14377C21246DE218005B0795 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3W6S8FM5ZF;
+				INFOPLIST_FILE = "Tiv BibleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iniongungroup.mobile.ios.Tiv-BibleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tiv Bible";
+			};
+			name = Debug;
+		};
+		14377C22246DE218005B0795 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3W6S8FM5ZF;
+				INFOPLIST_FILE = "Tiv BibleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iniongungroup.mobile.ios.Tiv-BibleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tiv Bible";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14377BEB246DE214005B0795 /* Build configuration list for PBXProject "Tiv Bible" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14377C18246DE218005B0795 /* Debug */,
+				14377C19246DE218005B0795 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14377C1A246DE218005B0795 /* Build configuration list for PBXNativeTarget "Tiv Bible" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14377C1B246DE218005B0795 /* Debug */,
+				14377C1C246DE218005B0795 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14377C1D246DE218005B0795 /* Build configuration list for PBXNativeTarget "Tiv BibleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14377C1E246DE218005B0795 /* Debug */,
+				14377C1F246DE218005B0795 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14377C20246DE218005B0795 /* Build configuration list for PBXNativeTarget "Tiv BibleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14377C21246DE218005B0795 /* Debug */,
+				14377C22246DE218005B0795 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14377BE8246DE214005B0795 /* Project object */;
+}
