@@ -3,10 +3,60 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076AB2A3C00E14C11FA29C18 /* Pods_Tiv_BibleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BC5B91C4FEC0F3E36C43B2 /* Pods_Tiv_BibleTests.framework */; };
+		14121D1B2474677F0073814F /* montserrat_alternates_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CE72474674B0073814F /* montserrat_alternates_bold.ttf */; };
+		14121D1C2474677F0073814F /* lobster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CE82474674C0073814F /* lobster.ttf */; };
+		14121D1D2474677F0073814F /* indie_flower.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CE92474674D0073814F /* indie_flower.ttf */; };
+		14121D1E2474677F0073814F /* montserrat_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CEA2474674E0073814F /* montserrat_light.ttf */; };
+		14121D1F2474677F0073814F /* roboto_medium_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CEB247467500073814F /* roboto_medium_italic.ttf */; };
+		14121D202474677F0073814F /* montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CEC247467510073814F /* montserrat.ttf */; };
+		14121D212474677F0073814F /* amatic_sc.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CED247467520073814F /* amatic_sc.ttf */; };
+		14121D222474677F0073814F /* montserrat_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CEE247467530073814F /* montserrat_bold.ttf */; };
+		14121D242474677F0073814F /* montserrat_light_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF0247467550073814F /* montserrat_light_italic.ttf */; };
+		14121D252474677F0073814F /* montserrat_extra_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF1247467560073814F /* montserrat_extra_light.ttf */; };
+		14121D262474677F0073814F /* comfortaa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF2247467570073814F /* comfortaa.ttf */; };
+		14121D272474677F0073814F /* montserrat_semi_bold_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF3247467580073814F /* montserrat_semi_bold_italic.ttf */; };
+		14121D282474677F0073814F /* martel_sans_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF4247467590073814F /* martel_sans_light.ttf */; };
+		14121D292474677F0073814F /* comfortaa_semi_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF52474675A0073814F /* comfortaa_semi_bold.ttf */; };
+		14121D2A2474677F0073814F /* montserrat_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF62474675B0073814F /* montserrat_black.ttf */; };
+		14121D2B2474677F0073814F /* montserrat_medium_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF72474675C0073814F /* montserrat_medium_italic.ttf */; };
+		14121D2C2474677F0073814F /* roboto_black_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF82474675D0073814F /* roboto_black_italic.ttf */; };
+		14121D2D2474677F0073814F /* roboto_bold_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF92474675E0073814F /* roboto_bold_italic.ttf */; };
+		14121D2E2474677F0073814F /* roboto_condensed_regular_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CFA2474675F0073814F /* roboto_condensed_regular_italic.ttf */; };
+		14121D2F2474677F0073814F /* lato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CFB247467600073814F /* lato.ttf */; };
+		14121D302474677F0073814F /* montserrat_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CFC247467610073814F /* montserrat_medium.ttf */; };
+		14121D312474677F0073814F /* roboto_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CFD247467620073814F /* roboto_bold.ttf */; };
+		14121D342474677F0073814F /* roboto_condensed_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D00247467650073814F /* roboto_condensed_regular.ttf */; };
+		14121D352474677F0073814F /* comfortaa_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D01247467660073814F /* comfortaa_bold.ttf */; };
+		14121D362474677F0073814F /* montserrat_bold_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D02247467670073814F /* montserrat_bold_italic.ttf */; };
+		14121D372474677F0073814F /* montserrat_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D03247467680073814F /* montserrat_thin.ttf */; };
+		14121D382474677F0073814F /* montserrat_semi_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D04247467690073814F /* montserrat_semi_bold.ttf */; };
+		14121D392474677F0073814F /* martel_sans_extralight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D052474676A0073814F /* martel_sans_extralight.ttf */; };
+		14121D3A2474677F0073814F /* montserrat_alternates.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D062474676B0073814F /* montserrat_alternates.ttf */; };
+		14121D3B2474677F0073814F /* comfortaa_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D072474676C0073814F /* comfortaa_light.ttf */; };
+		14121D3C2474677F0073814F /* roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D082474676D0073814F /* roboto_medium.ttf */; };
+		14121D3D2474677F0073814F /* jost.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D092474676E0073814F /* jost.ttf */; };
+		14121D3E2474677F0073814F /* roboto_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D0A2474676F0073814F /* roboto_light.ttf */; };
+		14121D3F2474677F0073814F /* montserrat_black_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D0B247467700073814F /* montserrat_black_italic.ttf */; };
+		14121D402474677F0073814F /* happy_monkey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D0C247467710073814F /* happy_monkey.ttf */; };
+		14121D412474677F0073814F /* roboto_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D0D247467720073814F /* roboto_italic.ttf */; };
+		14121D422474677F0073814F /* montserrat_thin_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D0E247467730073814F /* montserrat_thin_italic.ttf */; };
+		14121D432474677F0073814F /* martel_sans_semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D0F247467740073814F /* martel_sans_semibold.ttf */; };
+		14121D442474677F0073814F /* metamorphous.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D10247467750073814F /* metamorphous.ttf */; };
+		14121D452474677F0073814F /* montserrat_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D11247467760073814F /* montserrat_italic.ttf */; };
+		14121D462474677F0073814F /* montserrat_extra_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D12247467770073814F /* montserrat_extra_bold.ttf */; };
+		14121D472474677F0073814F /* montserrat_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D13247467780073814F /* montserrat_regular.ttf */; };
+		14121D482474677F0073814F /* roboto_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D14247467790073814F /* roboto_black.ttf */; };
+		14121D492474677F0073814F /* roboto_light_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D152474677A0073814F /* roboto_light_italic.ttf */; };
+		14121D4A2474677F0073814F /* roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D162474677B0073814F /* roboto.ttf */; };
+		14121D4B2474677F0073814F /* comfortaa_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D172474677C0073814F /* comfortaa_medium.ttf */; };
+		14121D4C2474677F0073814F /* montserrat_extra_light_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D182474677D0073814F /* montserrat_extra_light_italic.ttf */; };
+		14121D4D2474677F0073814F /* inconsolata_expanded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D192474677E0073814F /* inconsolata_expanded.ttf */; };
+		14121D4E2474677F0073814F /* montserrat_extra_bold_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D1A2474677F0073814F /* montserrat_extra_bold_italic.ttf */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
@@ -15,6 +65,8 @@
 		14377C00246DE218005B0795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14377BFE246DE218005B0795 /* LaunchScreen.storyboard */; };
 		14377C0B246DE218005B0795 /* Tiv_BibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377C0A246DE218005B0795 /* Tiv_BibleTests.swift */; };
 		14377C16246DE218005B0795 /* Tiv_BibleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377C15246DE218005B0795 /* Tiv_BibleUITests.swift */; };
+		1E04978FA0BC2747FEF5DE26 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313FE4C6C52C2C75C944FE96 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */; };
+		E4D75BE7DA206226FCD4DCE1 /* Pods_Tiv_Bible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3884A3AC6C6A9D8CA50103 /* Pods_Tiv_Bible.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +87,55 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14121CE72474674B0073814F /* montserrat_alternates_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_alternates_bold.ttf; sourceTree = "<group>"; };
+		14121CE82474674C0073814F /* lobster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lobster.ttf; sourceTree = "<group>"; };
+		14121CE92474674D0073814F /* indie_flower.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = indie_flower.ttf; sourceTree = "<group>"; };
+		14121CEA2474674E0073814F /* montserrat_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_light.ttf; sourceTree = "<group>"; };
+		14121CEB247467500073814F /* roboto_medium_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_medium_italic.ttf; sourceTree = "<group>"; };
+		14121CEC247467510073814F /* montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat.ttf; sourceTree = "<group>"; };
+		14121CED247467520073814F /* amatic_sc.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = amatic_sc.ttf; sourceTree = "<group>"; };
+		14121CEE247467530073814F /* montserrat_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_bold.ttf; sourceTree = "<group>"; };
+		14121CF0247467550073814F /* montserrat_light_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_light_italic.ttf; sourceTree = "<group>"; };
+		14121CF1247467560073814F /* montserrat_extra_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_extra_light.ttf; sourceTree = "<group>"; };
+		14121CF2247467570073814F /* comfortaa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = comfortaa.ttf; sourceTree = "<group>"; };
+		14121CF3247467580073814F /* montserrat_semi_bold_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_semi_bold_italic.ttf; sourceTree = "<group>"; };
+		14121CF4247467590073814F /* martel_sans_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = martel_sans_light.ttf; sourceTree = "<group>"; };
+		14121CF52474675A0073814F /* comfortaa_semi_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = comfortaa_semi_bold.ttf; sourceTree = "<group>"; };
+		14121CF62474675B0073814F /* montserrat_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_black.ttf; sourceTree = "<group>"; };
+		14121CF72474675C0073814F /* montserrat_medium_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_medium_italic.ttf; sourceTree = "<group>"; };
+		14121CF82474675D0073814F /* roboto_black_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_black_italic.ttf; sourceTree = "<group>"; };
+		14121CF92474675E0073814F /* roboto_bold_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_bold_italic.ttf; sourceTree = "<group>"; };
+		14121CFA2474675F0073814F /* roboto_condensed_regular_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_condensed_regular_italic.ttf; sourceTree = "<group>"; };
+		14121CFB247467600073814F /* lato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lato.ttf; sourceTree = "<group>"; };
+		14121CFC247467610073814F /* montserrat_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_medium.ttf; sourceTree = "<group>"; };
+		14121CFD247467620073814F /* roboto_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_bold.ttf; sourceTree = "<group>"; };
+		14121D00247467650073814F /* roboto_condensed_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_condensed_regular.ttf; sourceTree = "<group>"; };
+		14121D01247467660073814F /* comfortaa_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = comfortaa_bold.ttf; sourceTree = "<group>"; };
+		14121D02247467670073814F /* montserrat_bold_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_bold_italic.ttf; sourceTree = "<group>"; };
+		14121D03247467680073814F /* montserrat_thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_thin.ttf; sourceTree = "<group>"; };
+		14121D04247467690073814F /* montserrat_semi_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_semi_bold.ttf; sourceTree = "<group>"; };
+		14121D052474676A0073814F /* martel_sans_extralight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = martel_sans_extralight.ttf; sourceTree = "<group>"; };
+		14121D062474676B0073814F /* montserrat_alternates.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_alternates.ttf; sourceTree = "<group>"; };
+		14121D072474676C0073814F /* comfortaa_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = comfortaa_light.ttf; sourceTree = "<group>"; };
+		14121D082474676D0073814F /* roboto_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_medium.ttf; sourceTree = "<group>"; };
+		14121D092474676E0073814F /* jost.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = jost.ttf; sourceTree = "<group>"; };
+		14121D0A2474676F0073814F /* roboto_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_light.ttf; sourceTree = "<group>"; };
+		14121D0B247467700073814F /* montserrat_black_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_black_italic.ttf; sourceTree = "<group>"; };
+		14121D0C247467710073814F /* happy_monkey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = happy_monkey.ttf; sourceTree = "<group>"; };
+		14121D0D247467720073814F /* roboto_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_italic.ttf; sourceTree = "<group>"; };
+		14121D0E247467730073814F /* montserrat_thin_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_thin_italic.ttf; sourceTree = "<group>"; };
+		14121D0F247467740073814F /* martel_sans_semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = martel_sans_semibold.ttf; sourceTree = "<group>"; };
+		14121D10247467750073814F /* metamorphous.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = metamorphous.ttf; sourceTree = "<group>"; };
+		14121D11247467760073814F /* montserrat_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_italic.ttf; sourceTree = "<group>"; };
+		14121D12247467770073814F /* montserrat_extra_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_extra_bold.ttf; sourceTree = "<group>"; };
+		14121D13247467780073814F /* montserrat_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_regular.ttf; sourceTree = "<group>"; };
+		14121D14247467790073814F /* roboto_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_black.ttf; sourceTree = "<group>"; };
+		14121D152474677A0073814F /* roboto_light_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_light_italic.ttf; sourceTree = "<group>"; };
+		14121D162474677B0073814F /* roboto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto.ttf; sourceTree = "<group>"; };
+		14121D172474677C0073814F /* comfortaa_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = comfortaa_medium.ttf; sourceTree = "<group>"; };
+		14121D182474677D0073814F /* montserrat_extra_light_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_extra_light_italic.ttf; sourceTree = "<group>"; };
+		14121D192474677E0073814F /* inconsolata_expanded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = inconsolata_expanded.ttf; sourceTree = "<group>"; };
+		14121D1A2474677F0073814F /* montserrat_extra_bold_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_extra_bold_italic.ttf; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +150,15 @@
 		14377C11246DE218005B0795 /* Tiv BibleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tiv BibleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377C15246DE218005B0795 /* Tiv_BibleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiv_BibleUITests.swift; sourceTree = "<group>"; };
 		14377C17246DE218005B0795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A6051955E0881527E3A1B8D /* Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		313FE4C6C52C2C75C944FE96 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiv_Bible_Tiv_BibleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		384FCFA79DF63727CF81789E /* Pods-Tiv BibleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv BibleTests.release.xcconfig"; path = "Target Support Files/Pods-Tiv BibleTests/Pods-Tiv BibleTests.release.xcconfig"; sourceTree = "<group>"; };
+		3B3884A3AC6C6A9D8CA50103 /* Pods_Tiv_Bible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiv_Bible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75BC5B91C4FEC0F3E36C43B2 /* Pods_Tiv_BibleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiv_BibleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91CC8B96D7E99C9149212B85 /* Pods-Tiv Bible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv Bible.release.xcconfig"; path = "Target Support Files/Pods-Tiv Bible/Pods-Tiv Bible.release.xcconfig"; sourceTree = "<group>"; };
+		B94B4C1B66766ED092D31924 /* Pods-Tiv Bible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv Bible.debug.xcconfig"; path = "Target Support Files/Pods-Tiv Bible/Pods-Tiv Bible.debug.xcconfig"; sourceTree = "<group>"; };
+		C4E1299DF500919C3A36F21B /* Pods-Tiv BibleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv BibleTests.debug.xcconfig"; path = "Target Support Files/Pods-Tiv BibleTests/Pods-Tiv BibleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F226A7E4528DA93898887B13 /* Pods-Tiv Bible-Tiv BibleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv Bible-Tiv BibleUITests.release.xcconfig"; path = "Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D75BE7DA206226FCD4DCE1 /* Pods_Tiv_Bible.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076AB2A3C00E14C11FA29C18 /* Pods_Tiv_BibleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +182,162 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E04978FA0BC2747FEF5DE26 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02C67FE45E23F9925154169D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B94B4C1B66766ED092D31924 /* Pods-Tiv Bible.debug.xcconfig */,
+				91CC8B96D7E99C9149212B85 /* Pods-Tiv Bible.release.xcconfig */,
+				2A6051955E0881527E3A1B8D /* Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig */,
+				F226A7E4528DA93898887B13 /* Pods-Tiv Bible-Tiv BibleUITests.release.xcconfig */,
+				C4E1299DF500919C3A36F21B /* Pods-Tiv BibleTests.debug.xcconfig */,
+				384FCFA79DF63727CF81789E /* Pods-Tiv BibleTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		14121C7A2474644F0073814F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		14121C7B247464580073814F /* LocalDataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocalDataSource;
+			sourceTree = "<group>";
+		};
+		14121C7C2474649D0073814F /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Preference;
+			sourceTree = "<group>";
+		};
+		14121C7D247464AD0073814F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		14121C7E247464E00073814F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				14121C83247465740073814F /* Splash */,
+				14121C82247465650073814F /* Launch */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		14121C7F247464F10073814F /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		14121C80247464F80073814F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14121C84247465900073814F /* Fonts */,
+				14377BFC246DE218005B0795 /* Assets.xcassets */,
+				14377C01246DE218005B0795 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		14121C81247465070073814F /* App Files */ = {
+			isa = PBXGroup;
+			children = (
+				14377BF3246DE214005B0795 /* AppDelegate.swift */,
+				14377BF5246DE214005B0795 /* SceneDelegate.swift */,
+			);
+			path = "App Files";
+			sourceTree = "<group>";
+		};
+		14121C82247465650073814F /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				14377BFE246DE218005B0795 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		14121C83247465740073814F /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				14377BF7246DE214005B0795 /* ViewController.swift */,
+				14377BF9246DE214005B0795 /* Main.storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		14121C84247465900073814F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				14121CED247467520073814F /* amatic_sc.ttf */,
+				14121D01247467660073814F /* comfortaa_bold.ttf */,
+				14121D072474676C0073814F /* comfortaa_light.ttf */,
+				14121D172474677C0073814F /* comfortaa_medium.ttf */,
+				14121CF52474675A0073814F /* comfortaa_semi_bold.ttf */,
+				14121CF2247467570073814F /* comfortaa.ttf */,
+				14121D0C247467710073814F /* happy_monkey.ttf */,
+				14121D192474677E0073814F /* inconsolata_expanded.ttf */,
+				14121CE92474674D0073814F /* indie_flower.ttf */,
+				14121D092474676E0073814F /* jost.ttf */,
+				14121CFB247467600073814F /* lato.ttf */,
+				14121CE82474674C0073814F /* lobster.ttf */,
+				14121D052474676A0073814F /* martel_sans_extralight.ttf */,
+				14121CF4247467590073814F /* martel_sans_light.ttf */,
+				14121D0F247467740073814F /* martel_sans_semibold.ttf */,
+				14121D10247467750073814F /* metamorphous.ttf */,
+				14121CE72474674B0073814F /* montserrat_alternates_bold.ttf */,
+				14121D062474676B0073814F /* montserrat_alternates.ttf */,
+				14121D0B247467700073814F /* montserrat_black_italic.ttf */,
+				14121CF62474675B0073814F /* montserrat_black.ttf */,
+				14121D02247467670073814F /* montserrat_bold_italic.ttf */,
+				14121CEE247467530073814F /* montserrat_bold.ttf */,
+				14121D1A2474677F0073814F /* montserrat_extra_bold_italic.ttf */,
+				14121D12247467770073814F /* montserrat_extra_bold.ttf */,
+				14121D182474677D0073814F /* montserrat_extra_light_italic.ttf */,
+				14121CF1247467560073814F /* montserrat_extra_light.ttf */,
+				14121D11247467760073814F /* montserrat_italic.ttf */,
+				14121CF0247467550073814F /* montserrat_light_italic.ttf */,
+				14121CEA2474674E0073814F /* montserrat_light.ttf */,
+				14121CF72474675C0073814F /* montserrat_medium_italic.ttf */,
+				14121CFC247467610073814F /* montserrat_medium.ttf */,
+				14121D13247467780073814F /* montserrat_regular.ttf */,
+				14121CF3247467580073814F /* montserrat_semi_bold_italic.ttf */,
+				14121D04247467690073814F /* montserrat_semi_bold.ttf */,
+				14121D0E247467730073814F /* montserrat_thin_italic.ttf */,
+				14121D03247467680073814F /* montserrat_thin.ttf */,
+				14121CEC247467510073814F /* montserrat.ttf */,
+				14121CF82474675D0073814F /* roboto_black_italic.ttf */,
+				14121D14247467790073814F /* roboto_black.ttf */,
+				14121CF92474675E0073814F /* roboto_bold_italic.ttf */,
+				14121CFD247467620073814F /* roboto_bold.ttf */,
+				14121CFA2474675F0073814F /* roboto_condensed_regular_italic.ttf */,
+				14121D00247467650073814F /* roboto_condensed_regular.ttf */,
+				14121D0D247467720073814F /* roboto_italic.ttf */,
+				14121D152474677A0073814F /* roboto_light_italic.ttf */,
+				14121D0A2474676F0073814F /* roboto_light.ttf */,
+				14121CEB247467500073814F /* roboto_medium_italic.ttf */,
+				14121D082474676D0073814F /* roboto_medium.ttf */,
+				14121D162474677B0073814F /* roboto.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		14377BE7246DE213005B0795 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +345,8 @@
 				14377C09246DE218005B0795 /* Tiv BibleTests */,
 				14377C14246DE218005B0795 /* Tiv BibleUITests */,
 				14377BF1246DE214005B0795 /* Products */,
+				02C67FE45E23F9925154169D /* Pods */,
+				639B566969A01D1E2F125055 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +363,14 @@
 		14377BF2246DE214005B0795 /* Tiv Bible */ = {
 			isa = PBXGroup;
 			children = (
-				14377BF3246DE214005B0795 /* AppDelegate.swift */,
-				14377BF5246DE214005B0795 /* SceneDelegate.swift */,
-				14377BF7246DE214005B0795 /* ViewController.swift */,
-				14377BF9246DE214005B0795 /* Main.storyboard */,
-				14377BFC246DE218005B0795 /* Assets.xcassets */,
-				14377BFE246DE218005B0795 /* LaunchScreen.storyboard */,
-				14377C01246DE218005B0795 /* Info.plist */,
+				14121C81247465070073814F /* App Files */,
+				14121C80247464F80073814F /* Resources */,
+				14121C7F247464F10073814F /* DI */,
+				14121C7E247464E00073814F /* Features */,
+				14121C7D247464AD0073814F /* Repository */,
+				14121C7C2474649D0073814F /* Preference */,
+				14121C7B247464580073814F /* LocalDataSource */,
+				14121C7A2474644F0073814F /* Entities */,
 			);
 			path = "Tiv Bible";
 			sourceTree = "<group>";
@@ -128,6 +393,16 @@
 			path = "Tiv BibleUITests";
 			sourceTree = "<group>";
 		};
+		639B566969A01D1E2F125055 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B3884A3AC6C6A9D8CA50103 /* Pods_Tiv_Bible.framework */,
+				313FE4C6C52C2C75C944FE96 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */,
+				75BC5B91C4FEC0F3E36C43B2 /* Pods_Tiv_BibleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +410,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14377C1A246DE218005B0795 /* Build configuration list for PBXNativeTarget "Tiv Bible" */;
 			buildPhases = (
+				ADB6846035EBCE9AC4817CCC /* [CP] Check Pods Manifest.lock */,
 				14377BEC246DE214005B0795 /* Sources */,
 				14377BED246DE214005B0795 /* Frameworks */,
 				14377BEE246DE214005B0795 /* Resources */,
+				6A0C4946FEC09EDF71048CC8 /* [CP] Embed Pods Frameworks */,
+				A92D3F185CB0483ECE4548F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +430,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14377C1D246DE218005B0795 /* Build configuration list for PBXNativeTarget "Tiv BibleTests" */;
 			buildPhases = (
+				16E0AE7A7FA4FACBB53452F3 /* [CP] Check Pods Manifest.lock */,
 				14377C02246DE218005B0795 /* Sources */,
 				14377C03246DE218005B0795 /* Frameworks */,
 				14377C04246DE218005B0795 /* Resources */,
+				6C2EB196E9C44EC3ADB57637 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,9 +450,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14377C20246DE218005B0795 /* Build configuration list for PBXNativeTarget "Tiv BibleUITests" */;
 			buildPhases = (
+				970DEC2AE14F17B51AE7B2ED /* [CP] Check Pods Manifest.lock */,
 				14377C0D246DE218005B0795 /* Sources */,
 				14377C0E246DE218005B0795 /* Frameworks */,
 				14377C0F246DE218005B0795 /* Resources */,
+				B904DF0F28F927506882741E /* [CP] Embed Pods Frameworks */,
+				310C3222CA83D282F9B7AEC7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,9 +515,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14121D382474677F0073814F /* montserrat_semi_bold.ttf in Resources */,
+				14121D3A2474677F0073814F /* montserrat_alternates.ttf in Resources */,
+				14121D2C2474677F0073814F /* roboto_black_italic.ttf in Resources */,
 				14377C00246DE218005B0795 /* LaunchScreen.storyboard in Resources */,
+				14121D3D2474677F0073814F /* jost.ttf in Resources */,
+				14121D202474677F0073814F /* montserrat.ttf in Resources */,
+				14121D292474677F0073814F /* comfortaa_semi_bold.ttf in Resources */,
+				14121D242474677F0073814F /* montserrat_light_italic.ttf in Resources */,
+				14121D2B2474677F0073814F /* montserrat_medium_italic.ttf in Resources */,
+				14121D4E2474677F0073814F /* montserrat_extra_bold_italic.ttf in Resources */,
+				14121D1D2474677F0073814F /* indie_flower.ttf in Resources */,
+				14121D4D2474677F0073814F /* inconsolata_expanded.ttf in Resources */,
+				14121D432474677F0073814F /* martel_sans_semibold.ttf in Resources */,
+				14121D262474677F0073814F /* comfortaa.ttf in Resources */,
+				14121D302474677F0073814F /* montserrat_medium.ttf in Resources */,
+				14121D4A2474677F0073814F /* roboto.ttf in Resources */,
+				14121D422474677F0073814F /* montserrat_thin_italic.ttf in Resources */,
+				14121D4B2474677F0073814F /* comfortaa_medium.ttf in Resources */,
+				14121D1C2474677F0073814F /* lobster.ttf in Resources */,
 				14377BFD246DE218005B0795 /* Assets.xcassets in Resources */,
+				14121D2E2474677F0073814F /* roboto_condensed_regular_italic.ttf in Resources */,
+				14121D472474677F0073814F /* montserrat_regular.ttf in Resources */,
+				14121D222474677F0073814F /* montserrat_bold.ttf in Resources */,
+				14121D352474677F0073814F /* comfortaa_bold.ttf in Resources */,
+				14121D3C2474677F0073814F /* roboto_medium.ttf in Resources */,
+				14121D2D2474677F0073814F /* roboto_bold_italic.ttf in Resources */,
+				14121D4C2474677F0073814F /* montserrat_extra_light_italic.ttf in Resources */,
+				14121D372474677F0073814F /* montserrat_thin.ttf in Resources */,
+				14121D2A2474677F0073814F /* montserrat_black.ttf in Resources */,
+				14121D282474677F0073814F /* martel_sans_light.ttf in Resources */,
+				14121D212474677F0073814F /* amatic_sc.ttf in Resources */,
+				14121D3B2474677F0073814F /* comfortaa_light.ttf in Resources */,
+				14121D252474677F0073814F /* montserrat_extra_light.ttf in Resources */,
 				14377BFB246DE214005B0795 /* Main.storyboard in Resources */,
+				14121D452474677F0073814F /* montserrat_italic.ttf in Resources */,
+				14121D272474677F0073814F /* montserrat_semi_bold_italic.ttf in Resources */,
+				14121D482474677F0073814F /* roboto_black.ttf in Resources */,
+				14121D442474677F0073814F /* metamorphous.ttf in Resources */,
+				14121D392474677F0073814F /* martel_sans_extralight.ttf in Resources */,
+				14121D3E2474677F0073814F /* roboto_light.ttf in Resources */,
+				14121D2F2474677F0073814F /* lato.ttf in Resources */,
+				14121D462474677F0073814F /* montserrat_extra_bold.ttf in Resources */,
+				14121D3F2474677F0073814F /* montserrat_black_italic.ttf in Resources */,
+				14121D1B2474677F0073814F /* montserrat_alternates_bold.ttf in Resources */,
+				14121D492474677F0073814F /* roboto_light_italic.ttf in Resources */,
+				14121D412474677F0073814F /* roboto_italic.ttf in Resources */,
+				14121D402474677F0073814F /* happy_monkey.ttf in Resources */,
+				14121D342474677F0073814F /* roboto_condensed_regular.ttf in Resources */,
+				14121D362474677F0073814F /* montserrat_bold_italic.ttf in Resources */,
+				14121D1F2474677F0073814F /* roboto_medium_italic.ttf in Resources */,
+				14121D312474677F0073814F /* roboto_bold.ttf in Resources */,
+				14121D1E2474677F0073814F /* montserrat_light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +585,160 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16E0AE7A7FA4FACBB53452F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tiv BibleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		310C3222CA83D282F9B7AEC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A0C4946FEC09EDF71048CC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible/Pods-Tiv Bible-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible/Pods-Tiv Bible-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible/Pods-Tiv Bible-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C2EB196E9C44EC3ADB57637 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tiv BibleTests/Pods-Tiv BibleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tiv BibleTests/Pods-Tiv BibleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tiv BibleTests/Pods-Tiv BibleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		970DEC2AE14F17B51AE7B2ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tiv Bible-Tiv BibleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A92D3F185CB0483ECE4548F4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible/Pods-Tiv Bible-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible/Pods-Tiv Bible-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible/Pods-Tiv Bible-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADB6846035EBCE9AC4817CCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tiv Bible-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B904DF0F28F927506882741E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14377BEC246DE214005B0795 /* Sources */ = {
@@ -432,6 +918,7 @@
 		};
 		14377C1B246DE218005B0795 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B94B4C1B66766ED092D31924 /* Pods-Tiv Bible.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +937,7 @@
 		};
 		14377C1C246DE218005B0795 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91CC8B96D7E99C9149212B85 /* Pods-Tiv Bible.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +956,7 @@
 		};
 		14377C1E246DE218005B0795 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4E1299DF500919C3A36F21B /* Pods-Tiv BibleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +979,7 @@
 		};
 		14377C1F246DE218005B0795 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 384FCFA79DF63727CF81789E /* Pods-Tiv BibleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +1002,7 @@
 		};
 		14377C21246DE218005B0795 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A6051955E0881527E3A1B8D /* Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +1023,7 @@
 		};
 		14377C22246DE218005B0795 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F226A7E4528DA93898887B13 /* Pods-Tiv Bible-Tiv BibleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
