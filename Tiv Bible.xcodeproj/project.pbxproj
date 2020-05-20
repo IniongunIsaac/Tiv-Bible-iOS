@@ -57,6 +57,26 @@
 		14121D4C2474677F0073814F /* montserrat_extra_light_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D182474677D0073814F /* montserrat_extra_light_italic.ttf */; };
 		14121D4D2474677F0073814F /* inconsolata_expanded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D192474677E0073814F /* inconsolata_expanded.ttf */; };
 		14121D4E2474677F0073814F /* montserrat_extra_bold_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121D1A2474677F0073814F /* montserrat_extra_bold_italic.ttf */; };
+		14121D5024746EC20073814F /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D4F24746EC20073814F /* Base.swift */; };
+		14121D52247471FF0073814F /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D51247471FF0073814F /* Version.swift */; };
+		14121D54247479EC0073814F /* Testament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D53247479EC0073814F /* Testament.swift */; };
+		14121D5624747A4D0073814F /* BaseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D5524747A4D0073814F /* BaseName.swift */; };
+		14121D5824747B6A0073814F /* AudioSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D5724747B6A0073814F /* AudioSpeed.swift */; };
+		14121D5A24747BB20073814F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D5924747BB20073814F /* Book.swift */; };
+		14121D5C2474804E0073814F /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D5B2474804E0073814F /* Bookmark.swift */; };
+		14121D5E247486600073814F /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D5D247486600073814F /* Chapter.swift */; };
+		14121D60247488060073814F /* Verse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D5F247488060073814F /* Verse.swift */; };
+		14121D6324750F0D0073814F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D6224750F0D0073814F /* Date+Extensions.swift */; };
+		14121D65247515220073814F /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D64247515220073814F /* FontStyle.swift */; };
+		14121D672475154D0073814F /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D662475154D0073814F /* Highlight.swift */; };
+		14121D69247516520073814F /* HighlightColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D68247516520073814F /* HighlightColor.swift */; };
+		14121D6B247517110073814F /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D6A247517110073814F /* History.swift */; };
+		14121D6D2475247B0073814F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D6C2475247B0073814F /* Note.swift */; };
+		14121D6F24752B9A0073814F /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D6E24752B990073814F /* Other.swift */; };
+		14121D7124752C3A0073814F /* RecentSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D7024752C3A0073814F /* RecentSearch.swift */; };
+		14121D7324752C8E0073814F /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D7224752C8E0073814F /* Setting.swift */; };
+		14121D7524752DBC0073814F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D7424752DBC0073814F /* Theme.swift */; };
+		14121D7724752DE10073814F /* TivBibleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D7624752DE10073814F /* TivBibleData.swift */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
@@ -136,6 +156,26 @@
 		14121D182474677D0073814F /* montserrat_extra_light_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_extra_light_italic.ttf; sourceTree = "<group>"; };
 		14121D192474677E0073814F /* inconsolata_expanded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = inconsolata_expanded.ttf; sourceTree = "<group>"; };
 		14121D1A2474677F0073814F /* montserrat_extra_bold_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_extra_bold_italic.ttf; sourceTree = "<group>"; };
+		14121D4F24746EC20073814F /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		14121D51247471FF0073814F /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		14121D53247479EC0073814F /* Testament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testament.swift; sourceTree = "<group>"; };
+		14121D5524747A4D0073814F /* BaseName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseName.swift; sourceTree = "<group>"; };
+		14121D5724747B6A0073814F /* AudioSpeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSpeed.swift; sourceTree = "<group>"; };
+		14121D5924747BB20073814F /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		14121D5B2474804E0073814F /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		14121D5D247486600073814F /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
+		14121D5F247488060073814F /* Verse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verse.swift; sourceTree = "<group>"; };
+		14121D6224750F0D0073814F /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		14121D64247515220073814F /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
+		14121D662475154D0073814F /* Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlight.swift; sourceTree = "<group>"; };
+		14121D68247516520073814F /* HighlightColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColor.swift; sourceTree = "<group>"; };
+		14121D6A247517110073814F /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		14121D6C2475247B0073814F /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		14121D6E24752B990073814F /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
+		14121D7024752C3A0073814F /* RecentSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearch.swift; sourceTree = "<group>"; };
+		14121D7224752C8E0073814F /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		14121D7424752DBC0073814F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		14121D7624752DE10073814F /* TivBibleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TivBibleData.swift; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +245,25 @@
 		14121C7A2474644F0073814F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				14121D4F24746EC20073814F /* Base.swift */,
+				14121D51247471FF0073814F /* Version.swift */,
+				14121D53247479EC0073814F /* Testament.swift */,
+				14121D5524747A4D0073814F /* BaseName.swift */,
+				14121D5724747B6A0073814F /* AudioSpeed.swift */,
+				14121D5924747BB20073814F /* Book.swift */,
+				14121D5B2474804E0073814F /* Bookmark.swift */,
+				14121D5D247486600073814F /* Chapter.swift */,
+				14121D5F247488060073814F /* Verse.swift */,
+				14121D64247515220073814F /* FontStyle.swift */,
+				14121D662475154D0073814F /* Highlight.swift */,
+				14121D68247516520073814F /* HighlightColor.swift */,
+				14121D6A247517110073814F /* History.swift */,
+				14121D6C2475247B0073814F /* Note.swift */,
+				14121D6E24752B990073814F /* Other.swift */,
+				14121D7024752C3A0073814F /* RecentSearch.swift */,
+				14121D7224752C8E0073814F /* Setting.swift */,
+				14121D7424752DBC0073814F /* Theme.swift */,
+				14121D7624752DE10073814F /* TivBibleData.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -233,6 +292,7 @@
 		14121C7E247464E00073814F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				14121D6124750EE90073814F /* Utils */,
 				14121C83247465740073814F /* Splash */,
 				14121C82247465650073814F /* Launch */,
 			);
@@ -336,6 +396,14 @@
 				14121D162474677B0073814F /* roboto.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		14121D6124750EE90073814F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				14121D6224750F0D0073814F /* Date+Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		14377BE7246DE213005B0795 = {
@@ -745,9 +813,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14121D6B247517110073814F /* History.swift in Sources */,
+				14121D5024746EC20073814F /* Base.swift in Sources */,
+				14121D54247479EC0073814F /* Testament.swift in Sources */,
+				14121D52247471FF0073814F /* Version.swift in Sources */,
+				14121D6324750F0D0073814F /* Date+Extensions.swift in Sources */,
+				14121D6D2475247B0073814F /* Note.swift in Sources */,
+				14121D672475154D0073814F /* Highlight.swift in Sources */,
+				14121D60247488060073814F /* Verse.swift in Sources */,
+				14121D69247516520073814F /* HighlightColor.swift in Sources */,
+				14121D5624747A4D0073814F /* BaseName.swift in Sources */,
+				14121D65247515220073814F /* FontStyle.swift in Sources */,
+				14121D7324752C8E0073814F /* Setting.swift in Sources */,
 				14377BF8246DE214005B0795 /* ViewController.swift in Sources */,
+				14121D7124752C3A0073814F /* RecentSearch.swift in Sources */,
+				14121D5C2474804E0073814F /* Bookmark.swift in Sources */,
+				14121D7524752DBC0073814F /* Theme.swift in Sources */,
+				14121D5A24747BB20073814F /* Book.swift in Sources */,
+				14121D6F24752B9A0073814F /* Other.swift in Sources */,
 				14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */,
+				14121D5824747B6A0073814F /* AudioSpeed.swift in Sources */,
 				14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */,
+				14121D7724752DE10073814F /* TivBibleData.swift in Sources */,
+				14121D5E247486600073814F /* Chapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -923,7 +1011,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3W6S8FM5ZF;
-				INFOPLIST_FILE = "Tiv Bible/Info.plist";
+				INFOPLIST_FILE = "Tiv Bible/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -942,7 +1030,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3W6S8FM5ZF;
-				INFOPLIST_FILE = "Tiv Bible/Info.plist";
+				INFOPLIST_FILE = "Tiv Bible/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
