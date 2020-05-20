@@ -77,6 +77,9 @@
 		14121D7324752C8E0073814F /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D7224752C8E0073814F /* Setting.swift */; };
 		14121D7524752DBC0073814F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D7424752DBC0073814F /* Theme.swift */; };
 		14121D7724752DE10073814F /* TivBibleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D7624752DE10073814F /* TivBibleData.swift */; };
+		14121D7A2475B41D0073814F /* IAudioSpeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D792475B41D0073814F /* IAudioSpeedDataSource.swift */; };
+		14121D7C2475B43B0073814F /* AudioSpeedDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D7B2475B43B0073814F /* AudioSpeedDataSourceImpl.swift */; };
+		14121D7F2475E89A0073814F /* Rx+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D7E2475E89A0073814F /* Rx+Extensions.swift */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
@@ -176,6 +179,9 @@
 		14121D7224752C8E0073814F /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		14121D7424752DBC0073814F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		14121D7624752DE10073814F /* TivBibleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TivBibleData.swift; sourceTree = "<group>"; };
+		14121D792475B41D0073814F /* IAudioSpeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAudioSpeedDataSource.swift; sourceTree = "<group>"; };
+		14121D7B2475B43B0073814F /* AudioSpeedDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSpeedDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121D7E2475E89A0073814F /* Rx+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Extensions.swift"; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -271,6 +277,8 @@
 		14121C7B247464580073814F /* LocalDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				14121D7D2475E87D0073814F /* Utils */,
+				14121D782475B3E10073814F /* Audio Speed */,
 			);
 			path = LocalDataSource;
 			sourceTree = "<group>";
@@ -402,6 +410,23 @@
 			isa = PBXGroup;
 			children = (
 				14121D6224750F0D0073814F /* Date+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		14121D782475B3E10073814F /* Audio Speed */ = {
+			isa = PBXGroup;
+			children = (
+				14121D792475B41D0073814F /* IAudioSpeedDataSource.swift */,
+				14121D7B2475B43B0073814F /* AudioSpeedDataSourceImpl.swift */,
+			);
+			path = "Audio Speed";
+			sourceTree = "<group>";
+		};
+		14121D7D2475E87D0073814F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				14121D7E2475E89A0073814F /* Rx+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -819,6 +844,7 @@
 				14121D52247471FF0073814F /* Version.swift in Sources */,
 				14121D6324750F0D0073814F /* Date+Extensions.swift in Sources */,
 				14121D6D2475247B0073814F /* Note.swift in Sources */,
+				14121D7C2475B43B0073814F /* AudioSpeedDataSourceImpl.swift in Sources */,
 				14121D672475154D0073814F /* Highlight.swift in Sources */,
 				14121D60247488060073814F /* Verse.swift in Sources */,
 				14121D69247516520073814F /* HighlightColor.swift in Sources */,
@@ -826,8 +852,10 @@
 				14121D65247515220073814F /* FontStyle.swift in Sources */,
 				14121D7324752C8E0073814F /* Setting.swift in Sources */,
 				14377BF8246DE214005B0795 /* ViewController.swift in Sources */,
+				14121D7A2475B41D0073814F /* IAudioSpeedDataSource.swift in Sources */,
 				14121D7124752C3A0073814F /* RecentSearch.swift in Sources */,
 				14121D5C2474804E0073814F /* Bookmark.swift in Sources */,
+				14121D7F2475E89A0073814F /* Rx+Extensions.swift in Sources */,
 				14121D7524752DBC0073814F /* Theme.swift in Sources */,
 				14121D5A24747BB20073814F /* Book.swift in Sources */,
 				14121D6F24752B9A0073814F /* Other.swift in Sources */,
