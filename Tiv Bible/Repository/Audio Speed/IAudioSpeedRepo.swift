@@ -1,15 +1,15 @@
 //
-//  IAudioSpeedDataSource.swift
+//  IAudioSpeedRepo.swift
 //  Tiv Bible
 //
-//  Created by Isaac Iniongun on 20/05/2020.
+//  Created by Isaac Iniongun on 21/05/2020.
 //  Copyright © 2020 Iniongun Group. All rights reserved.
 //
 
 import Foundation
 import RxSwift
 
-protocol IAudioSpeedDataSource {
+protocol IAudioSpeedRepo {
     
     func getAllAudioSpeeds() -> Observable<[AudioSpeed]>
     

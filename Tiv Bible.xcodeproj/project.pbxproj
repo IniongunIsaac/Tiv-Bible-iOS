@@ -110,6 +110,8 @@
 		14121DC5247712A40073814F /* VerseDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DC4247712A40073814F /* VerseDataSourceImpl.swift */; };
 		14121DC8247717B90073814F /* IVersionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DC7247717B90073814F /* IVersionDataSource.swift */; };
 		14121DCA247717D70073814F /* VersionDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DC9247717D70073814F /* VersionDataSourceImpl.swift */; };
+		14121DCD247719B90073814F /* IAudioSpeedRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DCC247719B90073814F /* IAudioSpeedRepo.swift */; };
+		14121DCF247719E20073814F /* AudioSpeedRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DCE247719E20073814F /* AudioSpeedRepoImpl.swift */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
@@ -242,6 +244,8 @@
 		14121DC4247712A40073814F /* VerseDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseDataSourceImpl.swift; sourceTree = "<group>"; };
 		14121DC7247717B90073814F /* IVersionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVersionDataSource.swift; sourceTree = "<group>"; };
 		14121DC9247717D70073814F /* VersionDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121DCC247719B90073814F /* IAudioSpeedRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAudioSpeedRepo.swift; sourceTree = "<group>"; };
+		14121DCE247719E20073814F /* AudioSpeedRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSpeedRepoImpl.swift; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -368,6 +372,7 @@
 		14121C7D247464AD0073814F /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				14121DCB247719990073814F /* Audio Speed */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -639,6 +644,15 @@
 				14121DC9247717D70073814F /* VersionDataSourceImpl.swift */,
 			);
 			path = Version;
+			sourceTree = "<group>";
+		};
+		14121DCB247719990073814F /* Audio Speed */ = {
+			isa = PBXGroup;
+			children = (
+				14121DCC247719B90073814F /* IAudioSpeedRepo.swift */,
+				14121DCE247719E20073814F /* AudioSpeedRepoImpl.swift */,
+			);
+			path = "Audio Speed";
 			sourceTree = "<group>";
 		};
 		14377BE7246DE213005B0795 = {
@@ -1051,6 +1065,7 @@
 				14121D8224766EB60073814F /* IBookDataSource.swift in Sources */,
 				14121DCA247717D70073814F /* VersionDataSourceImpl.swift in Sources */,
 				14121DB624770A3D0073814F /* SettingDataSourceImpl.swift in Sources */,
+				14121DCD247719B90073814F /* IAudioSpeedRepo.swift in Sources */,
 				14121D6B247517110073814F /* History.swift in Sources */,
 				14121DC8247717B90073814F /* IVersionDataSource.swift in Sources */,
 				14121D5024746EC20073814F /* Base.swift in Sources */,
@@ -1087,6 +1102,7 @@
 				14121DC5247712A40073814F /* VerseDataSourceImpl.swift in Sources */,
 				14121D7124752C3A0073814F /* RecentSearch.swift in Sources */,
 				14121D5C2474804E0073814F /* Bookmark.swift in Sources */,
+				14121DCF247719E20073814F /* AudioSpeedRepoImpl.swift in Sources */,
 				14121D7F2475E89A0073814F /* Rx+Extensions.swift in Sources */,
 				14121DC0247711210073814F /* ThemeDataSourceImpl.swift in Sources */,
 				14121D7524752DBC0073814F /* Theme.swift in Sources */,
