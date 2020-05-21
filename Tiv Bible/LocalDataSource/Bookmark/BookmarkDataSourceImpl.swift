@@ -16,15 +16,15 @@ struct BookmarkDataSourceImpl: IBookmarkDataSource {
     let realm: Realm
     
     func getBookmarks() -> Observable<[Bookmark]> {
-        return Observable.array(from: realm.objects(Bookmark.self))
+        Observable.array(from: realm.objects(Bookmark.self))
     }
     
     func getBookmarkByDate(bookmarkedOn: Date) -> Observable<[Bookmark]> {
-        return Observable.array(from: realm.objects(Bookmark.self).filter("bookmarkedOn == %@", bookmarkedOn).sorted(byKeyPath: "bookmarkedOn", ascending: false))
+        Observable.array(from: realm.objects(Bookmark.self).filter("bookmarkedOn == %@", bookmarkedOn).sorted(byKeyPath: "bookmarkedOn", ascending: false))
     }
     
     func getBookmarkByVerse(verseId: String) -> Observable<Bookmark> {
-        return Observable.from(optional: realm.objects(Bookmark.self).filter("verse.id = %@", verseId).first)
+        Observable.from(optional: realm.objects(Bookmark.self).filter("verse.id = %@", verseId).first)
     }
     
     func insertBookmarks(bookmarks: [Bookmark]) -> Observable<Void> {
@@ -35,5 +35,7 @@ struct BookmarkDataSourceImpl: IBookmarkDataSource {
         realm.deleteItems(items: bookmarks)
     }
     
-    
+    func deleteAllBookmarks() -> Observable<Void> {
+        realm.deleteAllItems(for: Bookmark.self)
+    }
 }

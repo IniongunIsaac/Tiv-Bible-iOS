@@ -24,5 +24,7 @@ protocol IBookDataSource {
     func insertBooks(books: [Book]) -> Observable<Void>
 
     func deleteBooks(books: [Book]) -> Observable<Void>
+    
+    func deleteAllBooks() -> Observable<Void>
 
 }

@@ -84,6 +84,8 @@
 		14121D842476700C0073814F /* BookDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D832476700C0073814F /* BookDataSourceImpl.swift */; };
 		14121D87247683A60073814F /* IBookmarkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D86247683A60073814F /* IBookmarkDataSource.swift */; };
 		14121D89247683D00073814F /* BookmarkDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D88247683D00073814F /* BookmarkDataSourceImpl.swift */; };
+		14121D8C2476AAF50073814F /* IChapterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D8B2476AAF50073814F /* IChapterDataSource.swift */; };
+		14121D8E2476B0780073814F /* ChapterDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D8D2476B0780073814F /* ChapterDataSourceImpl.swift */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
@@ -190,6 +192,8 @@
 		14121D832476700C0073814F /* BookDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataSourceImpl.swift; sourceTree = "<group>"; };
 		14121D86247683A60073814F /* IBookmarkDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBookmarkDataSource.swift; sourceTree = "<group>"; };
 		14121D88247683D00073814F /* BookmarkDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121D8B2476AAF50073814F /* IChapterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChapterDataSource.swift; sourceTree = "<group>"; };
+		14121D8D2476B0780073814F /* ChapterDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterDataSourceImpl.swift; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -285,6 +289,7 @@
 		14121C7B247464580073814F /* LocalDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				14121D8A2476AAC00073814F /* Chapter */,
 				14121D85247683850073814F /* Bookmark */,
 				14121D8024766E890073814F /* Book */,
 				14121D782475B3E10073814F /* Audio Speed */,
@@ -457,6 +462,15 @@
 				14121D88247683D00073814F /* BookmarkDataSourceImpl.swift */,
 			);
 			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		14121D8A2476AAC00073814F /* Chapter */ = {
+			isa = PBXGroup;
+			children = (
+				14121D8B2476AAF50073814F /* IChapterDataSource.swift */,
+				14121D8D2476B0780073814F /* ChapterDataSourceImpl.swift */,
+			);
+			path = Chapter;
 			sourceTree = "<group>";
 		};
 		14377BE7246DE213005B0795 = {
@@ -892,7 +906,9 @@
 				14121D6F24752B9A0073814F /* Other.swift in Sources */,
 				14121D89247683D00073814F /* BookmarkDataSourceImpl.swift in Sources */,
 				14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */,
+				14121D8E2476B0780073814F /* ChapterDataSourceImpl.swift in Sources */,
 				14121D5824747B6A0073814F /* AudioSpeed.swift in Sources */,
+				14121D8C2476AAF50073814F /* IChapterDataSource.swift in Sources */,
 				14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */,
 				14121D7724752DE10073814F /* TivBibleData.swift in Sources */,
 				14121D5E247486600073814F /* Chapter.swift in Sources */,

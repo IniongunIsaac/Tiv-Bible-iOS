@@ -20,4 +20,6 @@ protocol IAudioSpeedDataSource {
     func insertAudioSpeeds(audioSpeeds: [AudioSpeed]) -> Observable<Void>
     
     func deleteAudioSpeeds(audioSpeeds: [AudioSpeed]) -> Observable<Void>
+    
+    func deleteAllAudioSpeeds() -> Observable<Void>
 }

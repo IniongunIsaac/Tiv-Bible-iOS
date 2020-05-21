@@ -13,7 +13,6 @@ protocol IBookmarkDataSource {
     
     func getBookmarks() -> Observable<[Bookmark]>
 
-    //@Query("select * from Bookmark where bookmarked_on = :bookmarkedOn order by datetime(bookmarked_on) desc")
     func getBookmarkByDate(bookmarkedOn: Date) -> Observable<[Bookmark]>
 
     func getBookmarkByVerse(verseId: String) -> Observable<Bookmark>
@@ -21,5 +20,7 @@ protocol IBookmarkDataSource {
     func insertBookmarks(bookmarks: [Bookmark]) -> Observable<Void>
 
     func deleteBookmarks(bookmarks: [Bookmark]) -> Observable<Void>
+    
+    func deleteAllBookmarks() -> Observable<Void>
     
 }

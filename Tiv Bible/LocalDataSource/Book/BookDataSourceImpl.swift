@@ -16,31 +16,35 @@ struct BookDataSourceImpl: IBookDataSource {
     let realm: Realm
     
     func getAllBooks() -> Observable<[Book]> {
-        return Observable.array(from: realm.objects(Book.self))
+        Observable.array(from: realm.objects(Book.self))
     }
     
     func getBooksByTestament(testamentId: String) -> Observable<[Book]> {
-        return Observable.array(from: realm.objects(Book.self).filter("testament.id = %@", testamentId))
+        Observable.array(from: realm.objects(Book.self).filter("testament.id = %@", testamentId))
     }
     
     func getBooksByVersion(versionId: String) -> Observable<[Book]> {
-        return Observable.array(from: realm.objects(Book.self).filter("version.id = %@", versionId))
+        Observable.array(from: realm.objects(Book.self).filter("version.id = %@", versionId))
     }
     
     func getBookByName(bookName: String) -> Observable<Book> {
-        return Observable.from(optional: realm.objects(Book.self).filter("name LIKE %@", bookName).first)
+        Observable.from(optional: realm.objects(Book.self).filter("name LIKE %@", bookName).first)
     }
     
     func getBooksByTestamentAndVersion(testamentId: String, versionId: String) -> Observable<[Book]> {
-        return Observable.array(from: realm.objects(Book.self).filter("testament.id = %@ AND version.id = %@", testamentId, versionId))
+        Observable.array(from: realm.objects(Book.self).filter("testament.id = %@ AND version.id = %@", testamentId, versionId))
     }
     
     func insertBooks(books: [Book]) -> Observable<Void> {
-        return realm.insertItems(items: books)
+        realm.insertItems(items: books)
     }
     
     func deleteBooks(books: [Book]) -> Observable<Void> {
-        return realm.deleteItems(items: books)
+        realm.deleteItems(items: books)
+    }
+    
+    func deleteAllBooks() -> Observable<Void> {
+        realm.deleteAllItems(for: Book.self)
     }
     
     
