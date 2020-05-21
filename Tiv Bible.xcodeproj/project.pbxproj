@@ -112,6 +112,12 @@
 		14121DCA247717D70073814F /* VersionDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DC9247717D70073814F /* VersionDataSourceImpl.swift */; };
 		14121DCD247719B90073814F /* IAudioSpeedRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DCC247719B90073814F /* IAudioSpeedRepo.swift */; };
 		14121DCF247719E20073814F /* AudioSpeedRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DCE247719E20073814F /* AudioSpeedRepoImpl.swift */; };
+		14121DD22477262C0073814F /* IBookRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DD12477262C0073814F /* IBookRepo.swift */; };
+		14121DD42477265F0073814F /* BookRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DD32477265F0073814F /* BookRepoImpl.swift */; };
+		14121DD72477271A0073814F /* IBookmarkRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DD62477271A0073814F /* IBookmarkRepo.swift */; };
+		14121DD92477274D0073814F /* BookmarkRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DD82477274D0073814F /* BookmarkRepoImpl.swift */; };
+		14121DDC24772ADF0073814F /* IChapterRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DDB24772ADF0073814F /* IChapterRepo.swift */; };
+		14121DDE24772B130073814F /* ChapterRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DDD24772B130073814F /* ChapterRepoImpl.swift */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
@@ -246,6 +252,12 @@
 		14121DC9247717D70073814F /* VersionDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionDataSourceImpl.swift; sourceTree = "<group>"; };
 		14121DCC247719B90073814F /* IAudioSpeedRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAudioSpeedRepo.swift; sourceTree = "<group>"; };
 		14121DCE247719E20073814F /* AudioSpeedRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSpeedRepoImpl.swift; sourceTree = "<group>"; };
+		14121DD12477262C0073814F /* IBookRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBookRepo.swift; sourceTree = "<group>"; };
+		14121DD32477265F0073814F /* BookRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepoImpl.swift; sourceTree = "<group>"; };
+		14121DD62477271A0073814F /* IBookmarkRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBookmarkRepo.swift; sourceTree = "<group>"; };
+		14121DD82477274D0073814F /* BookmarkRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkRepoImpl.swift; sourceTree = "<group>"; };
+		14121DDB24772ADF0073814F /* IChapterRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChapterRepo.swift; sourceTree = "<group>"; };
+		14121DDD24772B130073814F /* ChapterRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterRepoImpl.swift; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -372,6 +384,9 @@
 		14121C7D247464AD0073814F /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				14121DDA24772AC10073814F /* Chapter */,
+				14121DD52477270C0073814F /* Bookmark */,
+				14121DD0247726170073814F /* Book */,
 				14121DCB247719990073814F /* Audio Speed */,
 			);
 			path = Repository;
@@ -653,6 +668,33 @@
 				14121DCE247719E20073814F /* AudioSpeedRepoImpl.swift */,
 			);
 			path = "Audio Speed";
+			sourceTree = "<group>";
+		};
+		14121DD0247726170073814F /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				14121DD12477262C0073814F /* IBookRepo.swift */,
+				14121DD32477265F0073814F /* BookRepoImpl.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		14121DD52477270C0073814F /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				14121DD62477271A0073814F /* IBookmarkRepo.swift */,
+				14121DD82477274D0073814F /* BookmarkRepoImpl.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		14121DDA24772AC10073814F /* Chapter */ = {
+			isa = PBXGroup;
+			children = (
+				14121DDB24772ADF0073814F /* IChapterRepo.swift */,
+				14121DDD24772B130073814F /* ChapterRepoImpl.swift */,
+			);
+			path = Chapter;
 			sourceTree = "<group>";
 		};
 		14377BE7246DE213005B0795 = {
@@ -1070,12 +1112,14 @@
 				14121DC8247717B90073814F /* IVersionDataSource.swift in Sources */,
 				14121D5024746EC20073814F /* Base.swift in Sources */,
 				14121D54247479EC0073814F /* Testament.swift in Sources */,
+				14121DD72477271A0073814F /* IBookmarkRepo.swift in Sources */,
 				14121D52247471FF0073814F /* Version.swift in Sources */,
 				14121DB924770E6F0073814F /* ITestamentDataSource.swift in Sources */,
 				14121D982476CD110073814F /* HighlightColorDataSourceImpl.swift in Sources */,
 				14121DB12477091A0073814F /* RecentSearchDataSourceImpl.swift in Sources */,
 				14121D932476CBAF0073814F /* FontStyleDataSourceImpl.swift in Sources */,
 				14121D6324750F0D0073814F /* Date+Extensions.swift in Sources */,
+				14121DD92477274D0073814F /* BookmarkRepoImpl.swift in Sources */,
 				14121D6D2475247B0073814F /* Note.swift in Sources */,
 				14121D9D2476CE6D0073814F /* HighlightDataSourceImpl.swift in Sources */,
 				14121DBE247710F20073814F /* IThemeDataSource.swift in Sources */,
@@ -1086,10 +1130,12 @@
 				14121D87247683A60073814F /* IBookmarkDataSource.swift in Sources */,
 				14121D60247488060073814F /* Verse.swift in Sources */,
 				14121DB424770A1F0073814F /* ISettingDataSource.swift in Sources */,
+				14121DD42477265F0073814F /* BookRepoImpl.swift in Sources */,
 				14121D69247516520073814F /* HighlightColor.swift in Sources */,
 				14121D5624747A4D0073814F /* BaseName.swift in Sources */,
 				14121D65247515220073814F /* FontStyle.swift in Sources */,
 				14121D912476CAA20073814F /* IFontStyleDataSource.swift in Sources */,
+				14121DDE24772B130073814F /* ChapterRepoImpl.swift in Sources */,
 				14121DC32477128A0073814F /* IVerseDataSource.swift in Sources */,
 				14121DA72476D6E40073814F /* NoteDataSourceImpl.swift in Sources */,
 				14121D962476CD030073814F /* IHighlightColorDataSource.swift in Sources */,
@@ -1104,6 +1150,7 @@
 				14121D5C2474804E0073814F /* Bookmark.swift in Sources */,
 				14121DCF247719E20073814F /* AudioSpeedRepoImpl.swift in Sources */,
 				14121D7F2475E89A0073814F /* Rx+Extensions.swift in Sources */,
+				14121DDC24772ADF0073814F /* IChapterRepo.swift in Sources */,
 				14121DC0247711210073814F /* ThemeDataSourceImpl.swift in Sources */,
 				14121D7524752DBC0073814F /* Theme.swift in Sources */,
 				14121D5A24747BB20073814F /* Book.swift in Sources */,
@@ -1113,6 +1160,7 @@
 				14121D8E2476B0780073814F /* ChapterDataSourceImpl.swift in Sources */,
 				14121D5824747B6A0073814F /* AudioSpeed.swift in Sources */,
 				14121D8C2476AAF50073814F /* IChapterDataSource.swift in Sources */,
+				14121DD22477262C0073814F /* IBookRepo.swift in Sources */,
 				14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */,
 				14121DBB24770E950073814F /* TestamentDataSourceImpl.swift in Sources */,
 				14121D9B2476CE4E0073814F /* IHighlightDataSource.swift in Sources */,
