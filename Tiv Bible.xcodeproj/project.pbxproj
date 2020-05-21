@@ -82,6 +82,8 @@
 		14121D7F2475E89A0073814F /* Rx+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D7E2475E89A0073814F /* Rx+Extensions.swift */; };
 		14121D8224766EB60073814F /* IBookDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D8124766EB60073814F /* IBookDataSource.swift */; };
 		14121D842476700C0073814F /* BookDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D832476700C0073814F /* BookDataSourceImpl.swift */; };
+		14121D87247683A60073814F /* IBookmarkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D86247683A60073814F /* IBookmarkDataSource.swift */; };
+		14121D89247683D00073814F /* BookmarkDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D88247683D00073814F /* BookmarkDataSourceImpl.swift */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
@@ -186,6 +188,8 @@
 		14121D7E2475E89A0073814F /* Rx+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Extensions.swift"; sourceTree = "<group>"; };
 		14121D8124766EB60073814F /* IBookDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBookDataSource.swift; sourceTree = "<group>"; };
 		14121D832476700C0073814F /* BookDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121D86247683A60073814F /* IBookmarkDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBookmarkDataSource.swift; sourceTree = "<group>"; };
+		14121D88247683D00073814F /* BookmarkDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDataSourceImpl.swift; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 		14121C7B247464580073814F /* LocalDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				14121D85247683850073814F /* Bookmark */,
 				14121D8024766E890073814F /* Book */,
 				14121D782475B3E10073814F /* Audio Speed */,
 				14121D7D2475E87D0073814F /* Utils */,
@@ -443,6 +448,15 @@
 				14121D832476700C0073814F /* BookDataSourceImpl.swift */,
 			);
 			path = Book;
+			sourceTree = "<group>";
+		};
+		14121D85247683850073814F /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				14121D86247683A60073814F /* IBookmarkDataSource.swift */,
+				14121D88247683D00073814F /* BookmarkDataSourceImpl.swift */,
+			);
+			path = Bookmark;
 			sourceTree = "<group>";
 		};
 		14377BE7246DE213005B0795 = {
@@ -862,6 +876,7 @@
 				14121D842476700C0073814F /* BookDataSourceImpl.swift in Sources */,
 				14121D7C2475B43B0073814F /* AudioSpeedDataSourceImpl.swift in Sources */,
 				14121D672475154D0073814F /* Highlight.swift in Sources */,
+				14121D87247683A60073814F /* IBookmarkDataSource.swift in Sources */,
 				14121D60247488060073814F /* Verse.swift in Sources */,
 				14121D69247516520073814F /* HighlightColor.swift in Sources */,
 				14121D5624747A4D0073814F /* BaseName.swift in Sources */,
@@ -875,6 +890,7 @@
 				14121D7524752DBC0073814F /* Theme.swift in Sources */,
 				14121D5A24747BB20073814F /* Book.swift in Sources */,
 				14121D6F24752B9A0073814F /* Other.swift in Sources */,
+				14121D89247683D00073814F /* BookmarkDataSourceImpl.swift in Sources */,
 				14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */,
 				14121D5824747B6A0073814F /* AudioSpeed.swift in Sources */,
 				14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */,
