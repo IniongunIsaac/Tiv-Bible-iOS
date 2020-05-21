@@ -13,13 +13,10 @@ protocol IChapterDataSource {
     
     func getAllChapters() -> Observable<[Chapter]>
 
-    //@Query("select * from Chapter where id = :chapterId ")
     func getChapterById(chapterId: String) -> Observable<Chapter>
 
-    //@Query("select * from Chapter where book_id = :bookId ")
     func getChaptersByBook(bookId: String) -> Observable<[Chapter]>
 
-   // @Query("select * from Chapter where book_id = :bookId and chapter_number = :chapterNumber")
     func getChapterByBookAndChapterNumber(bookId: String, chapterNumber: Int) -> Observable<Chapter>
 
     func insertChapters(chapters: [Chapter]) -> Observable<Void>

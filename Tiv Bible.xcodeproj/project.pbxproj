@@ -86,6 +86,12 @@
 		14121D89247683D00073814F /* BookmarkDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D88247683D00073814F /* BookmarkDataSourceImpl.swift */; };
 		14121D8C2476AAF50073814F /* IChapterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D8B2476AAF50073814F /* IChapterDataSource.swift */; };
 		14121D8E2476B0780073814F /* ChapterDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D8D2476B0780073814F /* ChapterDataSourceImpl.swift */; };
+		14121D912476CAA20073814F /* IFontStyleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D902476CAA20073814F /* IFontStyleDataSource.swift */; };
+		14121D932476CBAF0073814F /* FontStyleDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D922476CBAF0073814F /* FontStyleDataSourceImpl.swift */; };
+		14121D962476CD030073814F /* IHighlightColorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D952476CD030073814F /* IHighlightColorDataSource.swift */; };
+		14121D982476CD110073814F /* HighlightColorDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D972476CD110073814F /* HighlightColorDataSourceImpl.swift */; };
+		14121D9B2476CE4E0073814F /* IHighlightDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D9A2476CE4E0073814F /* IHighlightDataSource.swift */; };
+		14121D9D2476CE6D0073814F /* HighlightDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D9C2476CE6D0073814F /* HighlightDataSourceImpl.swift */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
@@ -194,6 +200,12 @@
 		14121D88247683D00073814F /* BookmarkDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDataSourceImpl.swift; sourceTree = "<group>"; };
 		14121D8B2476AAF50073814F /* IChapterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChapterDataSource.swift; sourceTree = "<group>"; };
 		14121D8D2476B0780073814F /* ChapterDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121D902476CAA20073814F /* IFontStyleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFontStyleDataSource.swift; sourceTree = "<group>"; };
+		14121D922476CBAF0073814F /* FontStyleDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyleDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121D952476CD030073814F /* IHighlightColorDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHighlightColorDataSource.swift; sourceTree = "<group>"; };
+		14121D972476CD110073814F /* HighlightColorDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColorDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121D9A2476CE4E0073814F /* IHighlightDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHighlightDataSource.swift; sourceTree = "<group>"; };
+		14121D9C2476CE6D0073814F /* HighlightDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightDataSourceImpl.swift; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -289,6 +301,9 @@
 		14121C7B247464580073814F /* LocalDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				14121D992476CE340073814F /* Highlight */,
+				14121D942476CCE60073814F /* Highlight Color */,
+				14121D8F2476CA900073814F /* Font Style */,
 				14121D8A2476AAC00073814F /* Chapter */,
 				14121D85247683850073814F /* Bookmark */,
 				14121D8024766E890073814F /* Book */,
@@ -471,6 +486,33 @@
 				14121D8D2476B0780073814F /* ChapterDataSourceImpl.swift */,
 			);
 			path = Chapter;
+			sourceTree = "<group>";
+		};
+		14121D8F2476CA900073814F /* Font Style */ = {
+			isa = PBXGroup;
+			children = (
+				14121D902476CAA20073814F /* IFontStyleDataSource.swift */,
+				14121D922476CBAF0073814F /* FontStyleDataSourceImpl.swift */,
+			);
+			path = "Font Style";
+			sourceTree = "<group>";
+		};
+		14121D942476CCE60073814F /* Highlight Color */ = {
+			isa = PBXGroup;
+			children = (
+				14121D952476CD030073814F /* IHighlightColorDataSource.swift */,
+				14121D972476CD110073814F /* HighlightColorDataSourceImpl.swift */,
+			);
+			path = "Highlight Color";
+			sourceTree = "<group>";
+		};
+		14121D992476CE340073814F /* Highlight */ = {
+			isa = PBXGroup;
+			children = (
+				14121D9A2476CE4E0073814F /* IHighlightDataSource.swift */,
+				14121D9C2476CE6D0073814F /* HighlightDataSourceImpl.swift */,
+			);
+			path = Highlight;
 			sourceTree = "<group>";
 		};
 		14377BE7246DE213005B0795 = {
@@ -885,8 +927,11 @@
 				14121D5024746EC20073814F /* Base.swift in Sources */,
 				14121D54247479EC0073814F /* Testament.swift in Sources */,
 				14121D52247471FF0073814F /* Version.swift in Sources */,
+				14121D982476CD110073814F /* HighlightColorDataSourceImpl.swift in Sources */,
+				14121D932476CBAF0073814F /* FontStyleDataSourceImpl.swift in Sources */,
 				14121D6324750F0D0073814F /* Date+Extensions.swift in Sources */,
 				14121D6D2475247B0073814F /* Note.swift in Sources */,
+				14121D9D2476CE6D0073814F /* HighlightDataSourceImpl.swift in Sources */,
 				14121D842476700C0073814F /* BookDataSourceImpl.swift in Sources */,
 				14121D7C2475B43B0073814F /* AudioSpeedDataSourceImpl.swift in Sources */,
 				14121D672475154D0073814F /* Highlight.swift in Sources */,
@@ -895,6 +940,8 @@
 				14121D69247516520073814F /* HighlightColor.swift in Sources */,
 				14121D5624747A4D0073814F /* BaseName.swift in Sources */,
 				14121D65247515220073814F /* FontStyle.swift in Sources */,
+				14121D912476CAA20073814F /* IFontStyleDataSource.swift in Sources */,
+				14121D962476CD030073814F /* IHighlightColorDataSource.swift in Sources */,
 				14121D7324752C8E0073814F /* Setting.swift in Sources */,
 				14377BF8246DE214005B0795 /* ViewController.swift in Sources */,
 				14121D7A2475B41D0073814F /* IAudioSpeedDataSource.swift in Sources */,
@@ -910,6 +957,7 @@
 				14121D5824747B6A0073814F /* AudioSpeed.swift in Sources */,
 				14121D8C2476AAF50073814F /* IChapterDataSource.swift in Sources */,
 				14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */,
+				14121D9B2476CE4E0073814F /* IHighlightDataSource.swift in Sources */,
 				14121D7724752DE10073814F /* TivBibleData.swift in Sources */,
 				14121D5E247486600073814F /* Chapter.swift in Sources */,
 			);
