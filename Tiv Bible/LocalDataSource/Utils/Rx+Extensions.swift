@@ -18,7 +18,27 @@ extension Realm {
             do {
                 
                 try self.write {
+                    self.add(items, update: .modified)
                     self.add(items)
+                }
+                
+                observer.onNext(())
+                
+            } catch {
+                observer.onError(error)
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    func updateItems<T: Object>(items: [T]) -> Observable<Void> {
+        return Observable<Void>.create { observer in
+            
+            do {
+                
+                try self.write {
+                    self.add(items, update: .modified)
                 }
                 
                 observer.onNext(())

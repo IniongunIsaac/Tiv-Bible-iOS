@@ -96,6 +96,20 @@
 		14121DA22476D38E0073814F /* HistoryDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DA12476D38E0073814F /* HistoryDataSourceImpl.swift */; };
 		14121DA52476D6C50073814F /* INoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DA42476D6C50073814F /* INoteDataSource.swift */; };
 		14121DA72476D6E40073814F /* NoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DA62476D6E40073814F /* NoteDataSourceImpl.swift */; };
+		14121DAA2476FAF30073814F /* IOtherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DA92476FAF30073814F /* IOtherDataSource.swift */; };
+		14121DAC2476FB220073814F /* OtherDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DAB2476FB220073814F /* OtherDataSourceImpl.swift */; };
+		14121DAF247709020073814F /* IRecentSearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DAE247709020073814F /* IRecentSearchDataSource.swift */; };
+		14121DB12477091A0073814F /* RecentSearchDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DB02477091A0073814F /* RecentSearchDataSourceImpl.swift */; };
+		14121DB424770A1F0073814F /* ISettingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DB324770A1F0073814F /* ISettingDataSource.swift */; };
+		14121DB624770A3D0073814F /* SettingDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DB524770A3D0073814F /* SettingDataSourceImpl.swift */; };
+		14121DB924770E6F0073814F /* ITestamentDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DB824770E6F0073814F /* ITestamentDataSource.swift */; };
+		14121DBB24770E950073814F /* TestamentDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DBA24770E950073814F /* TestamentDataSourceImpl.swift */; };
+		14121DBE247710F20073814F /* IThemeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DBD247710F20073814F /* IThemeDataSource.swift */; };
+		14121DC0247711210073814F /* ThemeDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DBF247711210073814F /* ThemeDataSourceImpl.swift */; };
+		14121DC32477128A0073814F /* IVerseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DC22477128A0073814F /* IVerseDataSource.swift */; };
+		14121DC5247712A40073814F /* VerseDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DC4247712A40073814F /* VerseDataSourceImpl.swift */; };
+		14121DC8247717B90073814F /* IVersionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DC7247717B90073814F /* IVersionDataSource.swift */; };
+		14121DCA247717D70073814F /* VersionDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DC9247717D70073814F /* VersionDataSourceImpl.swift */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
@@ -214,6 +228,20 @@
 		14121DA12476D38E0073814F /* HistoryDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDataSourceImpl.swift; sourceTree = "<group>"; };
 		14121DA42476D6C50073814F /* INoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INoteDataSource.swift; sourceTree = "<group>"; };
 		14121DA62476D6E40073814F /* NoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121DA92476FAF30073814F /* IOtherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOtherDataSource.swift; sourceTree = "<group>"; };
+		14121DAB2476FB220073814F /* OtherDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121DAE247709020073814F /* IRecentSearchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRecentSearchDataSource.swift; sourceTree = "<group>"; };
+		14121DB02477091A0073814F /* RecentSearchDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121DB324770A1F0073814F /* ISettingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISettingDataSource.swift; sourceTree = "<group>"; };
+		14121DB524770A3D0073814F /* SettingDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121DB824770E6F0073814F /* ITestamentDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITestamentDataSource.swift; sourceTree = "<group>"; };
+		14121DBA24770E950073814F /* TestamentDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestamentDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121DBD247710F20073814F /* IThemeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IThemeDataSource.swift; sourceTree = "<group>"; };
+		14121DBF247711210073814F /* ThemeDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121DC22477128A0073814F /* IVerseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVerseDataSource.swift; sourceTree = "<group>"; };
+		14121DC4247712A40073814F /* VerseDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121DC7247717B90073814F /* IVersionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVersionDataSource.swift; sourceTree = "<group>"; };
+		14121DC9247717D70073814F /* VersionDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionDataSourceImpl.swift; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -309,6 +337,13 @@
 		14121C7B247464580073814F /* LocalDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				14121DC6247717A40073814F /* Version */,
+				14121DC1247712740073814F /* Verse */,
+				14121DBC247710E00073814F /* Theme */,
+				14121DB724770E5F0073814F /* Testament */,
+				14121DB224770A040073814F /* Setting */,
+				14121DAD247708E90073814F /* RecentSearch */,
+				14121DA82476FADF0073814F /* Other */,
 				14121DA32476D6B10073814F /* Note */,
 				14121D9E2476D2E20073814F /* History */,
 				14121D992476CE340073814F /* Highlight */,
@@ -541,6 +576,69 @@
 				14121DA62476D6E40073814F /* NoteDataSourceImpl.swift */,
 			);
 			path = Note;
+			sourceTree = "<group>";
+		};
+		14121DA82476FADF0073814F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				14121DA92476FAF30073814F /* IOtherDataSource.swift */,
+				14121DAB2476FB220073814F /* OtherDataSourceImpl.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		14121DAD247708E90073814F /* RecentSearch */ = {
+			isa = PBXGroup;
+			children = (
+				14121DAE247709020073814F /* IRecentSearchDataSource.swift */,
+				14121DB02477091A0073814F /* RecentSearchDataSourceImpl.swift */,
+			);
+			path = RecentSearch;
+			sourceTree = "<group>";
+		};
+		14121DB224770A040073814F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				14121DB324770A1F0073814F /* ISettingDataSource.swift */,
+				14121DB524770A3D0073814F /* SettingDataSourceImpl.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		14121DB724770E5F0073814F /* Testament */ = {
+			isa = PBXGroup;
+			children = (
+				14121DB824770E6F0073814F /* ITestamentDataSource.swift */,
+				14121DBA24770E950073814F /* TestamentDataSourceImpl.swift */,
+			);
+			path = Testament;
+			sourceTree = "<group>";
+		};
+		14121DBC247710E00073814F /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				14121DBD247710F20073814F /* IThemeDataSource.swift */,
+				14121DBF247711210073814F /* ThemeDataSourceImpl.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		14121DC1247712740073814F /* Verse */ = {
+			isa = PBXGroup;
+			children = (
+				14121DC22477128A0073814F /* IVerseDataSource.swift */,
+				14121DC4247712A40073814F /* VerseDataSourceImpl.swift */,
+			);
+			path = Verse;
+			sourceTree = "<group>";
+		};
+		14121DC6247717A40073814F /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				14121DC7247717B90073814F /* IVersionDataSource.swift */,
+				14121DC9247717D70073814F /* VersionDataSourceImpl.swift */,
+			);
+			path = Version;
 			sourceTree = "<group>";
 		};
 		14377BE7246DE213005B0795 = {
@@ -951,34 +1049,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				14121D8224766EB60073814F /* IBookDataSource.swift in Sources */,
+				14121DCA247717D70073814F /* VersionDataSourceImpl.swift in Sources */,
+				14121DB624770A3D0073814F /* SettingDataSourceImpl.swift in Sources */,
 				14121D6B247517110073814F /* History.swift in Sources */,
+				14121DC8247717B90073814F /* IVersionDataSource.swift in Sources */,
 				14121D5024746EC20073814F /* Base.swift in Sources */,
 				14121D54247479EC0073814F /* Testament.swift in Sources */,
 				14121D52247471FF0073814F /* Version.swift in Sources */,
+				14121DB924770E6F0073814F /* ITestamentDataSource.swift in Sources */,
 				14121D982476CD110073814F /* HighlightColorDataSourceImpl.swift in Sources */,
+				14121DB12477091A0073814F /* RecentSearchDataSourceImpl.swift in Sources */,
 				14121D932476CBAF0073814F /* FontStyleDataSourceImpl.swift in Sources */,
 				14121D6324750F0D0073814F /* Date+Extensions.swift in Sources */,
 				14121D6D2475247B0073814F /* Note.swift in Sources */,
 				14121D9D2476CE6D0073814F /* HighlightDataSourceImpl.swift in Sources */,
+				14121DBE247710F20073814F /* IThemeDataSource.swift in Sources */,
 				14121D842476700C0073814F /* BookDataSourceImpl.swift in Sources */,
 				14121D7C2475B43B0073814F /* AudioSpeedDataSourceImpl.swift in Sources */,
 				14121D672475154D0073814F /* Highlight.swift in Sources */,
 				14121DA22476D38E0073814F /* HistoryDataSourceImpl.swift in Sources */,
 				14121D87247683A60073814F /* IBookmarkDataSource.swift in Sources */,
 				14121D60247488060073814F /* Verse.swift in Sources */,
+				14121DB424770A1F0073814F /* ISettingDataSource.swift in Sources */,
 				14121D69247516520073814F /* HighlightColor.swift in Sources */,
 				14121D5624747A4D0073814F /* BaseName.swift in Sources */,
 				14121D65247515220073814F /* FontStyle.swift in Sources */,
 				14121D912476CAA20073814F /* IFontStyleDataSource.swift in Sources */,
+				14121DC32477128A0073814F /* IVerseDataSource.swift in Sources */,
 				14121DA72476D6E40073814F /* NoteDataSourceImpl.swift in Sources */,
 				14121D962476CD030073814F /* IHighlightColorDataSource.swift in Sources */,
 				14121DA52476D6C50073814F /* INoteDataSource.swift in Sources */,
+				14121DAC2476FB220073814F /* OtherDataSourceImpl.swift in Sources */,
 				14121D7324752C8E0073814F /* Setting.swift in Sources */,
 				14377BF8246DE214005B0795 /* ViewController.swift in Sources */,
 				14121D7A2475B41D0073814F /* IAudioSpeedDataSource.swift in Sources */,
+				14121DAF247709020073814F /* IRecentSearchDataSource.swift in Sources */,
+				14121DC5247712A40073814F /* VerseDataSourceImpl.swift in Sources */,
 				14121D7124752C3A0073814F /* RecentSearch.swift in Sources */,
 				14121D5C2474804E0073814F /* Bookmark.swift in Sources */,
 				14121D7F2475E89A0073814F /* Rx+Extensions.swift in Sources */,
+				14121DC0247711210073814F /* ThemeDataSourceImpl.swift in Sources */,
 				14121D7524752DBC0073814F /* Theme.swift in Sources */,
 				14121D5A24747BB20073814F /* Book.swift in Sources */,
 				14121D6F24752B9A0073814F /* Other.swift in Sources */,
@@ -988,8 +1098,10 @@
 				14121D5824747B6A0073814F /* AudioSpeed.swift in Sources */,
 				14121D8C2476AAF50073814F /* IChapterDataSource.swift in Sources */,
 				14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */,
+				14121DBB24770E950073814F /* TestamentDataSourceImpl.swift in Sources */,
 				14121D9B2476CE4E0073814F /* IHighlightDataSource.swift in Sources */,
 				14121D7724752DE10073814F /* TivBibleData.swift in Sources */,
+				14121DAA2476FAF30073814F /* IOtherDataSource.swift in Sources */,
 				14121DA02476D36E0073814F /* IHistoryDataSource.swift in Sources */,
 				14121D5E247486600073814F /* Chapter.swift in Sources */,
 			);
