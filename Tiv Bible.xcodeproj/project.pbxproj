@@ -118,6 +118,30 @@
 		14121DD92477274D0073814F /* BookmarkRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DD82477274D0073814F /* BookmarkRepoImpl.swift */; };
 		14121DDC24772ADF0073814F /* IChapterRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DDB24772ADF0073814F /* IChapterRepo.swift */; };
 		14121DDE24772B130073814F /* ChapterRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DDD24772B130073814F /* ChapterRepoImpl.swift */; };
+		14121DE124772C900073814F /* IFontStyleRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DE024772C900073814F /* IFontStyleRepo.swift */; };
+		14121DE324772CBE0073814F /* FontStyleRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DE224772CBE0073814F /* FontStyleRepoImpl.swift */; };
+		14121DE624772D910073814F /* IHighlightColorRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DE524772D910073814F /* IHighlightColorRepo.swift */; };
+		14121DE824772DBF0073814F /* HighlightColorRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DE724772DBF0073814F /* HighlightColorRepoImpl.swift */; };
+		14121DEB24772E5A0073814F /* IHighlightRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DEA24772E5A0073814F /* IHighlightRepo.swift */; };
+		14121DED24772E8A0073814F /* HighlightRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DEC24772E8A0073814F /* HighlightRepoImpl.swift */; };
+		14121DF0247731670073814F /* IHistoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DEF247731670073814F /* IHistoryRepo.swift */; };
+		14121DF2247731A10073814F /* HistoryRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DF1247731A10073814F /* HistoryRepoImpl.swift */; };
+		14121DF5247732AD0073814F /* INoteRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DF4247732AD0073814F /* INoteRepo.swift */; };
+		14121DF7247732D70073814F /* NoteRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DF6247732D70073814F /* NoteRepoImpl.swift */; };
+		14121DFA2477335C0073814F /* IOtherRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DF92477335C0073814F /* IOtherRepo.swift */; };
+		14121DFC247733870073814F /* OtherRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DFB247733870073814F /* OtherRepoImpl.swift */; };
+		14121DFF247734010073814F /* IRecentSearchRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DFE247734010073814F /* IRecentSearchRepo.swift */; };
+		14121E01247734270073814F /* RecentSearchRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E00247734270073814F /* RecentSearchRepoImpl.swift */; };
+		14121E04247734CF0073814F /* ISettingRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E03247734CF0073814F /* ISettingRepo.swift */; };
+		14121E06247735030073814F /* SettingRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E05247735030073814F /* SettingRepoImpl.swift */; };
+		14121E09247735A30073814F /* ITestamentRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E08247735A30073814F /* ITestamentRepo.swift */; };
+		14121E0B247735CF0073814F /* TestamentRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E0A247735CF0073814F /* TestamentRepoImpl.swift */; };
+		14121E0E2477364F0073814F /* IThemeRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E0D2477364F0073814F /* IThemeRepo.swift */; };
+		14121E10247736830073814F /* ThemeRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E0F247736830073814F /* ThemeRepoImpl.swift */; };
+		14121E13247736F50073814F /* IVerseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E12247736F50073814F /* IVerseRepo.swift */; };
+		14121E152477371A0073814F /* VerseRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E142477371A0073814F /* VerseRepoImpl.swift */; };
+		14121E18247737BA0073814F /* IVersionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E17247737BA0073814F /* IVersionRepo.swift */; };
+		14121E1A247737E30073814F /* VersionRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E19247737E30073814F /* VersionRepoImpl.swift */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
@@ -258,6 +282,30 @@
 		14121DD82477274D0073814F /* BookmarkRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkRepoImpl.swift; sourceTree = "<group>"; };
 		14121DDB24772ADF0073814F /* IChapterRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChapterRepo.swift; sourceTree = "<group>"; };
 		14121DDD24772B130073814F /* ChapterRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterRepoImpl.swift; sourceTree = "<group>"; };
+		14121DE024772C900073814F /* IFontStyleRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFontStyleRepo.swift; sourceTree = "<group>"; };
+		14121DE224772CBE0073814F /* FontStyleRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyleRepoImpl.swift; sourceTree = "<group>"; };
+		14121DE524772D910073814F /* IHighlightColorRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHighlightColorRepo.swift; sourceTree = "<group>"; };
+		14121DE724772DBF0073814F /* HighlightColorRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColorRepoImpl.swift; sourceTree = "<group>"; };
+		14121DEA24772E5A0073814F /* IHighlightRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHighlightRepo.swift; sourceTree = "<group>"; };
+		14121DEC24772E8A0073814F /* HighlightRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightRepoImpl.swift; sourceTree = "<group>"; };
+		14121DEF247731670073814F /* IHistoryRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHistoryRepo.swift; sourceTree = "<group>"; };
+		14121DF1247731A10073814F /* HistoryRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRepoImpl.swift; sourceTree = "<group>"; };
+		14121DF4247732AD0073814F /* INoteRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INoteRepo.swift; sourceTree = "<group>"; };
+		14121DF6247732D70073814F /* NoteRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepoImpl.swift; sourceTree = "<group>"; };
+		14121DF92477335C0073814F /* IOtherRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOtherRepo.swift; sourceTree = "<group>"; };
+		14121DFB247733870073814F /* OtherRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherRepoImpl.swift; sourceTree = "<group>"; };
+		14121DFE247734010073814F /* IRecentSearchRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRecentSearchRepo.swift; sourceTree = "<group>"; };
+		14121E00247734270073814F /* RecentSearchRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchRepoImpl.swift; sourceTree = "<group>"; };
+		14121E03247734CF0073814F /* ISettingRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISettingRepo.swift; sourceTree = "<group>"; };
+		14121E05247735030073814F /* SettingRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepoImpl.swift; sourceTree = "<group>"; };
+		14121E08247735A30073814F /* ITestamentRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITestamentRepo.swift; sourceTree = "<group>"; };
+		14121E0A247735CF0073814F /* TestamentRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestamentRepoImpl.swift; sourceTree = "<group>"; };
+		14121E0D2477364F0073814F /* IThemeRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IThemeRepo.swift; sourceTree = "<group>"; };
+		14121E0F247736830073814F /* ThemeRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeRepoImpl.swift; sourceTree = "<group>"; };
+		14121E12247736F50073814F /* IVerseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVerseRepo.swift; sourceTree = "<group>"; };
+		14121E142477371A0073814F /* VerseRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseRepoImpl.swift; sourceTree = "<group>"; };
+		14121E17247737BA0073814F /* IVersionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVersionRepo.swift; sourceTree = "<group>"; };
+		14121E19247737E30073814F /* VersionRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionRepoImpl.swift; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -384,6 +432,18 @@
 		14121C7D247464AD0073814F /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				14121E16247737AC0073814F /* Version */,
+				14121E11247736E80073814F /* Verse */,
+				14121E0C247736420073814F /* Theme */,
+				14121E07247735920073814F /* Testament */,
+				14121E02247734C10073814F /* Setting */,
+				14121DFD247733EC0073814F /* Recent Search */,
+				14121DF82477334F0073814F /* Other */,
+				14121DF32477329C0073814F /* Note */,
+				14121DEE247731480073814F /* History */,
+				14121DE924772E4B0073814F /* Highlight */,
+				14121DE424772D810073814F /* Highlight Color */,
+				14121DDF24772C790073814F /* Font Style */,
 				14121DDA24772AC10073814F /* Chapter */,
 				14121DD52477270C0073814F /* Bookmark */,
 				14121DD0247726170073814F /* Book */,
@@ -695,6 +755,114 @@
 				14121DDD24772B130073814F /* ChapterRepoImpl.swift */,
 			);
 			path = Chapter;
+			sourceTree = "<group>";
+		};
+		14121DDF24772C790073814F /* Font Style */ = {
+			isa = PBXGroup;
+			children = (
+				14121DE024772C900073814F /* IFontStyleRepo.swift */,
+				14121DE224772CBE0073814F /* FontStyleRepoImpl.swift */,
+			);
+			path = "Font Style";
+			sourceTree = "<group>";
+		};
+		14121DE424772D810073814F /* Highlight Color */ = {
+			isa = PBXGroup;
+			children = (
+				14121DE524772D910073814F /* IHighlightColorRepo.swift */,
+				14121DE724772DBF0073814F /* HighlightColorRepoImpl.swift */,
+			);
+			path = "Highlight Color";
+			sourceTree = "<group>";
+		};
+		14121DE924772E4B0073814F /* Highlight */ = {
+			isa = PBXGroup;
+			children = (
+				14121DEA24772E5A0073814F /* IHighlightRepo.swift */,
+				14121DEC24772E8A0073814F /* HighlightRepoImpl.swift */,
+			);
+			path = Highlight;
+			sourceTree = "<group>";
+		};
+		14121DEE247731480073814F /* History */ = {
+			isa = PBXGroup;
+			children = (
+				14121DEF247731670073814F /* IHistoryRepo.swift */,
+				14121DF1247731A10073814F /* HistoryRepoImpl.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		14121DF32477329C0073814F /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				14121DF4247732AD0073814F /* INoteRepo.swift */,
+				14121DF6247732D70073814F /* NoteRepoImpl.swift */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		14121DF82477334F0073814F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				14121DF92477335C0073814F /* IOtherRepo.swift */,
+				14121DFB247733870073814F /* OtherRepoImpl.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		14121DFD247733EC0073814F /* Recent Search */ = {
+			isa = PBXGroup;
+			children = (
+				14121DFE247734010073814F /* IRecentSearchRepo.swift */,
+				14121E00247734270073814F /* RecentSearchRepoImpl.swift */,
+			);
+			path = "Recent Search";
+			sourceTree = "<group>";
+		};
+		14121E02247734C10073814F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				14121E03247734CF0073814F /* ISettingRepo.swift */,
+				14121E05247735030073814F /* SettingRepoImpl.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		14121E07247735920073814F /* Testament */ = {
+			isa = PBXGroup;
+			children = (
+				14121E08247735A30073814F /* ITestamentRepo.swift */,
+				14121E0A247735CF0073814F /* TestamentRepoImpl.swift */,
+			);
+			path = Testament;
+			sourceTree = "<group>";
+		};
+		14121E0C247736420073814F /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				14121E0D2477364F0073814F /* IThemeRepo.swift */,
+				14121E0F247736830073814F /* ThemeRepoImpl.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		14121E11247736E80073814F /* Verse */ = {
+			isa = PBXGroup;
+			children = (
+				14121E12247736F50073814F /* IVerseRepo.swift */,
+				14121E142477371A0073814F /* VerseRepoImpl.swift */,
+			);
+			path = Verse;
+			sourceTree = "<group>";
+		};
+		14121E16247737AC0073814F /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				14121E17247737BA0073814F /* IVersionRepo.swift */,
+				14121E19247737E30073814F /* VersionRepoImpl.swift */,
+			);
+			path = Version;
 			sourceTree = "<group>";
 		};
 		14377BE7246DE213005B0795 = {
@@ -1106,8 +1274,10 @@
 			files = (
 				14121D8224766EB60073814F /* IBookDataSource.swift in Sources */,
 				14121DCA247717D70073814F /* VersionDataSourceImpl.swift in Sources */,
+				14121E01247734270073814F /* RecentSearchRepoImpl.swift in Sources */,
 				14121DB624770A3D0073814F /* SettingDataSourceImpl.swift in Sources */,
 				14121DCD247719B90073814F /* IAudioSpeedRepo.swift in Sources */,
+				14121DF0247731670073814F /* IHistoryRepo.swift in Sources */,
 				14121D6B247517110073814F /* History.swift in Sources */,
 				14121DC8247717B90073814F /* IVersionDataSource.swift in Sources */,
 				14121D5024746EC20073814F /* Base.swift in Sources */,
@@ -1116,18 +1286,26 @@
 				14121D52247471FF0073814F /* Version.swift in Sources */,
 				14121DB924770E6F0073814F /* ITestamentDataSource.swift in Sources */,
 				14121D982476CD110073814F /* HighlightColorDataSourceImpl.swift in Sources */,
+				14121DEB24772E5A0073814F /* IHighlightRepo.swift in Sources */,
 				14121DB12477091A0073814F /* RecentSearchDataSourceImpl.swift in Sources */,
+				14121DF7247732D70073814F /* NoteRepoImpl.swift in Sources */,
+				14121DE124772C900073814F /* IFontStyleRepo.swift in Sources */,
 				14121D932476CBAF0073814F /* FontStyleDataSourceImpl.swift in Sources */,
 				14121D6324750F0D0073814F /* Date+Extensions.swift in Sources */,
 				14121DD92477274D0073814F /* BookmarkRepoImpl.swift in Sources */,
 				14121D6D2475247B0073814F /* Note.swift in Sources */,
+				14121E06247735030073814F /* SettingRepoImpl.swift in Sources */,
+				14121E0B247735CF0073814F /* TestamentRepoImpl.swift in Sources */,
 				14121D9D2476CE6D0073814F /* HighlightDataSourceImpl.swift in Sources */,
 				14121DBE247710F20073814F /* IThemeDataSource.swift in Sources */,
 				14121D842476700C0073814F /* BookDataSourceImpl.swift in Sources */,
 				14121D7C2475B43B0073814F /* AudioSpeedDataSourceImpl.swift in Sources */,
 				14121D672475154D0073814F /* Highlight.swift in Sources */,
 				14121DA22476D38E0073814F /* HistoryDataSourceImpl.swift in Sources */,
+				14121E1A247737E30073814F /* VersionRepoImpl.swift in Sources */,
+				14121DF2247731A10073814F /* HistoryRepoImpl.swift in Sources */,
 				14121D87247683A60073814F /* IBookmarkDataSource.swift in Sources */,
+				14121DFA2477335C0073814F /* IOtherRepo.swift in Sources */,
 				14121D60247488060073814F /* Verse.swift in Sources */,
 				14121DB424770A1F0073814F /* ISettingDataSource.swift in Sources */,
 				14121DD42477265F0073814F /* BookRepoImpl.swift in Sources */,
@@ -1136,37 +1314,51 @@
 				14121D65247515220073814F /* FontStyle.swift in Sources */,
 				14121D912476CAA20073814F /* IFontStyleDataSource.swift in Sources */,
 				14121DDE24772B130073814F /* ChapterRepoImpl.swift in Sources */,
+				14121E10247736830073814F /* ThemeRepoImpl.swift in Sources */,
 				14121DC32477128A0073814F /* IVerseDataSource.swift in Sources */,
 				14121DA72476D6E40073814F /* NoteDataSourceImpl.swift in Sources */,
 				14121D962476CD030073814F /* IHighlightColorDataSource.swift in Sources */,
+				14121E0E2477364F0073814F /* IThemeRepo.swift in Sources */,
 				14121DA52476D6C50073814F /* INoteDataSource.swift in Sources */,
 				14121DAC2476FB220073814F /* OtherDataSourceImpl.swift in Sources */,
 				14121D7324752C8E0073814F /* Setting.swift in Sources */,
 				14377BF8246DE214005B0795 /* ViewController.swift in Sources */,
 				14121D7A2475B41D0073814F /* IAudioSpeedDataSource.swift in Sources */,
+				14121E152477371A0073814F /* VerseRepoImpl.swift in Sources */,
 				14121DAF247709020073814F /* IRecentSearchDataSource.swift in Sources */,
 				14121DC5247712A40073814F /* VerseDataSourceImpl.swift in Sources */,
 				14121D7124752C3A0073814F /* RecentSearch.swift in Sources */,
+				14121DFF247734010073814F /* IRecentSearchRepo.swift in Sources */,
+				14121E18247737BA0073814F /* IVersionRepo.swift in Sources */,
+				14121E09247735A30073814F /* ITestamentRepo.swift in Sources */,
 				14121D5C2474804E0073814F /* Bookmark.swift in Sources */,
 				14121DCF247719E20073814F /* AudioSpeedRepoImpl.swift in Sources */,
+				14121DE824772DBF0073814F /* HighlightColorRepoImpl.swift in Sources */,
 				14121D7F2475E89A0073814F /* Rx+Extensions.swift in Sources */,
 				14121DDC24772ADF0073814F /* IChapterRepo.swift in Sources */,
 				14121DC0247711210073814F /* ThemeDataSourceImpl.swift in Sources */,
+				14121E04247734CF0073814F /* ISettingRepo.swift in Sources */,
 				14121D7524752DBC0073814F /* Theme.swift in Sources */,
+				14121DF5247732AD0073814F /* INoteRepo.swift in Sources */,
+				14121DED24772E8A0073814F /* HighlightRepoImpl.swift in Sources */,
 				14121D5A24747BB20073814F /* Book.swift in Sources */,
 				14121D6F24752B9A0073814F /* Other.swift in Sources */,
 				14121D89247683D00073814F /* BookmarkDataSourceImpl.swift in Sources */,
 				14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */,
 				14121D8E2476B0780073814F /* ChapterDataSourceImpl.swift in Sources */,
 				14121D5824747B6A0073814F /* AudioSpeed.swift in Sources */,
+				14121DFC247733870073814F /* OtherRepoImpl.swift in Sources */,
+				14121DE324772CBE0073814F /* FontStyleRepoImpl.swift in Sources */,
 				14121D8C2476AAF50073814F /* IChapterDataSource.swift in Sources */,
 				14121DD22477262C0073814F /* IBookRepo.swift in Sources */,
 				14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */,
 				14121DBB24770E950073814F /* TestamentDataSourceImpl.swift in Sources */,
 				14121D9B2476CE4E0073814F /* IHighlightDataSource.swift in Sources */,
+				14121E13247736F50073814F /* IVerseRepo.swift in Sources */,
 				14121D7724752DE10073814F /* TivBibleData.swift in Sources */,
 				14121DAA2476FAF30073814F /* IOtherDataSource.swift in Sources */,
 				14121DA02476D36E0073814F /* IHistoryDataSource.swift in Sources */,
+				14121DE624772D910073814F /* IHighlightColorRepo.swift in Sources */,
 				14121D5E247486600073814F /* Chapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  IOtherDataSource.swift
+//  IOtherRepo.swift
 //  Tiv Bible
 //
 //  Created by Isaac Iniongun on 21/05/2020.
@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol IOtherDataSource {
+protocol IOtherRepo {
     
     func getAllOthers() -> Observable<[Other]>
 
