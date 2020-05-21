@@ -92,6 +92,10 @@
 		14121D982476CD110073814F /* HighlightColorDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D972476CD110073814F /* HighlightColorDataSourceImpl.swift */; };
 		14121D9B2476CE4E0073814F /* IHighlightDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D9A2476CE4E0073814F /* IHighlightDataSource.swift */; };
 		14121D9D2476CE6D0073814F /* HighlightDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D9C2476CE6D0073814F /* HighlightDataSourceImpl.swift */; };
+		14121DA02476D36E0073814F /* IHistoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121D9F2476D36E0073814F /* IHistoryDataSource.swift */; };
+		14121DA22476D38E0073814F /* HistoryDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DA12476D38E0073814F /* HistoryDataSourceImpl.swift */; };
+		14121DA52476D6C50073814F /* INoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DA42476D6C50073814F /* INoteDataSource.swift */; };
+		14121DA72476D6E40073814F /* NoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121DA62476D6E40073814F /* NoteDataSourceImpl.swift */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
@@ -206,6 +210,10 @@
 		14121D972476CD110073814F /* HighlightColorDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColorDataSourceImpl.swift; sourceTree = "<group>"; };
 		14121D9A2476CE4E0073814F /* IHighlightDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHighlightDataSource.swift; sourceTree = "<group>"; };
 		14121D9C2476CE6D0073814F /* HighlightDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121D9F2476D36E0073814F /* IHistoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHistoryDataSource.swift; sourceTree = "<group>"; };
+		14121DA12476D38E0073814F /* HistoryDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDataSourceImpl.swift; sourceTree = "<group>"; };
+		14121DA42476D6C50073814F /* INoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INoteDataSource.swift; sourceTree = "<group>"; };
+		14121DA62476D6E40073814F /* NoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDataSourceImpl.swift; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -301,6 +309,8 @@
 		14121C7B247464580073814F /* LocalDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				14121DA32476D6B10073814F /* Note */,
+				14121D9E2476D2E20073814F /* History */,
 				14121D992476CE340073814F /* Highlight */,
 				14121D942476CCE60073814F /* Highlight Color */,
 				14121D8F2476CA900073814F /* Font Style */,
@@ -513,6 +523,24 @@
 				14121D9C2476CE6D0073814F /* HighlightDataSourceImpl.swift */,
 			);
 			path = Highlight;
+			sourceTree = "<group>";
+		};
+		14121D9E2476D2E20073814F /* History */ = {
+			isa = PBXGroup;
+			children = (
+				14121D9F2476D36E0073814F /* IHistoryDataSource.swift */,
+				14121DA12476D38E0073814F /* HistoryDataSourceImpl.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		14121DA32476D6B10073814F /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				14121DA42476D6C50073814F /* INoteDataSource.swift */,
+				14121DA62476D6E40073814F /* NoteDataSourceImpl.swift */,
+			);
+			path = Note;
 			sourceTree = "<group>";
 		};
 		14377BE7246DE213005B0795 = {
@@ -935,13 +963,16 @@
 				14121D842476700C0073814F /* BookDataSourceImpl.swift in Sources */,
 				14121D7C2475B43B0073814F /* AudioSpeedDataSourceImpl.swift in Sources */,
 				14121D672475154D0073814F /* Highlight.swift in Sources */,
+				14121DA22476D38E0073814F /* HistoryDataSourceImpl.swift in Sources */,
 				14121D87247683A60073814F /* IBookmarkDataSource.swift in Sources */,
 				14121D60247488060073814F /* Verse.swift in Sources */,
 				14121D69247516520073814F /* HighlightColor.swift in Sources */,
 				14121D5624747A4D0073814F /* BaseName.swift in Sources */,
 				14121D65247515220073814F /* FontStyle.swift in Sources */,
 				14121D912476CAA20073814F /* IFontStyleDataSource.swift in Sources */,
+				14121DA72476D6E40073814F /* NoteDataSourceImpl.swift in Sources */,
 				14121D962476CD030073814F /* IHighlightColorDataSource.swift in Sources */,
+				14121DA52476D6C50073814F /* INoteDataSource.swift in Sources */,
 				14121D7324752C8E0073814F /* Setting.swift in Sources */,
 				14377BF8246DE214005B0795 /* ViewController.swift in Sources */,
 				14121D7A2475B41D0073814F /* IAudioSpeedDataSource.swift in Sources */,
@@ -959,6 +990,7 @@
 				14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */,
 				14121D9B2476CE4E0073814F /* IHighlightDataSource.swift in Sources */,
 				14121D7724752DE10073814F /* TivBibleData.swift in Sources */,
+				14121DA02476D36E0073814F /* IHistoryDataSource.swift in Sources */,
 				14121D5E247486600073814F /* Chapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
