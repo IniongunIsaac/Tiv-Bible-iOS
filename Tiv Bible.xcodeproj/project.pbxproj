@@ -147,6 +147,9 @@
 		14121E2024788F360073814F /* PreferenceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E1F24788F360073814F /* PreferenceConstants.swift */; };
 		14121E2324792A310073814F /* IPreferenceRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2224792A310073814F /* IPreferenceRepo.swift */; };
 		14121E2524792A5B0073814F /* PreferenceRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2424792A5B0073814F /* PreferenceRepoImpl.swift */; };
+		14121E2724792BDD0073814F /* SwinjectDependencyGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2624792BDD0073814F /* SwinjectDependencyGraph.swift */; };
+		14121E2924792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2824792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift */; };
+		14121E2B24792F320073814F /* RepositoryDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2A24792F320073814F /* RepositoryDependencyInjectionGraph.swift */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
@@ -316,6 +319,9 @@
 		14121E1F24788F360073814F /* PreferenceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceConstants.swift; sourceTree = "<group>"; };
 		14121E2224792A310073814F /* IPreferenceRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPreferenceRepo.swift; sourceTree = "<group>"; };
 		14121E2424792A5B0073814F /* PreferenceRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceRepoImpl.swift; sourceTree = "<group>"; };
+		14121E2624792BDD0073814F /* SwinjectDependencyGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectDependencyGraph.swift; sourceTree = "<group>"; };
+		14121E2824792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceDependencyInjectionGraph.swift; sourceTree = "<group>"; };
+		14121E2A24792F320073814F /* RepositoryDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDependencyInjectionGraph.swift; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -479,6 +485,9 @@
 		14121C7F247464F10073814F /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				14121E2624792BDD0073814F /* SwinjectDependencyGraph.swift */,
+				14121E2824792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift */,
+				14121E2A24792F320073814F /* RepositoryDependencyInjectionGraph.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -1298,6 +1307,7 @@
 				14121D8224766EB60073814F /* IBookDataSource.swift in Sources */,
 				14121DCA247717D70073814F /* VersionDataSourceImpl.swift in Sources */,
 				14121E1C24788F0D0073814F /* IPreference.swift in Sources */,
+				14121E2924792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift in Sources */,
 				14121E01247734270073814F /* RecentSearchRepoImpl.swift in Sources */,
 				14121DB624770A3D0073814F /* SettingDataSourceImpl.swift in Sources */,
 				14121DCD247719B90073814F /* IAudioSpeedRepo.swift in Sources */,
@@ -1309,6 +1319,7 @@
 				14121DD72477271A0073814F /* IBookmarkRepo.swift in Sources */,
 				14121D52247471FF0073814F /* Version.swift in Sources */,
 				14121DB924770E6F0073814F /* ITestamentDataSource.swift in Sources */,
+				14121E2724792BDD0073814F /* SwinjectDependencyGraph.swift in Sources */,
 				14121D982476CD110073814F /* HighlightColorDataSourceImpl.swift in Sources */,
 				14121DEB24772E5A0073814F /* IHighlightRepo.swift in Sources */,
 				14121DB12477091A0073814F /* RecentSearchDataSourceImpl.swift in Sources */,
@@ -1316,6 +1327,7 @@
 				14121DE124772C900073814F /* IFontStyleRepo.swift in Sources */,
 				14121D932476CBAF0073814F /* FontStyleDataSourceImpl.swift in Sources */,
 				14121D6324750F0D0073814F /* Date+Extensions.swift in Sources */,
+				14121E2B24792F320073814F /* RepositoryDependencyInjectionGraph.swift in Sources */,
 				14121DD92477274D0073814F /* BookmarkRepoImpl.swift in Sources */,
 				14121D6D2475247B0073814F /* Note.swift in Sources */,
 				14121E06247735030073814F /* SettingRepoImpl.swift in Sources */,
