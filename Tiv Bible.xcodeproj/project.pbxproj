@@ -145,6 +145,8 @@
 		14121E1C24788F0D0073814F /* IPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E1B24788F0D0073814F /* IPreference.swift */; };
 		14121E1E24788F280073814F /* PreferenceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E1D24788F280073814F /* PreferenceImpl.swift */; };
 		14121E2024788F360073814F /* PreferenceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E1F24788F360073814F /* PreferenceConstants.swift */; };
+		14121E2324792A310073814F /* IPreferenceRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2224792A310073814F /* IPreferenceRepo.swift */; };
+		14121E2524792A5B0073814F /* PreferenceRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2424792A5B0073814F /* PreferenceRepoImpl.swift */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
@@ -312,6 +314,8 @@
 		14121E1B24788F0D0073814F /* IPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPreference.swift; sourceTree = "<group>"; };
 		14121E1D24788F280073814F /* PreferenceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceImpl.swift; sourceTree = "<group>"; };
 		14121E1F24788F360073814F /* PreferenceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceConstants.swift; sourceTree = "<group>"; };
+		14121E2224792A310073814F /* IPreferenceRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPreferenceRepo.swift; sourceTree = "<group>"; };
+		14121E2424792A5B0073814F /* PreferenceRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceRepoImpl.swift; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -441,6 +445,7 @@
 		14121C7D247464AD0073814F /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				14121E2124792A170073814F /* Preference */,
 				14121E16247737AC0073814F /* Version */,
 				14121E11247736E80073814F /* Verse */,
 				14121E0C247736420073814F /* Theme */,
@@ -872,6 +877,15 @@
 				14121E19247737E30073814F /* VersionRepoImpl.swift */,
 			);
 			path = Version;
+			sourceTree = "<group>";
+		};
+		14121E2124792A170073814F /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				14121E2224792A310073814F /* IPreferenceRepo.swift */,
+				14121E2424792A5B0073814F /* PreferenceRepoImpl.swift */,
+			);
+			path = Preference;
 			sourceTree = "<group>";
 		};
 		14377BE7246DE213005B0795 = {
@@ -1321,6 +1335,7 @@
 				14121DD42477265F0073814F /* BookRepoImpl.swift in Sources */,
 				14121D69247516520073814F /* HighlightColor.swift in Sources */,
 				14121D5624747A4D0073814F /* BaseName.swift in Sources */,
+				14121E2524792A5B0073814F /* PreferenceRepoImpl.swift in Sources */,
 				14121D65247515220073814F /* FontStyle.swift in Sources */,
 				14121D912476CAA20073814F /* IFontStyleDataSource.swift in Sources */,
 				14121DDE24772B130073814F /* ChapterRepoImpl.swift in Sources */,
@@ -1363,6 +1378,7 @@
 				14121E1E24788F280073814F /* PreferenceImpl.swift in Sources */,
 				14121D8C2476AAF50073814F /* IChapterDataSource.swift in Sources */,
 				14121DD22477262C0073814F /* IBookRepo.swift in Sources */,
+				14121E2324792A310073814F /* IPreferenceRepo.swift in Sources */,
 				14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */,
 				14121DBB24770E950073814F /* TestamentDataSourceImpl.swift in Sources */,
 				14121D9B2476CE4E0073814F /* IHighlightDataSource.swift in Sources */,
