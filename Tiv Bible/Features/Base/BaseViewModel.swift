@@ -19,19 +19,23 @@ class BaseViewModel {
     
     let error: PublishSubject<Error> = PublishSubject()
     
-    func viewDidLoad() { }
+    func didLoad() { }
     
-    func viewWillAppear() { }
+    func willAppear() { }
     
-    func viewDidAppear() { }
+    func didAppear() { }
     
-    func viewWillDisappear() { }
+    func willDisappear() { }
     
-    func viewDidDisappear() { }
+    func didDisappear() { }
     
     func emitFalseLoadingAndErrorValues(error: Error) {
         isLoading.onNext(false)
         self.error.onNext(error)
+    }
+    
+    func showLoading(_ shouldShow: Bool = true) {
+        isLoading.onNext(shouldShow)
     }
     
 }

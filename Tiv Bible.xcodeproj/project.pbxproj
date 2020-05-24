@@ -171,6 +171,7 @@
 		1440E06C247AB7A80037E68E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E06B247AB7A80037E68E /* BaseViewController.swift */; };
 		1440E06E247ABA040037E68E /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440E06D247ABA040037E68E /* Splash.storyboard */; };
 		1440E070247AC0C60037E68E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E06F247AC0C60037E68E /* SplashViewModel.swift */; };
+		1440E072247AF64D0037E68E /* ISplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E071247AF64D0037E68E /* ISplashViewModel.swift */; };
 		1E04978FA0BC2747FEF5DE26 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313FE4C6C52C2C75C944FE96 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */; };
 		E4D75BE7DA206226FCD4DCE1 /* Pods_Tiv_Bible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3884A3AC6C6A9D8CA50103 /* Pods_Tiv_Bible.framework */; };
 /* End PBXBuildFile section */
@@ -362,6 +363,7 @@
 		1440E06B247AB7A80037E68E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1440E06D247ABA040037E68E /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		1440E06F247AC0C60037E68E /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		1440E071247AF64D0037E68E /* ISplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISplashViewModel.swift; sourceTree = "<group>"; };
 		2A6051955E0881527E3A1B8D /* Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		313FE4C6C52C2C75C944FE96 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiv_Bible_Tiv_BibleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		384FCFA79DF63727CF81789E /* Pods-Tiv BibleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv BibleTests.release.xcconfig"; path = "Target Support Files/Pods-Tiv BibleTests/Pods-Tiv BibleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -991,6 +993,7 @@
 			isa = PBXGroup;
 			children = (
 				1440E06F247AC0C60037E68E /* SplashViewModel.swift */,
+				1440E071247AF64D0037E68E /* ISplashViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1432,6 +1435,7 @@
 				14121D672475154D0073814F /* Highlight.swift in Sources */,
 				14121DA22476D38E0073814F /* HistoryDataSourceImpl.swift in Sources */,
 				1440E070247AC0C60037E68E /* SplashViewModel.swift in Sources */,
+				1440E072247AF64D0037E68E /* ISplashViewModel.swift in Sources */,
 				14121E1A247737E30073814F /* VersionRepoImpl.swift in Sources */,
 				14121DF2247731A10073814F /* HistoryRepoImpl.swift in Sources */,
 				14121D87247683A60073814F /* IBookmarkDataSource.swift in Sources */,

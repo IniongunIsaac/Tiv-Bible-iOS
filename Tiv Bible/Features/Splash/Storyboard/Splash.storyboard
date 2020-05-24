@@ -6,6 +6,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="comfortaa_bold.ttf">
+            <string>Comfortaa-Bold</string>
+        </array>
+        <array key="comfortaa_light.ttf">
+            <string>Comfortaa-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Splash View Controller-->
         <scene sceneID="Mih-9E-xAZ">
@@ -15,31 +23,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbr-JF-CjC">
-                                <rect key="frame" x="190" y="433" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="startTapped:" destination="eff-RU-jTg" eventType="touchUpInside" id="qCj-ky-KIs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96S-1y-t2P">
-                                <rect key="frame" x="191" y="471" width="32" height="30"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="stopTapped:" destination="eff-RU-jTg" eventType="touchUpInside" id="3uj-GQ-Kh1"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1d-ld-W89">
+                                <rect key="frame" x="139" y="398" width="136" height="100.5"/>
+                                <string key="text">The Holy Bible
+
+in
+
+Tiv Language</string>
+                                <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup in progress, please wait…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RG5-bf-Jua">
+                                <rect key="frame" x="102.5" y="827.5" width="209" height="14.5"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Light" family="Comfortaa" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Comfortaa-Light" family="Comfortaa" pointSize="15"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="96S-1y-t2P" firstAttribute="top" secondItem="pbr-JF-CjC" secondAttribute="bottom" constant="8" id="69M-Iz-PkE"/>
-                            <constraint firstItem="pbr-JF-CjC" firstAttribute="centerY" secondItem="EBw-as-lGd" secondAttribute="centerY" id="LEz-fi-BgQ"/>
-                            <constraint firstItem="pbr-JF-CjC" firstAttribute="centerX" secondItem="EBw-as-lGd" secondAttribute="centerX" id="bDI-PN-hQA"/>
-                            <constraint firstItem="96S-1y-t2P" firstAttribute="centerX" secondItem="EBw-as-lGd" secondAttribute="centerX" id="zSk-kh-yWk"/>
+                            <constraint firstItem="K1d-ld-W89" firstAttribute="centerY" secondItem="EBw-as-lGd" secondAttribute="centerY" id="1ho-T4-paJ"/>
+                            <constraint firstItem="RG5-bf-Jua" firstAttribute="bottom" secondItem="bOh-KC-e0F" secondAttribute="bottom" constant="-20" id="8U0-f7-Jkd"/>
+                            <constraint firstItem="RG5-bf-Jua" firstAttribute="centerX" secondItem="EBw-as-lGd" secondAttribute="centerX" id="HbC-r9-wvY"/>
+                            <constraint firstItem="K1d-ld-W89" firstAttribute="centerX" secondItem="EBw-as-lGd" secondAttribute="centerX" id="Wnw-FP-6rr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bOh-KC-e0F"/>
                     </view>
                     <navigationItem key="navigationItem" id="gBg-Vd-RZl"/>
+                    <connections>
+                        <outlet property="setupInProgressLabel" destination="RG5-bf-Jua" id="bNG-Az-VGs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NpW-9j-SlL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

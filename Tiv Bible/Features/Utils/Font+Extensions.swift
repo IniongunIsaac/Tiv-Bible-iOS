@@ -12,23 +12,23 @@ import UIKit
 extension UIFont {
     
     class func comfortaaRegular(size: CGFloat = 16) -> UIFont {
-        return  UIFont(name: "comfortaa", size: size)!
+        return  UIFont(name: "Comfortaa", size: size)!
     }
     
     class func comfortaaMedium(size: CGFloat = 16) -> UIFont {
-        return  UIFont(name: "comfortaa_medium", size: size)!
+        return  UIFont(name: "Comfortaa-Medium", size: size)!
     }
     
     class func comfortaaBold(size: CGFloat = 16) -> UIFont {
-        return  UIFont(name: "comfortaa_bold", size: size)!
+        return  UIFont(name: "Comfortaa-Bold", size: size)!
     }
     
     class func comfortaaLight(size: CGFloat = 16) -> UIFont {
-        return  UIFont(name: "comfortaa_light", size: size)!
+        return  UIFont(name: "Comfortaa-Light", size: size)!
     }
     
     class func comfortaaSemiBold(size: CGFloat = 16) -> UIFont {
-        return  UIFont(name: "comfortaa_semi_bold", size: size)!
+        return  UIFont(name: "Comfortaa-Semi-Bold", size: size)!
     }
     
 }

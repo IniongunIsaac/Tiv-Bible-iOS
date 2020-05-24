@@ -9,13 +9,21 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import HorizontalProgressBar
+import MaterialProgressBar
 
 class BaseViewController: UIViewController {
     
     public let disposeBag = DisposeBag()
     fileprivate var alert: CustomAlert?
-    fileprivate var progressBar: HorizontalProgressbar?
+    let mProgressBar: LinearProgressBar = {
+        let progressBar = LinearProgressBar()
+        progressBar.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
+        progressBar.progressBarColor = .label
+        progressBar.progressBarWidth = 4
+        //progressBar.cornerRadius = 4
+        
+        return progressBar
+    }()
     
     fileprivate var scrollViewConstraint: NSLayoutConstraint?
     
@@ -34,7 +42,7 @@ class BaseViewController: UIViewController {
         
         setObservers()
         
-        getViewModel().viewDidLoad()
+        getViewModel().didLoad()
         configureProgressBar()
         self.alert = CustomAlert(on: self.view)
         
@@ -44,13 +52,14 @@ class BaseViewController: UIViewController {
         
     }
     
+    func addProgressBarConstraints() {
+        mProgressBar.anchor(top: view.topAnchor, paddingTop: 80, left: view.leftAnchor, right: view.rightAnchor, width: view.bounds.width - 10, height: 3)
+    }
+    
     fileprivate func configureProgressBar() {
-        progressBar = HorizontalProgressbar(frame: CGRect(x: 0, y: (self.navigationController?.navigationBar.frame.size.height)! - 3, width: (self.navigationController?.navigationBar.frame.size.width)!, height: 3))
-        self.navigationController?.navigationBar.addSubview(progressBar!)
-        progressBar?.progressTintColor = .label
-        progressBar?.trackTintColor = .darkGray
-        progressBar?.noOfChunks = 2
-        progressBar?.kChunkWdith = 300
+        view.addSubview(mProgressBar)
+        addProgressBarConstraints()
+        mProgressBar.isHidden = true
     }
     
     func hideNavigationBar(_ shouldHide: Bool = true) {
@@ -130,12 +139,13 @@ class BaseViewController: UIViewController {
     }
     
     private func showLoading() {
-        configureProgressBar()
-        progressBar?.startAnimating()
+        mProgressBar.fadeIn()
+        mProgressBar.startAnimating()
     }
     
     private func hideLoading() {
-        progressBar?.stopAnimating()
+        mProgressBar.fadeOut()
+        mProgressBar.stopAnimating()
     }
     
     func showAlert(message: String, type: AlertType, dismissCompletion: (() -> Void)? = nil) {
@@ -144,23 +154,23 @@ class BaseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getViewModel().viewWillAppear()
+        getViewModel().willAppear()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         alert?.hideAlert()
-        getViewModel().viewWillDisappear()
+        getViewModel().willDisappear()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        getViewModel().viewDidAppear()
+        getViewModel().didAppear()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        getViewModel().viewDidDisappear()
+        getViewModel().didDisappear()
     }
 
 }

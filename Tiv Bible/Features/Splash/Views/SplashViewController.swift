@@ -13,19 +13,18 @@ class SplashViewController: BaseViewController {
     let vm = SplashViewModel()
     
     override func getViewModel() -> BaseViewModel {
-        return vm
+        vm
     }
 
+    @IBOutlet weak var setupInProgressLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    @IBAction func stopTapped(_ sender: Any) {
-        vm.stop()
+        hideNavigationBar()
     }
     
-    @IBAction func startTapped(_ sender: Any) {
-        vm.start()
+    override func addProgressBarConstraints() {
+        mProgressBar.anchor(top: setupInProgressLabel.bottomAnchor, paddingTop: 8, left: view.leftAnchor, right: view.rightAnchor, width: view.bounds.width - 10, height: 3)
     }
     
 }
