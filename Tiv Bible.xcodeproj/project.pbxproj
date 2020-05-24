@@ -150,14 +150,27 @@
 		14121E2724792BDD0073814F /* SwinjectDependencyGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2624792BDD0073814F /* SwinjectDependencyGraph.swift */; };
 		14121E2924792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2824792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift */; };
 		14121E2B24792F320073814F /* RepositoryDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2A24792F320073814F /* RepositoryDependencyInjectionGraph.swift */; };
+		14121E2D24793B210073814F /* tivBibleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 14121E2C24793B200073814F /* tivBibleData.json */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
-		14377BF8246DE214005B0795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* ViewController.swift */; };
-		14377BFB246DE214005B0795 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14377BF9246DE214005B0795 /* Main.storyboard */; };
+		14377BF8246DE214005B0795 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* SplashViewController.swift */; };
 		14377BFD246DE218005B0795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14377BFC246DE218005B0795 /* Assets.xcassets */; };
 		14377C00246DE218005B0795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14377BFE246DE218005B0795 /* LaunchScreen.storyboard */; };
 		14377C0B246DE218005B0795 /* Tiv_BibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377C0A246DE218005B0795 /* Tiv_BibleTests.swift */; };
 		14377C16246DE218005B0795 /* Tiv_BibleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377C15246DE218005B0795 /* Tiv_BibleUITests.swift */; };
+		1440E0562479EF1A0037E68E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E0552479EF1A0037E68E /* BaseViewModel.swift */; };
+		1440E059247AABB20037E68E /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E058247AABB20037E68E /* AlertMessage.swift */; };
+		1440E05B247AABBE0037E68E /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E05A247AABBE0037E68E /* AlertType.swift */; };
+		1440E05D247AABCB0037E68E /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E05C247AABCB0037E68E /* CustomAlert.swift */; };
+		1440E05F247AAC4B0037E68E /* Code+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E05E247AAC4B0037E68E /* Code+Extensions.swift */; };
+		1440E061247AACAA0037E68E /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E060247AACAA0037E68E /* View+Extensions.swift */; };
+		1440E063247AACC90037E68E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E062247AACC90037E68E /* AppConstants.swift */; };
+		1440E065247AAD730037E68E /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E064247AAD730037E68E /* Font+Extensions.swift */; };
+		1440E068247AAF6F0037E68E /* IProgressLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E067247AAF6F0037E68E /* IProgressLoader.swift */; };
+		1440E06A247AAF9A0037E68E /* ProgressLoaderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E069247AAF9A0037E68E /* ProgressLoaderImpl.swift */; };
+		1440E06C247AB7A80037E68E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E06B247AB7A80037E68E /* BaseViewController.swift */; };
+		1440E06E247ABA040037E68E /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440E06D247ABA040037E68E /* Splash.storyboard */; };
+		1440E070247AC0C60037E68E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E06F247AC0C60037E68E /* SplashViewModel.swift */; };
 		1E04978FA0BC2747FEF5DE26 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313FE4C6C52C2C75C944FE96 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */; };
 		E4D75BE7DA206226FCD4DCE1 /* Pods_Tiv_Bible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3884A3AC6C6A9D8CA50103 /* Pods_Tiv_Bible.framework */; };
 /* End PBXBuildFile section */
@@ -322,11 +335,11 @@
 		14121E2624792BDD0073814F /* SwinjectDependencyGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectDependencyGraph.swift; sourceTree = "<group>"; };
 		14121E2824792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceDependencyInjectionGraph.swift; sourceTree = "<group>"; };
 		14121E2A24792F320073814F /* RepositoryDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDependencyInjectionGraph.swift; sourceTree = "<group>"; };
+		14121E2C24793B200073814F /* tivBibleData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tivBibleData.json; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		14377BF7246DE214005B0795 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		14377BFA246DE214005B0795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14377BF7246DE214005B0795 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		14377BFC246DE218005B0795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14377BFF246DE218005B0795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14377C01246DE218005B0795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -336,6 +349,19 @@
 		14377C11246DE218005B0795 /* Tiv BibleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tiv BibleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377C15246DE218005B0795 /* Tiv_BibleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiv_BibleUITests.swift; sourceTree = "<group>"; };
 		14377C17246DE218005B0795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1440E0552479EF1A0037E68E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		1440E058247AABB20037E68E /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		1440E05A247AABBE0037E68E /* AlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
+		1440E05C247AABCB0037E68E /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		1440E05E247AAC4B0037E68E /* Code+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Code+Extensions.swift"; sourceTree = "<group>"; };
+		1440E060247AACAA0037E68E /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		1440E062247AACC90037E68E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		1440E064247AAD730037E68E /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		1440E067247AAF6F0037E68E /* IProgressLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProgressLoader.swift; sourceTree = "<group>"; };
+		1440E069247AAF9A0037E68E /* ProgressLoaderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLoaderImpl.swift; sourceTree = "<group>"; };
+		1440E06B247AB7A80037E68E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1440E06D247ABA040037E68E /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		1440E06F247AC0C60037E68E /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		2A6051955E0881527E3A1B8D /* Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		313FE4C6C52C2C75C944FE96 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiv_Bible_Tiv_BibleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		384FCFA79DF63727CF81789E /* Pods-Tiv BibleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv BibleTests.release.xcconfig"; path = "Target Support Files/Pods-Tiv BibleTests/Pods-Tiv BibleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -475,9 +501,10 @@
 		14121C7E247464E00073814F /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				14121D6124750EE90073814F /* Utils */,
 				14121C83247465740073814F /* Splash */,
 				14121C82247465650073814F /* Launch */,
+				1440E0542479EEFF0037E68E /* Base */,
+				14121D6124750EE90073814F /* Utils */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -495,6 +522,7 @@
 		14121C80247464F80073814F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14121E2C24793B200073814F /* tivBibleData.json */,
 				14121C84247465900073814F /* Fonts */,
 				14377BFC246DE218005B0795 /* Assets.xcassets */,
 				14377C01246DE218005B0795 /* Info.plist */,
@@ -522,8 +550,9 @@
 		14121C83247465740073814F /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				14377BF7246DE214005B0795 /* ViewController.swift */,
-				14377BF9246DE214005B0795 /* Main.storyboard */,
+				1440E0532479A8A60037E68E /* Storyboard */,
+				1440E0522479A89D0037E68E /* Views */,
+				1440E0512479A8950037E68E /* ViewModel */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -587,7 +616,13 @@
 		14121D6124750EE90073814F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1440E066247AAF5B0037E68E /* Progress Loader */,
+				1440E057247AAB9A0037E68E /* Custom Alert */,
 				14121D6224750F0D0073814F /* Date+Extensions.swift */,
+				1440E05E247AAC4B0037E68E /* Code+Extensions.swift */,
+				1440E060247AACAA0037E68E /* View+Extensions.swift */,
+				1440E062247AACC90037E68E /* AppConstants.swift */,
+				1440E064247AAD730037E68E /* Font+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -952,6 +987,58 @@
 			path = "Tiv BibleUITests";
 			sourceTree = "<group>";
 		};
+		1440E0512479A8950037E68E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1440E06F247AC0C60037E68E /* SplashViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1440E0522479A89D0037E68E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14377BF7246DE214005B0795 /* SplashViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1440E0532479A8A60037E68E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1440E06D247ABA040037E68E /* Splash.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1440E0542479EEFF0037E68E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1440E0552479EF1A0037E68E /* BaseViewModel.swift */,
+				1440E06B247AB7A80037E68E /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1440E057247AAB9A0037E68E /* Custom Alert */ = {
+			isa = PBXGroup;
+			children = (
+				1440E058247AABB20037E68E /* AlertMessage.swift */,
+				1440E05A247AABBE0037E68E /* AlertType.swift */,
+				1440E05C247AABCB0037E68E /* CustomAlert.swift */,
+			);
+			path = "Custom Alert";
+			sourceTree = "<group>";
+		};
+		1440E066247AAF5B0037E68E /* Progress Loader */ = {
+			isa = PBXGroup;
+			children = (
+				1440E067247AAF6F0037E68E /* IProgressLoader.swift */,
+				1440E069247AAF9A0037E68E /* ProgressLoaderImpl.swift */,
+			);
+			path = "Progress Loader";
+			sourceTree = "<group>";
+		};
 		639B566969A01D1E2F125055 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1075,6 +1162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14121D382474677F0073814F /* montserrat_semi_bold.ttf in Resources */,
+				1440E06E247ABA040037E68E /* Splash.storyboard in Resources */,
 				14121D3A2474677F0073814F /* montserrat_alternates.ttf in Resources */,
 				14121D2C2474677F0073814F /* roboto_black_italic.ttf in Resources */,
 				14377C00246DE218005B0795 /* LaunchScreen.storyboard in Resources */,
@@ -1084,6 +1172,7 @@
 				14121D242474677F0073814F /* montserrat_light_italic.ttf in Resources */,
 				14121D2B2474677F0073814F /* montserrat_medium_italic.ttf in Resources */,
 				14121D4E2474677F0073814F /* montserrat_extra_bold_italic.ttf in Resources */,
+				14121E2D24793B210073814F /* tivBibleData.json in Resources */,
 				14121D1D2474677F0073814F /* indie_flower.ttf in Resources */,
 				14121D4D2474677F0073814F /* inconsolata_expanded.ttf in Resources */,
 				14121D432474677F0073814F /* martel_sans_semibold.ttf in Resources */,
@@ -1107,7 +1196,6 @@
 				14121D212474677F0073814F /* amatic_sc.ttf in Resources */,
 				14121D3B2474677F0073814F /* comfortaa_light.ttf in Resources */,
 				14121D252474677F0073814F /* montserrat_extra_light.ttf in Resources */,
-				14377BFB246DE214005B0795 /* Main.storyboard in Resources */,
 				14121D452474677F0073814F /* montserrat_italic.ttf in Resources */,
 				14121D272474677F0073814F /* montserrat_semi_bold_italic.ttf in Resources */,
 				14121D482474677F0073814F /* roboto_black.ttf in Resources */,
@@ -1312,8 +1400,10 @@
 				14121DB624770A3D0073814F /* SettingDataSourceImpl.swift in Sources */,
 				14121DCD247719B90073814F /* IAudioSpeedRepo.swift in Sources */,
 				14121DF0247731670073814F /* IHistoryRepo.swift in Sources */,
+				1440E06C247AB7A80037E68E /* BaseViewController.swift in Sources */,
 				14121D6B247517110073814F /* History.swift in Sources */,
 				14121DC8247717B90073814F /* IVersionDataSource.swift in Sources */,
+				1440E065247AAD730037E68E /* Font+Extensions.swift in Sources */,
 				14121D5024746EC20073814F /* Base.swift in Sources */,
 				14121D54247479EC0073814F /* Testament.swift in Sources */,
 				14121DD72477271A0073814F /* IBookmarkRepo.swift in Sources */,
@@ -1328,16 +1418,20 @@
 				14121D932476CBAF0073814F /* FontStyleDataSourceImpl.swift in Sources */,
 				14121D6324750F0D0073814F /* Date+Extensions.swift in Sources */,
 				14121E2B24792F320073814F /* RepositoryDependencyInjectionGraph.swift in Sources */,
+				1440E063247AACC90037E68E /* AppConstants.swift in Sources */,
 				14121DD92477274D0073814F /* BookmarkRepoImpl.swift in Sources */,
 				14121D6D2475247B0073814F /* Note.swift in Sources */,
 				14121E06247735030073814F /* SettingRepoImpl.swift in Sources */,
+				1440E06A247AAF9A0037E68E /* ProgressLoaderImpl.swift in Sources */,
 				14121E0B247735CF0073814F /* TestamentRepoImpl.swift in Sources */,
 				14121D9D2476CE6D0073814F /* HighlightDataSourceImpl.swift in Sources */,
 				14121DBE247710F20073814F /* IThemeDataSource.swift in Sources */,
 				14121D842476700C0073814F /* BookDataSourceImpl.swift in Sources */,
 				14121D7C2475B43B0073814F /* AudioSpeedDataSourceImpl.swift in Sources */,
+				1440E05B247AABBE0037E68E /* AlertType.swift in Sources */,
 				14121D672475154D0073814F /* Highlight.swift in Sources */,
 				14121DA22476D38E0073814F /* HistoryDataSourceImpl.swift in Sources */,
+				1440E070247AC0C60037E68E /* SplashViewModel.swift in Sources */,
 				14121E1A247737E30073814F /* VersionRepoImpl.swift in Sources */,
 				14121DF2247731A10073814F /* HistoryRepoImpl.swift in Sources */,
 				14121D87247683A60073814F /* IBookmarkDataSource.swift in Sources */,
@@ -1356,11 +1450,15 @@
 				14121DA72476D6E40073814F /* NoteDataSourceImpl.swift in Sources */,
 				14121D962476CD030073814F /* IHighlightColorDataSource.swift in Sources */,
 				14121E0E2477364F0073814F /* IThemeRepo.swift in Sources */,
+				1440E068247AAF6F0037E68E /* IProgressLoader.swift in Sources */,
 				14121DA52476D6C50073814F /* INoteDataSource.swift in Sources */,
+				1440E0562479EF1A0037E68E /* BaseViewModel.swift in Sources */,
 				14121DAC2476FB220073814F /* OtherDataSourceImpl.swift in Sources */,
 				14121D7324752C8E0073814F /* Setting.swift in Sources */,
-				14377BF8246DE214005B0795 /* ViewController.swift in Sources */,
+				14377BF8246DE214005B0795 /* SplashViewController.swift in Sources */,
+				1440E061247AACAA0037E68E /* View+Extensions.swift in Sources */,
 				14121D7A2475B41D0073814F /* IAudioSpeedDataSource.swift in Sources */,
+				1440E05D247AABCB0037E68E /* CustomAlert.swift in Sources */,
 				14121E152477371A0073814F /* VerseRepoImpl.swift in Sources */,
 				14121DAF247709020073814F /* IRecentSearchDataSource.swift in Sources */,
 				14121DC5247712A40073814F /* VerseDataSourceImpl.swift in Sources */,
@@ -1370,6 +1468,7 @@
 				14121E09247735A30073814F /* ITestamentRepo.swift in Sources */,
 				14121D5C2474804E0073814F /* Bookmark.swift in Sources */,
 				14121DCF247719E20073814F /* AudioSpeedRepoImpl.swift in Sources */,
+				1440E05F247AAC4B0037E68E /* Code+Extensions.swift in Sources */,
 				14121DE824772DBF0073814F /* HighlightColorRepoImpl.swift in Sources */,
 				14121D7F2475E89A0073814F /* Rx+Extensions.swift in Sources */,
 				14121DDC24772ADF0073814F /* IChapterRepo.swift in Sources */,
@@ -1379,6 +1478,7 @@
 				14121D7524752DBC0073814F /* Theme.swift in Sources */,
 				14121DF5247732AD0073814F /* INoteRepo.swift in Sources */,
 				14121DED24772E8A0073814F /* HighlightRepoImpl.swift in Sources */,
+				1440E059247AABB20037E68E /* AlertMessage.swift in Sources */,
 				14121D5A24747BB20073814F /* Book.swift in Sources */,
 				14121D6F24752B9A0073814F /* Other.swift in Sources */,
 				14121D89247683D00073814F /* BookmarkDataSourceImpl.swift in Sources */,
@@ -1435,14 +1535,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		14377BF9246DE214005B0795 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14377BFA246DE214005B0795 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		14377BFE246DE218005B0795 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

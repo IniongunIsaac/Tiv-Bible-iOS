@@ -45,6 +45,7 @@ target 'Tiv Bible' do
   pod 'PopupDialog'
   pod 'Shimmer'
   pod 'SwiftRandom'
+  pod 'HorizontalProgressBar'
 
   target 'Tiv BibleTests' do
     inherit! :search_paths

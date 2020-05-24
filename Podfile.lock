@@ -363,6 +363,7 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
   - GTMSessionFetcher/Core (1.3.1)
+  - HorizontalProgressBar (1.0.5)
   - KVNProgress (2.3.5)
   - leveldb-library (1.22)
   - nanopb (0.3.9011):
@@ -462,6 +463,7 @@ DEPENDENCIES:
   - Firebase/RemoteConfig
   - Firebase/Storage
   - FirebaseFirestoreSwift
+  - HorizontalProgressBar
   - KVNProgress
   - PopupDialog
   - RealmSwift
@@ -520,6 +522,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - HorizontalProgressBar
     - KVNProgress
     - leveldb-library
     - nanopb
@@ -584,6 +587,7 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
+  HorizontalProgressBar: f0e3d36051656651d1430d2cf5e0146fc4895f15
   KVNProgress: d7046cce142f1aeb740db39dc3cacfe910fac354
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
@@ -612,6 +616,6 @@ SPEC CHECKSUMS:
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 09db28afae0550640f190234693a76867fc75598
+PODFILE CHECKSUM: 85aaefec8d946f7fdbad97064427a4d4e4cc5dae
 
 COCOAPODS: 1.8.4
