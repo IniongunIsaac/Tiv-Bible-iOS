@@ -10,10 +10,10 @@ import UIKit
 
 class SplashViewController: BaseViewController {
     
-    let vm = SplashViewModel()
+    var splashViewModel: ISplashViewModel!
     
     override func getViewModel() -> BaseViewModel {
-        vm
+        splashViewModel as! BaseViewModel
     }
 
     @IBOutlet weak var setupInProgressLabel: UILabel!

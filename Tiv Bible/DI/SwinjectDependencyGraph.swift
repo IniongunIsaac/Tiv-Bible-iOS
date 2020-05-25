@@ -25,6 +25,8 @@ extension SwinjectStoryboard {
         
         RepositoryDependencyInjectionGraph.setup(container: defaultContainer)
         
+        SplashDependencyInjectionGraph.setup(container: defaultContainer)
+        
     }
     
 }

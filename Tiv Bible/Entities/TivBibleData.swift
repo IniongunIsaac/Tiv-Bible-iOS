@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TivBibleData {
+struct TivBibleData: Codable {
     let book: String
     let chapter: Int
     let verse: Int

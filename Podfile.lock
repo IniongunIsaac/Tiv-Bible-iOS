@@ -166,6 +166,7 @@ PODS:
     - BoringSSL-GRPC/Interface (= 0.0.3)
   - BoringSSL-GRPC/Interface (0.0.3)
   - BottomPopup (0.6.0)
+  - DeviceKit (2.3.0)
   - Differentiator (4.0.1)
   - DynamicBlurView (4.0.0)
   - Firebase (6.19.0):
@@ -451,6 +452,7 @@ PODS:
 DEPENDENCIES:
   - Alertift (~> 4.1)
   - BottomPopup
+  - DeviceKit (~> 2.0)
   - Firebase
   - Firebase/Analytics
   - Firebase/Auth
@@ -491,6 +493,7 @@ SPEC REPOS:
     - Alertift
     - BoringSSL-GRPC
     - BottomPopup
+    - DeviceKit
     - Differentiator
     - DynamicBlurView
     - Firebase
@@ -556,6 +559,7 @@ SPEC CHECKSUMS:
   Alertift: 950483ca193717cc8bb508a7dbbe34f4af321daf
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
   BottomPopup: 1d5649a3b29396238f0e8f3c82075a7bfcf37ba7
+  DeviceKit: da103891aa928d89f64ea8dd8aca738c5f3d8ac0
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   DynamicBlurView: ccf9acd2b20c883cc2c72e3524a04d8d3ee20533
   Firebase: d55ddb0e0bb3207166cddc028647833d8a1b5b6f
@@ -616,6 +620,6 @@ SPEC CHECKSUMS:
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 998df5338c7cb48d3cbbdd24dc0f39bc1fc25714
+PODFILE CHECKSUM: ef8b9a80640e19a1116228af900ad62c76d3d794
 
 COCOAPODS: 1.8.4

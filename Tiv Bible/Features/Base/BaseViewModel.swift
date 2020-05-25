@@ -38,4 +38,8 @@ class BaseViewModel {
         isLoading.onNext(shouldShow)
     }
     
+    func showMessage(_ message: String, type: AlertType = .success) {
+        alertMessage.onNext(AlertMessage(message: message, type: type))
+    }
+    
 }

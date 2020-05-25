@@ -172,6 +172,8 @@
 		1440E06E247ABA040037E68E /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440E06D247ABA040037E68E /* Splash.storyboard */; };
 		1440E070247AC0C60037E68E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E06F247AC0C60037E68E /* SplashViewModel.swift */; };
 		1440E072247AF64D0037E68E /* ISplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E071247AF64D0037E68E /* ISplashViewModel.swift */; };
+		1440E074247BBE850037E68E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E073247BBE850037E68E /* UIColor+Extension.swift */; };
+		1440E076247BF93B0037E68E /* SplashDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E075247BF93B0037E68E /* SplashDependencyInjectionGraph.swift */; };
 		1E04978FA0BC2747FEF5DE26 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313FE4C6C52C2C75C944FE96 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */; };
 		E4D75BE7DA206226FCD4DCE1 /* Pods_Tiv_Bible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3884A3AC6C6A9D8CA50103 /* Pods_Tiv_Bible.framework */; };
 /* End PBXBuildFile section */
@@ -364,6 +366,8 @@
 		1440E06D247ABA040037E68E /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		1440E06F247AC0C60037E68E /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		1440E071247AF64D0037E68E /* ISplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISplashViewModel.swift; sourceTree = "<group>"; };
+		1440E073247BBE850037E68E /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		1440E075247BF93B0037E68E /* SplashDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDependencyInjectionGraph.swift; sourceTree = "<group>"; };
 		2A6051955E0881527E3A1B8D /* Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		313FE4C6C52C2C75C944FE96 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiv_Bible_Tiv_BibleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		384FCFA79DF63727CF81789E /* Pods-Tiv BibleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv BibleTests.release.xcconfig"; path = "Target Support Files/Pods-Tiv BibleTests/Pods-Tiv BibleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -517,6 +521,7 @@
 				14121E2624792BDD0073814F /* SwinjectDependencyGraph.swift */,
 				14121E2824792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift */,
 				14121E2A24792F320073814F /* RepositoryDependencyInjectionGraph.swift */,
+				1440E075247BF93B0037E68E /* SplashDependencyInjectionGraph.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -625,6 +630,7 @@
 				1440E060247AACAA0037E68E /* View+Extensions.swift */,
 				1440E062247AACC90037E68E /* AppConstants.swift */,
 				1440E064247AAD730037E68E /* Font+Extensions.swift */,
+				1440E073247BBE850037E68E /* UIColor+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1460,10 +1466,12 @@
 				14121DAC2476FB220073814F /* OtherDataSourceImpl.swift in Sources */,
 				14121D7324752C8E0073814F /* Setting.swift in Sources */,
 				14377BF8246DE214005B0795 /* SplashViewController.swift in Sources */,
+				1440E076247BF93B0037E68E /* SplashDependencyInjectionGraph.swift in Sources */,
 				1440E061247AACAA0037E68E /* View+Extensions.swift in Sources */,
 				14121D7A2475B41D0073814F /* IAudioSpeedDataSource.swift in Sources */,
 				1440E05D247AABCB0037E68E /* CustomAlert.swift in Sources */,
 				14121E152477371A0073814F /* VerseRepoImpl.swift in Sources */,
+				1440E074247BBE850037E68E /* UIColor+Extension.swift in Sources */,
 				14121DAF247709020073814F /* IRecentSearchDataSource.swift in Sources */,
 				14121DC5247712A40073814F /* VerseDataSourceImpl.swift in Sources */,
 				14121D7124752C3A0073814F /* RecentSearch.swift in Sources */,
