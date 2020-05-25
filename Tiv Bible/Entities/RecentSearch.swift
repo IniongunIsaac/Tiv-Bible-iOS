@@ -15,4 +15,9 @@ import RealmSwift
     override static func primaryKey() -> String? {
         return "text"
     }
+    
+    convenience required init(text: String) {
+        self.init()
+        self.text = text
+    }
 }

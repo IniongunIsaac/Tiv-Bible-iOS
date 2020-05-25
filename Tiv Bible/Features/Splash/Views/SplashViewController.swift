@@ -17,6 +17,7 @@ class SplashViewController: BaseViewController {
     }
 
     @IBOutlet weak var setupInProgressLabel: UILabel!
+    @IBOutlet weak var versionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,27 @@ class SplashViewController: BaseViewController {
     }
     
     override func addProgressBarConstraints() {
-        mProgressBar.anchor(top: setupInProgressLabel.bottomAnchor, paddingTop: 8, left: view.leftAnchor, right: view.rightAnchor, width: view.bounds.width - 10, height: 3)
+        mProgressBar.anchor(top: setupInProgressLabel.bottomAnchor, paddingTop: 8, left: view.leftAnchor, right: view.rightAnchor, width: view.bounds.width, height: 3)
+    }
+    
+    override func setChildViewControllerObservers() {
+        observeShowHome()
+        observeShowSetupInProgress()
+    }
+    
+    fileprivate func observeShowHome() {
+        splashViewModel.showHome.bind { [weak self] shouldShow in
+            if shouldShow {
+                //navigate to home screen
+            }
+        }.disposed(by: disposeBag)
+    }
+    
+    fileprivate func observeShowSetupInProgress() {
+        splashViewModel.showSetupInProgress.bind { [weak self] shouldShow in
+            self?.setupInProgressLabel.isHidden = !shouldShow
+            self?.versionLabel.isHidden = shouldShow
+        }.disposed(by: disposeBag)
     }
     
 }

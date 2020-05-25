@@ -16,14 +16,11 @@ import RealmSwift
     dynamic var chapter: Chapter?
     let verses = List<Verse>()
     
-    init(comment: String, book: Book, chapter: Chapter) {
+    convenience required init(comment: String, book: Book, chapter: Chapter) {
+        self.init()
         self.comment = comment
         self.book = book
         self.chapter = chapter
-    }
-    
-    required init() {
-        fatalError("init() has not been implemented")
     }
     
     var bookNameAndChapterNumberAndVerseNumbersString: String {

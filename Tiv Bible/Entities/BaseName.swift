@@ -11,11 +11,8 @@ import Foundation
 @objcMembers class BaseName: Base {
     dynamic var name = ""
     
-    init(name: String) {
+    convenience required init(name: String) {
+        self.init()
         self.name = name
-    }
-    
-    required init() {
-        fatalError("init() has not been implemented")
     }
 }

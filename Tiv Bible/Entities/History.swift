@@ -27,13 +27,11 @@ import RealmSwift
         return historyDate.dateOnly(format: "dd.MM.yyyy")
     }
     
-    init(book: Book, chapter: Chapter) {
+    convenience required init(book: Book, chapter: Chapter) {
+        self.init()
         self.book = book
         self.chapter = chapter
         compositePrimaryKey = "\(self.chapter!.id)"
     }
     
-    required init() {
-        fatalError("init() has not been implemented")
-    }
 }

@@ -43,7 +43,9 @@ class BaseViewController: UIViewController {
         setObservers()
         
         getViewModel().didLoad()
+        
         configureProgressBar()
+        
         self.alert = CustomAlert(on: self.view)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
@@ -53,7 +55,7 @@ class BaseViewController: UIViewController {
     }
     
     func addProgressBarConstraints() {
-        mProgressBar.anchor(top: view.topAnchor, paddingTop: 80, left: view.leftAnchor, right: view.rightAnchor, width: view.bounds.width - 10, height: 3)
+        mProgressBar.anchor(top: view.topAnchor, paddingTop: 80, left: view.leftAnchor, right: view.rightAnchor, width: view.bounds.width, height: 3)
     }
     
     fileprivate func configureProgressBar() {

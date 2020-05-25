@@ -29,7 +29,8 @@ import RealmSwift
         return highlightedOn.dateOnly(format: "dd.MM.yyyy")
     }
     
-    init(book: Book, chapter: Chapter, verse: Verse, color: HighlightColor) {
+    convenience required init(book: Book, chapter: Chapter, verse: Verse, color: HighlightColor) {
+        self.init()
         self.book = book
         self.chapter = chapter
         self.verse = verse
@@ -37,7 +38,4 @@ import RealmSwift
         compositePrimaryKey = "\(self.book!.id)_\(self.chapter!.id)_\(self.verse!.number)"
     }
     
-    required init() {
-        fatalError("init() has not been implemented")
-    }
 }

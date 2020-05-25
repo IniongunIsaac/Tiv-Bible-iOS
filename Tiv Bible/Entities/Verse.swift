@@ -27,14 +27,12 @@ import RealmSwift
         return ["isSelected", "isHighlighted", "highlight"]
     }
     
-    init(number: Int, text: String, hasTitle: Bool, title: String) {
+    convenience required init(number: Int, text: String, hasTitle: Bool, title: String) {
+        self.init()
         self.number = number
         self.text = text
         self.hasTitle = hasTitle
         self.title = title
     }
     
-    required init() {
-        fatalError("init() has not been implemented")
-    }
 }

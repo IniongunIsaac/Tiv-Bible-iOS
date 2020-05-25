@@ -11,11 +11,9 @@ import Foundation
 @objcMembers class HighlightColor: Base {
     dynamic var hexCode = ""
     
-    init(hexCode: String) {
+    convenience required init(hexCode: String) {
+        self.init()
         self.hexCode = hexCode
     }
-    
-    required init() {
-        fatalError("init() has not been implemented")
-    }
+
 }

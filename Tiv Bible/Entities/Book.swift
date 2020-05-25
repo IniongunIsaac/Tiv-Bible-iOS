@@ -21,18 +21,14 @@ import RealmSwift
         return name.lowercased().capitalized
     }
     
-    init(name: String, orderNo: Int, numberOfChapters: Int, numberOfVerses: Int, testament: Testament, version: Version) {
-        super.init()
+    convenience required init(name: String, orderNo: Int, numberOfChapters: Int, numberOfVerses: Int, testament: Testament, version: Version) {
+        self.init()
         self.name = name
         self.orderNo = orderNo
         self.numberOfChapters = numberOfChapters
         self.numberOfVerses = numberOfVerses
         self.testament = testament
         self.version = version
-    }
-    
-    required init() {
-        fatalError("init() has not been implemented")
     }
     
 }

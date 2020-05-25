@@ -30,7 +30,7 @@ class BaseViewModel {
     func didDisappear() { }
     
     func emitFalseLoadingAndErrorValues(error: Error) {
-        isLoading.onNext(false)
+        showLoading(false)
         self.error.onNext(error)
     }
     

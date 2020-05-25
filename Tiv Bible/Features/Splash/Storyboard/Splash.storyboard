@@ -46,19 +46,31 @@ Tiv Language</string>
                                     <fontDescription key="fontDescription" name="Comfortaa-Light" family="Comfortaa" pointSize="15"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v2.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu9-fo-nsI">
+                                <rect key="frame" x="191.5" y="844" width="31" height="18"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="18"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Xu9-fo-nsI" firstAttribute="bottom" secondItem="bOh-KC-e0F" secondAttribute="bottom" id="1JT-w9-LFJ"/>
                             <constraint firstItem="K1d-ld-W89" firstAttribute="centerY" secondItem="EBw-as-lGd" secondAttribute="centerY" id="1ho-T4-paJ"/>
                             <constraint firstItem="RG5-bf-Jua" firstAttribute="bottom" secondItem="bOh-KC-e0F" secondAttribute="bottom" constant="-20" id="8U0-f7-Jkd"/>
                             <constraint firstItem="RG5-bf-Jua" firstAttribute="centerX" secondItem="EBw-as-lGd" secondAttribute="centerX" id="HbC-r9-wvY"/>
                             <constraint firstItem="K1d-ld-W89" firstAttribute="centerX" secondItem="EBw-as-lGd" secondAttribute="centerX" id="Wnw-FP-6rr"/>
+                            <constraint firstItem="Xu9-fo-nsI" firstAttribute="centerX" secondItem="EBw-as-lGd" secondAttribute="centerX" id="mnK-nk-4EX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bOh-KC-e0F"/>
                     </view>
                     <navigationItem key="navigationItem" id="gBg-Vd-RZl"/>
                     <connections>
                         <outlet property="setupInProgressLabel" destination="RG5-bf-Jua" id="bNG-Az-VGs"/>
+                        <outlet property="versionLabel" destination="Xu9-fo-nsI" id="EHL-J5-guW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NpW-9j-SlL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -21,6 +21,20 @@ func runOnMainThread(action: @escaping () -> Void) {
     }
 }
 
+func runOnBackgroundThread(action: @escaping () -> Void) {
+    DispatchQueue.global().async {
+        action()
+    }
+}
+
+func runOnBackgroundThenMainThread(action: @escaping () -> Void) {
+    DispatchQueue.global().async {
+        runOnMainThread {
+            action()
+        }
+    }
+}
+
 func animateView(duration: TimeInterval = 0.5, delay: TimeInterval = 0.0, completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in }, codeToAnimate: @escaping () -> Void) {
     UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
         codeToAnimate()

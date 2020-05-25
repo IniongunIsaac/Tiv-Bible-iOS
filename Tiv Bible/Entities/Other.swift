@@ -13,13 +13,11 @@ import Foundation
     dynamic var subTitle = ""
     dynamic var text = ""
     
-    init(title: String, subTitle: String, text: String) {
+    convenience required init(title: String, subTitle: String, text: String) {
+        self.init()
         self.title = title
         self.subTitle = subTitle
         self.text = text
     }
-    
-    required init() {
-        fatalError("init() has not been implemented")
-    }
+
 }

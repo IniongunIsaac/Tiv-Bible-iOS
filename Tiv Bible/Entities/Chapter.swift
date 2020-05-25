@@ -24,12 +24,10 @@ import RealmSwift
         return ["isSelected"]
     }
     
-    init(chapterNumber: Int, numberOfVerses: Int) {
+    convenience required init(chapterNumber: Int, numberOfVerses: Int) {
+        self.init()
         self.chapterNumber = chapterNumber
         self.numberOfVerses = numberOfVerses
     }
     
-    required init() {
-        fatalError("init() has not been implemented")
-    }
 }

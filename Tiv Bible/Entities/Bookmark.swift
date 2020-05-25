@@ -28,14 +28,12 @@ import RealmSwift
         return bookmarkedOn.dateOnly(format: "dd.MM.yyyy")
     }
     
-    init(book: Book, chapter: Chapter, verse: Verse) {
+    convenience required init(book: Book, chapter: Chapter, verse: Verse) {
+        self.init()
         self.book = book
         self.chapter = chapter
         self.verse = verse
         compositePrimaryKey = "\(self.book!.id)_\(self.chapter!.id)_\(self.verse!.number)"
     }
     
-    required init() {
-        fatalError("init() has not been implemented")
-    }
 }

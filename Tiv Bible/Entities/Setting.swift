@@ -16,7 +16,8 @@ import Foundation
     dynamic var stayAwake = false
     dynamic var audioSpeed: AudioSpeed?
     
-    init(fontSize: Int, lineSpacing: Int, fontStyle: FontStyle, theme: Theme, stayAwake: Bool, audioSpeed: AudioSpeed) {
+    convenience required init(fontSize: Int, lineSpacing: Int, fontStyle: FontStyle, theme: Theme, stayAwake: Bool, audioSpeed: AudioSpeed) {
+        self.init()
         self.fontSize = fontSize
         self.lineSpacing = lineSpacing
         self.fontStyle = fontStyle
@@ -25,7 +26,4 @@ import Foundation
         self.audioSpeed = audioSpeed
     }
     
-    required init() {
-        fatalError("init() has not been implemented")
-    }
 }
