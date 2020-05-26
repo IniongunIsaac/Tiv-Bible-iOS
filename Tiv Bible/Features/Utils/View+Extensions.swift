@@ -236,6 +236,30 @@ extension UIViewController {
         viewController.removeFromParent()
     }
     
+    func getViewController(from storyboardName: String, withId: String) -> UIViewController {
+        return UIStoryboard(name: storyboardName, bundle: Bundle.main).instantiateViewController(withIdentifier: withId)
+    }
+    
+    var homeTabs: UIViewController {
+        return UIStoryboard(name: AppConstants.HOME_STORYBOARD_NAME, bundle: Bundle.main).instantiateInitialViewController()!
+    }
+    
+    func setViewControllers(with viewController: UIViewController) {
+        navigationController?.viewControllers = [viewController]
+    }
+    
+    func pushViewController(_ viewController: UIViewController) {
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func popViewController() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func dismissViewController(animated: Bool = true, completion: (() -> Void)? = nil) {
+        dismiss(animated: true, completion: completion)
+    }
+    
 }
 
 // MARK: - UICollectionView Extensions

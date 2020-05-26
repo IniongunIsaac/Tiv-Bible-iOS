@@ -9,7 +9,6 @@
 import Foundation
 import RxSwift
 import DeviceKit
-import RealmSwift
 
 class SplashViewModel: BaseViewModel, ISplashViewModel {
     
@@ -52,8 +51,8 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
     
     fileprivate func setupDB() {
         if preferenceRepo.isDBInitialized {
-            showHome.onNext(true)
             showSetupInProgress.onNext(false)
+            showHome.onNext(true)
         } else {
             initializeDB()
         }

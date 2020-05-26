@@ -35,8 +35,10 @@ class SplashViewController: BaseViewController {
     
     fileprivate func observeShowHome() {
         splashViewModel.showHome.bind { [weak self] shouldShow in
+            guard let self = self else { return }
             if shouldShow {
                 //navigate to home screen
+                self.setViewControllers(with: self.homeTabs)
             }
         }.disposed(by: disposeBag)
     }

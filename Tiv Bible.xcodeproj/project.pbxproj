@@ -174,6 +174,13 @@
 		1440E072247AF64D0037E68E /* ISplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E071247AF64D0037E68E /* ISplashViewModel.swift */; };
 		1440E074247BBE850037E68E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E073247BBE850037E68E /* UIColor+Extension.swift */; };
 		1440E076247BF93B0037E68E /* SplashDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E075247BF93B0037E68E /* SplashDependencyInjectionGraph.swift */; };
+		1440E079247D3C630037E68E /* HomeTabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440E078247D3C630037E68E /* HomeTabs.storyboard */; };
+		1440E07E247D3CC90037E68E /* Read.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440E07D247D3CC90037E68E /* Read.storyboard */; };
+		1440E080247D3CD50037E68E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440E07F247D3CD50037E68E /* Search.storyboard */; };
+		1440E082247D3CDE0037E68E /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440E081247D3CDE0037E68E /* More.storyboard */; };
+		1440E08D247D420A0037E68E /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E08C247D420A0037E68E /* ReadViewController.swift */; };
+		1440E08F247D422C0037E68E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E08E247D422C0037E68E /* SearchViewController.swift */; };
+		1440E091247D42450037E68E /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E090247D42450037E68E /* MoreViewController.swift */; };
 		1E04978FA0BC2747FEF5DE26 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313FE4C6C52C2C75C944FE96 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */; };
 		E4D75BE7DA206226FCD4DCE1 /* Pods_Tiv_Bible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3884A3AC6C6A9D8CA50103 /* Pods_Tiv_Bible.framework */; };
 /* End PBXBuildFile section */
@@ -368,6 +375,13 @@
 		1440E071247AF64D0037E68E /* ISplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISplashViewModel.swift; sourceTree = "<group>"; };
 		1440E073247BBE850037E68E /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		1440E075247BF93B0037E68E /* SplashDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDependencyInjectionGraph.swift; sourceTree = "<group>"; };
+		1440E078247D3C630037E68E /* HomeTabs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTabs.storyboard; sourceTree = "<group>"; };
+		1440E07D247D3CC90037E68E /* Read.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Read.storyboard; sourceTree = "<group>"; };
+		1440E07F247D3CD50037E68E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		1440E081247D3CDE0037E68E /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		1440E08C247D420A0037E68E /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
+		1440E08E247D422C0037E68E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1440E090247D42450037E68E /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		2A6051955E0881527E3A1B8D /* Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		313FE4C6C52C2C75C944FE96 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiv_Bible_Tiv_BibleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		384FCFA79DF63727CF81789E /* Pods-Tiv BibleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv BibleTests.release.xcconfig"; path = "Target Support Files/Pods-Tiv BibleTests/Pods-Tiv BibleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -507,6 +521,10 @@
 		14121C7E247464E00073814F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				1440E07C247D3CBB0037E68E /* More */,
+				1440E07B247D3CB00037E68E /* Search */,
+				1440E07A247D3CA60037E68E /* Read */,
+				1440E077247CF9BD0037E68E /* Home */,
 				14121C83247465740073814F /* Splash */,
 				14121C82247465650073814F /* Launch */,
 				1440E0542479EEFF0037E68E /* Base */,
@@ -1048,6 +1066,113 @@
 			path = "Progress Loader";
 			sourceTree = "<group>";
 		};
+		1440E077247CF9BD0037E68E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1440E078247D3C630037E68E /* HomeTabs.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1440E07A247D3CA60037E68E /* Read */ = {
+			isa = PBXGroup;
+			children = (
+				1440E08B247D41D10037E68E /* ViewModel */,
+				1440E08A247D41CB0037E68E /* Views */,
+				1440E089247D41C50037E68E /* Storyboard */,
+			);
+			path = Read;
+			sourceTree = "<group>";
+		};
+		1440E07B247D3CB00037E68E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1440E088247D41BE0037E68E /* ViewModel */,
+				1440E087247D41B90037E68E /* Views */,
+				1440E086247D41AE0037E68E /* Storyboard */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		1440E07C247D3CBB0037E68E /* More */ = {
+			isa = PBXGroup;
+			children = (
+				1440E085247D41A40037E68E /* ViewModel */,
+				1440E084247D419E0037E68E /* Views */,
+				1440E083247D41920037E68E /* Storyboard */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		1440E083247D41920037E68E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1440E081247D3CDE0037E68E /* More.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1440E084247D419E0037E68E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1440E090247D42450037E68E /* MoreViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1440E085247D41A40037E68E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1440E086247D41AE0037E68E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1440E07F247D3CD50037E68E /* Search.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1440E087247D41B90037E68E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1440E08E247D422C0037E68E /* SearchViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1440E088247D41BE0037E68E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1440E089247D41C50037E68E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1440E07D247D3CC90037E68E /* Read.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1440E08A247D41CB0037E68E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1440E08C247D420A0037E68E /* ReadViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1440E08B247D41D10037E68E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		639B566969A01D1E2F125055 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1178,6 +1303,7 @@
 				14121D3D2474677F0073814F /* jost.ttf in Resources */,
 				14121D202474677F0073814F /* montserrat.ttf in Resources */,
 				14121D292474677F0073814F /* comfortaa_semi_bold.ttf in Resources */,
+				1440E07E247D3CC90037E68E /* Read.storyboard in Resources */,
 				14121D242474677F0073814F /* montserrat_light_italic.ttf in Resources */,
 				14121D2B2474677F0073814F /* montserrat_medium_italic.ttf in Resources */,
 				14121D4E2474677F0073814F /* montserrat_extra_bold_italic.ttf in Resources */,
@@ -1188,6 +1314,7 @@
 				14121D262474677F0073814F /* comfortaa.ttf in Resources */,
 				14121D302474677F0073814F /* montserrat_medium.ttf in Resources */,
 				14121D4A2474677F0073814F /* roboto.ttf in Resources */,
+				1440E082247D3CDE0037E68E /* More.storyboard in Resources */,
 				14121D422474677F0073814F /* montserrat_thin_italic.ttf in Resources */,
 				14121D4B2474677F0073814F /* comfortaa_medium.ttf in Resources */,
 				14121D1C2474677F0073814F /* lobster.ttf in Resources */,
@@ -1207,6 +1334,7 @@
 				14121D252474677F0073814F /* montserrat_extra_light.ttf in Resources */,
 				14121D452474677F0073814F /* montserrat_italic.ttf in Resources */,
 				14121D272474677F0073814F /* montserrat_semi_bold_italic.ttf in Resources */,
+				1440E079247D3C630037E68E /* HomeTabs.storyboard in Resources */,
 				14121D482474677F0073814F /* roboto_black.ttf in Resources */,
 				14121D442474677F0073814F /* metamorphous.ttf in Resources */,
 				14121D392474677F0073814F /* martel_sans_extralight.ttf in Resources */,
@@ -1214,6 +1342,7 @@
 				14121D2F2474677F0073814F /* lato.ttf in Resources */,
 				14121D462474677F0073814F /* montserrat_extra_bold.ttf in Resources */,
 				14121D3F2474677F0073814F /* montserrat_black_italic.ttf in Resources */,
+				1440E080247D3CD50037E68E /* Search.storyboard in Resources */,
 				14121D1B2474677F0073814F /* montserrat_alternates_bold.ttf in Resources */,
 				14121D492474677F0073814F /* roboto_light_italic.ttf in Resources */,
 				14121D412474677F0073814F /* roboto_italic.ttf in Resources */,
@@ -1461,6 +1590,7 @@
 				14121D962476CD030073814F /* IHighlightColorDataSource.swift in Sources */,
 				14121E0E2477364F0073814F /* IThemeRepo.swift in Sources */,
 				1440E068247AAF6F0037E68E /* IProgressLoader.swift in Sources */,
+				1440E08F247D422C0037E68E /* SearchViewController.swift in Sources */,
 				14121DA52476D6C50073814F /* INoteDataSource.swift in Sources */,
 				1440E0562479EF1A0037E68E /* BaseViewModel.swift in Sources */,
 				14121DAC2476FB220073814F /* OtherDataSourceImpl.swift in Sources */,
@@ -1487,6 +1617,7 @@
 				14121E2024788F360073814F /* PreferenceConstants.swift in Sources */,
 				14121DC0247711210073814F /* ThemeDataSourceImpl.swift in Sources */,
 				14121E04247734CF0073814F /* ISettingRepo.swift in Sources */,
+				1440E091247D42450037E68E /* MoreViewController.swift in Sources */,
 				14121D7524752DBC0073814F /* Theme.swift in Sources */,
 				14121DF5247732AD0073814F /* INoteRepo.swift in Sources */,
 				14121DED24772E8A0073814F /* HighlightRepoImpl.swift in Sources */,
@@ -1495,6 +1626,7 @@
 				14121D6F24752B9A0073814F /* Other.swift in Sources */,
 				14121D89247683D00073814F /* BookmarkDataSourceImpl.swift in Sources */,
 				14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */,
+				1440E08D247D420A0037E68E /* ReadViewController.swift in Sources */,
 				14121D8E2476B0780073814F /* ChapterDataSourceImpl.swift in Sources */,
 				14121D5824747B6A0073814F /* AudioSpeed.swift in Sources */,
 				14121DFC247733870073814F /* OtherRepoImpl.swift in Sources */,

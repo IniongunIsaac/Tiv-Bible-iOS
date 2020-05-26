@@ -30,4 +30,8 @@ extension UIColor {
                 alpha: alpha)
     }
     
+    static var primaryColor: UIColor {
+        return UIColor("#008577")
+    }
+    
 }
