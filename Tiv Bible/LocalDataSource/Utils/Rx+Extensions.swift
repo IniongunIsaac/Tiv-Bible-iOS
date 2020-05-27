@@ -15,10 +15,6 @@ extension Realm {
     func insertItems<T: Object>(items: [T]) -> Observable<Void> {
         return Observable<Void>.create { observer in
             
-            runOnBackgroundThread {
-                let realm = try! Realm()
-            }
-            
             do {
                 
                 try self.write {

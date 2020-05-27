@@ -19,6 +19,10 @@ struct SettingDataSourceImpl: ISettingDataSource {
         Observable.array(from: realm.objects(Setting.self))
     }
     
+    func getAllSetting() -> Observable<Setting> {
+        Observable.from(optional: realm.objects(Setting.self).first)
+    }
+    
     func getSettingsById(settingId: String) -> Observable<Setting> {
         Observable.from(optional: realm.object(ofType: Setting.self, forPrimaryKey: settingId))
     }

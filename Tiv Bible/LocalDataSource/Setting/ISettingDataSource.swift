@@ -12,6 +12,8 @@ import RxSwift
 protocol ISettingDataSource {
     
     func getAllSettings() -> Observable<[Setting]>
+    
+    func getAllSetting() -> Observable<Setting>
 
     func getSettingsById(settingId: String) -> Observable<Setting>
     

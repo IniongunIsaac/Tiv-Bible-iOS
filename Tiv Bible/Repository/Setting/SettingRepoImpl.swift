@@ -17,6 +17,10 @@ struct SettingRepoImpl: ISettingRepo {
         settingsDataSource.getAllSettings()
     }
     
+    func getAllSetting() -> Observable<Setting> {
+        settingsDataSource.getAllSetting()
+    }
+    
     func getSettingsById(settingId: String) -> Observable<Setting> {
         settingsDataSource.getSettingsById(settingId: settingId)
     }

@@ -8,8 +8,14 @@
 
 import UIKit
 
-class MoreViewController: UIViewController {
+class MoreViewController: BaseViewController {
 
+    var moreViewModel: IMoreViewModel!
+    
+    override func getViewModel() -> BaseViewModel {
+        return moreViewModel as! BaseViewModel
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

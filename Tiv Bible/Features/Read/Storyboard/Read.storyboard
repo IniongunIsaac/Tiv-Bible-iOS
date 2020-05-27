@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h41-eU-RPg">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="comfortaa.ttf">
+            <string>Comfortaa-Regular</string>
+        </array>
+        <array key="comfortaa_medium.ttf">
+            <string>Comfortaa-Medium</string>
+        </array>
+        <array key="comfortaa_semi_bold.ttf">
+            <string>Comfortaa-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Read-->
         <scene sceneID="DH9-Rr-Dfz">
@@ -32,17 +43,308 @@
                     <view key="view" contentMode="scaleToFill" id="g9D-0l-Bkp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1V-H7-1on">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uWm-vZ-D0d">
+                                        <rect key="frame" x="10" y="10" width="87.5" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSG-2f-3kF">
+                                                <rect key="frame" x="0.0" y="6" width="61" height="18"/>
+                                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="asc-aZ-mKk">
+                                                <rect key="frame" x="69" y="10" width="18.5" height="10.5"/>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoE-V3-llR">
+                                        <rect key="frame" x="368" y="10" width="30" height="30"/>
+                                        <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="16"/>
+                                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Aa">
+                                            <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fontStyleButtonTapped:" destination="HBa-F0-Bcn" eventType="touchUpInside" id="qpn-gD-bJu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="uWm-vZ-D0d" secondAttribute="bottom" constant="10" id="3rE-1Y-FzC"/>
+                                    <constraint firstAttribute="trailing" secondItem="SoE-V3-llR" secondAttribute="trailing" constant="16" id="Igz-Ec-X4S"/>
+                                    <constraint firstItem="SoE-V3-llR" firstAttribute="top" secondItem="t1V-H7-1on" secondAttribute="top" constant="10" id="VMU-NH-Po5"/>
+                                    <constraint firstItem="uWm-vZ-D0d" firstAttribute="leading" secondItem="t1V-H7-1on" secondAttribute="leading" constant="10" id="a8y-K3-IC5"/>
+                                    <constraint firstItem="uWm-vZ-D0d" firstAttribute="top" secondItem="t1V-H7-1on" secondAttribute="top" constant="10" id="e7d-dA-zM7"/>
+                                    <constraint firstAttribute="bottom" secondItem="SoE-V3-llR" secondAttribute="bottom" constant="10" id="raO-g5-4A5"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7dS-jP-YDg">
+                                <rect key="frame" x="0.0" y="102" width="414" height="711"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="verseTableViewCell" textLabel="SaW-He-S22" detailTextLabel="BIR-ha-JZa" style="IBUITableViewCellStyleSubtitle" id="RDv-cP-fqd">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="126"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RDv-cP-fqd" id="9zY-HR-7vc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SaW-He-S22">
+                                                    <rect key="frame" x="20" y="5.5" width="31.5" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BIR-ha-JZa">
+                                                    <rect key="frame" x="20" y="24" width="365.5" height="94"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">1. Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso</string>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="YrE-OV-Su4" detailTextLabel="iQr-ax-kHn" style="IBUITableViewCellStyleSubtitle" id="THm-KV-bIa">
+                                        <rect key="frame" x="0.0" y="154" width="414" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="THm-KV-bIa" id="OHD-D8-VIh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YrE-OV-Su4">
+                                                    <rect key="frame" x="20" y="5.5" width="31.5" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iQr-ax-kHn">
+                                                    <rect key="frame" x="20" y="24" width="374" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso</string>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="TpZ-Ic-fh7" detailTextLabel="Twp-lp-Fvi" style="IBUITableViewCellStyleSubtitle" id="IvX-SH-QaG">
+                                        <rect key="frame" x="0.0" y="233" width="414" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IvX-SH-QaG" id="T6Z-Cc-Yjv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TpZ-Ic-fh7">
+                                                    <rect key="frame" x="20" y="5.5" width="31.5" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Twp-lp-Fvi">
+                                                    <rect key="frame" x="20" y="24" width="374" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso</string>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="wrO-B0-cnV" detailTextLabel="tln-Xy-avY" style="IBUITableViewCellStyleSubtitle" id="hgY-dr-r0q">
+                                        <rect key="frame" x="0.0" y="312" width="414" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hgY-dr-r0q" id="PKR-FO-phP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wrO-B0-cnV">
+                                                    <rect key="frame" x="20" y="5.5" width="31.5" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tln-Xy-avY">
+                                                    <rect key="frame" x="20" y="24" width="374" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso</string>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="bEQ-zJ-Qs4" detailTextLabel="2F5-C9-Qtp" style="IBUITableViewCellStyleSubtitle" id="KzM-Tg-WOn">
+                                        <rect key="frame" x="0.0" y="391" width="414" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KzM-Tg-WOn" id="jTX-DY-wUU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bEQ-zJ-Qs4">
+                                                    <rect key="frame" x="20" y="5.5" width="31.5" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2F5-C9-Qtp">
+                                                    <rect key="frame" x="20" y="24" width="374" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso</string>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="4GL-Vr-CWX" detailTextLabel="LgO-NO-JBd" style="IBUITableViewCellStyleSubtitle" id="k7J-bo-mGe">
+                                        <rect key="frame" x="0.0" y="470" width="414" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k7J-bo-mGe" id="Ddo-Aw-vo7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4GL-Vr-CWX">
+                                                    <rect key="frame" x="20" y="5.5" width="31.5" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LgO-NO-JBd">
+                                                    <rect key="frame" x="20" y="24" width="374" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso</string>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="eb9-pS-CUv" detailTextLabel="eGk-wT-TFA" style="IBUITableViewCellStyleSubtitle" id="5Zq-YC-NW4">
+                                        <rect key="frame" x="0.0" y="549" width="414" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Zq-YC-NW4" id="8F0-5H-4z6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eb9-pS-CUv">
+                                                    <rect key="frame" x="20" y="5.5" width="31.5" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eGk-wT-TFA">
+                                                    <rect key="frame" x="20" y="24" width="374" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso</string>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="SpF-Lv-uJc" detailTextLabel="kal-Wy-AZS" style="IBUITableViewCellStyleSubtitle" id="j50-vn-vyL">
+                                        <rect key="frame" x="0.0" y="628" width="414" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j50-vn-vyL" id="r8a-HU-XQG">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SpF-Lv-uJc">
+                                                    <rect key="frame" x="20" y="5.5" width="31.5" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kal-Wy-AZS">
+                                                    <rect key="frame" x="20" y="24" width="374" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso</string>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="o8s-8d-Lfx" detailTextLabel="84a-Wk-NtD" style="IBUITableViewCellStyleSubtitle" id="kCy-hq-bbt">
+                                        <rect key="frame" x="0.0" y="707" width="414" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kCy-hq-bbt" id="pfw-nZ-brH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o8s-8d-Lfx">
+                                                    <rect key="frame" x="20" y="5.5" width="31.5" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="84a-Wk-NtD">
+                                                    <rect key="frame" x="20" y="24" width="374" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso Sha hiihii la Aondo gba sha man tar, tar yo gba lun daang gbilin tso</string>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="t1V-H7-1on" firstAttribute="leading" secondItem="4d1-9O-ls7" secondAttribute="leading" id="1j0-eg-rJB"/>
+                            <constraint firstItem="t1V-H7-1on" firstAttribute="trailing" secondItem="4d1-9O-ls7" secondAttribute="trailing" id="6lr-Bu-6Ny"/>
+                            <constraint firstItem="7dS-jP-YDg" firstAttribute="leading" secondItem="4d1-9O-ls7" secondAttribute="leading" id="c3d-8G-8Vw"/>
+                            <constraint firstItem="t1V-H7-1on" firstAttribute="top" secondItem="4d1-9O-ls7" secondAttribute="top" id="h94-9i-BdS"/>
+                            <constraint firstItem="7dS-jP-YDg" firstAttribute="top" secondItem="t1V-H7-1on" secondAttribute="bottom" constant="8" id="p3u-3X-FeO"/>
+                            <constraint firstItem="7dS-jP-YDg" firstAttribute="bottom" secondItem="4d1-9O-ls7" secondAttribute="bottom" id="r1y-tf-9vy"/>
+                            <constraint firstItem="4d1-9O-ls7" firstAttribute="trailing" secondItem="7dS-jP-YDg" secondAttribute="trailing" id="vph-Mz-F7c"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4d1-9O-ls7"/>
                     </view>
                     <navigationItem key="navigationItem" id="VhH-Pm-uSv"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="bookChapterLabel" destination="FSG-2f-3kF" id="Fi6-8U-MiA"/>
+                        <outlet property="bookChapterStackView" destination="uWm-vZ-D0d" id="2x8-Ht-0xn"/>
+                        <outlet property="fontStyleButton" destination="SoE-V3-llR" id="cnh-Vr-9hn"/>
+                        <outlet property="topView" destination="t1V-H7-1on" id="w4l-69-Ur6"/>
+                        <outlet property="versesTableView" destination="7dS-jP-YDg" id="FQx-M2-kWj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRN-rZ-jd5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="126"/>
+            <point key="canvasLocation" x="582.60869565217399" y="125.89285714285714"/>
         </scene>
     </scenes>
     <resources>
         <image name="book" catalog="system" width="64" height="50"/>
+        <image name="chevron.down" catalog="system" width="64" height="36"/>
     </resources>
 </document>

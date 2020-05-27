@@ -42,4 +42,12 @@ class BaseViewModel {
         alertMessage.onNext(AlertMessage(message: message, type: type))
     }
     
+    func subscribe<T>(_ observable: Observable<T>, success: @escaping (T) -> Void, error: ((Error) -> Void)? = nil) {
+        observable.subscribe(onNext: { value in
+            success(value)
+        }, onError: { [weak self] err in
+            error?(err)
+            self?.emitFalseLoadingAndErrorValues(error: err)
+        }).disposed(by: disposeBag)
+    }
 }

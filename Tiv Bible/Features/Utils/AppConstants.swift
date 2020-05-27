@@ -27,6 +27,9 @@ struct AppConstants {
     static let SEARCH_VC_ID = "searchViewController"
     static let MORE_VC_ID = "moreViewController"
     
+    //MARK: Cell IDs
+    static let VERSE_CELL_ID = "verseTableViewCell"
+    
     //MARK: - System Icon Names
     static let SYSTEM_GRID_ICON_NAME = "rectangle.grid.2x2"
     static let SYSTEM_LIST_ICON_NAME = "list.bullet"

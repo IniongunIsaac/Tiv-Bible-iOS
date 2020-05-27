@@ -181,6 +181,18 @@
 		1440E08D247D420A0037E68E /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E08C247D420A0037E68E /* ReadViewController.swift */; };
 		1440E08F247D422C0037E68E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E08E247D422C0037E68E /* SearchViewController.swift */; };
 		1440E091247D42450037E68E /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E090247D42450037E68E /* MoreViewController.swift */; };
+		14CD219E247D5D0B00EF0A32 /* IReadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD219D247D5D0B00EF0A32 /* IReadViewModel.swift */; };
+		14CD21A0247D5D3400EF0A32 /* ReadViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */; };
+		14CD21A3247D606C00EF0A32 /* ButtonWithBorderAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21A2247D606C00EF0A32 /* ButtonWithBorderAttributes.swift */; };
+		14CD21A5247D609000EF0A32 /* ViewWithBorderAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21A4247D609000EF0A32 /* ViewWithBorderAttributes.swift */; };
+		14CD21A7247DA5F400EF0A32 /* ISearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21A6247DA5F400EF0A32 /* ISearchViewModel.swift */; };
+		14CD21A9247DA61900EF0A32 /* SearchViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21A8247DA61900EF0A32 /* SearchViewModelImpl.swift */; };
+		14CD21AB247DA65600EF0A32 /* IMoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21AA247DA65600EF0A32 /* IMoreViewModel.swift */; };
+		14CD21AD247DA67400EF0A32 /* MoreViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21AC247DA67400EF0A32 /* MoreViewModelImpl.swift */; };
+		14CD21AF247E229900EF0A32 /* Reactive+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21AE247E229900EF0A32 /* Reactive+Extensions.swift */; };
+		14CD21B1247E28F400EF0A32 /* ReadDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21B0247E28F400EF0A32 /* ReadDependencyInjectionGraph.swift */; };
+		14CD21B3247E2B5900EF0A32 /* SearchDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21B2247E2B5900EF0A32 /* SearchDependencyInjectionGraph.swift */; };
+		14CD21B5247E2B7400EF0A32 /* MoreDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21B4247E2B7400EF0A32 /* MoreDependencyInjectionGraph.swift */; };
 		1E04978FA0BC2747FEF5DE26 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313FE4C6C52C2C75C944FE96 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */; };
 		E4D75BE7DA206226FCD4DCE1 /* Pods_Tiv_Bible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3884A3AC6C6A9D8CA50103 /* Pods_Tiv_Bible.framework */; };
 /* End PBXBuildFile section */
@@ -382,6 +394,18 @@
 		1440E08C247D420A0037E68E /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		1440E08E247D422C0037E68E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1440E090247D42450037E68E /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		14CD219D247D5D0B00EF0A32 /* IReadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IReadViewModel.swift; sourceTree = "<group>"; };
+		14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewModelImpl.swift; sourceTree = "<group>"; };
+		14CD21A2247D606C00EF0A32 /* ButtonWithBorderAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithBorderAttributes.swift; sourceTree = "<group>"; };
+		14CD21A4247D609000EF0A32 /* ViewWithBorderAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithBorderAttributes.swift; sourceTree = "<group>"; };
+		14CD21A6247DA5F400EF0A32 /* ISearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISearchViewModel.swift; sourceTree = "<group>"; };
+		14CD21A8247DA61900EF0A32 /* SearchViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelImpl.swift; sourceTree = "<group>"; };
+		14CD21AA247DA65600EF0A32 /* IMoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMoreViewModel.swift; sourceTree = "<group>"; };
+		14CD21AC247DA67400EF0A32 /* MoreViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModelImpl.swift; sourceTree = "<group>"; };
+		14CD21AE247E229900EF0A32 /* Reactive+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extensions.swift"; sourceTree = "<group>"; };
+		14CD21B0247E28F400EF0A32 /* ReadDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadDependencyInjectionGraph.swift; sourceTree = "<group>"; };
+		14CD21B2247E2B5900EF0A32 /* SearchDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDependencyInjectionGraph.swift; sourceTree = "<group>"; };
+		14CD21B4247E2B7400EF0A32 /* MoreDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDependencyInjectionGraph.swift; sourceTree = "<group>"; };
 		2A6051955E0881527E3A1B8D /* Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		313FE4C6C52C2C75C944FE96 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiv_Bible_Tiv_BibleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		384FCFA79DF63727CF81789E /* Pods-Tiv BibleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv BibleTests.release.xcconfig"; path = "Target Support Files/Pods-Tiv BibleTests/Pods-Tiv BibleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -540,6 +564,9 @@
 				14121E2824792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift */,
 				14121E2A24792F320073814F /* RepositoryDependencyInjectionGraph.swift */,
 				1440E075247BF93B0037E68E /* SplashDependencyInjectionGraph.swift */,
+				14CD21B0247E28F400EF0A32 /* ReadDependencyInjectionGraph.swift */,
+				14CD21B2247E2B5900EF0A32 /* SearchDependencyInjectionGraph.swift */,
+				14CD21B4247E2B7400EF0A32 /* MoreDependencyInjectionGraph.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -641,6 +668,7 @@
 		14121D6124750EE90073814F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				14CD21A1247D605B00EF0A32 /* IBDesignables */,
 				1440E066247AAF5B0037E68E /* Progress Loader */,
 				1440E057247AAB9A0037E68E /* Custom Alert */,
 				14121D6224750F0D0073814F /* Date+Extensions.swift */,
@@ -649,6 +677,7 @@
 				1440E062247AACC90037E68E /* AppConstants.swift */,
 				1440E064247AAD730037E68E /* Font+Extensions.swift */,
 				1440E073247BBE850037E68E /* UIColor+Extension.swift */,
+				14CD21AE247E229900EF0A32 /* Reactive+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1123,6 +1152,8 @@
 		1440E085247D41A40037E68E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				14CD21AA247DA65600EF0A32 /* IMoreViewModel.swift */,
+				14CD21AC247DA67400EF0A32 /* MoreViewModelImpl.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1146,6 +1177,8 @@
 		1440E088247D41BE0037E68E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				14CD21A6247DA5F400EF0A32 /* ISearchViewModel.swift */,
+				14CD21A8247DA61900EF0A32 /* SearchViewModelImpl.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1169,8 +1202,19 @@
 		1440E08B247D41D10037E68E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				14CD219D247D5D0B00EF0A32 /* IReadViewModel.swift */,
+				14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		14CD21A1247D605B00EF0A32 /* IBDesignables */ = {
+			isa = PBXGroup;
+			children = (
+				14CD21A2247D606C00EF0A32 /* ButtonWithBorderAttributes.swift */,
+				14CD21A4247D609000EF0A32 /* ViewWithBorderAttributes.swift */,
+			);
+			path = IBDesignables;
 			sourceTree = "<group>";
 		};
 		639B566969A01D1E2F125055 /* Frameworks */ = {
@@ -1548,6 +1592,7 @@
 				14121D52247471FF0073814F /* Version.swift in Sources */,
 				14121DB924770E6F0073814F /* ITestamentDataSource.swift in Sources */,
 				14121E2724792BDD0073814F /* SwinjectDependencyGraph.swift in Sources */,
+				14CD21A7247DA5F400EF0A32 /* ISearchViewModel.swift in Sources */,
 				14121D982476CD110073814F /* HighlightColorDataSourceImpl.swift in Sources */,
 				14121DEB24772E5A0073814F /* IHighlightRepo.swift in Sources */,
 				14121DB12477091A0073814F /* RecentSearchDataSourceImpl.swift in Sources */,
@@ -1565,18 +1610,23 @@
 				14121D9D2476CE6D0073814F /* HighlightDataSourceImpl.swift in Sources */,
 				14121DBE247710F20073814F /* IThemeDataSource.swift in Sources */,
 				14121D842476700C0073814F /* BookDataSourceImpl.swift in Sources */,
+				14CD21B3247E2B5900EF0A32 /* SearchDependencyInjectionGraph.swift in Sources */,
 				14121D7C2475B43B0073814F /* AudioSpeedDataSourceImpl.swift in Sources */,
 				1440E05B247AABBE0037E68E /* AlertType.swift in Sources */,
+				14CD21A5247D609000EF0A32 /* ViewWithBorderAttributes.swift in Sources */,
 				14121D672475154D0073814F /* Highlight.swift in Sources */,
 				14121DA22476D38E0073814F /* HistoryDataSourceImpl.swift in Sources */,
+				14CD21AF247E229900EF0A32 /* Reactive+Extensions.swift in Sources */,
 				1440E070247AC0C60037E68E /* SplashViewModel.swift in Sources */,
 				1440E072247AF64D0037E68E /* ISplashViewModel.swift in Sources */,
 				14121E1A247737E30073814F /* VersionRepoImpl.swift in Sources */,
+				14CD21B5247E2B7400EF0A32 /* MoreDependencyInjectionGraph.swift in Sources */,
 				14121DF2247731A10073814F /* HistoryRepoImpl.swift in Sources */,
 				14121D87247683A60073814F /* IBookmarkDataSource.swift in Sources */,
 				14121DFA2477335C0073814F /* IOtherRepo.swift in Sources */,
 				14121D60247488060073814F /* Verse.swift in Sources */,
 				14121DB424770A1F0073814F /* ISettingDataSource.swift in Sources */,
+				14CD21AB247DA65600EF0A32 /* IMoreViewModel.swift in Sources */,
 				14121DD42477265F0073814F /* BookRepoImpl.swift in Sources */,
 				14121D69247516520073814F /* HighlightColor.swift in Sources */,
 				14121D5624747A4D0073814F /* BaseName.swift in Sources */,
@@ -1602,11 +1652,13 @@
 				1440E05D247AABCB0037E68E /* CustomAlert.swift in Sources */,
 				14121E152477371A0073814F /* VerseRepoImpl.swift in Sources */,
 				1440E074247BBE850037E68E /* UIColor+Extension.swift in Sources */,
+				14CD21A0247D5D3400EF0A32 /* ReadViewModelImpl.swift in Sources */,
 				14121DAF247709020073814F /* IRecentSearchDataSource.swift in Sources */,
 				14121DC5247712A40073814F /* VerseDataSourceImpl.swift in Sources */,
 				14121D7124752C3A0073814F /* RecentSearch.swift in Sources */,
 				14121DFF247734010073814F /* IRecentSearchRepo.swift in Sources */,
 				14121E18247737BA0073814F /* IVersionRepo.swift in Sources */,
+				14CD21A9247DA61900EF0A32 /* SearchViewModelImpl.swift in Sources */,
 				14121E09247735A30073814F /* ITestamentRepo.swift in Sources */,
 				14121D5C2474804E0073814F /* Bookmark.swift in Sources */,
 				14121DCF247719E20073814F /* AudioSpeedRepoImpl.swift in Sources */,
@@ -1625,7 +1677,9 @@
 				14121D5A24747BB20073814F /* Book.swift in Sources */,
 				14121D6F24752B9A0073814F /* Other.swift in Sources */,
 				14121D89247683D00073814F /* BookmarkDataSourceImpl.swift in Sources */,
+				14CD21A3247D606C00EF0A32 /* ButtonWithBorderAttributes.swift in Sources */,
 				14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */,
+				14CD219E247D5D0B00EF0A32 /* IReadViewModel.swift in Sources */,
 				1440E08D247D420A0037E68E /* ReadViewController.swift in Sources */,
 				14121D8E2476B0780073814F /* ChapterDataSourceImpl.swift in Sources */,
 				14121D5824747B6A0073814F /* AudioSpeed.swift in Sources */,
@@ -1635,6 +1689,7 @@
 				14121D8C2476AAF50073814F /* IChapterDataSource.swift in Sources */,
 				14121DD22477262C0073814F /* IBookRepo.swift in Sources */,
 				14121E2324792A310073814F /* IPreferenceRepo.swift in Sources */,
+				14CD21B1247E28F400EF0A32 /* ReadDependencyInjectionGraph.swift in Sources */,
 				14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */,
 				14121DBB24770E950073814F /* TestamentDataSourceImpl.swift in Sources */,
 				14121D9B2476CE4E0073814F /* IHighlightDataSource.swift in Sources */,
@@ -1644,6 +1699,7 @@
 				14121DA02476D36E0073814F /* IHistoryDataSource.swift in Sources */,
 				14121DE624772D910073814F /* IHighlightColorRepo.swift in Sources */,
 				14121D5E247486600073814F /* Chapter.swift in Sources */,
+				14CD21AD247DA67400EF0A32 /* MoreViewModelImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
