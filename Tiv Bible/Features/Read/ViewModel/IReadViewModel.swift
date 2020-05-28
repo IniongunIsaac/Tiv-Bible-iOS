@@ -18,6 +18,10 @@ protocol IReadViewModel {
     
     var currentVerses: PublishSubject<[Verse]> { get }
     
+    var verseNumber: PublishSubject<Int> { get }
+    
+    var highlights: PublishSubject<[Highlight]> { get }
+    
     func getBookFromSavedPreferencesOrInitializeWithGenese()
     
 }

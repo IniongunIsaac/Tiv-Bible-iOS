@@ -181,6 +181,7 @@
 		1440E08D247D420A0037E68E /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E08C247D420A0037E68E /* ReadViewController.swift */; };
 		1440E08F247D422C0037E68E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E08E247D422C0037E68E /* SearchViewController.swift */; };
 		1440E091247D42450037E68E /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E090247D42450037E68E /* MoreViewController.swift */; };
+		1462CD2E2480469500063892 /* VerseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462CD2D2480469500063892 /* VerseTableViewCell.swift */; };
 		14CD219E247D5D0B00EF0A32 /* IReadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD219D247D5D0B00EF0A32 /* IReadViewModel.swift */; };
 		14CD21A0247D5D3400EF0A32 /* ReadViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */; };
 		14CD21A3247D606C00EF0A32 /* ButtonWithBorderAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21A2247D606C00EF0A32 /* ButtonWithBorderAttributes.swift */; };
@@ -394,6 +395,7 @@
 		1440E08C247D420A0037E68E /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		1440E08E247D422C0037E68E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1440E090247D42450037E68E /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		1462CD2D2480469500063892 /* VerseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseTableViewCell.swift; sourceTree = "<group>"; };
 		14CD219D247D5D0B00EF0A32 /* IReadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IReadViewModel.swift; sourceTree = "<group>"; };
 		14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewModelImpl.swift; sourceTree = "<group>"; };
 		14CD21A2247D606C00EF0A32 /* ButtonWithBorderAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithBorderAttributes.swift; sourceTree = "<group>"; };
@@ -1195,6 +1197,7 @@
 			isa = PBXGroup;
 			children = (
 				1440E08C247D420A0037E68E /* ReadViewController.swift */,
+				1462CD2D2480469500063892 /* VerseTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1598,6 +1601,7 @@
 				14121DB12477091A0073814F /* RecentSearchDataSourceImpl.swift in Sources */,
 				14121DF7247732D70073814F /* NoteRepoImpl.swift in Sources */,
 				14121DE124772C900073814F /* IFontStyleRepo.swift in Sources */,
+				1462CD2E2480469500063892 /* VerseTableViewCell.swift in Sources */,
 				14121D932476CBAF0073814F /* FontStyleDataSourceImpl.swift in Sources */,
 				14121D6324750F0D0073814F /* Date+Extensions.swift in Sources */,
 				14121E2B24792F320073814F /* RepositoryDependencyInjectionGraph.swift in Sources */,

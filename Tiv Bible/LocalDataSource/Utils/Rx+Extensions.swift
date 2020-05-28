@@ -40,7 +40,7 @@ extension Realm {
             do {
                 
                 try self.write {
-                    self.add(items)
+                    self.add(items, update: .modified)
                 }
                 
                 observer.onNext(())

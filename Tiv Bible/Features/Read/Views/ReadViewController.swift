@@ -32,6 +32,11 @@ class ReadViewController: BaseViewController {
         setTapGestures()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        readViewModel.getBookFromSavedPreferencesOrInitializeWithGenese()
+    }
+    
     fileprivate func setTapGestures() {
         bookChapterStackView.addTapGesture { [weak self] in
             self?.bookChapterStackView.animateOnClick(completion: {
@@ -42,6 +47,24 @@ class ReadViewController: BaseViewController {
     
     @IBAction func fontStyleButtonTapped(_ sender: UIButton) {
         
+    }
+    
+    override func setChildViewControllerObservers() {
+        super.setChildViewControllerObservers()
+        observeCurrentVerses()
+        observeBookNameAndChapterNumber()
+    }
+    
+    fileprivate func observeCurrentVerses() {
+        readViewModel.currentVerses.bind(to: versesTableView.rx.items(cellIdentifier: AppConstants.VERSE_CELL_ID, cellType: VerseTableViewCell.self)) { row, verse, cell in
+            
+            cell.configureView(verse: verse)
+            
+        }.disposed(by: disposeBag)
+    }
+    
+    fileprivate func observeBookNameAndChapterNumber() {
+        readViewModel.bookNameAndChapterNumber.bind(to: bookChapterLabel.rx.text).disposed(by: disposeBag)
     }
     
 }

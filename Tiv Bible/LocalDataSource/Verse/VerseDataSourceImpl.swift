@@ -28,15 +28,15 @@ struct VerseDataSourceImpl: IVerseDataSource {
     }
     
     func getVersesByChapter(chapterId: String) -> Observable<[Verse]> {
-        Observable.array(from: realm.objects(Verse.self).filter("chapter.id = %@", chapterId).sorted(byKeyPath: "number", ascending: true))
+        Observable.array(from: realm.objects(Verse.self).filter("ANY chapters.id = %@", chapterId).sorted(byKeyPath: "number", ascending: true))
     }
     
     func getVersesByTextAndChapter(searchText: String, chapterId: String) -> Observable<[Verse]> {
-        Observable.array(from: realm.objects(Verse.self).filter("text LIKE %@ chapter.id = %@", searchText, chapterId).sorted(byKeyPath: "number", ascending: true))
+        Observable.array(from: realm.objects(Verse.self).filter("text LIKE %@ AND ANY chapters.id = %@", searchText, chapterId).sorted(byKeyPath: "number", ascending: true))
     }
     
     func getVersesByBook(bookId: String) -> Observable<[Verse]> {
-        Observable.from(optional: realm.objects(Verse.self).filter("chapter.book.id = %@", bookId).sorted (by: { $0.chapter.book.orderNo < $1.chapter.book.orderNo && $0.number < $1.number }))
+        Observable.from(optional: realm.objects(Verse.self).filter("ANY chapters.books.id == %@", bookId).sorted (by: { $0.chapter.book.orderNo < $1.chapter.book.orderNo && $0.number < $1.number }))
     }
     
     func insertVerses(verses: [Verse]) -> Observable<Void> {

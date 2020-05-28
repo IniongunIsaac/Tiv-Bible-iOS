@@ -42,6 +42,8 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     var currentSettings: PublishSubject<Setting> = PublishSubject()
     var bookNameAndChapterNumber: PublishSubject<String> = PublishSubject()
     var currentVerses: PublishSubject<[Verse]> = PublishSubject()
+    var verseNumber: PublishSubject<Int> = PublishSubject()
+    var highlights: PublishSubject<[Highlight]> = PublishSubject()
     
     fileprivate var currentVerse: Verse?
     fileprivate var currentChapter: Chapter?
@@ -49,22 +51,23 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     fileprivate var newBookNameAndChapterNumber = "Genese:1"
     fileprivate var verses = [Verse]()
     fileprivate var chapters = [Verse]()
+    fileprivate var highlightsList = [Highlight]()
+    fileprivate var currentVersesList = [Verse]()
     
-    override func didAppear() {
-        super.didAppear()
-        getUserSettings()
+    override func didLoad() {
+        super.didLoad()
         self.preferenceRepo.shouldReloadVerses = true
     }
     
+    override func willAppear() {
+        super.willAppear()
+        getUserSettings()
+    }
+    
     fileprivate func getUserSettings() {
-        //showLoading()
-        runOnBackgroundThenMainThread { [weak self] in
-            guard let self = self else { return }
-            self.subscribe(self.settingsRepo.getAllSetting(), success: { setting in
-                self.currentSettings.onNext(setting)
-                //self.showLoading(false)
-            })
-        }
+        subscribe(settingsRepo.getAllSetting(), success: { [weak self] setting in
+            self?.currentSettings.onNext(setting)
+        })
     }
     
     func getBookFromSavedPreferencesOrInitializeWithGenese() {
@@ -80,31 +83,25 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     }
     
     fileprivate func getSavedBook(bookId: String) {
-        //showLoading()
-        runOnBackgroundThenMainThread { [weak self] in
+        subscribe(bookRepo.getBookById(bookId: bookId), success: { [weak self] book in
             guard let self = self else { return }
-            self.subscribe(self.bookRepo.getBookById(bookId: bookId), success: { book in
-                self.currentBook = book
-                self.getBookVerses(bookId: self.preferenceRepo.currentBookId)
-            })
-        }
+            self.currentBook = book
+            self.getBookVerses(bookId: self.preferenceRepo.currentBookId)
+        })
     }
     
     fileprivate func getDefaultBook() {
-        //showLoading()
-        runOnBackgroundThenMainThread { [weak self] in
+        self.subscribe(self.bookRepo.getBookByName(bookName: "Genese"), success: { [weak self] book in
             guard let self = self else { return }
-            self.subscribe(self.bookRepo.getBookByName(bookName: "Genese"), success: { book in
-                self.preferenceRepo.currentBookId = book.id
-                self.currentBook = book
-                if let chapter = book.chapters.first {
-                    self.currentChapter = chapter
-                    self.preferenceRepo.currentChapterId = chapter.id
-                }
-                //self.showLoading(false)
-                self.getBookVerses(bookId: self.preferenceRepo.currentBookId)
-            })
-        }
+            self.preferenceRepo.currentBookId = book.id
+            self.currentBook = book
+            if let chapter = book.chapters.first {
+                self.currentChapter = chapter
+                self.preferenceRepo.currentChapterId = chapter.id
+            }
+            self.getBookVerses(bookId: self.preferenceRepo.currentBookId)
+        })
+        
     }
     
     fileprivate func getBookVerses(bookId: String) {
@@ -113,14 +110,11 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         newBookNameAndChapterNumber = "\(currentBook!.bookName.capitalized):\(nameAndChapter[1])"
         bookNameAndChapterNumber.onNext(newBookNameAndChapterNumber.replacingOccurrences(of: ":", with: " "))
         
-        runOnBackgroundThenMainThread { [weak self] in
-            guard let self = self else { return }
-            self.subscribe(self.verseRepo.getVersesByBook(bookId: bookId), success: { verseList in
-                self.chapters = verseList.distinctBy { $0.chapter.id }
-                self.verses = verseList
-                self.getSavedChapter()
-            })
-        }
+        subscribe(verseRepo.getVersesByBook(bookId: bookId), success: { [weak self] verseList in
+            self?.chapters = verseList.distinctBy { $0.chapter.id }
+            self?.verses = verseList
+            self?.getSavedChapter()
+        })
     }
     
     fileprivate func getSavedChapter() {
@@ -131,21 +125,66 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         }
     }
     
-    fileprivate func getCurrentVerses() {
+    fileprivate func getCurrentVerses(chapterId: String? = nil) {
+        let chapterId = chapterId ?? chapters[0].id
+        currentVersesList = verses.filter { $0.chapter.id == chapterId }
+        currentVerses.onNext(currentVersesList)
+        
+        if let chapter = currentChapter {
+            let nameAndChapter = newBookNameAndChapterNumber.components(separatedBy: ":")
+            newBookNameAndChapterNumber = "\(nameAndChapter[0]):\(chapter.chapterNumber)"
+            bookNameAndChapterNumber.onNext(newBookNameAndChapterNumber.replacingOccurrences(of: ":", with: " "))
+        }
         
     }
     
     fileprivate func getChapter(chapterId: String) {
-        runOnBackgroundThenMainThread { [weak self] in
-            guard let self = self else { return }
-            self.subscribe(self.chapterRepo.getChapterById(chapterId: chapterId), success: { chapter in
-                self.saveHistory(chapter: chapter)
-            })
-        }
+        subscribe(chapterRepo.getChapterById(chapterId: chapterId), success: { [weak self] chapter in
+            self?.currentChapter = chapter
+            self?.saveHistory(chapter: chapter)
+            self?.getCurrentVerses(chapterId: chapter.id)
+        })
     }
     
     fileprivate func saveHistory(chapter: Chapter) {
+        subscribe(historyRepo.insertHistory(history: [History(book: currentBook!, chapter: chapter)]))
+    }
+    
+    fileprivate func getSavedVerse() {
+        getVersesHighlights()
         
+        if preferenceRepo.currentVerseId.isEmpty {
+            verseNumber.onNext(0)
+        } else {
+            getVerse(verseId: preferenceRepo.currentVerseId)
+        }
+    }
+    
+    fileprivate func getVerse(verseId: String) {
+        subscribe(verseRepo.getVerseById(verseId: verseId), success: { [weak self] verse in
+            self?.currentVerse = verse
+            self?.verseNumber.onNext(verse.number)
+        })
+    }
+    
+    fileprivate func getVersesHighlights() {
+        subscribe(highlightRepo.getAllHighlights(), success: { [weak self] highlights in
+            self?.highlightsList = highlights
+            self?.getHighlightedVerses()
+        })
+    }
+    
+    fileprivate func getHighlightedVerses() {
+        currentVersesList.forEach { verse in
+            highlightsList.forEach { highlight in
+                if highlight.verse?.id == verse.id {
+                    verse.isHighlighted = true
+                    verse.highlight = highlight
+                }
+            }
+        }
+        currentVerses.onNext(currentVersesList)
+        highlights.onNext(highlightsList)
     }
     
 }

@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import DeviceKit
+import RealmSwift
 
 class SplashViewModel: BaseViewModel, ISplashViewModel {
     
@@ -46,7 +47,17 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
     
     override func didAppear() {
         super.didAppear()
+        //reset()
         setupDB()
+    }
+    
+    fileprivate func reset() {
+        let realm = try! Realm()
+        debugPrint(realm.configuration.fileURL)
+        try! realm.write {
+            realm.deleteAll()
+            preferenceRepo.isDBInitialized = false
+        }
     }
     
     fileprivate func setupDB() {
@@ -160,12 +171,22 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
                     let numOfBookChapterVerses = bookChapterVerses.count
                     
                     //create and add chapter to chapters list
-                    chapters.append(Chapter(chapterNumber: bookChapter.chapter, numberOfVerses: numOfBookChapterVerses))
+                    let chapter = Chapter(chapterNumber: bookChapter.chapter, numberOfVerses: numOfBookChapterVerses)
+                    chapters.append(chapter)
                     
-                    //create and add verse to verses list
-                    verses.append(contentsOf: bookChapterVerses.map { Verse(number: $0.verse, text: $0.text.components(separatedBy: .whitespacesAndNewlines).joined(separator: " "), hasTitle: !$0.title.isEmpty, title: $0.title.components(separatedBy: .whitespacesAndNewlines).joined(separator: " ")) })
+                    //create verses
+                    let versesList = bookChapterVerses.map { Verse(number: $0.verse, text: $0.text.components(separatedBy: .whitespacesAndNewlines).joined(separator: " "), hasTitle: !$0.title.isEmpty, title: $0.title.components(separatedBy: .whitespacesAndNewlines).joined(separator: " ")) }
+                    
+                    //attach verses to chapter
+                    chapter.verses.append(objectsIn: versesList)
+                    
+                    //add verses to verses list
+                    verses.append(contentsOf: versesList)
                     
                 }
+                
+                //attach chapters to book
+                book.chapters.append(objectsIn: chapters)
                 
                 //save book, chapters and verses
                 Observable.zip(
