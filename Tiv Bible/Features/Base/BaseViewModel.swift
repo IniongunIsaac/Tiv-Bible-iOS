@@ -42,9 +42,11 @@ class BaseViewModel {
         alertMessage.onNext(AlertMessage(message: message, type: type))
     }
     
-    func subscribe<T>(_ observable: Observable<T>, success: @escaping (T) -> Void, error: ((Error) -> Void)? = nil) {
-        observable.subscribe(onNext: { value in
-            success(value)
+    func subscribe<T>(_ observable: Observable<T>, success: ((T) -> Void)? = nil, error: ((Error) -> Void)? = nil) {
+        showLoading()
+        observable.subscribe(onNext: { [weak self] value in
+            self?.showLoading(false)
+            success?(value)
         }, onError: { [weak self] err in
             error?(err)
             self?.emitFalseLoadingAndErrorValues(error: err)

@@ -13,6 +13,8 @@ protocol IBookRepo {
     
     func getAllBooks() -> Observable<[Book]>
     
+    func getBookById(bookId: String) -> Observable<Book>
+    
     func getBooksByTestament(testamentId: String) -> Observable<[Book]>
 
     func getBooksByVersion(versionId: String) -> Observable<[Book]>

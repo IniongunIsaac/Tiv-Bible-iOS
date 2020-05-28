@@ -43,4 +43,5 @@ class ReadViewController: BaseViewController {
     @IBAction func fontStyleButtonTapped(_ sender: UIButton) {
         
     }
+    
 }

@@ -27,6 +27,12 @@ func runOnBackgroundThread(action: @escaping () -> Void) {
     }
 }
 
+func runOnLabeledBackgroundThread(action: @escaping () -> Void) {
+    DispatchQueue(label: AppConstants.BACKGROUND_THREAD_LABEL, qos: .background) .async {
+        action()
+    }
+}
+
 func runOnBackgroundThenMainThread(action: @escaping () -> Void) {
     DispatchQueue.global().async {
         runOnMainThread {

@@ -40,6 +40,15 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     }
     
     var currentSettings: PublishSubject<Setting> = PublishSubject()
+    var bookNameAndChapterNumber: PublishSubject<String> = PublishSubject()
+    var currentVerses: PublishSubject<[Verse]> = PublishSubject()
+    
+    fileprivate var currentVerse: Verse?
+    fileprivate var currentChapter: Chapter?
+    fileprivate var currentBook: Book?
+    fileprivate var newBookNameAndChapterNumber = "Genese:1"
+    fileprivate var verses = [Verse]()
+    fileprivate var chapters = [Verse]()
     
     override func didAppear() {
         super.didAppear()
@@ -48,12 +57,12 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     }
     
     fileprivate func getUserSettings() {
-        showLoading()
+        //showLoading()
         runOnBackgroundThenMainThread { [weak self] in
             guard let self = self else { return }
             self.subscribe(self.settingsRepo.getAllSetting(), success: { setting in
                 self.currentSettings.onNext(setting)
-                self.showLoading(false)
+                //self.showLoading(false)
             })
         }
     }
@@ -63,12 +72,80 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
             preferenceRepo.shouldReloadVerses = false
             
             if preferenceRepo.currentBookId.isEmpty {
-                
+                getDefaultBook()
             } else {
-                
+                getSavedBook(bookId: preferenceRepo.currentBookId)
             }
-            
         }
+    }
+    
+    fileprivate func getSavedBook(bookId: String) {
+        //showLoading()
+        runOnBackgroundThenMainThread { [weak self] in
+            guard let self = self else { return }
+            self.subscribe(self.bookRepo.getBookById(bookId: bookId), success: { book in
+                self.currentBook = book
+                self.getBookVerses(bookId: self.preferenceRepo.currentBookId)
+            })
+        }
+    }
+    
+    fileprivate func getDefaultBook() {
+        //showLoading()
+        runOnBackgroundThenMainThread { [weak self] in
+            guard let self = self else { return }
+            self.subscribe(self.bookRepo.getBookByName(bookName: "Genese"), success: { book in
+                self.preferenceRepo.currentBookId = book.id
+                self.currentBook = book
+                if let chapter = book.chapters.first {
+                    self.currentChapter = chapter
+                    self.preferenceRepo.currentChapterId = chapter.id
+                }
+                //self.showLoading(false)
+                self.getBookVerses(bookId: self.preferenceRepo.currentBookId)
+            })
+        }
+    }
+    
+    fileprivate func getBookVerses(bookId: String) {
+        
+        let nameAndChapter = newBookNameAndChapterNumber.components(separatedBy: ":")
+        newBookNameAndChapterNumber = "\(currentBook!.bookName.capitalized):\(nameAndChapter[1])"
+        bookNameAndChapterNumber.onNext(newBookNameAndChapterNumber.replacingOccurrences(of: ":", with: " "))
+        
+        runOnBackgroundThenMainThread { [weak self] in
+            guard let self = self else { return }
+            self.subscribe(self.verseRepo.getVersesByBook(bookId: bookId), success: { verseList in
+                self.chapters = verseList.distinctBy { $0.chapter.id }
+                self.verses = verseList
+                self.getSavedChapter()
+            })
+        }
+    }
+    
+    fileprivate func getSavedChapter() {
+        if preferenceRepo.currentChapterId.isEmpty {
+            getCurrentVerses()
+        } else {
+            getChapter(chapterId: preferenceRepo.currentChapterId)
+        }
+    }
+    
+    fileprivate func getCurrentVerses() {
+        
+    }
+    
+    fileprivate func getChapter(chapterId: String) {
+        runOnBackgroundThenMainThread { [weak self] in
+            guard let self = self else { return }
+            self.subscribe(self.chapterRepo.getChapterById(chapterId: chapterId), success: { chapter in
+                self.saveHistory(chapter: chapter)
+            })
+        }
+    }
+    
+    fileprivate func saveHistory(chapter: Chapter) {
+        
     }
     
 }

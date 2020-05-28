@@ -19,6 +19,10 @@ struct BookDataSourceImpl: IBookDataSource {
         Observable.array(from: realm.objects(Book.self))
     }
     
+    func getBookById(bookId: String) -> Observable<Book> {
+        Observable.from(optional: realm.object(ofType: Book.self, forPrimaryKey: bookId))
+    }
+    
     func getBooksByTestament(testamentId: String) -> Observable<[Book]> {
         Observable.array(from: realm.objects(Book.self).filter("testament.id = %@", testamentId))
     }

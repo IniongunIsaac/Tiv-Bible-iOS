@@ -14,6 +14,10 @@ protocol IReadViewModel {
     
     var currentSettings: PublishSubject<Setting> { get }
     
+    var bookNameAndChapterNumber: PublishSubject<String> { get }
+    
+    var currentVerses: PublishSubject<[Verse]> { get }
+    
     func getBookFromSavedPreferencesOrInitializeWithGenese()
     
 }

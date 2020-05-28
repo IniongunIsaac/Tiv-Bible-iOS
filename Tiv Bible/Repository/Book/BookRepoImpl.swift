@@ -17,6 +17,10 @@ struct BookRepoImpl: IBookRepo {
         bookDataSource.getAllBooks()
     }
     
+    func getBookById(bookId: String) -> Observable<Book> {
+        bookDataSource.getBookById(bookId: bookId)
+    }
+    
     func getBooksByTestament(testamentId: String) -> Observable<[Book]> {
         bookDataSource.getBooksByTestament(testamentId: testamentId)
     }

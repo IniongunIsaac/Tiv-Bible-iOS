@@ -10,6 +10,28 @@ import Foundation
 import RealmSwift
 import RxSwift
 
+func insertItems<T: Object>(items: [T]) -> Observable<Void> {
+    return Observable<Void>.create { observer in
+        
+        runOnLabeledBackgroundThread {
+            let realm = try! Realm()
+            do {
+                
+                try realm.write {
+                    realm.add(items)
+                }
+                
+                observer.onNext(())
+                
+            } catch {
+                observer.onError(error)
+            }
+        }
+        
+        return Disposables.create()
+    }
+}
+
 extension Realm {
     
     func insertItems<T: Object>(items: [T]) -> Observable<Void> {

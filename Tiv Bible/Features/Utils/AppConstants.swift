@@ -15,6 +15,7 @@ struct AppConstants {
     static let DATE_FORMAT = "dd MMM yyyy"
     static let INVALID_INPUT_FIELD = "Invalid input field."
     static let DATA_NOT_FOUND = "No data found!"
+    static let BACKGROUND_THREAD_LABEL = "com.iniongungroup.tivbible.background.thread"
     
     //MARK: - Storyboard IDs
     static let READ_STORYBOARD_NAME = "Read"
