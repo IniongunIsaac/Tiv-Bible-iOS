@@ -29,6 +29,11 @@ class VerseTableViewCell: UITableViewCell {
 
         let attributedText = NSMutableAttributedString(string: text, attributes: attributes)
         attributedText.addAttribute(.font, value: UIFont.comfortaaBold(size: 13), range: NSRange(location: 0, length: "\(verse.number)".count + 1))
+        
+        if verse.isSelected {
+            attributedText.addAttribute(.underlineStyle, value: NSUnderlineStyle.patternDashDot.rawValue | NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedText.length))
+        }
+        
         verseTextLabel.attributedText = attributedText
     }
 }

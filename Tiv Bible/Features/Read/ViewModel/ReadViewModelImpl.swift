@@ -44,6 +44,9 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     var currentVerses: PublishSubject<[Verse]> = PublishSubject()
     var verseNumber: PublishSubject<Int> = PublishSubject()
     var highlights: PublishSubject<[Highlight]> = PublishSubject()
+    var selectedVersesText: PublishSubject<String> = PublishSubject()
+    var shareableSelectedVersesText: String = ""
+    var verseSelected: PublishSubject<Bool> = PublishSubject()
     
     fileprivate var currentVerse: Verse?
     fileprivate var currentChapter: Chapter?
@@ -53,6 +56,7 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     fileprivate var chapters = [Verse]()
     fileprivate var highlightsList = [Highlight]()
     fileprivate var currentVersesList = [Verse]()
+    var selectedVerses = [Verse]()
     
     override func didLoad() {
         super.didLoad()
@@ -91,7 +95,7 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     }
     
     fileprivate func getDefaultBook() {
-        self.subscribe(self.bookRepo.getBookByName(bookName: "Genese"), success: { [weak self] book in
+        subscribe(bookRepo.getBookByName(bookName: "Genese"), success: { [weak self] book in
             guard let self = self else { return }
             self.preferenceRepo.currentBookId = book.id
             self.currentBook = book
@@ -185,6 +189,55 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         }
         currentVerses.onNext(currentVersesList)
         highlights.onNext(highlightsList)
+    }
+    
+    func toggleSelectedVerse(verse: Verse) {
+        verse.isSelected = !verse.isSelected
+        if verse.isSelected {
+            selectedVerses.append(verse)
+        } else {
+            selectedVerses.removeAll { $0.id == verse.id }
+        }
+        if !selectedVerses.isEmpty {
+            getSelectedVersesText()
+        } else {
+            shareableSelectedVersesText = ""
+        }
+        
+        verseSelected.onNext(verse.isSelected)
+    }
+    
+    fileprivate func getSelectedVersesText() {
+        
+        let selectedVersesList = selectedVerses.sorted { $0.number < $1.number }
+        let verses = selectedVersesList.map { $0.number }
+
+        var left: Int?
+        var right: Int?
+        var groups = [String]()
+
+        for index in (verses.first ?? 0)...(verses.last ?? 0) + 1 {
+            if verses.contains(index) {
+                if left == nil {
+                    left = index
+                } else {
+                    right = index
+                }
+            } else {
+                guard let leftx = left else { continue }
+                
+                if let right = right {
+                    groups.append("\(leftx)-\(right)")
+                } else {
+                    groups.append("\(leftx)")
+                }
+                left = nil
+                right = nil
+            }
+        }
+        
+        selectedVersesText.onNext("\(newBookNameAndChapterNumber.replacingOccurrences(of: ":", with: " ")) : \(groups.joined(separator: ", "))")
+        shareableSelectedVersesText = selectedVersesList.map { "\($0.number).\t\($0.text)" }.joined(separator: "\n\n")
     }
     
 }

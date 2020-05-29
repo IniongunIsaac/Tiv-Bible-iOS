@@ -22,6 +22,14 @@ protocol IReadViewModel {
     
     var highlights: PublishSubject<[Highlight]> { get }
     
+    var selectedVersesText: PublishSubject<String> { get }
+    
+    var shareableSelectedVersesText: String { get }
+    
+    var verseSelected: PublishSubject<Bool> { get }
+    
     func getBookFromSavedPreferencesOrInitializeWithGenese()
+    
+    func toggleSelectedVerse(verse: Verse)
     
 }

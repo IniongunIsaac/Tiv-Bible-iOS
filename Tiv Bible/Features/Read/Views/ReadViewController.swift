@@ -53,6 +53,7 @@ class ReadViewController: BaseViewController {
         super.setChildViewControllerObservers()
         observeCurrentVerses()
         observeBookNameAndChapterNumber()
+        observeVerseSelected()
     }
     
     fileprivate func observeCurrentVerses() {
@@ -60,6 +61,16 @@ class ReadViewController: BaseViewController {
             
             cell.configureView(verse: verse)
             
+            cell.addTapGesture { [weak self] in
+                self?.readViewModel.toggleSelectedVerse(verse: verse)
+            }
+            
+        }.disposed(by: disposeBag)
+    }
+    
+    fileprivate func observeVerseSelected() {
+        readViewModel.verseSelected.bind { [weak self] selected in
+            self?.versesTableView.reloadData()
         }.disposed(by: disposeBag)
     }
     

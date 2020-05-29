@@ -47,6 +47,7 @@ extension Realm {
                 
             } catch {
                 observer.onError(error)
+                
             }
             
             return Disposables.create()
