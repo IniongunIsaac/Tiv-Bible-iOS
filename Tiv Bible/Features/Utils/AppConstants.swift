@@ -30,19 +30,13 @@ struct AppConstants {
     
     //MARK: Cell IDs
     static let VERSE_CELL_ID = "verseTableViewCell"
+    static let TAP_ACTION_COLLECTION_CELL_ID = "tapActionCollectionViewCell"
+    static let HIGHLIGHT_COLOR_COLLECTION_CELL_ID = "highlightColorCollectionViewCell"
+    static let FONT_STYLE_COLLECTION_CELL_ID = "fontStyleCollectionViewCell"
+    static let THEME_COLLECTION_CELL_ID = "themeCollectionViewCell"
     
     //MARK: - System Icon Names
     static let SYSTEM_GRID_ICON_NAME = "rectangle.grid.2x2"
-    static let SYSTEM_LIST_ICON_NAME = "list.bullet"
-    static let SYSTEM_CHECKMARK_ICON_NAME = "checkmark.circle.fill"
-    static let SYSTEM_MULTIPLY_ICON_NAME = "multiply.circle.fill"
-    static let SYSTEM_CHECKMARK_RECTANGLE_ICON_NAME = "checkmark.rectangle"
-    static let SYSTEM_CREDIT_CARD_FILL_ICON_NAME = "creditcard.fill"
-    
-    // MARK: - General Image Names
-    static let SUCCESS_ICON_IMAGE_NAME = "success_icon"
-    static let PENDING_ICON_IMAGE_NAME = "pending_icon"
-    static let IN_TRANSIT_ICON_IMAGE_NAME = "transit_icon"
     
     // MARK: - Color Hex Codes
     static let colorHexCodes = ["#FF8A65", "#FFB74D", "#FFD54F", "#DCE775", "#2962FF", "#4DB6AC", "#00B8D4", "#00BFA5", "#00C853", "#64DD17", "#AEEA00", "#FFD600", "#FFAB00", "#FF6D00", "#DD2C00", "#E57373", "#F06292", "#BA68C8", "#7986CB", "#4FC3F7"]

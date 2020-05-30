@@ -15,6 +15,23 @@ class ReadViewController: BaseViewController {
     @IBOutlet weak var bookChapterLabel: UILabel!
     @IBOutlet weak var fontStyleButton: UIButton!
     @IBOutlet weak var versesTableView: UITableView!
+    @IBOutlet weak var tapActionsView: UIView!
+    @IBOutlet weak var closeTapActionsImageView: UIImageView!
+    @IBOutlet weak var selectedVersesLabel: UILabel!
+    @IBOutlet weak var tapActionsCollectionView: UICollectionView!
+    @IBOutlet weak var removeHighlightColorImageView: UIImageView!
+    @IBOutlet weak var highlightColorsCollectionView: UICollectionView!
+    @IBOutlet weak var fontSettingsView: UIView!
+    @IBOutlet weak var closeFontSettingsImageView: UIImageView!
+    @IBOutlet weak var increaseFontSizeView: ViewWithBorderAttributes!
+    @IBOutlet weak var decreaseFontSizeView: ViewWithBorderAttributes!
+    @IBOutlet weak var currentFontSizeLabel: UILabel!
+    @IBOutlet weak var lineSpacingTwoView: ViewWithBorderAttributes!
+    @IBOutlet weak var lineSpacingThreeView: ViewWithBorderAttributes!
+    @IBOutlet weak var lineSpacingFourView: ViewWithBorderAttributes!
+    @IBOutlet weak var fontStyleCollectionView: UICollectionView!
+    @IBOutlet weak var themesCollectionView: UICollectionView!
+    @IBOutlet weak var goToSettingsView: ViewWithBorderAttributes!
     
     var readViewModel: IReadViewModel!
     

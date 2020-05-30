@@ -366,6 +366,35 @@ PODS:
   - GTMSessionFetcher/Core (1.3.1)
   - KVNProgress (2.3.5)
   - leveldb-library (1.22)
+  - MaterialComponents/Availability (107.2.0)
+  - MaterialComponents/BottomSheet (107.2.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+  - MaterialComponents/Elevation (107.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (107.2.0)
+  - MaterialComponents/private/Color (107.2.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/KeyboardWatcher (107.2.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Math (107.2.0)
+  - MaterialComponents/ShadowElevations (107.2.0)
+  - MaterialComponents/ShadowLayer (107.2.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (107.2.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (107.2.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
   - MaterialProgressBar (1.2.0)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -466,6 +495,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseFirestoreSwift
   - KVNProgress
+  - MaterialComponents/BottomSheet
   - MaterialProgressBar
   - PopupDialog
   - RealmSwift
@@ -527,6 +557,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - KVNProgress
     - leveldb-library
+    - MaterialComponents
     - MaterialProgressBar
     - nanopb
     - PopupDialog
@@ -593,6 +624,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
   KVNProgress: d7046cce142f1aeb740db39dc3cacfe910fac354
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  MaterialComponents: 4dd1927cd2257e564983018906e152d18cda0c03
   MaterialProgressBar: 5119975877966d7efd6b8556dea4bc9c036254d6
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
@@ -620,6 +652,6 @@ SPEC CHECKSUMS:
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: ef8b9a80640e19a1116228af900ad62c76d3d794
+PODFILE CHECKSUM: fa17e5cacf8d4fbdd657801492cf612facfaff88
 
 COCOAPODS: 1.8.4
