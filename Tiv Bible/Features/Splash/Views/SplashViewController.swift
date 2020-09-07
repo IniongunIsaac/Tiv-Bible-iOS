@@ -22,10 +22,7 @@ class SplashViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideNavigationBar()
-    }
-    
-    override func addProgressBarConstraints() {
-        mProgressBar.anchor(top: setupInProgressLabel.bottomAnchor, paddingTop: 8, left: view.leftAnchor, right: view.rightAnchor, width: view.bounds.width, height: 3)
+        splashViewModel.setupDB()
     }
     
     override func setChildViewControllerObservers() {

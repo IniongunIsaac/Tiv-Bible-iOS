@@ -45,11 +45,11 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
     var showHome: PublishSubject<Bool> = PublishSubject()
     var showSetupInProgress: PublishSubject<Bool> = PublishSubject()
     
-    override func didAppear() {
-        super.didAppear()
-        //reset()
-        setupDB()
-    }
+//    override func didAppear() {
+//        super.didAppear()
+//        //reset()
+//        setupDB()
+//    }
     
     fileprivate func reset() {
         let realm = try! Realm()
@@ -60,7 +60,7 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
         }
     }
     
-    fileprivate func setupDB() {
+    func setupDB() {
         if preferenceRepo.isDBInitialized {
             showSetupInProgress.onNext(false)
             showHome.onNext(true)

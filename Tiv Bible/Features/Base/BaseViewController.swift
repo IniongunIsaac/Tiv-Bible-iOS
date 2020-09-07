@@ -9,21 +9,17 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import MaterialProgressBar
+import HorizontalProgressBar
+import DeviceKit
 
 class BaseViewController: UIViewController {
     
     public let disposeBag = DisposeBag()
     fileprivate var alert: CustomAlert?
-    let mProgressBar: LinearProgressBar = {
-        let progressBar = LinearProgressBar()
-        progressBar.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
-        progressBar.progressBarColor = .label
-        progressBar.progressBarWidth = 4
-        //progressBar.cornerRadius = 4
-        
-        return progressBar
-    }()
+    var progressBar: HorizontalProgressbar?
+    var horizontalProgressBarYPosition: CGFloat {
+        Device.current.isOneOf(Device.allXSeriesDevices + Device.allSimulatorXSeriesDevices) ? 88 : 64
+    }
     
     fileprivate var scrollViewConstraint: NSLayoutConstraint?
     
@@ -44,8 +40,6 @@ class BaseViewController: UIViewController {
         
         getViewModel().didLoad()
         
-        configureProgressBar()
-        
         self.alert = CustomAlert(on: self.view)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
@@ -54,14 +48,13 @@ class BaseViewController: UIViewController {
         
     }
     
-    func addProgressBarConstraints() {
-        mProgressBar.anchor(top: view.topAnchor, paddingTop: 80, left: view.leftAnchor, right: view.rightAnchor, width: view.bounds.width, height: 3)
-    }
-    
-    fileprivate func configureProgressBar() {
-        view.addSubview(mProgressBar)
-        addProgressBarConstraints()
-        mProgressBar.isHidden = true
+    fileprivate func createHorizontalProgressBar() {
+        progressBar = HorizontalProgressbar(frame: CGRect(x: 0, y: horizontalProgressBarYPosition, width: view.frame.width, height: 4))
+        view.addSubview(progressBar!)
+        progressBar?.noOfChunks = 1  // You can provide number of Chunks/Strips appearing over the animation. By default it is 3
+        progressBar?.kChunkWdith = Double(view.frame.width) - 20 // Adjust the width of Chunks/Strips
+        progressBar?.progressTintColor = .primaryColor  // To change the Chunks color
+        progressBar?.trackTintColor = UIColor.darkGray  // To change background color of loading indicator
     }
     
     func hideNavigationBar(_ shouldHide: Bool = true) {
@@ -141,13 +134,12 @@ class BaseViewController: UIViewController {
     }
     
     private func showLoading() {
-        mProgressBar.fadeIn()
-        mProgressBar.startAnimating()
+        createHorizontalProgressBar()
+        progressBar?.startAnimating()
     }
     
     private func hideLoading() {
-        mProgressBar.fadeOut()
-        mProgressBar.stopAnimating()
+        progressBar?.stopAnimating()
     }
     
     func showAlert(message: String, type: AlertType, dismissCompletion: (() -> Void)? = nil) {

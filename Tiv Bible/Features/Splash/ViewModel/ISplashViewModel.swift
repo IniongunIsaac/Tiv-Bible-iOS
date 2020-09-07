@@ -13,4 +13,6 @@ import RxCocoa
 protocol ISplashViewModel {
     var showHome: PublishSubject<Bool> { get }
     var showSetupInProgress: PublishSubject<Bool> { get }
+    
+    func setupDB()
 }

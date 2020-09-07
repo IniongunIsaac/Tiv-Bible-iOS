@@ -22,14 +22,22 @@ protocol IReadViewModel {
     
     var highlights: PublishSubject<[Highlight]> { get }
     
+    var selectedVerses: [Verse] { get }
+    
     var selectedVersesText: PublishSubject<String> { get }
     
     var shareableSelectedVersesText: String { get }
     
     var verseSelected: PublishSubject<Bool> { get }
     
+    var highlightColorsFontStylesAndThemes: PublishSubject<(highlightColors: [HighlightColor], fontStyles: [FontStyle], themes: [Theme])> { get }
+    
     func getBookFromSavedPreferencesOrInitializeWithGenese()
     
     func toggleSelectedVerse(verse: Verse)
+    
+    func getHighlightColorsFontStylesAndThemes()
+    
+    func getUserSettings()
     
 }

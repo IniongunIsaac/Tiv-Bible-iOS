@@ -186,6 +186,10 @@
 		1462CD3224819AB900063892 /* HighlightColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462CD3124819AB900063892 /* HighlightColorCollectionViewCell.swift */; };
 		1462CD342481C13E00063892 /* FontStyleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462CD332481C13E00063892 /* FontStyleCollectionViewCell.swift */; };
 		1462CD362481C15100063892 /* ThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */; };
+		149531C62506773800A6E9DD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 149531C52506773800A6E9DD /* .gitignore */; };
+		149531CB2506783C00A6E9DD /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 149531CA2506783C00A6E9DD /* Podfile.lock */; };
+		149531CF2506792D00A6E9DD /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149531CE2506792D00A6E9DD /* R.generated.swift */; };
+		14BDAF0F2482E754008B6586 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BDAF0E2482E754008B6586 /* NewViewController.swift */; };
 		14CD219E247D5D0B00EF0A32 /* IReadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD219D247D5D0B00EF0A32 /* IReadViewModel.swift */; };
 		14CD21A0247D5D3400EF0A32 /* ReadViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */; };
 		14CD21A3247D606C00EF0A32 /* ButtonWithBorderAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21A2247D606C00EF0A32 /* ButtonWithBorderAttributes.swift */; };
@@ -404,6 +408,10 @@
 		1462CD3124819AB900063892 /* HighlightColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		1462CD332481C13E00063892 /* FontStyleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyleCollectionViewCell.swift; sourceTree = "<group>"; };
 		1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		149531C52506773800A6E9DD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		149531CA2506783C00A6E9DD /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
+		149531CE2506792D00A6E9DD /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		14BDAF0E2482E754008B6586 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		14CD219D247D5D0B00EF0A32 /* IReadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IReadViewModel.swift; sourceTree = "<group>"; };
 		14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewModelImpl.swift; sourceTree = "<group>"; };
 		14CD21A2247D606C00EF0A32 /* ButtonWithBorderAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithBorderAttributes.swift; sourceTree = "<group>"; };
@@ -1000,6 +1008,9 @@
 		14377BE7246DE213005B0795 = {
 			isa = PBXGroup;
 			children = (
+				149531CE2506792D00A6E9DD /* R.generated.swift */,
+				149531CA2506783C00A6E9DD /* Podfile.lock */,
+				149531C52506773800A6E9DD /* .gitignore */,
 				14377BF2246DE214005B0795 /* Tiv Bible */,
 				14377C09246DE218005B0795 /* Tiv BibleTests */,
 				14377C14246DE218005B0795 /* Tiv BibleUITests */,
@@ -1210,6 +1221,7 @@
 				1462CD3124819AB900063892 /* HighlightColorCollectionViewCell.swift */,
 				1462CD332481C13E00063892 /* FontStyleCollectionViewCell.swift */,
 				1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */,
+				14BDAF0E2482E754008B6586 /* NewViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1250,11 +1262,11 @@
 			buildConfigurationList = 14377C1A246DE218005B0795 /* Build configuration list for PBXNativeTarget "Tiv Bible" */;
 			buildPhases = (
 				ADB6846035EBCE9AC4817CCC /* [CP] Check Pods Manifest.lock */,
+				149531C72506776600A6E9DD /* ShellScript */,
 				14377BEC246DE214005B0795 /* Sources */,
 				14377BED246DE214005B0795 /* Frameworks */,
 				14377BEE246DE214005B0795 /* Resources */,
 				6A0C4946FEC09EDF71048CC8 /* [CP] Embed Pods Frameworks */,
-				A92D3F185CB0483ECE4548F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1294,7 +1306,6 @@
 				14377C0E246DE218005B0795 /* Frameworks */,
 				14377C0F246DE218005B0795 /* Resources */,
 				B904DF0F28F927506882741E /* [CP] Embed Pods Frameworks */,
-				310C3222CA83D282F9B7AEC7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1373,6 +1384,7 @@
 				14121D262474677F0073814F /* comfortaa.ttf in Resources */,
 				14121D302474677F0073814F /* montserrat_medium.ttf in Resources */,
 				14121D4A2474677F0073814F /* roboto.ttf in Resources */,
+				149531CB2506783C00A6E9DD /* Podfile.lock in Resources */,
 				1440E082247D3CDE0037E68E /* More.storyboard in Resources */,
 				14121D422474677F0073814F /* montserrat_thin_italic.ttf in Resources */,
 				14121D4B2474677F0073814F /* comfortaa_medium.ttf in Resources */,
@@ -1406,6 +1418,7 @@
 				14121D492474677F0073814F /* roboto_light_italic.ttf in Resources */,
 				14121D412474677F0073814F /* roboto_italic.ttf in Resources */,
 				14121D402474677F0073814F /* happy_monkey.ttf in Resources */,
+				149531C62506773800A6E9DD /* .gitignore in Resources */,
 				14121D342474677F0073814F /* roboto_condensed_regular.ttf in Resources */,
 				14121D362474677F0073814F /* montserrat_bold_italic.ttf in Resources */,
 				14121D1F2474677F0073814F /* roboto_medium_italic.ttf in Resources */,
@@ -1431,6 +1444,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		149531C72506776600A6E9DD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		16E0AE7A7FA4FACBB53452F3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1451,23 +1483,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		310C3222CA83D282F9B7AEC7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6A0C4946FEC09EDF71048CC8 /* [CP] Embed Pods Frameworks */ = {
@@ -1524,23 +1539,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A92D3F185CB0483ECE4548F4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible/Pods-Tiv Bible-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible/Pods-Tiv Bible-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tiv Bible/Pods-Tiv Bible-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ADB6846035EBCE9AC4817CCC /* [CP] Check Pods Manifest.lock */ = {
@@ -1616,6 +1614,7 @@
 				1462CD2E2480469500063892 /* VerseTableViewCell.swift in Sources */,
 				14121D932476CBAF0073814F /* FontStyleDataSourceImpl.swift in Sources */,
 				14121D6324750F0D0073814F /* Date+Extensions.swift in Sources */,
+				14BDAF0F2482E754008B6586 /* NewViewController.swift in Sources */,
 				14121E2B24792F320073814F /* RepositoryDependencyInjectionGraph.swift in Sources */,
 				1440E063247AACC90037E68E /* AppConstants.swift in Sources */,
 				14121DD92477274D0073814F /* BookmarkRepoImpl.swift in Sources */,
@@ -1716,6 +1715,7 @@
 				14121E13247736F50073814F /* IVerseRepo.swift in Sources */,
 				14121D7724752DE10073814F /* TivBibleData.swift in Sources */,
 				14121DAA2476FAF30073814F /* IOtherDataSource.swift in Sources */,
+				149531CF2506792D00A6E9DD /* R.generated.swift in Sources */,
 				14121DA02476D36E0073814F /* IHistoryDataSource.swift in Sources */,
 				14121DE624772D910073814F /* IHighlightColorRepo.swift in Sources */,
 				14121D5E247486600073814F /* Chapter.swift in Sources */,

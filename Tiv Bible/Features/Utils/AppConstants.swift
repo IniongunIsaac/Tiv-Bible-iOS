@@ -21,7 +21,7 @@ struct AppConstants {
     static let READ_STORYBOARD_NAME = "Read"
     static let SEARCH_STORYBOARD_NAME = "Search"
     static let MORE_STORYBOARD_NAME = "More"
-    static let HOME_STORYBOARD_NAME = "HomeTabs"
+    static let HOME_STORYBOARD_NAME = "Home"
     
     //MARK: - Storyboard View Controller IDs
     static let READ_VC_ID = "readViewController"

@@ -15,28 +15,6 @@ target 'Tiv Bible' do
   pod 'RealmSwift'
   pod "RxRealm"
   #pod "RxRealmDataSources"
-
-  # Firebase pods
-  pod 'Firebase'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Firestore'
-  pod 'FirebaseFirestoreSwift'
-  pod 'Firebase/Storage'
-  pod 'Firebase/Performance'
-  pod 'Firebase/RemoteConfig'
-  pod 'Firebase/Messaging'
-  pod 'Firebase/InAppMessaging'
-  pod 'Firebase/Functions'
-  pod 'Firebase/Crashlytics'
-  
-  #RxFirebase Pods
-  pod 'RxFirebase/Firestore'
-  pod 'RxFirebase/RemoteConfig'
-  pod 'RxFirebase/Database'
-  pod 'RxFirebase/Storage'
-  pod 'RxFirebase/Auth'
-  pod 'RxFirebase/Functions'
   
   #Other pods
   pod 'Alertift', '~> 4.1'
@@ -45,9 +23,10 @@ target 'Tiv Bible' do
   pod 'PopupDialog'
   pod 'Shimmer'
   pod 'SwiftRandom'
-  pod 'MaterialProgressBar'
   pod 'DeviceKit', '~> 2.0'
   pod 'MaterialComponents/BottomSheet'
+  pod 'HorizontalProgressBar'
+  pod 'R.swift'
 
   target 'Tiv BibleTests' do
     inherit! :search_paths

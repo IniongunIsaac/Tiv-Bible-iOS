@@ -47,6 +47,8 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     var selectedVersesText: PublishSubject<String> = PublishSubject()
     var shareableSelectedVersesText: String = ""
     var verseSelected: PublishSubject<Bool> = PublishSubject()
+    var selectedVerses = [Verse]()
+    var highlightColorsFontStylesAndThemes: PublishSubject<(highlightColors: [HighlightColor], fontStyles: [FontStyle], themes: [Theme])> = PublishSubject()
     
     fileprivate var currentVerse: Verse?
     fileprivate var currentChapter: Chapter?
@@ -56,7 +58,6 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     fileprivate var chapters = [Verse]()
     fileprivate var highlightsList = [Highlight]()
     fileprivate var currentVersesList = [Verse]()
-    var selectedVerses = [Verse]()
     
     override func didLoad() {
         super.didLoad()
@@ -65,12 +66,19 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     
     override func willAppear() {
         super.willAppear()
-        getUserSettings()
+        //getUserSettings()
+        //getHighlightColorsFontStylesAndThemes()
     }
     
-    fileprivate func getUserSettings() {
+    func getUserSettings() {
         subscribe(settingsRepo.getAllSetting(), success: { [weak self] setting in
             self?.currentSettings.onNext(setting)
+        })
+    }
+    
+    func getHighlightColorsFontStylesAndThemes() {
+        subscribe(Observable.zip(highlightColorRepo.getAllHighlightColors(), fontStyleRepo.getAllFontStyles(), themeRepo.getAllThemes()), success: { [weak self] data in
+            self?.highlightColorsFontStylesAndThemes.onNext(data)
         })
     }
     
