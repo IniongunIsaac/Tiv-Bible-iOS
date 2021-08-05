@@ -21,7 +21,6 @@
 		14121D262474677F0073814F /* comfortaa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF2247467570073814F /* comfortaa.ttf */; };
 		14121D272474677F0073814F /* montserrat_semi_bold_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF3247467580073814F /* montserrat_semi_bold_italic.ttf */; };
 		14121D282474677F0073814F /* martel_sans_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF4247467590073814F /* martel_sans_light.ttf */; };
-		14121D292474677F0073814F /* comfortaa_semi_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF52474675A0073814F /* comfortaa_semi_bold.ttf */; };
 		14121D2A2474677F0073814F /* montserrat_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF62474675B0073814F /* montserrat_black.ttf */; };
 		14121D2B2474677F0073814F /* montserrat_medium_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF72474675C0073814F /* montserrat_medium_italic.ttf */; };
 		14121D2C2474677F0073814F /* roboto_black_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14121CF82474675D0073814F /* roboto_black_italic.ttf */; };
@@ -185,6 +184,9 @@
 		1462CD3224819AB900063892 /* HighlightColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462CD3124819AB900063892 /* HighlightColorCollectionViewCell.swift */; };
 		1462CD342481C13E00063892 /* FontStyleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462CD332481C13E00063892 /* FontStyleCollectionViewCell.swift */; };
 		1462CD362481C15100063892 /* ThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */; };
+		1470728126BBEC530088C8D3 /* TakeNotesDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470728026BBEC520088C8D3 /* TakeNotesDialogViewController.swift */; };
+		1470728326BC06460088C8D3 /* TextViewWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470728226BC06460088C8D3 /* TextViewWithPlaceholder.swift */; };
+		1470728626BC0F3E0088C8D3 /* Comfortaa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1470728526BC0F3D0088C8D3 /* Comfortaa-SemiBold.ttf */; };
 		1488103126B9D16B007096C4 /* RxRealm in Frameworks */ = {isa = PBXBuildFile; productRef = 1488103026B9D16B007096C4 /* RxRealm */; };
 		1488103326B9D5E7007096C4 /* TabOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488103226B9D5E7007096C4 /* TabOption.swift */; };
 		1488103526B9D692007096C4 /* ScopeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488103426B9D692007096C4 /* ScopeFunctions.swift */; };
@@ -242,7 +244,6 @@
 		14121CF2247467570073814F /* comfortaa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = comfortaa.ttf; sourceTree = "<group>"; };
 		14121CF3247467580073814F /* montserrat_semi_bold_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_semi_bold_italic.ttf; sourceTree = "<group>"; };
 		14121CF4247467590073814F /* martel_sans_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = martel_sans_light.ttf; sourceTree = "<group>"; };
-		14121CF52474675A0073814F /* comfortaa_semi_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = comfortaa_semi_bold.ttf; sourceTree = "<group>"; };
 		14121CF62474675B0073814F /* montserrat_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_black.ttf; sourceTree = "<group>"; };
 		14121CF72474675C0073814F /* montserrat_medium_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_medium_italic.ttf; sourceTree = "<group>"; };
 		14121CF82474675D0073814F /* roboto_black_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_black_italic.ttf; sourceTree = "<group>"; };
@@ -412,6 +413,9 @@
 		1462CD3124819AB900063892 /* HighlightColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		1462CD332481C13E00063892 /* FontStyleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyleCollectionViewCell.swift; sourceTree = "<group>"; };
 		1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		1470728026BBEC520088C8D3 /* TakeNotesDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeNotesDialogViewController.swift; sourceTree = "<group>"; };
+		1470728226BC06460088C8D3 /* TextViewWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithPlaceholder.swift; sourceTree = "<group>"; };
+		1470728526BC0F3D0088C8D3 /* Comfortaa-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-SemiBold.ttf"; sourceTree = "<group>"; };
 		1488103226B9D5E7007096C4 /* TabOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOption.swift; sourceTree = "<group>"; };
 		1488103426B9D692007096C4 /* ScopeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeFunctions.swift; sourceTree = "<group>"; };
 		148862CC26B7E6FD0004F4C3 /* Preference+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preference+Utils.swift"; sourceTree = "<group>"; };
@@ -643,7 +647,7 @@
 				14121D01247467660073814F /* comfortaa_bold.ttf */,
 				14121D072474676C0073814F /* comfortaa_light.ttf */,
 				14121D172474677C0073814F /* comfortaa_medium.ttf */,
-				14121CF52474675A0073814F /* comfortaa_semi_bold.ttf */,
+				1470728526BC0F3D0088C8D3 /* Comfortaa-SemiBold.ttf */,
 				14121CF2247467570073814F /* comfortaa.ttf */,
 				14121D0C247467710073814F /* happy_monkey.ttf */,
 				14121D192474677E0073814F /* inconsolata_expanded.ttf */,
@@ -1224,6 +1228,7 @@
 				1462CD3124819AB900063892 /* HighlightColorCollectionViewCell.swift */,
 				1462CD332481C13E00063892 /* FontStyleCollectionViewCell.swift */,
 				1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */,
+				1470728026BBEC520088C8D3 /* TakeNotesDialogViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1250,6 +1255,7 @@
 				148862D026B7E9EE0004F4C3 /* UIViewController+Extensions.swift */,
 				1488103226B9D5E7007096C4 /* TabOption.swift */,
 				1488103426B9D692007096C4 /* ScopeFunctions.swift */,
+				1470728226BC06460088C8D3 /* TextViewWithPlaceholder.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -1396,7 +1402,6 @@
 				14377C00246DE218005B0795 /* LaunchScreen.storyboard in Resources */,
 				14121D3D2474677F0073814F /* jost.ttf in Resources */,
 				14121D202474677F0073814F /* montserrat.ttf in Resources */,
-				14121D292474677F0073814F /* comfortaa_semi_bold.ttf in Resources */,
 				1440E07E247D3CC90037E68E /* Read.storyboard in Resources */,
 				14121D242474677F0073814F /* montserrat_light_italic.ttf in Resources */,
 				14121D2B2474677F0073814F /* montserrat_medium_italic.ttf in Resources */,
@@ -1439,6 +1444,7 @@
 				14121D3F2474677F0073814F /* montserrat_black_italic.ttf in Resources */,
 				1440E080247D3CD50037E68E /* Search.storyboard in Resources */,
 				14121D1B2474677F0073814F /* montserrat_alternates_bold.ttf in Resources */,
+				1470728626BC0F3E0088C8D3 /* Comfortaa-SemiBold.ttf in Resources */,
 				14121D492474677F0073814F /* roboto_light_italic.ttf in Resources */,
 				14121D412474677F0073814F /* roboto_italic.ttf in Resources */,
 				14121D402474677F0073814F /* happy_monkey.ttf in Resources */,
@@ -1627,6 +1633,7 @@
 				1440E063247AACC90037E68E /* AppConstants.swift in Sources */,
 				14121DD92477274D0073814F /* BookmarkRepoImpl.swift in Sources */,
 				14121D6D2475247B0073814F /* Note.swift in Sources */,
+				1470728326BC06460088C8D3 /* TextViewWithPlaceholder.swift in Sources */,
 				14121E06247735030073814F /* SettingRepoImpl.swift in Sources */,
 				1440E06A247AAF9A0037E68E /* ProgressLoaderImpl.swift in Sources */,
 				14121E0B247735CF0073814F /* TestamentRepoImpl.swift in Sources */,
@@ -1696,6 +1703,7 @@
 				14121E2024788F360073814F /* PreferenceConstants.swift in Sources */,
 				14121DC0247711210073814F /* ThemeDataSourceImpl.swift in Sources */,
 				14121E04247734CF0073814F /* ISettingRepo.swift in Sources */,
+				1470728126BBEC530088C8D3 /* TakeNotesDialogViewController.swift in Sources */,
 				1440E091247D42450037E68E /* MoreViewController.swift in Sources */,
 				14121D7524752DBC0073814F /* Theme.swift in Sources */,
 				14121DF5247732AD0073814F /* INoteRepo.swift in Sources */,

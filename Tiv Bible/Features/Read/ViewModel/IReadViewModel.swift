@@ -10,7 +10,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-protocol IReadViewModel {
+protocol IReadViewModel: Scopable {
     
     var currentSettings: PublishSubject<Setting> { get }
     
@@ -39,5 +39,9 @@ protocol IReadViewModel {
     func getHighlightColorsFontStylesAndThemes()
     
     func getUserSettings()
+    
+    func saveBookmarks()
+    
+    func saveNotes(_ notes: String)
     
 }

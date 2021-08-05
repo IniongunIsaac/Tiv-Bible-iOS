@@ -40,7 +40,7 @@ extension UIViewController {
         viewController.removeFromParent()
     }
     
-    func showDialog(for viewController: UIViewController, opacity: CGFloat = 0.3, dismissCompletionHandler: (() -> Void)? = nil) {
+    func showDialog(for viewController: UIViewController, opacity: CGFloat = 0.1, dismissCompletionHandler: (() -> Void)? = nil) {
         let containerAppearance = PopupDialogContainerView.appearance()
         containerAppearance.cornerRadius = Float(10)
         

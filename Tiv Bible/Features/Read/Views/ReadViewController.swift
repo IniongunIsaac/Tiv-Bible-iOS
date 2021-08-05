@@ -42,6 +42,8 @@ class ReadViewController: BaseViewController {
     override func getViewModel() -> BaseViewModel { readViewModel as! BaseViewModel }
     
     fileprivate var isShowingTapActions = false
+    fileprivate var shareableText: String { readViewModel.shareableSelectedVersesText }
+    fileprivate var selectedVersesText = ""
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -62,18 +64,25 @@ class ReadViewController: BaseViewController {
         
         shareView.animateViewOnTapGesture { [weak self] in
             guard let self = self else { return }
-            self.share(content: self.readViewModel.shareableSelectedVersesText)
+            self.share(content: self.shareableText)
         }
         
         bookmarkView.animateViewOnTapGesture { [weak self] in
-            
+            self?.readViewModel.saveBookmarks()
         }
         
         copyView.animateViewOnTapGesture { [weak self] in
+            self?.shareableText.copyToClipboard()
+            self?.showAlert(message: "Selected verses copied to clipboard successfully!", type: .success)
+        }
+        
+        takeNotesView.animateViewOnTapGesture(completion: handleTakeNotesTapped)
+        
+        closeTapActionsImageView.animateViewOnTapGesture { [weak self] in
             
         }
         
-        takeNotesView.animateViewOnTapGesture { [weak self] in
+        closeFontSettingsImageView.animateViewOnTapGesture { [weak self] in
             
         }
     }
@@ -82,6 +91,15 @@ class ReadViewController: BaseViewController {
         fontStyleButton.animateView { [weak self] in
             
         }
+    }
+    
+    fileprivate func handleTakeNotesTapped() {
+        showDialog(for: R.storyboard.read.takeNotesDialogViewController()!.apply {
+            $0.selectedVersesText = selectedVersesText
+            $0.saveNotesHandler = { [weak self] notes in
+                self?.readViewModel.saveNotes(notes)
+            }
+        })
     }
     
     override func setChildViewControllerObservers() {
@@ -127,7 +145,10 @@ class ReadViewController: BaseViewController {
     }
     
     fileprivate func observeSelectedVersesText() {
-        readViewModel.selectedVersesText.bind(to: selectedVersesLabel.rx.text).disposed(by: disposeBag)
+        readViewModel.selectedVersesText.bind { [weak self] text in
+            self?.selectedVersesLabel .text = text
+            self?.selectedVersesText = text
+        }.disposed(by: disposeBag)
     }
     
     fileprivate func observeHighlightColorsFontStylesAndThemes() {

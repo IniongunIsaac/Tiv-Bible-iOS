@@ -248,4 +248,18 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         shareableSelectedVersesText = "\(newBookNameAndChapterNumber)\n\(selectedVersesList.map { "\($0.number). \($0.text)" }.joined(separator: "\n\n"))"
     }
     
+    func saveBookmarks() {
+        let bookmarks = selectedVerses.map { Bookmark(book: currentBook!, chapter: currentChapter!, verse: $0) }
+        subscribe(bookmarkRepo.insertBookmarks(bookmarks: bookmarks), success: { [weak self] in
+            self?.showMessage("Bookmarks saved successfully!")
+        })
+    }
+    
+    func saveNotes(_ notes: String) {
+        let note = Note(comment: notes, book: currentBook!, chapter: currentChapter!)
+        subscribe(noteRepo.insertNotes(notes: [note]), success: { [weak self] in
+            self?.showMessage("Notes saved successfully!")
+        })
+    }
+    
 }

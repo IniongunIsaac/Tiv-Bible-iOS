@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+typealias NoParamHandler = (() -> Void)
+
 func runAfter(_ delay: Double = 2.0, action: @escaping () -> Void) {
     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delay) {
         action()
@@ -93,6 +95,10 @@ extension String {
     
     var orEmpty: String {
         return self.isEmpty ? "" : self
+    }
+    
+    func copyToClipboard() {
+        UIPasteboard.general.string = self
     }
     
 }

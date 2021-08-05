@@ -26,6 +26,6 @@ extension UIFont {
     
     class func comfortaaLight(size: CGFloat = 16) -> UIFont { R.font.comfortaaLight(size: size)! }
     
-    class func comfortaaSemiBold(size: CGFloat = 16) -> UIFont { R.font.comfortaaSemiBold(size: size)! }
+    class func comfortaaSemiBold(size: CGFloat = 16) -> UIFont { R.font.comfortaaBold(size: size)! }
     
 }
