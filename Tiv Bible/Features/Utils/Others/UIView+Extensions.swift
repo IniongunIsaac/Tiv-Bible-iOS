@@ -12,7 +12,7 @@ import UIKit
 //MARK: - UIView Inspectables
 extension UIView {
     
-    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+    func addRoundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
@@ -358,7 +358,7 @@ extension Array where Element == UIView {
         forEach { $0.enableUserInteraction() }
     }
     
-    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
-        forEach { $0.roundCorners(corners, radius: radius) }
+    func addRoundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        forEach { $0.addRoundCorners(corners, radius: radius) }
     }
 }

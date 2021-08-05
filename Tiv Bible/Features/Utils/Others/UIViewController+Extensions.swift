@@ -113,7 +113,7 @@ extension UIViewController {
         tabBarController?.tabBar.isHidden = !show
     }
     
-    func showAlert(message: String, type: AlertType, duration: TimeInterval = 5.0, dismissCompletion: (() -> Void)? = nil) {
+    func showAlert(message: String, type: AlertType, duration: TimeInterval = 3.0, dismissCompletion: (() -> Void)? = nil) {
         runOnMainThread { [weak self] in
             self?.view.hideAllToasts()
         }

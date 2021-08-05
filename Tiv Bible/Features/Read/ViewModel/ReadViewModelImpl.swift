@@ -66,6 +66,7 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     
     override func willAppear() {
         super.willAppear()
+        getBookFromSavedPreferencesOrInitializeWithGenese()
         getUserSettings()
         getHighlightColorsFontStylesAndThemes()
     }
@@ -244,7 +245,7 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         }
         
         selectedVersesText.onNext("\(newBookNameAndChapterNumber.replacingOccurrences(of: ":", with: " ")) : \(groups.joined(separator: ", "))")
-        shareableSelectedVersesText = selectedVersesList.map { "\($0.number).\t\($0.text)" }.joined(separator: "\n\n")
+        shareableSelectedVersesText = "\(newBookNameAndChapterNumber)\n\(selectedVersesList.map { "\($0.number). \($0.text)" }.joined(separator: "\n\n"))"
     }
     
 }

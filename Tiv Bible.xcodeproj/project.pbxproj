@@ -698,16 +698,7 @@
 				14CD21A1247D605B00EF0A32 /* IBDesignables */,
 				1440E066247AAF5B0037E68E /* Progress Loader */,
 				1440E057247AAB9A0037E68E /* Custom Alert */,
-				14121D6224750F0D0073814F /* Date+Extensions.swift */,
-				1440E05E247AAC4B0037E68E /* Code+Extensions.swift */,
-				1440E060247AACAA0037E68E /* UIView+Extensions.swift */,
-				1440E062247AACC90037E68E /* AppConstants.swift */,
-				1440E064247AAD730037E68E /* Font+Extensions.swift */,
-				1440E073247BBE850037E68E /* UIColor+Extension.swift */,
-				14CD21AE247E229900EF0A32 /* Reactive+Extensions.swift */,
-				148862D026B7E9EE0004F4C3 /* UIViewController+Extensions.swift */,
-				1488103226B9D5E7007096C4 /* TabOption.swift */,
-				1488103426B9D692007096C4 /* ScopeFunctions.swift */,
+				1470727F26BBD4C60088C8D3 /* Others */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1244,6 +1235,23 @@
 				14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1470727F26BBD4C60088C8D3 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				14121D6224750F0D0073814F /* Date+Extensions.swift */,
+				1440E05E247AAC4B0037E68E /* Code+Extensions.swift */,
+				1440E060247AACAA0037E68E /* UIView+Extensions.swift */,
+				1440E062247AACC90037E68E /* AppConstants.swift */,
+				1440E064247AAD730037E68E /* Font+Extensions.swift */,
+				1440E073247BBE850037E68E /* UIColor+Extension.swift */,
+				14CD21AE247E229900EF0A32 /* Reactive+Extensions.swift */,
+				148862D026B7E9EE0004F4C3 /* UIViewController+Extensions.swift */,
+				1488103226B9D5E7007096C4 /* TabOption.swift */,
+				1488103426B9D692007096C4 /* ScopeFunctions.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 		14CD21A1247D605B00EF0A32 /* IBDesignables */ = {

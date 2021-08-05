@@ -40,12 +40,12 @@ class ReadViewController: BaseViewController {
     
     var readViewModel: IReadViewModel!
     override func getViewModel() -> BaseViewModel { readViewModel as! BaseViewModel }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        readViewModel.getBookFromSavedPreferencesOrInitializeWithGenese()
-        //readViewModel.getUserSettings()
-        //readViewModel.getHighlightColorsFontStylesAndThemes()
+    
+    fileprivate var isShowingTapActions = false
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        [tapActionsView, fontSettingsView].addRoundCorners([.topLeft, .topRight], radius: 10)
     }
     
     override func configureViews() {
@@ -59,10 +59,29 @@ class ReadViewController: BaseViewController {
         bookChapterStackView.animateViewOnTapGesture { [weak self] in
             
         }
+        
+        shareView.animateViewOnTapGesture { [weak self] in
+            guard let self = self else { return }
+            self.share(content: self.readViewModel.shareableSelectedVersesText)
+        }
+        
+        bookmarkView.animateViewOnTapGesture { [weak self] in
+            
+        }
+        
+        copyView.animateViewOnTapGesture { [weak self] in
+            
+        }
+        
+        takeNotesView.animateViewOnTapGesture { [weak self] in
+            
+        }
     }
     
     @IBAction func fontStyleButtonTapped(_ sender: UIButton) {
-        self.showTapActions()
+        fontStyleButton.animateView { [weak self] in
+            
+        }
     }
     
     override func setChildViewControllerObservers() {
@@ -80,18 +99,21 @@ class ReadViewController: BaseViewController {
             cell.configureView(verse: verse)
             
             cell.addTapGesture { [weak self] in
-                guard let self = self else { return }
-                self.readViewModel.toggleSelectedVerse(verse: verse)
-                if self.readViewModel.selectedVerses.isNotEmpty {
-                    //self.showTapActions()
-                    self.tapActionsView.showView()
-                } else {
-                    self.tapActionsView.hideView()
-                }
+                self?.handleVerseTapped(verse)
             }
             
         }.disposed(by: disposeBag)
         
+    }
+    
+    fileprivate func handleVerseTapped(_ verse: Verse) {
+        readViewModel.toggleSelectedVerse(verse: verse)
+        if readViewModel.selectedVerses.isNotEmpty {
+            showTapActions()
+        } else {
+            self.isShowingTapActions = false
+            self.tapActionsView.fadeOut()
+        }
     }
     
     fileprivate func observeVerseSelected() {
@@ -119,18 +141,17 @@ class ReadViewController: BaseViewController {
     }
     
     fileprivate func configureHighlightColors(_ highlightColors: [HighlightColor]) {
-        //highlightColorsStackView.arrangedSubviews.forEach { highlightColorsStackView.removeArrangedSubview($0) }
-        
         highlightColors.forEach { [weak self] highlightColor in
             
-            let view = UIView()
-            view.heightAnchor.constraint(equalToConstant: 40).isActive = true
-            view.widthAnchor.constraint(equalToConstant: 40).isActive = true
-            view.backgroundColor = UIColor(highlightColor.hexCode)
-            view.addCornerRadius(radius: 20)
-//            view.addTapGesture {
-//                debugPrint("highlight color: \(highlightColor.hexCode)")
-//            }
+            let view = UIView().apply {
+                $0.heightAnchor.constraint(equalToConstant: 40).isActive = true
+                $0.widthAnchor.constraint(equalToConstant: 40).isActive = true
+                $0.backgroundColor = UIColor(highlightColor.hexCode)
+                $0.addCornerRadius(radius: 20)
+                $0.animateViewOnTapGesture { [weak self] in
+                    
+                }
+            }
             
             self?.highlightColorsStackView.addArrangedSubview(view)
         }
@@ -149,7 +170,10 @@ class ReadViewController: BaseViewController {
     }
     
     fileprivate func showTapActions() {
-        tapActionsView.showView()
+        if !isShowingTapActions {
+            isShowingTapActions = true
+            tapActionsView.fadeIn()
+        }
     }
     
 }
