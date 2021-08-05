@@ -9,10 +9,10 @@
 import Foundation
 
 struct PreferenceConstants {
-    static let DB_INITIALIZED_KEY = "Database Initialized"
-    static let CURRENT_VERSE_KEY = "Current Verse"
-    static let CURRENT_CHAPTER_KEY = "Current Chapter"
-    static let CURRENT_BOOK_KEY = "Current Book"
-    static let CURRENT_THEME_KEY = "Current Theme"
-    static let SHOULD_RELOAD_VERSES_KEY = "Reload Verses"
+    static let DB_INITIALIZED_KEY = "DatabaseInitialized"
+    static let CURRENT_VERSE_KEY = "CurrentVerse"
+    static let CURRENT_CHAPTER_KEY = "CurrentChapter"
+    static let CURRENT_BOOK_KEY = "CurrentBook"
+    static let CURRENT_THEME_KEY = "CurrentTheme"
+    static let SHOULD_RELOAD_VERSES_KEY = "ReloadVerses"
 }

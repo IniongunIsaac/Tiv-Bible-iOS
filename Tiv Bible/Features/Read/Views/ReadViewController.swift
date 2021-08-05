@@ -39,30 +39,25 @@ class ReadViewController: BaseViewController {
     @IBOutlet weak var highlightColorsStackView: UIStackView!
     
     var readViewModel: IReadViewModel!
-    
-    override func getViewModel() -> BaseViewModel {
-        return readViewModel as! BaseViewModel
-    }
+    override func getViewModel() -> BaseViewModel { readViewModel as! BaseViewModel }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        hideNavigationBar()
-        setTapGestures()
-        //tapActionsView.isHidden = true
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         readViewModel.getBookFromSavedPreferencesOrInitializeWithGenese()
         //readViewModel.getUserSettings()
-        readViewModel.getHighlightColorsFontStylesAndThemes()
+        //readViewModel.getHighlightColorsFontStylesAndThemes()
+    }
+    
+    override func configureViews() {
+        super.configureViews()
+        hideNavigationBar()
+        setTapGestures()
+        [tapActionsView, fontSettingsView].hideViews()
     }
     
     fileprivate func setTapGestures() {
-        bookChapterStackView.addTapGesture { [weak self] in
-            self?.bookChapterStackView.animateOnClick(completion: {
-                
-            })
+        bookChapterStackView.animateViewOnTapGesture { [weak self] in
+            
         }
     }
     
@@ -80,36 +75,23 @@ class ReadViewController: BaseViewController {
     }
     
     fileprivate func observeCurrentVerses() {
-        readViewModel.currentVerses.bind(to: versesTableView.rx.items(cellIdentifier: AppConstants.VERSE_CELL_ID, cellType: VerseTableViewCell.self)) { row, verse, cell in
+        readViewModel.currentVerses.bind(to: versesTableView.rx.items(cellIdentifier: R.reuseIdentifier.verseTableViewCell.identifier, cellType: VerseTableViewCell.self)) { row, verse, cell in
             
             cell.configureView(verse: verse)
             
             cell.addTapGesture { [weak self] in
                 guard let self = self else { return }
                 self.readViewModel.toggleSelectedVerse(verse: verse)
-//                if !self.readViewModel.selectedVerses.isEmpty {
-//                    self.showTapActions()
-//                } else {
-//                    self.tapActionsView.fadeOut()
-//                }
+                if self.readViewModel.selectedVerses.isNotEmpty {
+                    //self.showTapActions()
+                    self.tapActionsView.showView()
+                } else {
+                    self.tapActionsView.hideView()
+                }
             }
             
         }.disposed(by: disposeBag)
         
-        versesTableView.rx.modelSelected(Verse.self).subscribe(onNext: { verse in
-            self.readViewModel.toggleSelectedVerse(verse: verse)
-            
-//                            if !self.readViewModel.selectedVerses.isEmpty {
-//                                self.showTapActions()
-//                            } else {
-//                                self.tapActionsView.fadeOut()
-//                            }
-            
-            }).disposed(by: disposeBag)
-        
-//        versesTableView.rx.itemSelected.subscribe(onNext: { indexPath in
-//            debugPrint("cell tapped.")
-//            }).disposed(by: disposeBag)
     }
     
     fileprivate func observeVerseSelected() {
@@ -167,7 +149,7 @@ class ReadViewController: BaseViewController {
     }
     
     fileprivate func showTapActions() {
-        tapActionsView.isHidden = false
+        tapActionsView.showView()
     }
     
 }

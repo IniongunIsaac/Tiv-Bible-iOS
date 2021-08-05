@@ -14,20 +14,13 @@ import DeviceKit
 
 class BaseViewController: UIViewController {
     
-    public let disposeBag = DisposeBag()
-    fileprivate var alert: CustomAlert?
+    let disposeBag = DisposeBag()
     var progressBar: HorizontalProgressbar?
     var horizontalProgressBarYPosition: CGFloat {
         Device.current.isOneOf(Device.allXSeriesDevices + Device.allSimulatorXSeriesDevices) ? 88 : 64
     }
-    
-    fileprivate var scrollViewConstraint: NSLayoutConstraint?
-    
-    var shouldRecieveTapGestures: Bool {
-        return true
-    }
-    
-    var keyboardHeight: CGFloat = 0.0
+    var views: [UIView] { [] }
+    var progressBarColor: UIColor { .primaryColor }
     
     func getViewModel() -> BaseViewModel {
         preconditionFailure("BaseViewController subclass must provide a subclass of BaseViewModel")
@@ -40,13 +33,11 @@ class BaseViewController: UIViewController {
         
         getViewModel().didLoad()
         
-        self.alert = CustomAlert(on: self.view)
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
-        tapGesture.delegate = self
-        self.view.addGestureRecognizer(tapGesture)
+        configureViews()
         
     }
+    
+    func configureViews() {}
     
     fileprivate func createHorizontalProgressBar() {
         progressBar = HorizontalProgressbar(frame: CGRect(x: 0, y: horizontalProgressBarYPosition, width: view.frame.width, height: 4))
@@ -63,39 +54,6 @@ class BaseViewController: UIViewController {
     
     @objc func hideKeyboard() {
         self.view.endEditing(true)
-        expandScrollView()
-    }
-    
-    func addScrollViewListener(constraint: NSLayoutConstraint) {
-        self.scrollViewConstraint = constraint
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillShow),
-            name: UIResponder.keyboardWillShowNotification,
-            object: nil
-        )
-    }
-    
-    @objc func keyboardWillShow(_ notification: Notification) {
-        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            self.keyboardHeight = keyboardRectangle.height
-            UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 6, options: [], animations: ({
-                if keyboardRectangle.origin.y >= self.view.frame.height {
-                    self.scrollViewConstraint?.constant = 0
-                } else {
-                    self.scrollViewConstraint?.constant = self.keyboardHeight
-                }
-                self.view.layoutIfNeeded()
-            }), completion: nil)
-        }
-    }
-    
-    func expandScrollView() {
-        UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 6, options: [], animations: ({
-            self.scrollViewConstraint?.constant = 0
-            self.view.layoutIfNeeded()
-        }), completion: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -136,14 +94,14 @@ class BaseViewController: UIViewController {
     private func showLoading() {
         createHorizontalProgressBar()
         progressBar?.startAnimating()
+        views.disableUserInteraction()
+        disableNavBar()
     }
     
     private func hideLoading() {
         progressBar?.stopAnimating()
-    }
-    
-    func showAlert(message: String, type: AlertType, dismissCompletion: (() -> Void)? = nil) {
-        self.alert?.showAlert(text: message, type: type, dismissCompletion: dismissCompletion)
+        views.enableUserInteraction()
+        enableNavBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -153,28 +111,20 @@ class BaseViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        alert?.hideAlert()
+        hideAlert()
         getViewModel().willDisappear()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        hideAlert()
         getViewModel().didAppear()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        hideAlert()
         getViewModel().didDisappear()
     }
 
-}
-
-//MARK: - UIGestureRecognizerDelegate
-
-extension BaseViewController: UIGestureRecognizerDelegate {
-    
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        return shouldRecieveTapGestures
-    }
-    
 }

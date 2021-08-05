@@ -77,48 +77,43 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
     
     fileprivate func addAppData() {
         
-        runOnBackgroundThenMainThread { [weak self] in
-            guard let self = self else { return }
-
-            let audioSpeeds = [AudioSpeed(name: "High"), AudioSpeed(name: "Low"), AudioSpeed(name: "Medium")]
-
-            let themes = [Theme(name: "System Default"), Theme(name: "Dark"), Theme(name: "Light")]
-
-            let fontStyles = [FontStyle(name: "Comfortaa"), FontStyle(name: "Happy-Monkey"), FontStyle(name: "Metamorphous"), FontStyle(name: "Roboto"), FontStyle(name: "Montserrat"), FontStyle(name: "Amatic-Sc"), FontStyle(name: "Inconsolata-Expanded"), FontStyle(name: "Indie-Flower"), FontStyle(name: "Jost"), FontStyle(name: "Lato"), FontStyle(name: "Lobster")]
-
-            let highlightColors = AppConstants.colorHexCodes.map { HighlightColor(hexCode: $0) }
-
-            let others = AppConstants.others.map { Other(title: $0.title, subTitle: $0.subTitle, text: $0.content) }
-
-            var fontSize_lineSpacing = (0,0)
-            let currDevice = Device.current
-            if currDevice.isPhone {
-                fontSize_lineSpacing = (14, 8)
-            } else if currDevice.isPad {
-                fontSize_lineSpacing = (18, 10)
-            }
-
-            let settings = [Setting(fontSize: fontSize_lineSpacing.0, lineSpacing: fontSize_lineSpacing.1, fontStyle: fontStyles[0], theme: themes[0], stayAwake: true, audioSpeed: audioSpeeds.last!)]
-
-            let versions = [Version(name: "Old"), Version(name: "New")]
-            let testaments = [Testament(name: "Old"), Testament(name: "New")]
-
-            Observable.zip(
-                self.audioSpeedRepo.insertAudioSpeeds(audioSpeeds: audioSpeeds),
-                self.themeRepo.insertThemes(themes: themes),
-                self.fontStyleRepo.insertFontStyles(fontStyles: fontStyles),
-                self.highlightColorRepo.insertHighlightColors(highlightColors: highlightColors),
-                self.otherRepo.insertOthers(others: others),
-                self.settingsRepo.insertSettings(settings: settings),
-                self.versionRepo.insertVersions(versions: versions),
-                self.testamentRepo.insertTestaments(testaments: testaments))
-                .subscribe(onNext: { [weak self] _, _, _, _, _, _, _, _ in
-                    self?.saveBooksAndChaptersAndVerses(testaments, versions[0])
-                    }, onError: { [weak self] error in
-                        self?.emitFalseLoadingAndErrorValues(error: error)
-                }).disposed(by: self.disposeBag)
-
+        let audioSpeeds = [AudioSpeed(name: "High"), AudioSpeed(name: "Low"), AudioSpeed(name: "Medium")]
+        
+        let themes = [Theme(name: "System Default"), Theme(name: "Dark"), Theme(name: "Light")]
+        
+        let fontStyles = [FontStyle(name: "Comfortaa"), FontStyle(name: "Happy-Monkey"), FontStyle(name: "Metamorphous"), FontStyle(name: "Roboto"), FontStyle(name: "Montserrat"), FontStyle(name: "Amatic-Sc"), FontStyle(name: "Inconsolata-Expanded"), FontStyle(name: "Indie-Flower"), FontStyle(name: "Jost"), FontStyle(name: "Lato"), FontStyle(name: "Lobster")]
+        
+        let highlightColors = AppConstants.colorHexCodes.map { HighlightColor(hexCode: $0) }
+        
+        let others = AppConstants.others.map { Other(title: $0.title, subTitle: $0.subTitle, text: $0.content) }
+        
+        var fontSize_lineSpacing = (0,0)
+        let currDevice = Device.current
+        if currDevice.isPhone {
+            fontSize_lineSpacing = (14, 8)
+        } else if currDevice.isPad {
+            fontSize_lineSpacing = (18, 10)
         }
+        
+        let settings = [Setting(fontSize: fontSize_lineSpacing.0, lineSpacing: fontSize_lineSpacing.1, fontStyle: fontStyles[0], theme: themes[0], stayAwake: true, audioSpeed: audioSpeeds.last!)]
+        
+        let versions = [Version(name: "Old"), Version(name: "New")]
+        let testaments = [Testament(name: "Old"), Testament(name: "New")]
+        
+        Observable.zip(
+            audioSpeedRepo.insertAudioSpeeds(audioSpeeds: audioSpeeds),
+            themeRepo.insertThemes(themes: themes),
+            fontStyleRepo.insertFontStyles(fontStyles: fontStyles),
+            highlightColorRepo.insertHighlightColors(highlightColors: highlightColors),
+            otherRepo.insertOthers(others: others),
+            settingsRepo.insertSettings(settings: settings),
+            versionRepo.insertVersions(versions: versions),
+            testamentRepo.insertTestaments(testaments: testaments))
+            .subscribe(onNext: { [weak self] _, _, _, _, _, _, _, _ in
+                self?.saveBooksAndChaptersAndVerses(testaments, versions[0])
+            }, onError: { [weak self] error in
+                self?.emitFalseLoadingAndErrorValues(error: error)
+            }).disposed(by: self.disposeBag)
         
     }
     

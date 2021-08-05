@@ -31,19 +31,18 @@ class SplashViewController: BaseViewController {
     }
     
     fileprivate func observeShowHome() {
-        splashViewModel.showHome.bind { [weak self] shouldShow in
+        splashViewModel.showHome.bind { [weak self] show in
             guard let self = self else { return }
-            if shouldShow {
-                //navigate to home screen
-                self.setViewControllers(with: self.homeTabs)
+            if show {
+                self.showHome()
             }
         }.disposed(by: disposeBag)
     }
     
     fileprivate func observeShowSetupInProgress() {
-        splashViewModel.showSetupInProgress.bind { [weak self] shouldShow in
-            self?.setupInProgressLabel.isHidden = !shouldShow
-            self?.versionLabel.isHidden = shouldShow
+        splashViewModel.showSetupInProgress.bind { [weak self] show in
+            self?.setupInProgressLabel.showView(show)
+            self?.versionLabel.showView(!show)
         }.disposed(by: disposeBag)
     }
     

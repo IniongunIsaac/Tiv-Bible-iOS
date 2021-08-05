@@ -1,158 +1,105 @@
 PODS:
-  - Alertift (4.1.1)
-  - BottomPopup (0.6.0)
+  - Alertift (4.2.0)
+  - AttributedStringBuilder (1.2.0)
+  - BEMCheckBox (1.4.1)
+  - BottomPopup (0.7.0)
   - DeviceKit (2.3.0)
-  - Differentiator (4.0.1)
-  - DynamicBlurView (4.0.0)
+  - DynamicBlurView (4.1.0)
   - HorizontalProgressBar (1.0.5)
-  - KVNProgress (2.3.5)
-  - MaterialComponents/Availability (107.2.0)
-  - MaterialComponents/BottomSheet (107.2.0):
-    - MaterialComponents/Elevation
-    - MaterialComponents/private/KeyboardWatcher
-    - MaterialComponents/private/Math
-    - MaterialComponents/ShadowElevations
-    - MaterialComponents/ShadowLayer
-    - MaterialComponents/ShapeLibrary
-    - MaterialComponents/Shapes
-  - MaterialComponents/Elevation (107.2.0):
-    - MaterialComponents/Availability
-    - MaterialComponents/private/Color
-    - MaterialComponents/private/Math
-  - MaterialComponents/private/Application (107.2.0)
-  - MaterialComponents/private/Color (107.2.0):
-    - MaterialComponents/Availability
-  - MaterialComponents/private/KeyboardWatcher (107.2.0):
-    - MaterialComponents/private/Application
-  - MaterialComponents/private/Math (107.2.0)
-  - MaterialComponents/ShadowElevations (107.2.0)
-  - MaterialComponents/ShadowLayer (107.2.0):
-    - MaterialComponents/ShadowElevations
-  - MaterialComponents/ShapeLibrary (107.2.0):
-    - MaterialComponents/private/Math
-    - MaterialComponents/Shapes
-  - MaterialComponents/Shapes (107.2.0):
-    - MaterialComponents/private/Color
-    - MaterialComponents/private/Math
-    - MaterialComponents/ShadowLayer
+  - IQKeyboardManagerSwift (6.5.6)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
-  - R.swift (5.2.2):
-    - R.swift.Library (~> 5.2.0)
-  - R.swift.Library (5.2.0)
-  - Realm (4.3.2):
-    - Realm/Headers (= 4.3.2)
-  - Realm/Headers (4.3.2)
-  - RealmSwift (4.3.2):
-    - Realm (= 4.3.2)
-  - RxBlocking (5.1.0):
-    - RxSwift (~> 5)
-  - RxCocoa (5.1.0):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxDataSources (4.0.1):
-    - Differentiator (~> 4.0)
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxRealm (2.0.0):
-    - RealmSwift (~> 4.0)
-    - RxSwift (~> 5.0)
-  - RxRelay (5.1.0):
-    - RxSwift (~> 5)
-  - RxSwift (5.1.0)
-  - RxSwiftExt (5.2.0):
-    - RxSwiftExt/Core (= 5.2.0)
-    - RxSwiftExt/RxCocoa (= 5.2.0)
-  - RxSwiftExt/Core (5.2.0):
-    - RxSwift (~> 5.0)
-  - RxSwiftExt/RxCocoa (5.2.0):
-    - RxCocoa (~> 5.0)
+  - R.swift (5.4.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - RxSwiftExt (6.0.1):
+    - RxSwiftExt/Core (= 6.0.1)
+    - RxSwiftExt/RxCocoa (= 6.0.1)
+  - RxSwiftExt/Core (6.0.1):
+    - RxSwift (~> 6.0)
+  - RxSwiftExt/RxCocoa (6.0.1):
+    - RxCocoa (~> 6.0)
     - RxSwiftExt/Core
-  - RxTest (5.1.0):
-    - RxSwift (~> 5)
-  - Shimmer (1.0.2)
   - SwiftRandom (1.0.0)
   - Swinject (2.7.1)
-  - SwinjectStoryboard (2.2.0):
-    - Swinject (~> 2.6)
+  - SwinjectStoryboard (2.2.1):
+    - Swinject (~> 2.7.1)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Alertift (~> 4.1)
+  - AttributedStringBuilder
+  - BEMCheckBox
   - BottomPopup
   - DeviceKit (~> 2.0)
   - HorizontalProgressBar
-  - KVNProgress
-  - MaterialComponents/BottomSheet
+  - IQKeyboardManagerSwift
   - PopupDialog
   - R.swift
-  - RealmSwift
-  - RxBlocking (~> 5)
-  - RxCocoa (~> 5)
-  - RxDataSources (~> 4.0)
-  - RxRealm
-  - RxSwift (~> 5)
-  - RxSwiftExt (~> 5)
-  - RxTest (~> 5)
-  - Shimmer
+  - RxSwiftExt
   - SwiftRandom
   - Swinject
-  - SwinjectStoryboard
+  - SwinjectStoryboard (from `https://github.com/Swinject/SwinjectStoryboard.git`, branch `master`)
+  - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
     - Alertift
+    - AttributedStringBuilder
+    - BEMCheckBox
     - BottomPopup
     - DeviceKit
-    - Differentiator
     - DynamicBlurView
     - HorizontalProgressBar
-    - KVNProgress
-    - MaterialComponents
+    - IQKeyboardManagerSwift
     - PopupDialog
     - R.swift
     - R.swift.Library
-    - Realm
-    - RealmSwift
-    - RxBlocking
     - RxCocoa
-    - RxDataSources
-    - RxRealm
     - RxRelay
     - RxSwift
     - RxSwiftExt
-    - RxTest
-    - Shimmer
     - SwiftRandom
     - Swinject
-    - SwinjectStoryboard
+    - Toast-Swift
+
+EXTERNAL SOURCES:
+  SwinjectStoryboard:
+    :branch: master
+    :git: https://github.com/Swinject/SwinjectStoryboard.git
+
+CHECKOUT OPTIONS:
+  SwinjectStoryboard:
+    :commit: dd2c13879c887233530b9673c5b67495ff3ee3bb
+    :git: https://github.com/Swinject/SwinjectStoryboard.git
 
 SPEC CHECKSUMS:
-  Alertift: 950483ca193717cc8bb508a7dbbe34f4af321daf
-  BottomPopup: 1d5649a3b29396238f0e8f3c82075a7bfcf37ba7
+  Alertift: 17b37be915cd28edeceabd438e4134d041ea825c
+  AttributedStringBuilder: 3cee4ae28b8fc6eba136242f89b0ea697a3b9d55
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  BottomPopup: fe3e284628532f99093ae68c592c6b9d392c972d
   DeviceKit: da103891aa928d89f64ea8dd8aca738c5f3d8ac0
-  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  DynamicBlurView: ccf9acd2b20c883cc2c72e3524a04d8d3ee20533
+  DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   HorizontalProgressBar: f0e3d36051656651d1430d2cf5e0146fc4895f15
-  KVNProgress: d7046cce142f1aeb740db39dc3cacfe910fac354
-  MaterialComponents: 4dd1927cd2257e564983018906e152d18cda0c03
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
-  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
-  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
-  Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
-  RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
-  RxBlocking: 5ef131267220f92ef68531dd6afeaf407cd6b41a
-  RxCocoa: 13d2a4d7546a34b8ececae8c281e4ea1dbb94f2b
-  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
-  RxRealm: 900f5c7e6f0a2d6527b56eaf7283f3035ec1e8ba
-  RxRelay: a168bd6caf712d00c676ac344e9295afc93b418e
-  RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
-  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
-  RxTest: d5e1c9c1880de2751041fa485d476ce006967b31
-  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
+  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
   SwiftRandom: 437275c63500ddf5a565cbd56996fb23f12cfc3d
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
-  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
+  SwinjectStoryboard: fe54ea9494a75348b1f3126e5e278e674f5684ad
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 1c5c86892b300c36a7a0adc483adfb7d91b3913c
+PODFILE CHECKSUM: c0790110b105790c44cbee232bae7d82ee628878
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.2

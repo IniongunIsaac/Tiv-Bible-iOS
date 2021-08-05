@@ -34,6 +34,14 @@ extension UIColor {
         return UIColor("#008577")
     }
     
+    static var appGreen: UIColor { UIColor("#00B764") }
+    
+    static var appBlue: UIColor { UIColor("#3C84E5") }
+    
+    static var appInfo: UIColor { UIColor("#171d46") }
+    
+    static var appRed: UIColor { UIColor("#EE4848") }
+    
     static var aLabel: UIColor {
         if #available(iOS 13, *) {
             return .label

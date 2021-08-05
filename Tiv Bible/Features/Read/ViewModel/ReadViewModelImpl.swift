@@ -66,8 +66,8 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     
     override func willAppear() {
         super.willAppear()
-        //getUserSettings()
-        //getHighlightColorsFontStylesAndThemes()
+        getUserSettings()
+        getHighlightColorsFontStylesAndThemes()
     }
     
     func getUserSettings() {
@@ -85,7 +85,6 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     func getBookFromSavedPreferencesOrInitializeWithGenese() {
         if preferenceRepo.shouldReloadVerses {
             preferenceRepo.shouldReloadVerses = false
-            
             if preferenceRepo.currentBookId.isEmpty {
                 getDefaultBook()
             } else {
@@ -206,7 +205,7 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         } else {
             selectedVerses.removeAll { $0.id == verse.id }
         }
-        if !selectedVerses.isEmpty {
+        if selectedVerses.isNotEmpty {
             getSelectedVersesText()
         } else {
             shareableSelectedVersesText = ""

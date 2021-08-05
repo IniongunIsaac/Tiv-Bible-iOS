@@ -12,6 +12,13 @@ import UIKit
 //MARK: - UIView Inspectables
 extension UIView {
     
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
+    }
+    
     @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -100,6 +107,70 @@ extension UIView {
                 completion?()
             })
         }
+    }
+    
+    func hideView() {
+        isHidden = true
+    }
+    
+    func showView(_ show: Bool = true) {
+        isHidden = !show
+    }
+    
+    func animateView(duration: TimeInterval = 0.5, completion: (() -> Void)? = nil) {
+        UIView.animate(withDuration: duration, animations: {
+            self.alpha = 0.5
+        }) { completed in
+            UIView.animate(withDuration: duration, animations: {
+                self.alpha = 1
+                completion?()
+            })
+        }
+    }
+    
+    func animateViewOnTapGesture(duration: TimeInterval = 0.5, completion: (() -> Void)? = nil) {
+        addTapGesture {
+            self.animateView(duration: duration, completion: completion)
+        }
+    }
+    
+    func addDismissGesture(on viewcontroller: UIViewController, duration: TimeInterval = 0.5, completion: (() -> Void)? = nil) {
+        animateViewOnTapGesture(duration: duration) {
+            viewcontroller.dismissViewController(completion: completion)
+        }
+    }
+    
+    func addPopGesture(on viewcontroller: UIViewController) {
+        animateViewOnTapGesture {
+            viewcontroller.popViewController()
+        }
+    }
+    
+    enum ViewSide {
+        case left, right, top, bottom
+    }
+
+    func addBorder(toSide side: ViewSide, withColor color: UIColor, andThickness thickness: CGFloat) {
+
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+
+        switch side {
+        case .left: border.frame = CGRect(x: frame.minX, y: frame.minY, width: thickness, height: frame.height); break
+        case .right: border.frame = CGRect(x: frame.maxX, y: frame.minY, width: thickness, height: frame.height); break
+        case .top: border.frame = CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: thickness); break
+        case .bottom: border.frame = CGRect(x: frame.minX, y: frame.maxY, width: frame.width, height: thickness); break
+        }
+
+        layer.addSublayer(border)
+    }
+    
+    func enableUserInteraction() {
+        isUserInteractionEnabled = true
+    }
+    
+    func disableUserInteraction() {
+        isUserInteractionEnabled = false
     }
     
 }
@@ -206,62 +277,6 @@ extension UIView {
     }
 }
 
-// MARK: UIViewController Extensions
-
-extension UIViewController {
-    
-    func add(asChildViewController viewController: UIViewController) {
-        // Add Child View Controller
-        addChild(viewController)
-
-        // Add Child View as Subview
-        view.addSubview(viewController.view)
-
-        // Configure Child View
-        viewController.view.frame = view.bounds
-        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-
-        // Notify Child View Controller
-        viewController.didMove(toParent: self)
-    }
-    
-    func remove(asChildViewController viewController: UIViewController) {
-        // Notify Child View Controller
-        viewController.willMove(toParent: nil)
-
-        // Remove Child View From Superview
-        viewController.view.removeFromSuperview()
-
-        // Notify Child View Controller
-        viewController.removeFromParent()
-    }
-    
-    func getViewController(from storyboardName: String, withId: String) -> UIViewController {
-        return UIStoryboard(name: storyboardName, bundle: Bundle.main).instantiateViewController(withIdentifier: withId)
-    }
-    
-    var homeTabs: UIViewController {
-        return UIStoryboard(name: AppConstants.HOME_STORYBOARD_NAME, bundle: Bundle.main).instantiateInitialViewController()!
-    }
-    
-    func setViewControllers(with viewController: UIViewController) {
-        navigationController?.viewControllers = [viewController]
-    }
-    
-    func pushViewController(_ viewController: UIViewController) {
-        navigationController?.pushViewController(viewController, animated: true)
-    }
-    
-    func popViewController() {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    func dismissViewController(animated: Bool = true, completion: (() -> Void)? = nil) {
-        dismiss(animated: true, completion: completion)
-    }
-    
-}
-
 // MARK: - UICollectionView Extensions
 
 extension UICollectionView {
@@ -320,4 +335,30 @@ extension UIImageView {
         self.clipsToBounds = true
     }
     
+}
+
+extension Array where Element == UIView {
+    func addClearBackground() {
+        forEach { $0.backgroundColor = .clear }
+    }
+    
+    func hideViews() {
+        forEach { $0.hideView() }
+    }
+    
+    func showViews() {
+        forEach { $0.showView() }
+    }
+    
+    func disableUserInteraction() {
+        forEach { $0.disableUserInteraction() }
+    }
+    
+    func enableUserInteraction() {
+        forEach { $0.enableUserInteraction() }
+    }
+    
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        forEach { $0.roundCorners(corners, radius: radius) }
+    }
 }

@@ -199,3 +199,7 @@ extension Sequence {
         return list
     }
 }
+
+extension Collection {
+    var isNotEmpty: Bool { !self.isEmpty }
+}

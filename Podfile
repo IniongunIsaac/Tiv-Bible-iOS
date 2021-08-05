@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 target 'Tiv Bible' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,32 +7,25 @@ target 'Tiv Bible' do
 
   # Pods for Tiv Bible
   pod 'Swinject'
-  pod 'SwinjectStoryboard'
-  pod 'RxSwift', '~> 5'
-  pod 'RxCocoa', '~> 5'
-  pod 'RxSwiftExt', '~> 5'
-  pod 'RxDataSources', '~> 4.0'
-  pod 'RealmSwift'
-  pod "RxRealm"
-  #pod "RxRealmDataSources"
+  pod 'SwinjectStoryboard', :git => 'https://github.com/Swinject/SwinjectStoryboard.git', :branch => 'master'
+  pod 'RxSwiftExt'
   
   #Other pods
   pod 'Alertift', '~> 4.1'
   pod 'BottomPopup'
-  pod 'KVNProgress'
   pod 'PopupDialog'
-  pod 'Shimmer'
   pod 'SwiftRandom'
   pod 'DeviceKit', '~> 2.0'
-  pod 'MaterialComponents/BottomSheet'
+  pod 'Toast-Swift', '~> 5.0.1'
+  pod "AttributedStringBuilder"
+  pod 'BEMCheckBox'
   pod 'HorizontalProgressBar'
   pod 'R.swift'
+  pod 'IQKeyboardManagerSwift'
 
   target 'Tiv BibleTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'RxBlocking', '~> 5'
-    pod 'RxTest', '~> 5'
   end
 
   target 'Tiv BibleUITests' do

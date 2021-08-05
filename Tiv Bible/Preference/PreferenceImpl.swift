@@ -10,79 +10,25 @@ import Foundation
 
 struct PreferenceImpl: IPreference {
     
-    fileprivate let userDefs = UserDefaults.standard
+    @UserDefaultStorage(key: PreferenceConstants.DB_INITIALIZED_KEY, default: false)
+    var isDBInitialized: Bool
     
-    init(){}
+    @UserDefaultStorage(key: PreferenceConstants.CURRENT_THEME_KEY, default: "")
+    var currentTheme: String
     
-    var isDBInitialized: Bool {
-        get {
-            return userDefs.bool(forKey: PreferenceConstants.DB_INITIALIZED_KEY)
-        }
-        
-        set {
-            userDefs.set(newValue, forKey: PreferenceConstants.DB_INITIALIZED_KEY)
-        }
-    }
+    @UserDefaultStorage(key: PreferenceConstants.CURRENT_VERSE_KEY, default: "")
+    var currentVerseId: String
     
-    var currentTheme: String {
-        get {
-            return userDefs.string(forKey: PreferenceConstants.CURRENT_THEME_KEY) ?? ""
-        }
-        
-        set {
-            userDefs.set(newValue, forKey: PreferenceConstants.CURRENT_THEME_KEY)
-        }
-    }
+    @UserDefaultStorage(key: PreferenceConstants.CURRENT_CHAPTER_KEY, default: "")
+    var currentChapterId: String
     
-    var currentVerseId: String {
-        get {
-            return userDefs.string(forKey: PreferenceConstants.CURRENT_VERSE_KEY) ?? ""
-        }
-        
-        set {
-            userDefs.set(newValue, forKey: PreferenceConstants.CURRENT_VERSE_KEY)
-        }
-    }
+    @UserDefaultStorage(key: PreferenceConstants.CURRENT_BOOK_KEY, default: "")
+    var currentBookId: String
     
-    var currentChapterId: String {
-        get {
-            
-            return userDefs.string(forKey: PreferenceConstants.CURRENT_CHAPTER_KEY) ?? ""
-        }
-        
-        set {
-            userDefs.set(newValue, forKey: PreferenceConstants.CURRENT_CHAPTER_KEY)
-        }
-    }
+    @UserDefaultStorage(key: PreferenceConstants.CURRENT_VERSE_KEY, default: "")
+    var currentVerseString: String
     
-    var currentBookId: String {
-        get {
-            return userDefs.string(forKey: PreferenceConstants.CURRENT_BOOK_KEY) ?? ""
-        }
-        
-        set {
-            userDefs.set(newValue, forKey: PreferenceConstants.CURRENT_BOOK_KEY)
-        }
-    }
-    
-    var currentVerseString: String {
-        get {
-            return userDefs.string(forKey: PreferenceConstants.CURRENT_VERSE_KEY) ?? ""
-        }
-        
-        set {
-            userDefs.set(newValue, forKey: PreferenceConstants.CURRENT_VERSE_KEY)
-        }
-    }
-    
-    var shouldReloadVerses: Bool {
-        get {
-            return userDefs.bool(forKey: PreferenceConstants.SHOULD_RELOAD_VERSES_KEY)
-        }
-        
-        set {
-            userDefs.set(newValue, forKey: PreferenceConstants.SHOULD_RELOAD_VERSES_KEY)
-        }
-    }
+    @UserDefaultStorage(key: PreferenceConstants.SHOULD_RELOAD_VERSES_KEY, default: false)
+    var shouldReloadVerses: Bool
     
 }
