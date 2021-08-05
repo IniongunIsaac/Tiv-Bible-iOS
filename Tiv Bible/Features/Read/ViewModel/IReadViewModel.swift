@@ -28,7 +28,7 @@ protocol IReadViewModel: Scopable {
     
     var shareableSelectedVersesText: String { get }
     
-    var verseSelected: PublishSubject<Bool> { get }
+    var reloadVerses: PublishSubject<Bool> { get }
     
     var highlightColorsFontStylesAndThemes: PublishSubject<(highlightColors: [HighlightColor], fontStyles: [FontStyle], themes: [Theme])> { get }
     
@@ -43,5 +43,7 @@ protocol IReadViewModel: Scopable {
     func saveBookmarks()
     
     func saveNotes(_ notes: String)
+    
+    func setHighlightColorForSelectedVerses(_ color: HighlightColor)
     
 }

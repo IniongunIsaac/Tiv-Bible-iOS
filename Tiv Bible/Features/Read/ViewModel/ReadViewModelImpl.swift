@@ -46,7 +46,7 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     var highlights: PublishSubject<[Highlight]> = PublishSubject()
     var selectedVersesText: PublishSubject<String> = PublishSubject()
     var shareableSelectedVersesText: String = ""
-    var verseSelected: PublishSubject<Bool> = PublishSubject()
+    var reloadVerses: PublishSubject<Bool> = PublishSubject()
     var selectedVerses = [Verse]()
     var highlightColorsFontStylesAndThemes: PublishSubject<(highlightColors: [HighlightColor], fontStyles: [FontStyle], themes: [Theme])> = PublishSubject()
     
@@ -148,6 +148,8 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
             bookNameAndChapterNumber.onNext(newBookNameAndChapterNumber.replacingOccurrences(of: ":", with: " "))
         }
         
+        getVersesHighlights()
+        
     }
     
     fileprivate func getChapter(chapterId: String) {
@@ -196,7 +198,8 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
             }
         }
         currentVerses.onNext(currentVersesList)
-        highlights.onNext(highlightsList)
+        //highlights.onNext(highlightsList)
+        //reloadVerses.onNext(true)
     }
     
     func toggleSelectedVerse(verse: Verse) {
@@ -206,13 +209,14 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         } else {
             selectedVerses.removeAll { $0.id == verse.id }
         }
+        
         if selectedVerses.isNotEmpty {
             getSelectedVersesText()
         } else {
             shareableSelectedVersesText = ""
         }
         
-        verseSelected.onNext(verse.isSelected)
+        reloadVerses.onNext(true)
     }
     
     fileprivate func getSelectedVersesText() {
@@ -259,6 +263,13 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         let note = Note(comment: notes, book: currentBook!, chapter: currentChapter!)
         subscribe(noteRepo.insertNotes(notes: [note]), success: { [weak self] in
             self?.showMessage("Notes saved successfully!")
+        })
+    }
+    
+    func setHighlightColorForSelectedVerses(_ color: HighlightColor) {
+        let highlights = selectedVerses.map { Highlight(book: currentBook!, chapter: currentChapter!, verse: $0, color: color) }
+        subscribe(highlightRepo.insertHighlights(highlights: highlights), success: { [weak self] in
+            self?.getVersesHighlights()
         })
     }
     

@@ -35,5 +35,14 @@ class VerseTableViewCell: UITableViewCell {
         }
         
         verseTextLabel.attributedText = attributedText
+        
+        verse.do {
+            if $0.isHighlighted {
+                verseTextLabel.backgroundColor = UIColor($0.highlight!.color!.hexCode)
+            } else {
+                verseTextLabel.backgroundColor = .clear
+            }
+        }
+        
     }
 }

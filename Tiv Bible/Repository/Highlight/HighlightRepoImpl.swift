@@ -17,6 +17,10 @@ struct HighlightRepoImpl: IHighlightRepo {
         highlightDataSource.getAllHighlights()
     }
     
+    func getHighlightsByChapter(_ chapterId: String) -> Observable<[Highlight]> {
+        highlightDataSource.getHighlightsByChapter(chapterId)
+    }
+    
     func getHighlightById(id: String) -> Observable<Highlight> {
         highlightDataSource.getHighlightById(id: id)
     }

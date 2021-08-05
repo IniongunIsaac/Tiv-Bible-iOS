@@ -13,7 +13,7 @@ import RxCocoa
 class ReadViewController: BaseViewController {
     
     @IBOutlet weak var topView: UIView!
-    @IBOutlet weak var bookChapterStackView: UIStackView!
+    @IBOutlet weak var bookChapterView: UIView!
     @IBOutlet weak var bookChapterLabel: UILabel!
     @IBOutlet weak var fontStyleButton: UIButton!
     @IBOutlet weak var versesTableView: UITableView!
@@ -58,7 +58,7 @@ class ReadViewController: BaseViewController {
     }
     
     fileprivate func setTapGestures() {
-        bookChapterStackView.animateViewOnTapGesture { [weak self] in
+        bookChapterView.animateViewOnTapGesture { [weak self] in
             
         }
         
@@ -106,7 +106,7 @@ class ReadViewController: BaseViewController {
         super.setChildViewControllerObservers()
         observeCurrentVerses()
         observeBookNameAndChapterNumber()
-        observeVerseSelected()
+        observeReloadVerses()
         observeSelectedVersesText()
         observeHighlightColorsFontStylesAndThemes()
     }
@@ -134,9 +134,11 @@ class ReadViewController: BaseViewController {
         }
     }
     
-    fileprivate func observeVerseSelected() {
-        readViewModel.verseSelected.bind { [weak self] selected in
-            self?.versesTableView.reloadData()
+    fileprivate func observeReloadVerses() {
+        readViewModel.reloadVerses.bind { [weak self] reload in
+            if reload {
+                self?.versesTableView.reloadData()
+            }
         }.disposed(by: disposeBag)
     }
     
@@ -162,15 +164,15 @@ class ReadViewController: BaseViewController {
     }
     
     fileprivate func configureHighlightColors(_ highlightColors: [HighlightColor]) {
-        highlightColors.forEach { [weak self] highlightColor in
+        highlightColors.forEach { [weak self] color in
             
             let view = UIView().apply {
                 $0.heightAnchor.constraint(equalToConstant: 40).isActive = true
                 $0.widthAnchor.constraint(equalToConstant: 40).isActive = true
-                $0.backgroundColor = UIColor(highlightColor.hexCode)
+                $0.backgroundColor = UIColor(color.hexCode)
                 $0.addCornerRadius(radius: 20)
                 $0.animateViewOnTapGesture { [weak self] in
-                    
+                    self?.readViewModel.setHighlightColorForSelectedVerses(color)
                 }
             }
             

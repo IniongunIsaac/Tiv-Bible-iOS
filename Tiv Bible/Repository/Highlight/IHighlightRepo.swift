@@ -14,6 +14,8 @@ protocol IHighlightRepo {
     func getAllHighlights() -> Observable<[Highlight]>
 
     func getHighlightById(id: String) -> Observable<Highlight>
+    
+    func getHighlightsByChapter(_ chapterId: String) -> Observable<[Highlight]>
 
     func getHighlightsByDate(highlightedOn: Date) -> Observable<[Highlight]>
 
