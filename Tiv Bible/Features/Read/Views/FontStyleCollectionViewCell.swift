@@ -14,4 +14,9 @@ class FontStyleCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var checkmarkImageView: UIImageView!
     @IBOutlet weak var fontStyleTextLabel: UILabel!
     
+    func configureView(font: FontStyle) {
+        font.do {
+            fontStyleTextLabel.text = $0.name
+        }
+    }
 }

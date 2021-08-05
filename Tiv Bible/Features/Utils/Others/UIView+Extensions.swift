@@ -173,6 +173,10 @@ extension UIView {
         isUserInteractionEnabled = false
     }
     
+    var width: CGFloat { frame.size.width }
+    
+    var height: CGFloat { frame.size.height }
+    
 }
 
 //MARK: - Custom UIViewTapGestureRecognizer

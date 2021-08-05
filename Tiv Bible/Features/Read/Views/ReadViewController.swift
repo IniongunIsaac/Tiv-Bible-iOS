@@ -23,20 +23,22 @@ class ReadViewController: BaseViewController {
     @IBOutlet weak var removeHighlightColorImageView: UIImageView!
     @IBOutlet weak var fontSettingsView: UIView!
     @IBOutlet weak var closeFontSettingsImageView: UIImageView!
-    @IBOutlet weak var increaseFontSizeView: ViewWithBorderAttributes!
-    @IBOutlet weak var decreaseFontSizeView: ViewWithBorderAttributes!
+    @IBOutlet weak var increaseFontSizeView: UIView!
+    @IBOutlet weak var decreaseFontSizeView: UIView!
     @IBOutlet weak var currentFontSizeLabel: UILabel!
-    @IBOutlet weak var lineSpacingTwoView: ViewWithBorderAttributes!
-    @IBOutlet weak var lineSpacingThreeView: ViewWithBorderAttributes!
-    @IBOutlet weak var lineSpacingFourView: ViewWithBorderAttributes!
+    @IBOutlet weak var lineSpacingTwoView: UIView!
+    @IBOutlet weak var lineSpacingThreeView: UIView!
+    @IBOutlet weak var lineSpacingFourView: UIView!
     @IBOutlet weak var fontStyleCollectionView: UICollectionView!
-    @IBOutlet weak var themesCollectionView: UICollectionView!
-    @IBOutlet weak var goToSettingsView: ViewWithBorderAttributes!
+    @IBOutlet weak var goToSettingsView: UIView!
     @IBOutlet weak var shareView: ViewWithBorderAttributes!
     @IBOutlet weak var bookmarkView: ViewWithBorderAttributes!
     @IBOutlet weak var copyView: ViewWithBorderAttributes!
     @IBOutlet weak var takeNotesView: ViewWithBorderAttributes!
     @IBOutlet weak var highlightColorsStackView: UIStackView!
+    @IBOutlet weak var systemThemeView: UIView!
+    @IBOutlet weak var darkThemeView: UIView!
+    @IBOutlet weak var lightThemeView: UIView!
     
     var readViewModel: IReadViewModel!
     override func getViewModel() -> BaseViewModel { readViewModel as! BaseViewModel }
@@ -79,17 +81,17 @@ class ReadViewController: BaseViewController {
         takeNotesView.animateViewOnTapGesture(completion: handleTakeNotesTapped)
         
         closeTapActionsImageView.animateViewOnTapGesture { [weak self] in
-            
+            self?.tapActionsView.fadeOut()
         }
         
         closeFontSettingsImageView.animateViewOnTapGesture { [weak self] in
-            
+            self?.fontSettingsView.fadeOut()
         }
     }
     
     @IBAction func fontStyleButtonTapped(_ sender: UIButton) {
         fontStyleButton.animateView { [weak self] in
-            
+            self?.fontSettingsView.fadeIn()
         }
     }
     
@@ -158,7 +160,6 @@ class ReadViewController: BaseViewController {
             
             self?.configureHighlightColors(data.highlightColors)
             self?.configureFontStyles(data.fontStyles)
-            self?.configureThemes(data.themes)
             
         }.disposed(by: disposeBag)
     }
@@ -181,15 +182,20 @@ class ReadViewController: BaseViewController {
     }
     
     fileprivate func configureFontStyles(_ fontStyles: [FontStyle]) {
-        fontStyles.forEach { fontStyle in
+        fontStyleCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
+        Observable.just(fontStyles).bind(to: fontStyleCollectionView.rx.items(cellIdentifier: R.reuseIdentifier.fontStyleCollectionViewCell.identifier, cellType: FontStyleCollectionViewCell.self)) { row, font, cell in
             
-        }
+            cell.configureView(font: font)
+            
+            cell.addTapGesture { [weak self] in
+                self?.handleFontStyleSelected(font)
+            }
+            
+        }.disposed(by: disposeBag)
     }
     
-    fileprivate func configureThemes(_ themes: [Theme]) {
-        themes.forEach { theme in
-            
-        }
+    func handleFontStyleSelected(_ font: FontStyle) {
+        
     }
     
     fileprivate func showTapActions() {
@@ -197,6 +203,23 @@ class ReadViewController: BaseViewController {
             isShowingTapActions = true
             tapActionsView.fadeIn()
         }
+    }
+    
+}
+
+//MARK: - UICollectionViewDelegateFlowLayout
+extension ReadViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 150, height: collectionView.height)
     }
     
 }
