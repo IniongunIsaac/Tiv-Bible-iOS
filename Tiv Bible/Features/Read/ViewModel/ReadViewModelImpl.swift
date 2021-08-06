@@ -60,6 +60,11 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     fileprivate var highlightsList = [Highlight]()
     fileprivate var currentVersesList = [Verse]()
     
+    var currentTheme: ThemeType {
+        get { preferenceRepo.currentTheme }
+        set { preferenceRepo.currentTheme = newValue }
+    }
+    
     override func didLoad() {
         super.didLoad()
         self.preferenceRepo.shouldReloadVerses = true
@@ -297,6 +302,10 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         subscribe(settingsRepo.updateSettings(setting: settings), success: { [weak self] in
             self?.getUserSettings()
         })
+    }
+    
+    func updateLineSpacing(type: LineSpacingType) {
+        updateUserSettings(currentSettings!.newCopy(lineSpacing: type.value))
     }
     
 }

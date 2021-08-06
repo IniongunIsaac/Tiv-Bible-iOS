@@ -13,6 +13,6 @@ struct PreferenceConstants {
     static let CURRENT_VERSE_KEY = "CurrentVerse"
     static let CURRENT_CHAPTER_KEY = "CurrentChapter"
     static let CURRENT_BOOK_KEY = "CurrentBook"
-    static let CURRENT_THEME_KEY = "CurrentTheme"
     static let SHOULD_RELOAD_VERSES_KEY = "ReloadVerses"
+    static let CURRENT_THEME = "CurrentTheme"
 }

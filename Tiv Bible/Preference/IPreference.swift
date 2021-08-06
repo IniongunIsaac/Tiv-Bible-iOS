@@ -12,8 +12,6 @@ protocol IPreference {
     
     var isDBInitialized: Bool { get set }
 
-    var currentTheme: String { get set }
-
     var currentVerseId: String { get set }
 
     var currentChapterId: String { get set }
@@ -23,5 +21,7 @@ protocol IPreference {
     var currentVerseString: String { get set }
 
     var shouldReloadVerses: Bool { get set }
+    
+    var currentTheme: ThemeType { get set }
     
 }

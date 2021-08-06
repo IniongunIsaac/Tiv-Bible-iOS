@@ -13,73 +13,38 @@ struct PreferenceRepoImpl: IPreferenceRepo {
     var preference: IPreference
     
     var isDBInitialized: Bool {
-        get {
-            preference.isDBInitialized
-        }
-        
-        set {
-            preference.isDBInitialized = newValue
-        }
+        get { preference.isDBInitialized }
+        set { preference.isDBInitialized = newValue }
     }
     
-    var currentTheme: String {
-        get {
-            preference.currentTheme
-        }
-        
-        set {
-            preference.currentTheme = newValue
-        }
+    var currentTheme: ThemeType {
+        get { preference.currentTheme }
+        set { preference.currentTheme = newValue }
     }
     
     var currentVerseId: String {
-        get {
-            preference.currentVerseId
-        }
-        
-        set {
-            preference.currentVerseId = newValue
-        }
+        get { preference.currentVerseId }
+        set { preference.currentVerseId = newValue }
     }
     
     var currentChapterId: String {
-        get {
-            preference.currentChapterId
-        }
-        
-        set {
-            preference.currentChapterId = newValue
-        }
+        get { preference.currentChapterId }
+        set { preference.currentChapterId = newValue }
     }
     
     var currentBookId: String {
-        get {
-            preference.currentBookId
-        }
-        
-        set {
-            preference.currentBookId = newValue
-        }
+        get { preference.currentBookId }
+        set { preference.currentBookId = newValue }
     }
     
     var currentVerseString: String {
-        get {
-            preference.currentVerseString
-        }
-        
-        set {
-            preference.currentVerseString = newValue
-        }
+        get { preference.currentVerseString }
+        set { preference.currentVerseString = newValue }
     }
     
     var shouldReloadVerses: Bool {
-        get {
-            preference.shouldReloadVerses
-        }
-        
-        set {
-            preference.shouldReloadVerses = newValue
-        }
+        get { preference.shouldReloadVerses }
+        set { preference.shouldReloadVerses = newValue }
     }
     
 }

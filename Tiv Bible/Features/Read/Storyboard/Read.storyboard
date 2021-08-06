@@ -941,16 +941,17 @@
                         <outlet property="goToSettingsView" destination="78f-V0-q7Y" id="LQ4-bT-qNl"/>
                         <outlet property="highlightColorsStackView" destination="Urv-XD-3Pm" id="rCP-jS-QcA"/>
                         <outlet property="increaseFontSizeView" destination="8B7-lx-tp7" id="luQ-bp-uum"/>
+                        <outlet property="largeLineSpacingView" destination="VDY-rn-MZG" id="Pxq-E9-b1N"/>
                         <outlet property="lightThemeView" destination="iIi-N6-wPs" id="RcE-uS-CHO"/>
-                        <outlet property="lineSpacingFourView" destination="VDY-rn-MZG" id="nDE-iN-TD4"/>
-                        <outlet property="lineSpacingThreeView" destination="Rgt-E9-ddo" id="aGT-wO-JEh"/>
-                        <outlet property="lineSpacingTwoView" destination="0NE-74-5bs" id="opW-rw-ql4"/>
+                        <outlet property="normalLineSpacingView" destination="Rgt-E9-ddo" id="JtJ-fy-04k"/>
                         <outlet property="removeHighlightColorImageView" destination="Fy6-Dk-3J4" id="fGi-L8-syH"/>
                         <outlet property="selectedVersesLabel" destination="gVO-O9-LXM" id="czR-za-d3b"/>
                         <outlet property="shareView" destination="4R6-jD-qM0" id="dUH-8r-wbC"/>
+                        <outlet property="smallLineSpacingView" destination="0NE-74-5bs" id="l6Q-Fq-daF"/>
                         <outlet property="systemThemeView" destination="Mfk-gs-yRA" id="7Wg-cC-nbE"/>
                         <outlet property="takeNotesView" destination="lcm-Wu-owv" id="RVm-1D-qWT"/>
                         <outlet property="tapActionsView" destination="jea-rI-tpi" id="GPS-gX-iRi"/>
+                        <outlet property="themesStackView" destination="1aP-C8-kQd" id="74h-RX-OGk"/>
                         <outlet property="topView" destination="t1V-H7-1on" id="w4l-69-Ur6"/>
                         <outlet property="versesTableView" destination="7dS-jP-YDg" id="FQx-M2-kWj"/>
                     </connections>

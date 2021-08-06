@@ -26,9 +26,9 @@ class ReadViewController: BaseViewController {
     @IBOutlet weak var increaseFontSizeView: UIView!
     @IBOutlet weak var decreaseFontSizeView: UIView!
     @IBOutlet weak var currentFontSizeLabel: UILabel!
-    @IBOutlet weak var lineSpacingTwoView: UIView!
-    @IBOutlet weak var lineSpacingThreeView: UIView!
-    @IBOutlet weak var lineSpacingFourView: UIView!
+    @IBOutlet weak var smallLineSpacingView: UIView!
+    @IBOutlet weak var normalLineSpacingView: UIView!
+    @IBOutlet weak var largeLineSpacingView: UIView!
     @IBOutlet weak var fontStyleCollectionView: UICollectionView!
     @IBOutlet weak var goToSettingsView: UIView!
     @IBOutlet weak var shareView: ViewWithBorderAttributes!
@@ -39,10 +39,11 @@ class ReadViewController: BaseViewController {
     @IBOutlet weak var systemThemeView: UIView!
     @IBOutlet weak var darkThemeView: UIView!
     @IBOutlet weak var lightThemeView: UIView!
+    @IBOutlet weak var themesStackView: UIStackView!
     
     var readViewModel: IReadViewModel!
     override func getViewModel() -> BaseViewModel { readViewModel as! BaseViewModel }
-    override var views: [UIView] { [bookChapterView, tapActionsView, fontSettingsView, shareView, bookmarkView, copyView, takeNotesView, closeTapActionsImageView, closeFontSettingsImageView, systemThemeView, darkThemeView, lightThemeView, goToSettingsView, increaseFontSizeView, decreaseFontSizeView, lineSpacingTwoView, lineSpacingThreeView, lineSpacingFourView] }
+    override var views: [UIView] { [bookChapterView, tapActionsView, fontSettingsView, shareView, bookmarkView, copyView, takeNotesView, closeTapActionsImageView, closeFontSettingsImageView, systemThemeView, darkThemeView, lightThemeView, goToSettingsView, increaseFontSizeView, decreaseFontSizeView, smallLineSpacingView, normalLineSpacingView, largeLineSpacingView] }
     
     fileprivate var isShowingTapActions = false
     fileprivate var shareableText: String { readViewModel.shareableSelectedVersesText }
@@ -58,6 +59,7 @@ class ReadViewController: BaseViewController {
         hideNavigationBar()
         setTapGestures()
         [tapActionsView, fontSettingsView].hideViews()
+        switchAppTheme(type: readViewModel.currentTheme)
     }
     
     fileprivate func setTapGestures() {
@@ -90,15 +92,15 @@ class ReadViewController: BaseViewController {
         }
         
         systemThemeView.animateViewOnTapGesture { [weak self] in
-            
+            self?.switchAppTheme(type: .system)
         }
         
         darkThemeView.animateViewOnTapGesture { [weak self] in
-            
+            self?.switchAppTheme(type: .dark)
         }
         
         lightThemeView.animateViewOnTapGesture { [weak self] in
-            
+            self?.switchAppTheme(type: .light)
         }
         
         goToSettingsView.animateViewOnTapGesture { [weak self] in
@@ -113,16 +115,16 @@ class ReadViewController: BaseViewController {
             self?.readViewModel.decreaseFontSize()
         }
         
-        lineSpacingTwoView.animateViewOnTapGesture { [weak self] in
-            
+        smallLineSpacingView.animateViewOnTapGesture { [weak self] in
+            self?.readViewModel.updateLineSpacing(type: .small)
         }
         
-        lineSpacingThreeView.animateViewOnTapGesture { [weak self] in
-            
+        normalLineSpacingView.animateViewOnTapGesture { [weak self] in
+            self?.readViewModel.updateLineSpacing(type: .normal)
         }
         
-        lineSpacingFourView.animateViewOnTapGesture { [weak self] in
-            
+        largeLineSpacingView.animateViewOnTapGesture { [weak self] in
+            self?.readViewModel.updateLineSpacing(type: .large)
         }
     }
     
@@ -130,6 +132,35 @@ class ReadViewController: BaseViewController {
         fontStyleButton.animateView { [weak self] in
             self?.fontSettingsView.fadeIn()
         }
+    }
+    
+    fileprivate func switchAppTheme(type theme: ThemeType) {
+        if #available(iOS 13.0, *) {
+            view.window?.do {
+                switch theme {
+                case .system:
+                    $0.overrideUserInterfaceStyle = .unspecified
+                case .dark:
+                    $0.overrideUserInterfaceStyle = .dark
+                case .light:
+                    $0.overrideUserInterfaceStyle = .light
+                }
+            }
+            readViewModel.currentTheme = theme
+            updateThemeViews(theme: theme)
+        } else {
+            themesStackView.hideView()
+        }
+    }
+    
+    fileprivate func updateThemeViews(theme: ThemeType) {
+        updateThemeView(systemThemeView, isActive: theme == .system)
+        updateThemeView(darkThemeView, isActive: theme == .dark)
+        updateThemeView(lightThemeView, isActive: theme == .light)
+    }
+    
+    fileprivate func updateThemeView(_ themeView: UIView, isActive: Bool) {
+        ((themeView.subviews.first as? UIStackView)?.subviews.filter { $0 is UIImageView }.first as? UIImageView)?.showView(isActive)
     }
     
     fileprivate func handleTakeNotesTapped() {

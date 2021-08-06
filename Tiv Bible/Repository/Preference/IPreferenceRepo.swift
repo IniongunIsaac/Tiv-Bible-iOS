@@ -12,7 +12,7 @@ protocol IPreferenceRepo {
     
     var isDBInitialized: Bool { get set }
 
-    var currentTheme: String { get set }
+    var currentTheme: ThemeType { get set }
 
     var currentVerseId: String { get set }
 

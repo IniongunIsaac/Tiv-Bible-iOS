@@ -34,6 +34,8 @@ protocol IReadViewModel: Scopable {
     
     var highlightColorsFontStylesAndThemes: PublishSubject<(highlightColors: [HighlightColor], fontStyles: [FontStyle], themes: [Theme])> { get }
     
+    var currentTheme: ThemeType { get set }
+    
     func getBookFromSavedPreferencesOrInitializeWithGenese()
     
     func toggleSelectedVerse(verse: Verse)
@@ -51,5 +53,7 @@ protocol IReadViewModel: Scopable {
     func increaseFontSize()
     
     func decreaseFontSize()
+    
+    func updateLineSpacing(type: LineSpacingType)
     
 }

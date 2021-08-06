@@ -189,6 +189,7 @@
 		1470728626BC0F3E0088C8D3 /* Comfortaa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1470728526BC0F3D0088C8D3 /* Comfortaa-SemiBold.ttf */; };
 		1487476C26BCA4F500DA5155 /* ThemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487476B26BCA4F500DA5155 /* ThemeType.swift */; };
 		1487476E26BD551800DA5155 /* Numbers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487476D26BD551700DA5155 /* Numbers+Extensions.swift */; };
+		1487477026BD6A4800DA5155 /* LineSpacingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487476F26BD6A4800DA5155 /* LineSpacingType.swift */; };
 		1488103126B9D16B007096C4 /* RxRealm in Frameworks */ = {isa = PBXBuildFile; productRef = 1488103026B9D16B007096C4 /* RxRealm */; };
 		1488103326B9D5E7007096C4 /* TabOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488103226B9D5E7007096C4 /* TabOption.swift */; };
 		1488103526B9D692007096C4 /* ScopeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488103426B9D692007096C4 /* ScopeFunctions.swift */; };
@@ -420,6 +421,7 @@
 		1470728526BC0F3D0088C8D3 /* Comfortaa-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-SemiBold.ttf"; sourceTree = "<group>"; };
 		1487476B26BCA4F500DA5155 /* ThemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeType.swift; sourceTree = "<group>"; };
 		1487476D26BD551700DA5155 /* Numbers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numbers+Extensions.swift"; sourceTree = "<group>"; };
+		1487476F26BD6A4800DA5155 /* LineSpacingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSpacingType.swift; sourceTree = "<group>"; };
 		1488103226B9D5E7007096C4 /* TabOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOption.swift; sourceTree = "<group>"; };
 		1488103426B9D692007096C4 /* ScopeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeFunctions.swift; sourceTree = "<group>"; };
 		148862CC26B7E6FD0004F4C3 /* Preference+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preference+Utils.swift"; sourceTree = "<group>"; };
@@ -515,6 +517,7 @@
 				14121D7424752DBC0073814F /* Theme.swift */,
 				14121D7624752DE10073814F /* TivBibleData.swift */,
 				1487476B26BCA4F500DA5155 /* ThemeType.swift */,
+				1487476F26BD6A4800DA5155 /* LineSpacingType.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1642,6 +1645,7 @@
 				1470728326BC06460088C8D3 /* TextViewWithPlaceholder.swift in Sources */,
 				14121E06247735030073814F /* SettingRepoImpl.swift in Sources */,
 				1440E06A247AAF9A0037E68E /* ProgressLoaderImpl.swift in Sources */,
+				1487477026BD6A4800DA5155 /* LineSpacingType.swift in Sources */,
 				14121E0B247735CF0073814F /* TestamentRepoImpl.swift in Sources */,
 				14121D9D2476CE6D0073814F /* HighlightDataSourceImpl.swift in Sources */,
 				14121DBE247710F20073814F /* IThemeDataSource.swift in Sources */,
