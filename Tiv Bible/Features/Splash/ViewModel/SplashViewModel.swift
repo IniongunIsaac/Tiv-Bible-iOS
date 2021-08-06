@@ -8,7 +8,6 @@
 
 import Foundation
 import RxSwift
-import DeviceKit
 import RealmSwift
 
 class SplashViewModel: BaseViewModel, ISplashViewModel {
@@ -88,10 +87,9 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
         let others = AppConstants.others.map { Other(title: $0.title, subTitle: $0.subTitle, text: $0.content) }
         
         var fontSize_lineSpacing = (0,0)
-        let currDevice = Device.current
-        if currDevice.isPhone {
-            fontSize_lineSpacing = (14, 8)
-        } else if currDevice.isPad {
+        if currentDevice.isPhone {
+            fontSize_lineSpacing = (13, 8)
+        } else if currentDevice.isPad {
             fontSize_lineSpacing = (18, 10)
         }
         
@@ -109,7 +107,7 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
             settingsRepo.insertSettings(settings: settings),
             versionRepo.insertVersions(versions: versions),
             testamentRepo.insertTestaments(testaments: testaments))
-            .subscribe(onNext: { [weak self] _, _, _, _, _, _, _, _ in
+            .subscribe(onNext: { [weak self] _ in
                 self?.saveBooksAndChaptersAndVerses(testaments, versions[0])
             }, onError: { [weak self] error in
                 self?.emitFalseLoadingAndErrorValues(error: error)

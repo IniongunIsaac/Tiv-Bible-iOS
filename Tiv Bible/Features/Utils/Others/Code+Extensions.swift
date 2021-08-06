@@ -8,8 +8,10 @@
 
 import Foundation
 import UIKit
+import DeviceKit
 
 typealias NoParamHandler = (() -> Void)
+let currentDevice = Device.current
 
 func runAfter(_ delay: Double = 2.0, action: @escaping () -> Void) {
     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delay) {
@@ -208,4 +210,14 @@ extension Sequence {
 
 extension Collection {
     var isNotEmpty: Bool { !self.isEmpty }
+}
+
+extension Optional {
+    var isNil : Bool {
+        self == nil
+    }
+    
+    var isNotNil : Bool {
+        self != nil
+    }
 }

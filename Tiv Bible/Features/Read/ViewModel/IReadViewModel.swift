@@ -12,7 +12,9 @@ import RxSwift
 
 protocol IReadViewModel: Scopable {
     
-    var currentSettings: PublishSubject<Setting> { get }
+    var currentSettings: Setting? { get set }
+    
+    var updateUIWithCurrentSettings: PublishSubject<Bool> { get }
     
     var bookNameAndChapterNumber: PublishSubject<String> { get }
     
@@ -45,5 +47,9 @@ protocol IReadViewModel: Scopable {
     func saveNotes(_ notes: String)
     
     func setHighlightColorForSelectedVerses(_ color: HighlightColor)
+    
+    func increaseFontSize()
+    
+    func decreaseFontSize()
     
 }

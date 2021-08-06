@@ -26,4 +26,16 @@ import Foundation
         self.audioSpeed = audioSpeed
     }
     
+    func newCopy(fontSize: Int? = nil, lineSpacing: Int? = nil, fontStyle: FontStyle? = nil, theme: Theme? = nil, stayAwake: Bool? = nil, audioSpeed: AudioSpeed? = nil) -> Setting {
+        Setting().apply {
+            $0.id = id
+            $0.fontSize = fontSize ?? self.fontSize
+            $0.lineSpacing = lineSpacing ?? self.lineSpacing
+            $0.fontStyle = fontStyle ?? self.fontStyle
+            $0.theme = theme ?? self.theme
+            $0.stayAwake = stayAwake ?? self.stayAwake
+            $0.audioSpeed = audioSpeed ?? self.audioSpeed
+        }
+    }
+    
 }

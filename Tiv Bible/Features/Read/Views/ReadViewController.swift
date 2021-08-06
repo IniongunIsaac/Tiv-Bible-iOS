@@ -42,6 +42,7 @@ class ReadViewController: BaseViewController {
     
     var readViewModel: IReadViewModel!
     override func getViewModel() -> BaseViewModel { readViewModel as! BaseViewModel }
+    override var views: [UIView] { [bookChapterView, tapActionsView, fontSettingsView, shareView, bookmarkView, copyView, takeNotesView, closeTapActionsImageView, closeFontSettingsImageView, systemThemeView, darkThemeView, lightThemeView, goToSettingsView, increaseFontSizeView, decreaseFontSizeView, lineSpacingTwoView, lineSpacingThreeView, lineSpacingFourView] }
     
     fileprivate var isShowingTapActions = false
     fileprivate var shareableText: String { readViewModel.shareableSelectedVersesText }
@@ -49,7 +50,7 @@ class ReadViewController: BaseViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        [tapActionsView, fontSettingsView].addRoundCorners([.topLeft, .topRight], radius: 10)
+        [tapActionsView, fontSettingsView].addRoundCorners([.topLeft, .topRight], radius: 20)
     }
     
     override func configureViews() {
@@ -87,6 +88,42 @@ class ReadViewController: BaseViewController {
         closeFontSettingsImageView.animateViewOnTapGesture { [weak self] in
             self?.fontSettingsView.fadeOut()
         }
+        
+        systemThemeView.animateViewOnTapGesture { [weak self] in
+            
+        }
+        
+        darkThemeView.animateViewOnTapGesture { [weak self] in
+            
+        }
+        
+        lightThemeView.animateViewOnTapGesture { [weak self] in
+            
+        }
+        
+        goToSettingsView.animateViewOnTapGesture { [weak self] in
+            
+        }
+        
+        increaseFontSizeView.animateViewOnTapGesture { [weak self] in
+            self?.readViewModel.increaseFontSize()
+        }
+        
+        decreaseFontSizeView.animateViewOnTapGesture { [weak self] in
+            self?.readViewModel.decreaseFontSize()
+        }
+        
+        lineSpacingTwoView.animateViewOnTapGesture { [weak self] in
+            
+        }
+        
+        lineSpacingThreeView.animateViewOnTapGesture { [weak self] in
+            
+        }
+        
+        lineSpacingFourView.animateViewOnTapGesture { [weak self] in
+            
+        }
     }
     
     @IBAction func fontStyleButtonTapped(_ sender: UIButton) {
@@ -111,12 +148,14 @@ class ReadViewController: BaseViewController {
         observeReloadVerses()
         observeSelectedVersesText()
         observeHighlightColorsFontStylesAndThemes()
+        observeCurrentSettingsChanges()
     }
     
     fileprivate func observeCurrentVerses() {
-        readViewModel.currentVerses.bind(to: versesTableView.rx.items(cellIdentifier: R.reuseIdentifier.verseTableViewCell.identifier, cellType: VerseTableViewCell.self)) { row, verse, cell in
+        readViewModel.currentVerses.bind(to: versesTableView.rx.items(cellIdentifier: R.reuseIdentifier.verseTableViewCell.identifier, cellType: VerseTableViewCell.self)) { [weak self] row, verse, cell in
+            guard let self = self else { return }
             
-            cell.configureView(verse: verse)
+            cell.configureView(verse: verse, settings: self.readViewModel.currentSettings!)
             
             cell.addTapGesture { [weak self] in
                 self?.handleVerseTapped(verse)
@@ -161,6 +200,16 @@ class ReadViewController: BaseViewController {
             self?.configureHighlightColors(data.highlightColors)
             self?.configureFontStyles(data.fontStyles)
             
+        }.disposed(by: disposeBag)
+    }
+    
+    fileprivate func observeCurrentSettingsChanges() {
+        readViewModel.updateUIWithCurrentSettings.bind { [weak self] update in
+            if update {
+                guard let self = self else { return }
+                self.versesTableView.reloadData()
+                self.currentFontSizeLabel.text = "\(self.readViewModel.currentSettings!.fontSize)px"
+            }
         }.disposed(by: disposeBag)
     }
     

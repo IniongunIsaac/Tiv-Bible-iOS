@@ -39,7 +39,8 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         self.noteRepo = noteRepo
     }
     
-    var currentSettings: PublishSubject<Setting> = PublishSubject()
+    var currentSettings: Setting? = nil
+    var updateUIWithCurrentSettings: PublishSubject<Bool> = PublishSubject()
     var bookNameAndChapterNumber: PublishSubject<String> = PublishSubject()
     var currentVerses: PublishSubject<[Verse]> = PublishSubject()
     var verseNumber: PublishSubject<Int> = PublishSubject()
@@ -66,15 +67,9 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     
     override func willAppear() {
         super.willAppear()
-        getBookFromSavedPreferencesOrInitializeWithGenese()
         getUserSettings()
+        getBookFromSavedPreferencesOrInitializeWithGenese()
         getHighlightColorsFontStylesAndThemes()
-    }
-    
-    func getUserSettings() {
-        subscribe(settingsRepo.getAllSetting(), success: { [weak self] setting in
-            self?.currentSettings.onNext(setting)
-        })
     }
     
     func getHighlightColorsFontStylesAndThemes() {
@@ -198,8 +193,6 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
             }
         }
         currentVerses.onNext(currentVersesList)
-        //highlights.onNext(highlightsList)
-        //reloadVerses.onNext(true)
     }
     
     func toggleSelectedVerse(verse: Verse) {
@@ -270,6 +263,39 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         let highlights = selectedVerses.map { Highlight(book: currentBook!, chapter: currentChapter!, verse: $0, color: color) }
         subscribe(highlightRepo.insertHighlights(highlights: highlights), success: { [weak self] in
             self?.getVersesHighlights()
+        })
+    }
+    
+    func increaseFontSize() {
+        guard let currentSettings = currentSettings else { return }
+        if currentSettings.fontSize == AppConstants.maxFontSize {
+            showMessage("Maximum font size for your device is \(AppConstants.maxFontSize)px", type: .error)
+        } else {
+            let fontSize = currentSettings.fontSize + 1
+            updateUserSettings(currentSettings.newCopy(fontSize: fontSize))
+        }
+    }
+    
+    func decreaseFontSize() {
+        guard let currentSettings = currentSettings else { return }
+        if currentSettings.fontSize == AppConstants.minFontSize {
+            showMessage("Minimum font size for your device is \(AppConstants.minFontSize)px", type: .error)
+        } else {
+            let fontSize = currentSettings.fontSize - 1
+            updateUserSettings(currentSettings.newCopy(fontSize: fontSize))
+        }
+    }
+    
+    func getUserSettings() {
+        subscribe(settingsRepo.getAllSetting(), success: { [weak self] setting in
+            self?.currentSettings = setting
+            self?.updateUIWithCurrentSettings.onNext(true)
+        })
+    }
+    
+    fileprivate func updateUserSettings(_ settings: Setting) {
+        subscribe(settingsRepo.updateSettings(setting: settings), success: { [weak self] in
+            self?.getUserSettings()
         })
     }
     

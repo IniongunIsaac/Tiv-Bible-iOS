@@ -17,26 +17,8 @@ struct AppConstants {
     static let DATA_NOT_FOUND = "No data found!"
     static let BACKGROUND_THREAD_LABEL = "com.iniongungroup.tivbible.background.thread"
     
-    //MARK: - Storyboard IDs
-    static let READ_STORYBOARD_NAME = "Read"
-    static let SEARCH_STORYBOARD_NAME = "Search"
-    static let MORE_STORYBOARD_NAME = "More"
-    static let HOME_STORYBOARD_NAME = "Home"
-    
-    //MARK: - Storyboard View Controller IDs
-    static let READ_VC_ID = "readViewController"
-    static let SEARCH_VC_ID = "searchViewController"
-    static let MORE_VC_ID = "moreViewController"
-    
-    //MARK: Cell IDs
-    static let VERSE_CELL_ID = "verseTableViewCell"
-    static let TAP_ACTION_COLLECTION_CELL_ID = "tapActionCollectionViewCell"
-    static let HIGHLIGHT_COLOR_COLLECTION_CELL_ID = "highlightColorCollectionViewCell"
-    static let FONT_STYLE_COLLECTION_CELL_ID = "fontStyleCollectionViewCell"
-    static let THEME_COLLECTION_CELL_ID = "themeCollectionViewCell"
-    
-    //MARK: - System Icon Names
-    static let SYSTEM_GRID_ICON_NAME = "rectangle.grid.2x2"
+    static let minFontSize = currentDevice.isPhone ? 13 : 16
+    static let maxFontSize = currentDevice.isPhone ? 17 : 20
     
     // MARK: - Color Hex Codes
     static let colorHexCodes = ["#FF8A65", "#FFB74D", "#FFD54F", "#DCE775", "#2962FF", "#4DB6AC", "#00B8D4", "#00BFA5", "#00C853", "#64DD17", "#AEEA00", "#FFD600", "#FFAB00", "#FF6D00", "#DD2C00", "#E57373", "#F06292", "#BA68C8", "#7986CB", "#4FC3F7"]
