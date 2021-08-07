@@ -191,6 +191,10 @@
 		148B0F3926BE357500B92B26 /* martel_sans_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0F0526BE357400B92B26 /* martel_sans_light.ttf */; };
 		148B0F3A26BE357500B92B26 /* montserrat_extra_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0F0626BE357500B92B26 /* montserrat_extra_bold.ttf */; };
 		148B0F3B26BE357500B92B26 /* comfortaa_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0F0726BE357500B92B26 /* comfortaa_light.ttf */; };
+		148B0F3D26BE59A500B92B26 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148B0F3C26BE59A500B92B26 /* ReferencesViewController.swift */; };
+		148B0F4126BE5AB700B92B26 /* ReferenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148B0F4026BE5AB700B92B26 /* ReferenceView.xib */; };
+		148B0F4326BE5ACC00B92B26 /* ReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148B0F4226BE5ACC00B92B26 /* ReferenceView.swift */; };
+		148B0F4626BE5B1C00B92B26 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148B0F4526BE5B1C00B92B26 /* BaseView.swift */; };
 		149531C62506773800A6E9DD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 149531C52506773800A6E9DD /* .gitignore */; };
 		149531CB2506783C00A6E9DD /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 149531CA2506783C00A6E9DD /* Podfile.lock */; };
 		149531CF2506792D00A6E9DD /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149531CE2506792D00A6E9DD /* R.generated.swift */; };
@@ -417,6 +421,10 @@
 		148B0F0526BE357400B92B26 /* martel_sans_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = martel_sans_light.ttf; sourceTree = "<group>"; };
 		148B0F0626BE357500B92B26 /* montserrat_extra_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_extra_bold.ttf; sourceTree = "<group>"; };
 		148B0F0726BE357500B92B26 /* comfortaa_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = comfortaa_light.ttf; sourceTree = "<group>"; };
+		148B0F3C26BE59A500B92B26 /* ReferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
+		148B0F4026BE5AB700B92B26 /* ReferenceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReferenceView.xib; sourceTree = "<group>"; };
+		148B0F4226BE5ACC00B92B26 /* ReferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceView.swift; sourceTree = "<group>"; };
+		148B0F4526BE5B1C00B92B26 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		149531C52506773800A6E9DD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		149531CA2506783C00A6E9DD /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		149531CE2506792D00A6E9DD /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -694,6 +702,7 @@
 		14121D6124750EE90073814F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				148B0F3E26BE5A9200B92B26 /* Custom Views */,
 				14CD21A1247D605B00EF0A32 /* IBDesignables */,
 				1440E066247AAF5B0037E68E /* Progress Loader */,
 				1440E057247AAB9A0037E68E /* Custom Alert */,
@@ -1206,6 +1215,7 @@
 				1462CD332481C13E00063892 /* FontStyleCollectionViewCell.swift */,
 				1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */,
 				1470728026BBEC520088C8D3 /* TakeNotesDialogViewController.swift */,
+				148B0F3C26BE59A500B92B26 /* ReferencesViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1236,6 +1246,32 @@
 				1487476D26BD551700DA5155 /* Numbers+Extensions.swift */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		148B0F3E26BE5A9200B92B26 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				148B0F4426BE5AD600B92B26 /* Base */,
+				148B0F3F26BE5AA100B92B26 /* Reference View */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		148B0F3F26BE5AA100B92B26 /* Reference View */ = {
+			isa = PBXGroup;
+			children = (
+				148B0F4026BE5AB700B92B26 /* ReferenceView.xib */,
+				148B0F4226BE5ACC00B92B26 /* ReferenceView.swift */,
+			);
+			path = "Reference View";
+			sourceTree = "<group>";
+		};
+		148B0F4426BE5AD600B92B26 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				148B0F4526BE5B1C00B92B26 /* BaseView.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		14CD21A1247D605B00EF0A32 /* IBDesignables */ = {
@@ -1413,6 +1449,7 @@
 				148B0F2126BE357500B92B26 /* montserrat_extra_bold_italic.ttf in Resources */,
 				148B0F1A26BE357500B92B26 /* montserrat_light_italic.ttf in Resources */,
 				148B0F2A26BE357500B92B26 /* lobster.ttf in Resources */,
+				148B0F4126BE5AB700B92B26 /* ReferenceView.xib in Resources */,
 				148B0F3226BE357500B92B26 /* amatic_sc.ttf in Resources */,
 				148B0F1F26BE357500B92B26 /* roboto_black.ttf in Resources */,
 				148B0F0B26BE357500B92B26 /* roboto_black_italic.ttf in Resources */,
@@ -1664,6 +1701,7 @@
 				1440E074247BBE850037E68E /* UIColor+Extension.swift in Sources */,
 				14CD21A0247D5D3400EF0A32 /* ReadViewModelImpl.swift in Sources */,
 				14121DAF247709020073814F /* IRecentSearchDataSource.swift in Sources */,
+				148B0F4626BE5B1C00B92B26 /* BaseView.swift in Sources */,
 				14121DC5247712A40073814F /* VerseDataSourceImpl.swift in Sources */,
 				14121D7124752C3A0073814F /* RecentSearch.swift in Sources */,
 				14121DFF247734010073814F /* IRecentSearchRepo.swift in Sources */,
@@ -1688,6 +1726,7 @@
 				14121D5A24747BB20073814F /* Book.swift in Sources */,
 				14121D6F24752B9A0073814F /* Other.swift in Sources */,
 				14121D89247683D00073814F /* BookmarkDataSourceImpl.swift in Sources */,
+				148B0F3D26BE59A500B92B26 /* ReferencesViewController.swift in Sources */,
 				14CD21A3247D606C00EF0A32 /* ButtonWithBorderAttributes.swift in Sources */,
 				14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */,
 				14CD219E247D5D0B00EF0A32 /* IReadViewModel.swift in Sources */,
@@ -1713,6 +1752,7 @@
 				14121DA02476D36E0073814F /* IHistoryDataSource.swift in Sources */,
 				14121DE624772D910073814F /* IHighlightColorRepo.swift in Sources */,
 				14121D5E247486600073814F /* Chapter.swift in Sources */,
+				148B0F4326BE5ACC00B92B26 /* ReferenceView.swift in Sources */,
 				14CD21AD247DA67400EF0A32 /* MoreViewModelImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

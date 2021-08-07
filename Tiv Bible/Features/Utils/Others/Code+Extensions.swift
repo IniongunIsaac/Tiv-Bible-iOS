@@ -221,3 +221,13 @@ extension Optional {
         self != nil
     }
 }
+
+extension Optional where Wrapped == String {
+    var orEmpty: String {
+        self?.isEmpty ?? true ? "" : self!
+    }
+    
+    var described: String {
+        String(describing: self)
+    }
+}

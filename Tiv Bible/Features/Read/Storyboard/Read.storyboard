@@ -1100,6 +1100,72 @@
             </objects>
             <point key="canvasLocation" x="1653.6231884057972" y="-295.3125"/>
         </scene>
+        <!--References View Controller-->
+        <scene sceneID="3HJ-sh-cQ7">
+            <objects>
+                <viewController storyboardIdentifier="referencesViewController" id="5pJ-ic-gHU" customClass="ReferencesViewController" customModule="Tiv_Bible" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1lY-Ig-bsZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wvh-Q5-jBm">
+                                <rect key="frame" x="42" y="74" width="330" height="45"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uIz-Dg-ND8" customClass="ReferenceView" customModule="Tiv_Bible" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="lI3-v1-u5U"/>
+                                            <constraint firstAttribute="height" constant="45" id="rmi-M5-276"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Books"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isActive" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uW1-MQ-Kde" customClass="ReferenceView" customModule="Tiv_Bible" customModuleProvider="target">
+                                        <rect key="frame" x="110" y="0.0" width="110" height="45"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="OA8-Ec-Rga"/>
+                                            <constraint firstAttribute="width" constant="110" id="XJR-aR-Tes"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Chapters"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArR-2p-Phg" customClass="ReferenceView" customModule="Tiv_Bible" customModuleProvider="target">
+                                        <rect key="frame" x="230" y="0.0" width="100" height="45"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="AxV-il-LPb"/>
+                                            <constraint firstAttribute="width" constant="100" id="way-zg-ULb"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Verses"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3J1-fB-yaX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wvh-Q5-jBm" firstAttribute="top" secondItem="3J1-fB-yaX" secondAttribute="top" constant="30" id="CTd-Bg-nsB"/>
+                            <constraint firstItem="wvh-Q5-jBm" firstAttribute="centerX" secondItem="1lY-Ig-bsZ" secondAttribute="centerX" id="r3G-B2-xW5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="booksView" destination="uIz-Dg-ND8" id="vF6-hm-WKG"/>
+                        <outlet property="chaptersView" destination="uW1-MQ-Kde" id="z3L-Sz-HY9"/>
+                        <outlet property="referencesStackView" destination="wvh-Q5-jBm" id="5Y3-kE-x4b"/>
+                        <outlet property="versesView" destination="ArR-2p-Phg" id="stc-Br-Scu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zhk-Xa-qe3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2464" y="-295"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow_icon" width="512" height="512"/>
@@ -1131,6 +1197,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

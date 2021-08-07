@@ -42,6 +42,8 @@ extension UIColor {
     
     static var appRed: UIColor { UIColor("#EE4848") }
     
+    static var accentColor: UIColor? { R.color.accentColor() }
+    
     static var aLabel: UIColor {
         if #available(iOS 13, *) {
             return .label

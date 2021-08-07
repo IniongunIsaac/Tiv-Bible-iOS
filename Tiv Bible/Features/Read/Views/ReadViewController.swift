@@ -65,7 +65,7 @@ class ReadViewController: BaseViewController {
     
     fileprivate func setTapGestures() {
         bookChapterView.animateViewOnTapGesture { [weak self] in
-            
+            self?.presentViewController(R.storyboard.read.referencesViewController()!)
         }
         
         shareView.animateViewOnTapGesture { [weak self] in

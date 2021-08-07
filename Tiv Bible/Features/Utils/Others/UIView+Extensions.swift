@@ -177,6 +177,10 @@ extension UIView {
     
     var height: CGFloat { frame.size.height }
     
+    func addClearBackground() {
+        backgroundColor = .clear
+    }
+    
 }
 
 //MARK: - Custom UIViewTapGestureRecognizer
@@ -343,7 +347,7 @@ extension UIImageView {
 
 extension Array where Element == UIView {
     func addClearBackground() {
-        forEach { $0.backgroundColor = .clear }
+        forEach { $0.addClearBackground() }
     }
     
     func hideViews() {
