@@ -43,9 +43,10 @@ class ReadViewController: BaseViewController {
     
     var readViewModel: IReadViewModel!
     override func getViewModel() -> BaseViewModel { readViewModel as! BaseViewModel }
-    override var views: [UIView] { [bookChapterView, tapActionsView, fontSettingsView, shareView, bookmarkView, copyView, takeNotesView, closeTapActionsImageView, closeFontSettingsImageView, systemThemeView, darkThemeView, lightThemeView, goToSettingsView, increaseFontSizeView, decreaseFontSizeView, smallLineSpacingView, normalLineSpacingView, largeLineSpacingView] }
+    override var views: [UIView] { [bookChapterView, tapActionsView, fontSettingsView, shareView, bookmarkView, copyView, takeNotesView, closeTapActionsImageView, closeFontSettingsImageView, systemThemeView, darkThemeView, lightThemeView, goToSettingsView, increaseFontSizeView, decreaseFontSizeView, smallLineSpacingView, normalLineSpacingView, largeLineSpacingView, removeHighlightColorImageView] }
     
     fileprivate var isShowingTapActions = false
+    fileprivate var isShowingFontSettings = false
     fileprivate var shareableText: String { readViewModel.shareableSelectedVersesText }
     fileprivate var selectedVersesText = ""
     
@@ -84,10 +85,12 @@ class ReadViewController: BaseViewController {
         takeNotesView.animateViewOnTapGesture(completion: handleTakeNotesTapped)
         
         closeTapActionsImageView.animateViewOnTapGesture { [weak self] in
+            self?.isShowingTapActions = false
             self?.tapActionsView.fadeOut()
         }
         
         closeFontSettingsImageView.animateViewOnTapGesture { [weak self] in
+            self?.isShowingFontSettings = false
             self?.fontSettingsView.fadeOut()
         }
         
@@ -104,7 +107,7 @@ class ReadViewController: BaseViewController {
         }
         
         goToSettingsView.animateViewOnTapGesture { [weak self] in
-            self?.fontSettingsView.fadeOut()
+            self?.hideTapActionsAndFontSettingsViews()
             self?.navigateToTab(.more)
         }
         
@@ -127,11 +130,15 @@ class ReadViewController: BaseViewController {
         largeLineSpacingView.animateViewOnTapGesture { [weak self] in
             self?.readViewModel.updateLineSpacing(type: .large)
         }
+        
+        removeHighlightColorImageView.animateViewOnTapGesture { [weak self] in
+            self?.readViewModel.removeHighlightsFromSelectedVerses()
+        }
     }
     
     @IBAction func fontStyleButtonTapped(_ sender: UIButton) {
         fontStyleButton.animateView { [weak self] in
-            self?.fontSettingsView.fadeIn()
+            self?.showFontSettings()
         }
     }
     
@@ -181,7 +188,6 @@ class ReadViewController: BaseViewController {
         observeSelectedVersesText()
         observeHighlightColorsFontStylesAndThemes()
         observeCurrentSettingsChanges()
-        observeReloadFontStyles()
     }
     
     fileprivate func observeCurrentVerses() {
@@ -247,14 +253,6 @@ class ReadViewController: BaseViewController {
         }.disposed(by: disposeBag)
     }
     
-    fileprivate func observeReloadFontStyles() {
-        readViewModel.reloadFontStyles.bind { [weak self] reload in
-            if reload {
-                self?.fontStyleCollectionView.reloadData()
-            }
-        }.disposed(by: disposeBag)
-    }
-    
     fileprivate func configureHighlightColors(_ highlightColors: [HighlightColor]) {
         highlightColors.forEach { [weak self] color in
             
@@ -287,9 +285,38 @@ class ReadViewController: BaseViewController {
     }
     
     fileprivate func showTapActions() {
+        if isShowingFontSettings {
+            isShowingFontSettings = false
+            fontSettingsView.fadeOut()
+        }
+        
         if !isShowingTapActions {
             isShowingTapActions = true
             tapActionsView.fadeIn()
+        }
+    }
+    
+    fileprivate func showFontSettings() {
+        if isShowingTapActions {
+            isShowingTapActions = false
+            tapActionsView.fadeOut()
+        }
+        
+        if !isShowingFontSettings {
+            isShowingFontSettings = true
+            fontSettingsView.fadeIn()
+        }
+    }
+    
+    fileprivate func hideTapActionsAndFontSettingsViews() {
+        if isShowingFontSettings {
+            isShowingFontSettings = false
+            fontSettingsView.fadeOut()
+        }
+        
+        if isShowingTapActions {
+            isShowingTapActions = false
+            tapActionsView.fadeOut()
         }
     }
     

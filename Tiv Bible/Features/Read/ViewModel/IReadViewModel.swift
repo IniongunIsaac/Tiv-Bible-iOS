@@ -22,8 +22,6 @@ protocol IReadViewModel: Scopable {
     
     var verseNumber: PublishSubject<Int> { get }
     
-    var highlights: PublishSubject<[Highlight]> { get }
-    
     var selectedVerses: [Verse] { get }
     
     var selectedVersesText: PublishSubject<String> { get }
@@ -33,8 +31,6 @@ protocol IReadViewModel: Scopable {
     var reloadVerses: PublishSubject<Bool> { get }
     
     var highlightColorsAndFontStyles: PublishSubject<(highlightColors: [HighlightColor], fontStyles: [FontStyle])> { get }
-    
-    var reloadFontStyles: PublishSubject<Bool> { get }
     
     var currentTheme: Theme { get set }
     
@@ -59,5 +55,7 @@ protocol IReadViewModel: Scopable {
     func updateLineSpacing(type: LineSpacingType)
     
     func updateSelectedFontStyle(_ fontStyle: FontStyle)
+    
+    func removeHighlightsFromSelectedVerses()
     
 }

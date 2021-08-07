@@ -33,8 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         configureGlobalAppAppearance()
-        //printAvailableFonts()
-        //UIFont.familyNames.forEach { print(UIFont.fontNames(forFamilyName: $0)) }
         
         return true
     }

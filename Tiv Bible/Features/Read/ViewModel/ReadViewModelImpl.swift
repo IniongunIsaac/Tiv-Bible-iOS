@@ -42,14 +42,12 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     var bookNameAndChapterNumber: PublishSubject<String> = PublishSubject()
     var currentVerses: PublishSubject<[Verse]> = PublishSubject()
     var verseNumber: PublishSubject<Int> = PublishSubject()
-    var highlights: PublishSubject<[Highlight]> = PublishSubject()
     var selectedVersesText: PublishSubject<String> = PublishSubject()
     var shareableSelectedVersesText: String = ""
     var reloadVerses: PublishSubject<Bool> = PublishSubject()
     var selectedVerses = [Verse]()
     var highlightColorsAndFontStyles: PublishSubject<(highlightColors: [HighlightColor], fontStyles: [FontStyle])> = PublishSubject()
     fileprivate var fontStyles = [FontStyle]()
-    var reloadFontStyles: PublishSubject<Bool> = PublishSubject()
     
     fileprivate var currentVerse: Verse?
     fileprivate var currentChapter: Chapter?
@@ -179,6 +177,7 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     }
     
     fileprivate func getVersesHighlights() {
+        highlightsList.removeAll()
         subscribe(highlightRepo.getAllHighlights(), success: { [weak self] highlights in
             self?.highlightsList = highlights
             self?.getHighlightedVerses()
@@ -307,6 +306,18 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     
     func updateSelectedFontStyle(_ fontStyle: FontStyle) {
         updateUserSettings(currentSettings!.newCopy(fontStyle: fontStyle))
+    }
+    
+    func removeHighlightsFromSelectedVerses() {
+        let selectedHighlightedVerses = selectedVerses.filter { $0.highlight.isNotNil }
+        let highlights = selectedHighlightedVerses.compactMap { $0.highlight }
+        selectedHighlightedVerses.forEach {
+            $0.highlight = nil
+            $0.isHighlighted = false
+        }
+        subscribe(highlightRepo.deleteHighlights(highlights: highlights), success: { [weak self] in
+            self?.getVersesHighlights()
+        })
     }
     
 }
