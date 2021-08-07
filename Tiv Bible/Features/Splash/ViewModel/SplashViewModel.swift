@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import RealmSwift
+import UIKit
 
 class SplashViewModel: BaseViewModel, ISplashViewModel {
     
@@ -19,13 +20,12 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
     let chapterRepo: IChapterRepo
     let verseRepo: IVerseRepo
     let audioSpeedRepo: IAudioSpeedRepo
-    let themeRepo: IThemeRepo
     let fontStyleRepo: IFontStyleRepo
     let settingsRepo: ISettingRepo
     let highlightColorRepo: IHighlightColorRepo
     let otherRepo: IOtherRepo
     
-    init(preferenceRepo: IPreferenceRepo, versionRepo: IVersionRepo,testamentRepo: ITestamentRepo, bookRepo: IBookRepo, chapterRepo: IChapterRepo, verseRepo: IVerseRepo, audioSpeedRepo: IAudioSpeedRepo, themeRepo: IThemeRepo, fontStyleRepo: IFontStyleRepo, settingsRepo: ISettingRepo, highlightColorRepo: IHighlightColorRepo, otherRepo: IOtherRepo) {
+    init(preferenceRepo: IPreferenceRepo, versionRepo: IVersionRepo,testamentRepo: ITestamentRepo, bookRepo: IBookRepo, chapterRepo: IChapterRepo, verseRepo: IVerseRepo, audioSpeedRepo: IAudioSpeedRepo, fontStyleRepo: IFontStyleRepo, settingsRepo: ISettingRepo, highlightColorRepo: IHighlightColorRepo, otherRepo: IOtherRepo) {
         
         self.preferenceRepo = preferenceRepo
         self.versionRepo = versionRepo
@@ -34,7 +34,6 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
         self.chapterRepo = chapterRepo
         self.verseRepo = verseRepo
         self.audioSpeedRepo = audioSpeedRepo
-        self.themeRepo = themeRepo
         self.fontStyleRepo = fontStyleRepo
         self.settingsRepo = settingsRepo
         self.highlightColorRepo = highlightColorRepo
@@ -78,9 +77,12 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
         
         let audioSpeeds = [AudioSpeed(name: "High"), AudioSpeed(name: "Low"), AudioSpeed(name: "Medium")]
         
-        let themes = [Theme(name: "System Default"), Theme(name: "Dark"), Theme(name: "Light")]
+        var fontNames = ["Comfortaa-Regular"]
+        UIFont.familyNames.forEach { fontNames.append(contentsOf: UIFont.fontNames(forFamilyName: $0)) }
         
-        let fontStyles = [FontStyle(name: "Comfortaa"), FontStyle(name: "Happy-Monkey"), FontStyle(name: "Metamorphous"), FontStyle(name: "Roboto"), FontStyle(name: "Montserrat"), FontStyle(name: "Amatic-Sc"), FontStyle(name: "Inconsolata-Expanded"), FontStyle(name: "Indie-Flower"), FontStyle(name: "Jost"), FontStyle(name: "Lato"), FontStyle(name: "Lobster")]
+        //let fontStyles = [FontStyle(name: "Comfortaa"), FontStyle(name: "Happy-Monkey"), FontStyle(name: "Metamorphous"), FontStyle(name: "Roboto"), FontStyle(name: "Montserrat"), FontStyle(name: "Amatic-Sc"), FontStyle(name: "Inconsolata-Expanded"), FontStyle(name: "Indie-Flower"), FontStyle(name: "Jost"), FontStyle(name: "Lato"), FontStyle(name: "Lobster")]
+        
+        let fontStyles = fontNames.map { FontStyle(name: $0) }
         
         let highlightColors = AppConstants.colorHexCodes.map { HighlightColor(hexCode: $0) }
         
@@ -93,14 +95,13 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
             fontSize_lineSpacing = (18, 10)
         }
         
-        let settings = [Setting(fontSize: fontSize_lineSpacing.0, lineSpacing: fontSize_lineSpacing.1, fontStyle: fontStyles[0], theme: themes[0], stayAwake: true, audioSpeed: audioSpeeds.last!)]
+        let settings = [Setting(fontSize: fontSize_lineSpacing.0, lineSpacing: fontSize_lineSpacing.1, fontStyle: fontStyles[0], stayAwake: true, audioSpeed: audioSpeeds.last!)]
         
         let versions = [Version(name: "Old"), Version(name: "New")]
         let testaments = [Testament(name: "Old"), Testament(name: "New")]
         
         Observable.zip(
             audioSpeedRepo.insertAudioSpeeds(audioSpeeds: audioSpeeds),
-            themeRepo.insertThemes(themes: themes),
             fontStyleRepo.insertFontStyles(fontStyles: fontStyles),
             highlightColorRepo.insertHighlightColors(highlightColors: highlightColors),
             otherRepo.insertOthers(others: others),

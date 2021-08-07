@@ -20,6 +20,23 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Comfortaa-Regular.ttf</string>
+		<string>Comfortaa-Light.ttf</string>
+		<string>Comfortaa-Medium.ttf</string>
+		<string>Comfortaa-Bold.ttf</string>
+		<string>Happy-Monkey.ttf</string>
+		<string>Metamorphous.ttf</string>
+		<string>Roboto.ttf</string>
+		<string>Montserrat.ttf</string>
+		<string>Amatic-Sc.ttf</string>
+		<string>Inconsolata-Expanded.ttf</string>
+		<string>Indie-Flower.ttf</string>
+		<string>Jost.ttf</string>
+		<string>Lato.ttf</string>
+		<string>Lobster.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -50,8 +67,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

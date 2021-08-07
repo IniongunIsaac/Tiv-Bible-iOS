@@ -665,15 +665,19 @@
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixp-Ip-kbL" customClass="ViewWithBorderAttributes" customModule="Tiv_Bible" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="140" height="31"/>
                                                                                     <subviews>
-                                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bB2-l4-4iM">
+                                                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bB2-l4-4iM">
                                                                                             <rect key="frame" x="15" y="5" width="110" height="21"/>
                                                                                             <subviews>
                                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="9Yg-uv-3LI">
-                                                                                                    <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                                                                    <rect key="frame" x="0.0" y="0.5" width="20" height="20"/>
                                                                                                     <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                                                                                    <constraints>
+                                                                                                        <constraint firstAttribute="width" constant="20" id="WWC-yq-iaU"/>
+                                                                                                        <constraint firstAttribute="height" constant="20" id="qVH-uI-hgj"/>
+                                                                                                    </constraints>
                                                                                                 </imageView>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comfortaa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="V2f-pS-8ry">
-                                                                                                    <rect key="frame" x="34" y="2" width="76" height="17"/>
+                                                                                                    <rect key="frame" x="25" y="2" width="85" height="17"/>
                                                                                                     <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                                                     <nil key="textColor"/>
                                                                                                     <nil key="highlightedColor"/>
@@ -728,20 +732,24 @@
                                                                 <rect key="frame" x="76" y="0.0" width="298" height="35"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="k5V-gK-iI9" userLabel="Themes Stack View">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="395.5" height="35"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="35"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mfk-gs-yRA">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="170.5" height="35"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="172" height="35"/>
                                                                                 <subviews>
-                                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8Gf-Me-l2b">
-                                                                                        <rect key="frame" x="15" y="5" width="140.5" height="25"/>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8Gf-Me-l2b">
+                                                                                        <rect key="frame" x="15" y="5" width="142" height="25"/>
                                                                                         <subviews>
-                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2aJ-tn-Cdj">
-                                                                                                <rect key="frame" x="0.0" y="4.5" width="18.5" height="16.5"/>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="2aJ-tn-Cdj">
+                                                                                                <rect key="frame" x="0.0" y="2.5" width="20" height="20"/>
                                                                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="20" id="1y9-FZ-Ufj"/>
+                                                                                                    <constraint firstAttribute="height" constant="20" id="aPq-iw-0lh"/>
+                                                                                                </constraints>
                                                                                             </imageView>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="System Default" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apt-08-JSV">
-                                                                                                <rect key="frame" x="23.5" y="4" width="117" height="17"/>
+                                                                                                <rect key="frame" x="25" y="4" width="117" height="17"/>
                                                                                                 <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -764,17 +772,21 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KoV-gi-fGO">
-                                                                                <rect key="frame" x="190.5" y="0.0" width="91" height="35"/>
+                                                                                <rect key="frame" x="192" y="0.0" width="92.5" height="35"/>
                                                                                 <subviews>
-                                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jEZ-4f-jxI">
-                                                                                        <rect key="frame" x="15" y="5" width="61" height="25"/>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jEZ-4f-jxI">
+                                                                                        <rect key="frame" x="15" y="5" width="62.5" height="25"/>
                                                                                         <subviews>
-                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="smF-sl-xbs">
-                                                                                                <rect key="frame" x="0.0" y="4.5" width="18.5" height="16.5"/>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="smF-sl-xbs">
+                                                                                                <rect key="frame" x="0.0" y="2.5" width="20" height="20"/>
                                                                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="height" constant="20" id="AsD-r3-Wql"/>
+                                                                                                    <constraint firstAttribute="width" constant="20" id="Gyn-y1-dR7"/>
+                                                                                                </constraints>
                                                                                             </imageView>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="me0-UN-c38">
-                                                                                                <rect key="frame" x="23.5" y="4" width="37.5" height="17"/>
+                                                                                                <rect key="frame" x="25" y="4" width="37.5" height="17"/>
                                                                                                 <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -797,17 +809,21 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIi-N6-wPs">
-                                                                                <rect key="frame" x="301.5" y="0.0" width="94" height="35"/>
+                                                                                <rect key="frame" x="304.5" y="0.0" width="95.5" height="35"/>
                                                                                 <subviews>
-                                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gah-jG-Ztx">
-                                                                                        <rect key="frame" x="15" y="5" width="64" height="25"/>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gah-jG-Ztx">
+                                                                                        <rect key="frame" x="15" y="5" width="65.5" height="25"/>
                                                                                         <subviews>
-                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="r9Y-dz-bK1">
-                                                                                                <rect key="frame" x="0.0" y="4.5" width="18.5" height="16.5"/>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="r9Y-dz-bK1">
+                                                                                                <rect key="frame" x="0.0" y="2.5" width="20" height="20"/>
                                                                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="height" constant="20" id="AiC-bs-4b9"/>
+                                                                                                    <constraint firstAttribute="width" constant="20" id="sFI-xx-BXU"/>
+                                                                                                </constraints>
                                                                                             </imageView>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLC-52-z9e">
-                                                                                                <rect key="frame" x="23.5" y="4" width="40.5" height="17"/>
+                                                                                                <rect key="frame" x="25" y="4" width="40.5" height="17"/>
                                                                                                 <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -1089,7 +1105,6 @@
         <image name="arrow_icon" width="512" height="512"/>
         <image name="book" catalog="system" width="128" height="102"/>
         <image name="bookmark_icon" width="128" height="128"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="checkmark_icon" width="32" height="32"/>
         <image name="copy_icon" width="50" height="50"/>
         <image name="gear_icon" width="512" height="512"/>

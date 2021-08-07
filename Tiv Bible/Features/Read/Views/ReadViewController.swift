@@ -104,7 +104,8 @@ class ReadViewController: BaseViewController {
         }
         
         goToSettingsView.animateViewOnTapGesture { [weak self] in
-            
+            self?.fontSettingsView.fadeOut()
+            self?.navigateToTab(.more)
         }
         
         increaseFontSizeView.animateViewOnTapGesture { [weak self] in
@@ -134,7 +135,7 @@ class ReadViewController: BaseViewController {
         }
     }
     
-    fileprivate func switchAppTheme(type theme: ThemeType) {
+    fileprivate func switchAppTheme(type theme: Theme) {
         if #available(iOS 13.0, *) {
             view.window?.do {
                 switch theme {
@@ -153,7 +154,7 @@ class ReadViewController: BaseViewController {
         }
     }
     
-    fileprivate func updateThemeViews(theme: ThemeType) {
+    fileprivate func updateThemeViews(theme: Theme) {
         updateThemeView(systemThemeView, isActive: theme == .system)
         updateThemeView(darkThemeView, isActive: theme == .dark)
         updateThemeView(lightThemeView, isActive: theme == .light)
@@ -180,6 +181,7 @@ class ReadViewController: BaseViewController {
         observeSelectedVersesText()
         observeHighlightColorsFontStylesAndThemes()
         observeCurrentSettingsChanges()
+        observeReloadFontStyles()
     }
     
     fileprivate func observeCurrentVerses() {
@@ -226,7 +228,7 @@ class ReadViewController: BaseViewController {
     }
     
     fileprivate func observeHighlightColorsFontStylesAndThemes() {
-        readViewModel.highlightColorsFontStylesAndThemes.bind { [weak self] data in
+        readViewModel.highlightColorsAndFontStyles.bind { [weak self] data in
             
             self?.configureHighlightColors(data.highlightColors)
             self?.configureFontStyles(data.fontStyles)
@@ -240,6 +242,15 @@ class ReadViewController: BaseViewController {
                 guard let self = self else { return }
                 self.versesTableView.reloadData()
                 self.currentFontSizeLabel.text = "\(self.readViewModel.currentSettings!.fontSize)px"
+                self.fontStyleCollectionView.reloadData()
+            }
+        }.disposed(by: disposeBag)
+    }
+    
+    fileprivate func observeReloadFontStyles() {
+        readViewModel.reloadFontStyles.bind { [weak self] reload in
+            if reload {
+                self?.fontStyleCollectionView.reloadData()
             }
         }.disposed(by: disposeBag)
     }
@@ -263,19 +274,16 @@ class ReadViewController: BaseViewController {
     
     fileprivate func configureFontStyles(_ fontStyles: [FontStyle]) {
         fontStyleCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
-        Observable.just(fontStyles).bind(to: fontStyleCollectionView.rx.items(cellIdentifier: R.reuseIdentifier.fontStyleCollectionViewCell.identifier, cellType: FontStyleCollectionViewCell.self)) { row, font, cell in
+        Observable.just(fontStyles).bind(to: fontStyleCollectionView.rx.items(cellIdentifier: R.reuseIdentifier.fontStyleCollectionViewCell.identifier, cellType: FontStyleCollectionViewCell.self)) { [weak self] row, font, cell in
+            guard let self = self else { return }
             
-            cell.configureView(font: font)
+            cell.configureView(font: font, settings: self.readViewModel.currentSettings!)
             
             cell.addTapGesture { [weak self] in
-                self?.handleFontStyleSelected(font)
+                self?.readViewModel.updateSelectedFontStyle(font)
             }
             
         }.disposed(by: disposeBag)
-    }
-    
-    func handleFontStyleSelected(_ font: FontStyle) {
-        
     }
     
     fileprivate func showTapActions() {
@@ -299,7 +307,7 @@ extension ReadViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: collectionView.height)
+        CGSize(width: 150, height: collectionView.height)
     }
     
 }

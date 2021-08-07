@@ -17,7 +17,7 @@ struct PreferenceRepoImpl: IPreferenceRepo {
         set { preference.isDBInitialized = newValue }
     }
     
-    var currentTheme: ThemeType {
+    var currentTheme: Theme {
         get { preference.currentTheme }
         set { preference.currentTheme = newValue }
     }

@@ -40,8 +40,6 @@ struct LocalDataSourceDependencyInjectionGraph {
         
         container.register(ITestamentDataSource.self) { res in TestamentDataSourceImpl(realm: res.resolve(Realm.self)!) }
         
-        container.register(IThemeDataSource.self) { res in ThemeDataSourceImpl(realm: res.resolve(Realm.self)!) }
-        
         container.register(IVerseDataSource.self) { res in VerseDataSourceImpl(realm: res.resolve(Realm.self)!) }
         
         container.register(IVersionDataSource.self) { res in VersionDataSourceImpl(realm: res.resolve(Realm.self)!) }

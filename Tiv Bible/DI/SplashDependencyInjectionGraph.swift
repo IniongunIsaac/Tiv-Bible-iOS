@@ -23,7 +23,6 @@ struct SplashDependencyInjectionGraph {
                             chapterRepo: res.resolve(IChapterRepo.self)!,
                             verseRepo: res.resolve(IVerseRepo.self)!,
                             audioSpeedRepo: res.resolve(IAudioSpeedRepo.self)!,
-                            themeRepo: res.resolve(IThemeRepo.self)!,
                             fontStyleRepo: res.resolve(IFontStyleRepo.self)!,
                             settingsRepo: res.resolve(ISettingRepo.self)!,
                             highlightColorRepo: res.resolve(IHighlightColorRepo.self)!,

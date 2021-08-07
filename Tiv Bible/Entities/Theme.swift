@@ -2,10 +2,12 @@
 //  Theme.swift
 //  Tiv Bible
 //
-//  Created by Isaac Iniongun on 20/05/2020.
-//  Copyright © 2020 Iniongun Group. All rights reserved.
+//  Created by Isaac Iniongun on 06/08/2021.
+//  Copyright © 2021 Iniongun Group. All rights reserved.
 //
 
 import Foundation
 
-class Theme: BaseName {}
+enum Theme: Int, Codable {
+    case system, dark, light
+}

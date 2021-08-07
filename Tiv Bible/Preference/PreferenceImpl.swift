@@ -14,7 +14,7 @@ struct PreferenceImpl: IPreference {
     var isDBInitialized: Bool
     
     @UserDefaultStorage(key: PreferenceConstants.CURRENT_THEME, default: .system)
-    var currentTheme: ThemeType
+    var currentTheme: Theme
     
     @UserDefaultStorage(key: PreferenceConstants.CURRENT_VERSE_KEY, default: "")
     var currentVerseId: String

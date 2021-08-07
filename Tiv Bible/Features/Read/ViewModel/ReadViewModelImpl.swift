@@ -11,27 +11,25 @@ import RxSwift
 
 class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     
-    let bookRepo: IBookRepo
-    let verseRepo: IVerseRepo
-    let chapterRepo: IChapterRepo
-    var preferenceRepo: IPreferenceRepo
-    let settingsRepo: ISettingRepo
-    let fontStyleRepo: IFontStyleRepo
-    let themeRepo: IThemeRepo
-    let bookmarkRepo: IBookmarkRepo
-    let highlightColorRepo: IHighlightColorRepo
-    let highlightRepo: IHighlightRepo
-    let historyRepo: IHistoryRepo
-    let noteRepo: INoteRepo
+    fileprivate let bookRepo: IBookRepo
+    fileprivate let verseRepo: IVerseRepo
+    fileprivate let chapterRepo: IChapterRepo
+    fileprivate var preferenceRepo: IPreferenceRepo
+    fileprivate let settingsRepo: ISettingRepo
+    fileprivate let fontStyleRepo: IFontStyleRepo
+    fileprivate let bookmarkRepo: IBookmarkRepo
+    fileprivate let highlightColorRepo: IHighlightColorRepo
+    fileprivate let highlightRepo: IHighlightRepo
+    fileprivate let historyRepo: IHistoryRepo
+    fileprivate let noteRepo: INoteRepo
     
-    init(bookRepo: IBookRepo, verseRepo: IVerseRepo, chapterRepo: IChapterRepo, preferenceRepo: IPreferenceRepo, settingsRepo: ISettingRepo, fontStyleRepo: IFontStyleRepo, themeRepo: IThemeRepo, bookmarkRepo: IBookmarkRepo, highlightColorRepo: IHighlightColorRepo, highlightRepo: IHighlightRepo, historyRepo: IHistoryRepo, noteRepo: INoteRepo) {
+    init(bookRepo: IBookRepo, verseRepo: IVerseRepo, chapterRepo: IChapterRepo, preferenceRepo: IPreferenceRepo, settingsRepo: ISettingRepo, fontStyleRepo: IFontStyleRepo, bookmarkRepo: IBookmarkRepo, highlightColorRepo: IHighlightColorRepo, highlightRepo: IHighlightRepo, historyRepo: IHistoryRepo, noteRepo: INoteRepo) {
         self.bookRepo = bookRepo
         self.verseRepo = verseRepo
         self.chapterRepo = chapterRepo
         self.preferenceRepo = preferenceRepo
         self.settingsRepo = settingsRepo
         self.fontStyleRepo = fontStyleRepo
-        self.themeRepo = themeRepo
         self.bookmarkRepo = bookmarkRepo
         self.highlightColorRepo = highlightColorRepo
         self.highlightRepo = highlightRepo
@@ -49,7 +47,9 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     var shareableSelectedVersesText: String = ""
     var reloadVerses: PublishSubject<Bool> = PublishSubject()
     var selectedVerses = [Verse]()
-    var highlightColorsFontStylesAndThemes: PublishSubject<(highlightColors: [HighlightColor], fontStyles: [FontStyle], themes: [Theme])> = PublishSubject()
+    var highlightColorsAndFontStyles: PublishSubject<(highlightColors: [HighlightColor], fontStyles: [FontStyle])> = PublishSubject()
+    fileprivate var fontStyles = [FontStyle]()
+    var reloadFontStyles: PublishSubject<Bool> = PublishSubject()
     
     fileprivate var currentVerse: Verse?
     fileprivate var currentChapter: Chapter?
@@ -60,7 +60,7 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     fileprivate var highlightsList = [Highlight]()
     fileprivate var currentVersesList = [Verse]()
     
-    var currentTheme: ThemeType {
+    var currentTheme: Theme {
         get { preferenceRepo.currentTheme }
         set { preferenceRepo.currentTheme = newValue }
     }
@@ -68,18 +68,15 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     override func didLoad() {
         super.didLoad()
         self.preferenceRepo.shouldReloadVerses = true
-    }
-    
-    override func willAppear() {
-        super.willAppear()
         getUserSettings()
         getBookFromSavedPreferencesOrInitializeWithGenese()
-        getHighlightColorsFontStylesAndThemes()
+        getHighlightColorsAndFontStyles()
     }
     
-    func getHighlightColorsFontStylesAndThemes() {
-        subscribe(Observable.zip(highlightColorRepo.getAllHighlightColors(), fontStyleRepo.getAllFontStyles(), themeRepo.getAllThemes()), success: { [weak self] data in
-            self?.highlightColorsFontStylesAndThemes.onNext(data)
+    func getHighlightColorsAndFontStyles() {
+        subscribe(Observable.zip(highlightColorRepo.getAllHighlightColors(), fontStyleRepo.getAllFontStyles()), success: { [weak self] data in
+            self?.fontStyles = data.1
+            self?.highlightColorsAndFontStyles.onNext(data)
         })
     }
     
@@ -306,6 +303,10 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     
     func updateLineSpacing(type: LineSpacingType) {
         updateUserSettings(currentSettings!.newCopy(lineSpacing: type.value))
+    }
+    
+    func updateSelectedFontStyle(_ fontStyle: FontStyle) {
+        updateUserSettings(currentSettings!.newCopy(fontStyle: fontStyle))
     }
     
 }

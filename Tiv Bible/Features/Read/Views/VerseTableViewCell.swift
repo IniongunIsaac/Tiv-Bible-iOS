@@ -14,8 +14,12 @@ class VerseTableViewCell: UITableViewCell {
     @IBOutlet weak var verseTextLabel: UILabel!
     
     func configureView(verse: Verse, settings: Setting) {
-        titleLabel.isHidden = !verse.hasTitle
+        
+        let font = getFont(name: settings.fontStyle!.name, size: settings.fontSize)
+        
+        titleLabel.showView(verse.hasTitle)
         titleLabel.text = verse.title
+        titleLabel.font = getFont(name: settings.fontStyle!.name, size: 12).italic
         
         let text = "\(verse.number). \(verse.text)"
         
@@ -23,12 +27,12 @@ class VerseTableViewCell: UITableViewCell {
         paragraphStyle.lineSpacing = settings.lineSpacing.cgfloat
         paragraphStyle.firstLineHeadIndent = 10
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.comfortaaRegular(size: settings.fontSize.cgfloat),
+            .font: font,
             .paragraphStyle: paragraphStyle
         ]
 
         let attributedText = NSMutableAttributedString(string: text, attributes: attributes)
-        attributedText.addAttribute(.font, value: UIFont.comfortaaBold(size: settings.fontSize.cgfloat), range: NSRange(location: 0, length: "\(verse.number)".count + 1))
+        attributedText.addAttribute(.font, value: font.bold, range: NSRange(location: 0, length: "\(verse.number)".count + 1))
         
         if verse.isSelected {
             attributedText.addAttribute(.underlineStyle, value: NSUnderlineStyle.patternDashDot.rawValue | NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedText.length))
@@ -44,5 +48,9 @@ class VerseTableViewCell: UITableViewCell {
             }
         }
         
+    }
+    
+    fileprivate func getFont(name: String, size: Int) -> UIFont {
+        UIFont(name: name, size: size.cgfloat) ?? .comfortaaRegular(size: size.cgfloat)
     }
 }

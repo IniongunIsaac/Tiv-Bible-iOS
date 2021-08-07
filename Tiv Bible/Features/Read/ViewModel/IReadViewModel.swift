@@ -32,15 +32,17 @@ protocol IReadViewModel: Scopable {
     
     var reloadVerses: PublishSubject<Bool> { get }
     
-    var highlightColorsFontStylesAndThemes: PublishSubject<(highlightColors: [HighlightColor], fontStyles: [FontStyle], themes: [Theme])> { get }
+    var highlightColorsAndFontStyles: PublishSubject<(highlightColors: [HighlightColor], fontStyles: [FontStyle])> { get }
     
-    var currentTheme: ThemeType { get set }
+    var reloadFontStyles: PublishSubject<Bool> { get }
+    
+    var currentTheme: Theme { get set }
     
     func getBookFromSavedPreferencesOrInitializeWithGenese()
     
     func toggleSelectedVerse(verse: Verse)
     
-    func getHighlightColorsFontStylesAndThemes()
+    func getHighlightColorsAndFontStyles()
     
     func getUserSettings()
     
@@ -55,5 +57,7 @@ protocol IReadViewModel: Scopable {
     func decreaseFontSize()
     
     func updateLineSpacing(type: LineSpacingType)
+    
+    func updateSelectedFontStyle(_ fontStyle: FontStyle)
     
 }

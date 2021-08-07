@@ -41,8 +41,6 @@ struct RepositoryDependencyInjectionGraph {
         
         container.register(ITestamentRepo.self) { res in TestamentRepoImpl(testamentDataSource: res.resolve(ITestamentDataSource.self)!) }
         
-        container.register(IThemeRepo.self) { res in ThemeRepoImpl(themeDataSource: res.resolve(IThemeDataSource.self)!) }
-        
         container.register(IVerseRepo.self) { res in VerseRepoImpl(verseDataSource: res.resolve(IVerseDataSource.self)!) }
         
         container.register(IVersionRepo.self) { res in VersionRepoImpl(versionDataSource: res.resolve(IVersionDataSource.self)!) }

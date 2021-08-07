@@ -22,6 +22,6 @@ protocol IPreference {
 
     var shouldReloadVerses: Bool { get set }
     
-    var currentTheme: ThemeType { get set }
+    var currentTheme: Theme { get set }
     
 }

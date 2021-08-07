@@ -22,7 +22,6 @@ struct ReadDependencyInjectionGraph {
                               preferenceRepo: res.resolve(IPreferenceRepo.self)!,
                               settingsRepo: res.resolve(ISettingRepo.self)!,
                               fontStyleRepo: res.resolve(IFontStyleRepo.self)!,
-                              themeRepo: res.resolve(IThemeRepo.self)!,
                               bookmarkRepo: res.resolve(IBookmarkRepo.self)!,
                               highlightColorRepo: res.resolve(IHighlightColorRepo.self)!,
                               highlightRepo: res.resolve(IHighlightRepo.self)!,
