@@ -146,7 +146,6 @@
 		148B0F0926BE357500B92B26 /* montserrat_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0ED526BE356D00B92B26 /* montserrat_medium.ttf */; };
 		148B0F0A26BE357500B92B26 /* montserrat_extra_light_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0ED626BE356D00B92B26 /* montserrat_extra_light_italic.ttf */; };
 		148B0F0B26BE357500B92B26 /* roboto_black_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0ED726BE356D00B92B26 /* roboto_black_italic.ttf */; };
-		148B0F0C26BE357500B92B26 /* martel_sans.xml in Resources */ = {isa = PBXBuildFile; fileRef = 148B0ED826BE356D00B92B26 /* martel_sans.xml */; };
 		148B0F0D26BE357500B92B26 /* montserrat_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0ED926BE356D00B92B26 /* montserrat_thin.ttf */; };
 		148B0F0E26BE357500B92B26 /* comfortaa_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0EDA26BE356E00B92B26 /* comfortaa_bold.ttf */; };
 		148B0F0F26BE357500B92B26 /* indie_flower.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0EDB26BE356E00B92B26 /* indie_flower.ttf */; };
@@ -158,11 +157,9 @@
 		148B0F1526BE357500B92B26 /* metamorphous.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0EE126BE356F00B92B26 /* metamorphous.ttf */; };
 		148B0F1626BE357500B92B26 /* martel_sans_semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0EE226BE356F00B92B26 /* martel_sans_semibold.ttf */; };
 		148B0F1726BE357500B92B26 /* jost.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0EE326BE356F00B92B26 /* jost.ttf */; };
-		148B0F1826BE357500B92B26 /* martel_sans_extrabold.xml in Resources */ = {isa = PBXBuildFile; fileRef = 148B0EE426BE356F00B92B26 /* martel_sans_extrabold.xml */; };
 		148B0F1926BE357500B92B26 /* inconsolata_expanded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0EE526BE356F00B92B26 /* inconsolata_expanded.ttf */; };
 		148B0F1A26BE357500B92B26 /* montserrat_light_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0EE626BE356F00B92B26 /* montserrat_light_italic.ttf */; };
 		148B0F1B26BE357500B92B26 /* roboto_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0EE726BE357000B92B26 /* roboto_italic.ttf */; };
-		148B0F1C26BE357500B92B26 /* martel_sans_bold.xml in Resources */ = {isa = PBXBuildFile; fileRef = 148B0EE826BE357000B92B26 /* martel_sans_bold.xml */; };
 		148B0F1D26BE357500B92B26 /* roboto_condensed_regular_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0EE926BE357000B92B26 /* roboto_condensed_regular_italic.ttf */; };
 		148B0F1E26BE357500B92B26 /* roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0EEA26BE357000B92B26 /* roboto_medium.ttf */; };
 		148B0F1F26BE357500B92B26 /* roboto_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 148B0EEB26BE357000B92B26 /* roboto_black.ttf */; };
@@ -375,7 +372,6 @@
 		148B0ED526BE356D00B92B26 /* montserrat_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_medium.ttf; sourceTree = "<group>"; };
 		148B0ED626BE356D00B92B26 /* montserrat_extra_light_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_extra_light_italic.ttf; sourceTree = "<group>"; };
 		148B0ED726BE356D00B92B26 /* roboto_black_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_black_italic.ttf; sourceTree = "<group>"; };
-		148B0ED826BE356D00B92B26 /* martel_sans.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = martel_sans.xml; sourceTree = "<group>"; };
 		148B0ED926BE356D00B92B26 /* montserrat_thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_thin.ttf; sourceTree = "<group>"; };
 		148B0EDA26BE356E00B92B26 /* comfortaa_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = comfortaa_bold.ttf; sourceTree = "<group>"; };
 		148B0EDB26BE356E00B92B26 /* indie_flower.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = indie_flower.ttf; sourceTree = "<group>"; };
@@ -387,11 +383,9 @@
 		148B0EE126BE356F00B92B26 /* metamorphous.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = metamorphous.ttf; sourceTree = "<group>"; };
 		148B0EE226BE356F00B92B26 /* martel_sans_semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = martel_sans_semibold.ttf; sourceTree = "<group>"; };
 		148B0EE326BE356F00B92B26 /* jost.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = jost.ttf; sourceTree = "<group>"; };
-		148B0EE426BE356F00B92B26 /* martel_sans_extrabold.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = martel_sans_extrabold.xml; sourceTree = "<group>"; };
 		148B0EE526BE356F00B92B26 /* inconsolata_expanded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = inconsolata_expanded.ttf; sourceTree = "<group>"; };
 		148B0EE626BE356F00B92B26 /* montserrat_light_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_light_italic.ttf; sourceTree = "<group>"; };
 		148B0EE726BE357000B92B26 /* roboto_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_italic.ttf; sourceTree = "<group>"; };
-		148B0EE826BE357000B92B26 /* martel_sans_bold.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = martel_sans_bold.xml; sourceTree = "<group>"; };
 		148B0EE926BE357000B92B26 /* roboto_condensed_regular_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_condensed_regular_italic.ttf; sourceTree = "<group>"; };
 		148B0EEA26BE357000B92B26 /* roboto_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_medium.ttf; sourceTree = "<group>"; };
 		148B0EEB26BE357000B92B26 /* roboto_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_black.ttf; sourceTree = "<group>"; };
@@ -656,12 +650,9 @@
 				148B0EE326BE356F00B92B26 /* jost.ttf */,
 				148B0F0426BE357400B92B26 /* lato.ttf */,
 				148B0EF626BE357200B92B26 /* lobster.ttf */,
-				148B0EE826BE357000B92B26 /* martel_sans_bold.xml */,
-				148B0EE426BE356F00B92B26 /* martel_sans_extrabold.xml */,
 				148B0EF426BE357200B92B26 /* martel_sans_extralight.ttf */,
 				148B0F0526BE357400B92B26 /* martel_sans_light.ttf */,
 				148B0EE226BE356F00B92B26 /* martel_sans_semibold.ttf */,
-				148B0ED826BE356D00B92B26 /* martel_sans.xml */,
 				148B0EE126BE356F00B92B26 /* metamorphous.ttf */,
 				148B0EDF26BE356E00B92B26 /* montserrat_alternates_bold.ttf */,
 				148B0EFA26BE357300B92B26 /* montserrat_alternates.ttf */,
@@ -1384,7 +1375,6 @@
 			files = (
 				148B0F1526BE357500B92B26 /* metamorphous.ttf in Resources */,
 				148B0F0D26BE357500B92B26 /* montserrat_thin.ttf in Resources */,
-				148B0F0C26BE357500B92B26 /* martel_sans.xml in Resources */,
 				148B0F1226BE357500B92B26 /* montserrat_black_italic.ttf in Resources */,
 				148B0F3726BE357500B92B26 /* roboto_bold.ttf in Resources */,
 				148B0F2926BE357500B92B26 /* montserrat_medium_italic.ttf in Resources */,
@@ -1392,7 +1382,6 @@
 				148B0F3326BE357500B92B26 /* montserrat_italic.ttf in Resources */,
 				148B0F1326BE357500B92B26 /* montserrat_alternates_bold.ttf in Resources */,
 				148B0F3926BE357500B92B26 /* martel_sans_light.ttf in Resources */,
-				148B0F1C26BE357500B92B26 /* martel_sans_bold.xml in Resources */,
 				1440E06E247ABA040037E68E /* Splash.storyboard in Resources */,
 				148B0F0E26BE357500B92B26 /* comfortaa_bold.ttf in Resources */,
 				148B0F2826BE357500B92B26 /* martel_sans_extralight.ttf in Resources */,
@@ -1435,7 +1424,6 @@
 				148B0F0F26BE357500B92B26 /* indie_flower.ttf in Resources */,
 				148B0F0926BE357500B92B26 /* montserrat_medium.ttf in Resources */,
 				148B0F3B26BE357500B92B26 /* comfortaa_light.ttf in Resources */,
-				148B0F1826BE357500B92B26 /* martel_sans_extrabold.xml in Resources */,
 				148B0F2026BE357500B92B26 /* roboto_condensed_regular.ttf in Resources */,
 				148B0F2D26BE357500B92B26 /* comfortaa_medium.ttf in Resources */,
 				1440E079247D3C630037E68E /* HomeTabs.storyboard in Resources */,
