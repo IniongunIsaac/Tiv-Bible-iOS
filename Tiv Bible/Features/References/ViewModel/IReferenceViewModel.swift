@@ -19,6 +19,8 @@ protocol IReferenceViewModel: Scopable {
     
     var showReferenceSegment: PublishSubject<ReferenceSegment> { get }
     
+    var showReaderView: PublishSubject<Bool> { get }
+    
     func getBooks()
     
     func getBookChapters(_ book: Book)

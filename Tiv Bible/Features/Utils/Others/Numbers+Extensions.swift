@@ -56,6 +56,7 @@ extension Int32: FormattableNumeric {}
 extension Int64: FormattableNumeric {}
 extension Float: FormattableNumeric {}
 extension Double: FormattableNumeric {}
+extension CGFloat: FormattableNumeric {}
 
 extension Collection where Element: FormattableNumeric {
     

@@ -31,4 +31,10 @@ struct PreferenceImpl: IPreference {
     @UserDefaultStorage(key: PreferenceConstants.SHOULD_RELOAD_VERSES_KEY, default: false)
     var shouldReloadVerses: Bool
     
+    @UserDefaultStorage(key: PreferenceConstants.SELECTED_VERSE_NUMBER, default: 0)
+    var selectedVerseNumber: Int
+    
+    @UserDefaultStorage(key: PreferenceConstants.SHOULD_SCROLL_TO_VERSE, default: false)
+    var shouldScrollToVerse: Bool
+    
 }

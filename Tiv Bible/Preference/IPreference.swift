@@ -24,4 +24,8 @@ protocol IPreference {
     
     var currentTheme: Theme { get set }
     
+    var selectedVerseNumber: Int { get set }
+    
+    var shouldScrollToVerse: Bool { get set }
+    
 }

@@ -49,7 +49,7 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     var highlightColorsAndFontStyles: PublishSubject<(highlightColors: [HighlightColor], fontStyles: [FontStyle])> = PublishSubject()
     fileprivate var fontStyles = [FontStyle]()
     
-    fileprivate var currentVerse: Verse?
+    //fileprivate var currentVerse: Verse?
     fileprivate var currentChapter: Chapter?
     fileprivate var currentBook: Book?
     fileprivate var newBookNameAndChapterNumber = "Genese:1"
@@ -79,12 +79,21 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     }
     
     func getBookFromSavedPreferencesOrInitializeWithGenese() {
-        if preferenceRepo.shouldReloadVerses {
-            preferenceRepo.shouldReloadVerses = false
-            if preferenceRepo.currentBookId.isEmpty {
-                getDefaultBook()
-            } else {
-                getSavedBook(bookId: preferenceRepo.currentBookId)
+        preferenceRepo.do {
+            if $0.shouldReloadVerses {
+                preferenceRepo.shouldReloadVerses = false
+                if $0.currentBookId.isEmpty {
+                    getDefaultBook()
+                } else {
+                    getSavedBook(bookId: $0.currentBookId)
+                    
+                    if $0.shouldScrollToVerse && $0.selectedVerseNumber > 1 {
+                        verseNumber.onNext($0.selectedVerseNumber)
+                        preferenceRepo.shouldScrollToVerse = false
+                        preferenceRepo.selectedVerseNumber = 0
+                    }
+                    
+                }
             }
         }
     }
@@ -159,22 +168,22 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         subscribe(historyRepo.insertHistory(history: [History(book: currentBook!, chapter: chapter)]))
     }
     
-    fileprivate func getSavedVerse() {
-        getVersesHighlights()
-        
-        if preferenceRepo.currentVerseId.isEmpty {
-            verseNumber.onNext(0)
-        } else {
-            getVerse(verseId: preferenceRepo.currentVerseId)
-        }
-    }
-    
-    fileprivate func getVerse(verseId: String) {
-        subscribe(verseRepo.getVerseById(verseId: verseId), success: { [weak self] verse in
-            self?.currentVerse = verse
-            self?.verseNumber.onNext(verse.number)
-        })
-    }
+//    fileprivate func getSavedVerse() {
+//        getVersesHighlights()
+//
+//        if preferenceRepo.currentVerseId.isEmpty {
+//            verseNumber.onNext(0)
+//        } else {
+//            getVerse(verseId: preferenceRepo.currentVerseId)
+//        }
+//    }
+//
+//    fileprivate func getVerse(verseId: String) {
+//        subscribe(verseRepo.getVerseById(verseId: verseId), success: { [weak self] verse in
+//            self?.currentVerse = verse
+//            self?.verseNumber.onNext(verse.number)
+//        })
+//    }
     
     fileprivate func getVersesHighlights() {
         highlightsList.removeAll()

@@ -13,7 +13,11 @@ class ChapterCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var numberView: NumberView!
     
     func configureView(chapter: Chapter) {
-        
+        numberView.do {
+            $0.addClearBackground()
+            $0.text = chapter.chapterNumber.string
+            $0.activate(chapter.isSelected)
+        }
     }
     
 }

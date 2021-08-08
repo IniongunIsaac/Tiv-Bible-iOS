@@ -13,13 +13,18 @@ class BookTableViewCell: UITableViewCell {
     @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var checkmarkImageView: UIImageView!
-    @IBOutlet weak var separatorView: UIView!
     
     func configureView(book: Book) {
         book.do {
             bookNameLabel.text = $0.bookName
-            //checkmarkImageView.showView($0.isSelected)
+            activate($0.isSelected)
         }
+    }
+    
+    fileprivate func activate(_ activate: Bool) {
+        checkmarkImageView.showView(activate)
+        detailsView.backgroundColor = activate ? UIColor.accentColor!.withAlphaComponent(0.2) : .clear
+        bookNameLabel.textColor = activate ? .accentColor : .aLabel
     }
     
 }

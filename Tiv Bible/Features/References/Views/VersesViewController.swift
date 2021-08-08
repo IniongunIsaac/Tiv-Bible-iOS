@@ -15,6 +15,7 @@ class VersesViewController: UIViewController {
     
     fileprivate let disposeBag = DisposeBag()
     var verses = [Verse]()
+    var verseSelectedHandler: ((Verse) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +36,17 @@ class VersesViewController: UIViewController {
             cell.configureView(verse: verse)
             
             cell.animateViewOnTapGesture { [weak self] in
-                
+                self?.handleVerseSelected(verse)
             }
             
         }.disposed(by: disposeBag)
+    }
+    
+    fileprivate func handleVerseSelected(_ verse: Verse) {
+        verse.isSelected = true
+        verses.filter { $0.id != verse.id }.forEach { $0.isSelected = false }
+        versesCollectionView.reloadData()
+        verseSelectedHandler?(verse)
     }
 
 }
@@ -56,7 +64,7 @@ extension VersesViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 150, height: collectionView.height)
+        CGSize(width: (width - (40 + (15 * 5))) / 5, height: 60)
     }
     
 }

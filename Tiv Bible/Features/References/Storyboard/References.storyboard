@@ -109,61 +109,49 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cfs-8v-ljY">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppr-Av-AIv">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppr-Av-AIv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yh2-0V-lrc">
+                                                            <rect key="frame" x="15" y="25" width="384" height="20"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yh2-0V-lrc">
-                                                                    <rect key="frame" x="15" y="17.5" width="384" height="20"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fzo-UO-5mB">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="20"/>
-                                                                            <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ffm-gH-KcS">
-                                                                            <rect key="frame" x="364" y="0.0" width="20" height="20"/>
-                                                                            <color key="tintColor" name="AccentColor"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" constant="20" id="KYT-6c-sQw"/>
-                                                                                <constraint firstAttribute="width" constant="20" id="f0y-5i-2h2"/>
-                                                                            </constraints>
-                                                                        </imageView>
-                                                                    </subviews>
-                                                                </stackView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fzo-UO-5mB">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ffm-gH-KcS">
+                                                                    <rect key="frame" x="364" y="0.0" width="20" height="20"/>
+                                                                    <color key="tintColor" name="AccentColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="KYT-6c-sQw"/>
+                                                                        <constraint firstAttribute="width" constant="20" id="f0y-5i-2h2"/>
+                                                                    </constraints>
+                                                                </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="yh2-0V-lrc" secondAttribute="trailing" constant="15" id="05r-9e-ieb"/>
-                                                                <constraint firstItem="yh2-0V-lrc" firstAttribute="centerY" secondItem="ppr-Av-AIv" secondAttribute="centerY" id="GOu-mJ-pDB"/>
-                                                                <constraint firstAttribute="height" constant="30" id="dkh-Xe-IT4"/>
-                                                                <constraint firstItem="yh2-0V-lrc" firstAttribute="leading" secondItem="ppr-Av-AIv" secondAttribute="leading" constant="15" id="lg9-dk-YD5"/>
-                                                            </constraints>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="8"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGW-q6-3T6" userLabel="Separator View">
-                                                            <rect key="frame" x="0.0" y="55" width="414" height="15"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="15" id="AIN-1J-O5I"/>
-                                                            </constraints>
-                                                        </view>
+                                                        </stackView>
                                                     </subviews>
-                                                </stackView>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="yh2-0V-lrc" secondAttribute="trailing" constant="15" id="05r-9e-ieb"/>
+                                                        <constraint firstItem="yh2-0V-lrc" firstAttribute="centerY" secondItem="ppr-Av-AIv" secondAttribute="centerY" id="GOu-mJ-pDB"/>
+                                                        <constraint firstAttribute="height" constant="50" id="dkh-Xe-IT4"/>
+                                                        <constraint firstItem="yh2-0V-lrc" firstAttribute="leading" secondItem="ppr-Av-AIv" secondAttribute="leading" constant="15" id="lg9-dk-YD5"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="Cfs-8v-ljY" firstAttribute="top" secondItem="ZVg-cF-b34" secondAttribute="top" id="45h-Ze-L5Y"/>
-                                                <constraint firstItem="Cfs-8v-ljY" firstAttribute="leading" secondItem="ZVg-cF-b34" secondAttribute="leading" id="QTF-Xf-LfY"/>
-                                                <constraint firstAttribute="trailing" secondItem="Cfs-8v-ljY" secondAttribute="trailing" id="nIN-SO-1in"/>
-                                                <constraint firstAttribute="bottom" secondItem="Cfs-8v-ljY" secondAttribute="bottom" id="qHI-rl-dOe"/>
+                                                <constraint firstItem="ppr-Av-AIv" firstAttribute="top" secondItem="ZVg-cF-b34" secondAttribute="top" id="TYP-kK-unf"/>
+                                                <constraint firstItem="ppr-Av-AIv" firstAttribute="leading" secondItem="ZVg-cF-b34" secondAttribute="leading" id="cf3-f7-PlE"/>
+                                                <constraint firstAttribute="trailing" secondItem="ppr-Av-AIv" secondAttribute="trailing" id="xUV-gg-hp6"/>
+                                                <constraint firstAttribute="bottom" secondItem="ppr-Av-AIv" secondAttribute="bottom" id="zRR-xZ-aB7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -171,7 +159,6 @@
                                             <outlet property="bookNameLabel" destination="fzo-UO-5mB" id="Mk1-5D-ZAw"/>
                                             <outlet property="checkmarkImageView" destination="Ffm-gH-KcS" id="Pt2-aI-ncd"/>
                                             <outlet property="detailsView" destination="ppr-Av-AIv" id="eyc-Ht-b7w"/>
-                                            <outlet property="separatorView" destination="JGW-q6-3T6" id="7nl-d8-hfi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol IPreferenceRepo {
+protocol IPreferenceRepo: Scopable {
     
     var isDBInitialized: Bool { get set }
 
@@ -23,5 +23,9 @@ protocol IPreferenceRepo {
     var currentVerseString: String { get set }
 
     var shouldReloadVerses: Bool { get set }
+    
+    var selectedVerseNumber: Int { get set }
+    
+    var shouldScrollToVerse: Bool { get set }
     
 }

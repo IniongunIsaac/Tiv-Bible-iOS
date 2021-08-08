@@ -16,6 +16,7 @@ class BooksViewController: UIViewController {
     
     fileprivate let disposeBag = DisposeBag()
     var books = [Book]()
+    var bookSelectedHandler: ((Book) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +42,20 @@ class BooksViewController: UIViewController {
             
         }.bind(to: booksTableView.rx.items(cellIdentifier: R.reuseIdentifier.bookTableViewCell.identifier, cellType: BookTableViewCell.self)) { index, book, cell in
             
-              cell.configureView(book: book)
-                
-              cell.animateViewOnTapGesture { [weak self] in
-                
-              }
+          cell.configureView(book: book)
+            
+          cell.animateViewOnTapGesture { [weak self] in
+            self?.handleBookSelected(book)
+          }
             
         }.disposed(by: disposeBag)
+    }
+    
+    fileprivate func handleBookSelected(_ book: Book) {
+        book.isSelected = true
+        books.filter { $0.id != book.id }.forEach { $0.isSelected = false }
+        booksTableView.reloadData()
+        bookSelectedHandler?(book)
     }
 
 }

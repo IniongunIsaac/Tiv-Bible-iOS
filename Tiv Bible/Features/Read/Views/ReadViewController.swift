@@ -64,7 +64,11 @@ class ReadViewController: BaseViewController {
     
     override func setupTapGestures() {
         bookChapterView.animateViewOnTapGesture { [weak self] in
-            self?.presentViewController(R.storyboard.references.referencesViewController()!)
+            self?.presentViewController(R.storyboard.references.referencesViewController()!.apply {
+                $0.dismissHandler = { [weak self] in
+                    self?.readViewModel.getBookFromSavedPreferencesOrInitializeWithGenese()
+                }
+            })
         }
         
         shareView.animateViewOnTapGesture { [weak self] in
@@ -187,6 +191,7 @@ class ReadViewController: BaseViewController {
         observeSelectedVersesText()
         observeHighlightColorsFontStylesAndThemes()
         observeCurrentSettingsChanges()
+        observeVerseNumber()
     }
     
     fileprivate func observeCurrentVerses() {
@@ -249,6 +254,13 @@ class ReadViewController: BaseViewController {
                 self.currentFontSizeLabel.text = "\(self.readViewModel.currentSettings!.fontSize)px"
                 self.fontStyleCollectionView.reloadData()
             }
+        }.disposed(by: disposeBag)
+    }
+    
+    fileprivate func observeVerseNumber() {
+        readViewModel.verseNumber.bind { [weak self] number in
+            let indexPath = IndexPath(item: number - 1, section: 0)
+            self?.versesTableView.scrollToRow(at: indexPath, at: .middle, animated: true)
         }.disposed(by: disposeBag)
     }
     

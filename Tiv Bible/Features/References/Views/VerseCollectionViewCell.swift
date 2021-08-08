@@ -13,7 +13,11 @@ class VerseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var numberView: NumberView!
     
     func configureView(verse: Verse) {
-        
+        numberView.do {
+            $0.addClearBackground()
+            $0.text = verse.number.string
+            $0.activate(verse.isSelected)
+        }
     }
     
 }

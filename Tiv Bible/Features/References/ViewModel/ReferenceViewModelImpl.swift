@@ -15,6 +15,7 @@ class ReferenceViewModelImpl: BaseViewModel, IReferenceViewModel {
     var chapters: [Chapter] = []
     var verses: [Verse] = []
     var showReferenceSegment: PublishSubject<ReferenceSegment> = PublishSubject()
+    var showReaderView: PublishSubject<Bool> = PublishSubject()
     
     fileprivate let booksRepo: IBookRepo
     fileprivate let chaptersRepo: IChapterRepo
@@ -43,14 +44,28 @@ class ReferenceViewModelImpl: BaseViewModel, IReferenceViewModel {
     
     func getBookChapters(_ book: Book) {
         selectedBook = book
+        chapters = book.chapters.toArray()
+        showReferenceSegment.onNext(.chapters)
     }
     
     func getChapterVerses(_ chapter: Chapter) {
         selectedChapter = chapter
+        verses = chapter.verses.toArray()
+        showReferenceSegment.onNext(.verses)
     }
     
     func handleVerseSelected(_ verse: Verse) {
         selectedVerse = verse
+        preferenceRepo.currentBookId = selectedBook.id
+        preferenceRepo.currentChapterId = selectedChapter.id
+        preferenceRepo.currentVerseId = selectedVerse.id
+        preferenceRepo.selectedVerseNumber = selectedVerse.number
+        preferenceRepo.shouldScrollToVerse = true
+        preferenceRepo.shouldReloadVerses = true
+        let history = History(book: selectedBook, chapter: selectedChapter)
+        subscribe(historyRepo.insertHistory(history: [history]), viewControllerType: .bottomSheet, success: { [weak self] in
+            self?.showReaderView.onNext(true)
+        })
     }
     
 }

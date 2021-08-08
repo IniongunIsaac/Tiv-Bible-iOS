@@ -29,20 +29,31 @@ class ReferencesViewController: BaseBottomPopupViewController {
     fileprivate var booksViewController: BooksViewController {
         R.storyboard.references.booksViewController()!.apply {
             $0.books = books
+            $0.bookSelectedHandler = { [weak self] book in
+                self?.referencesViewModel.getBookChapters(book)
+            }
         }
     }
     
     fileprivate var chaptersViewController: ChaptersViewController {
         R.storyboard.references.chaptersViewController()!.apply {
             $0.chapters = chapters
+            $0.chapterSelectedHandler = { [weak self] chapter in
+                self?.referencesViewModel.getChapterVerses(chapter)
+            }
         }
     }
     
     fileprivate var versesViewController: VersesViewController {
         R.storyboard.references.versesViewController()!.apply {
             $0.verses = verses
+            $0.verseSelectedHandler = { [weak self] verse in
+                self?.referencesViewModel.handleVerseSelected(verse)
+            }
         }
     }
+    
+    var dismissHandler: NoParamHandler?
     
     override func configureViews() {
         super.configureViews()
@@ -99,11 +110,22 @@ class ReferencesViewController: BaseBottomPopupViewController {
     override func setChildViewControllerObservers() {
         super.setChildViewControllerObservers()
         observeShowReferenceSegment()
+        observeShowReaderView()
     }
     
     fileprivate func observeShowReferenceSegment() {
         referencesViewModel.showReferenceSegment.bind { [weak self] segment in
             self?.showReferenceSegment(segment)
+        }.disposed(by: disposeBag)
+    }
+    
+    fileprivate func observeShowReaderView() {
+        referencesViewModel.showReaderView.bind { [weak self] show in
+            if show {
+                self?.dismissViewController {
+                    self?.dismissHandler?()
+                }
+            }
         }.disposed(by: disposeBag)
     }
     

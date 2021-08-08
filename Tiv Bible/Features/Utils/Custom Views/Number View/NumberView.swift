@@ -23,13 +23,9 @@ class NumberView: BaseView {
     }
     
     func activate(_ activate: Bool = true) {
-        if activate {
-            detailsView.backgroundColor = .accentColor
-            textLabel.textColor = .aLabel
-        } else {
-            detailsView.backgroundColor = .aSecondarySystemBackground
-            textLabel.textColor = .aSecondaryLabel
-        }
+        detailsView.backgroundColor = activate ? .accentColor?.withAlphaComponent(0.2) : .aSecondarySystemBackground
+        textLabel.textColor = activate ? .accentColor : .aSecondaryLabel
+        textLabel.font = activate ? .comfortaaBold(size: 15) : .comfortaaMedium(size: 14)
     }
 
 }

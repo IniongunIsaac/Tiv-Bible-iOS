@@ -47,4 +47,14 @@ struct PreferenceRepoImpl: IPreferenceRepo {
         set { preference.shouldReloadVerses = newValue }
     }
     
+    var selectedVerseNumber: Int {
+        get { preference.selectedVerseNumber }
+        set { preference.selectedVerseNumber = newValue }
+    }
+    
+    var shouldScrollToVerse: Bool {
+        get { preference.shouldScrollToVerse }
+        set { preference.shouldScrollToVerse = newValue }
+    }
+    
 }

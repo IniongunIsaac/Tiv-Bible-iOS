@@ -15,6 +15,7 @@ class ChaptersViewController: UIViewController {
     
     fileprivate let disposeBag = DisposeBag()
     var chapters = [Chapter]()
+    var chapterSelectedHandler: ((Chapter) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +36,17 @@ class ChaptersViewController: UIViewController {
             cell.configureView(chapter: chapter)
             
             cell.animateViewOnTapGesture { [weak self] in
-                
+                self?.handleChapterSelected(chapter)
             }
             
         }.disposed(by: disposeBag)
+    }
+    
+    fileprivate func handleChapterSelected(_ chapter: Chapter) {
+        chapter.isSelected = true
+        chapters.filter { $0.id != chapter.id }.forEach { $0.isSelected = false }
+        chaptersCollectionView.reloadData()
+        chapterSelectedHandler?(chapter)
     }
 
 }
@@ -55,7 +63,12 @@ extension ChaptersViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 150, height: collectionView.height)
+        let cellsPerRow = AppConstants.numberItemsPerRow
+        ///40 => paddingRight(20) + paddingLeft(20)
+        ///15 => spacing between cells
+        let cellWidth = width.int! - (40 + (15 * cellsPerRow))
+        
+        return CGSize(width: (cellWidth / cellsPerRow), height: 60)
     }
     
 }
