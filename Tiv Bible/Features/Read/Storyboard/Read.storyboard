@@ -115,7 +115,7 @@
                                 <rect key="frame" x="0.0" y="102.5" width="414" height="710.5"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7dS-jP-YDg">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="135.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="710.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="verseTableViewCell" rowHeight="67" id="RDv-cP-fqd" customClass="VerseTableViewCell" customModule="Tiv_Bible" customModuleProvider="target">
@@ -157,8 +157,8 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jea-rI-tpi" userLabel="Tap Actions View">
-                                        <rect key="frame" x="0.0" y="140.5" width="414" height="216"/>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jea-rI-tpi" userLabel="Tap Actions View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontal_line" translatesAutoresizingMaskIntoConstraints="NO" id="IxU-dj-uzN">
                                                 <rect key="frame" x="182" y="10" width="50" height="20"/>
@@ -418,8 +418,8 @@
                                             <constraint firstAttribute="trailing" secondItem="gQP-WR-apS" secondAttribute="trailing" constant="20" id="opk-n3-Rbt"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sur-bF-YPL" userLabel="Font Settings View">
-                                        <rect key="frame" x="0.0" y="361.5" width="414" height="349"/>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sur-bF-YPL" userLabel="Font Settings View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="349"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontal_line" translatesAutoresizingMaskIntoConstraints="NO" id="R3g-1h-niJ">
                                                 <rect key="frame" x="182" y="10" width="50" height="20"/>
@@ -901,6 +901,40 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gga-yW-LQu" customClass="IconView" customModule="Tiv_Bible" customModuleProvider="target">
+                                <rect key="frame" x="20" y="733" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="edE-BX-E38"/>
+                                    <constraint firstAttribute="height" constant="60" id="zCT-1K-ggO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="arrow_left_icon"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nN1-tO-iZJ" customClass="IconView" customModule="Tiv_Bible" customModuleProvider="target">
+                                <rect key="frame" x="334" y="733" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0zQ-hI-fzF"/>
+                                    <constraint firstAttribute="height" constant="60" id="eFD-Fu-5Lb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="arrow_right_icon"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4d1-9O-ls7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -908,16 +942,20 @@
                             <constraint firstItem="t1V-H7-1on" firstAttribute="leading" secondItem="4d1-9O-ls7" secondAttribute="leading" id="1j0-eg-rJB"/>
                             <constraint firstItem="t1V-H7-1on" firstAttribute="trailing" secondItem="4d1-9O-ls7" secondAttribute="trailing" id="6lr-Bu-6Ny"/>
                             <constraint firstItem="9fR-ZK-YX0" firstAttribute="top" secondItem="t1V-H7-1on" secondAttribute="bottom" id="7Nq-q1-fHB"/>
+                            <constraint firstItem="gga-yW-LQu" firstAttribute="leading" secondItem="4d1-9O-ls7" secondAttribute="leading" constant="20" id="H42-FI-BUP"/>
                             <constraint firstItem="4d1-9O-ls7" firstAttribute="trailing" secondItem="9fR-ZK-YX0" secondAttribute="trailing" id="KfC-s7-yHP"/>
                             <constraint firstItem="Uj7-vX-lyT" firstAttribute="top" secondItem="g9D-0l-Bkp" secondAttribute="top" id="Vvp-pk-9dn"/>
                             <constraint firstItem="0u9-CV-0pc" firstAttribute="trailing" secondItem="4d1-9O-ls7" secondAttribute="trailing" id="WcC-EZ-dNu"/>
                             <constraint firstItem="0u9-CV-0pc" firstAttribute="top" secondItem="9fR-ZK-YX0" secondAttribute="bottom" constant="8" id="WqC-tP-TgK"/>
                             <constraint firstItem="0u9-CV-0pc" firstAttribute="leading" secondItem="4d1-9O-ls7" secondAttribute="leading" id="YLl-7i-SQ5"/>
                             <constraint firstItem="0u9-CV-0pc" firstAttribute="bottom" secondItem="4d1-9O-ls7" secondAttribute="bottom" id="Z6y-Y5-o7D"/>
+                            <constraint firstItem="4d1-9O-ls7" firstAttribute="trailing" secondItem="nN1-tO-iZJ" secondAttribute="trailing" constant="20" id="et3-M1-b3P"/>
+                            <constraint firstItem="4d1-9O-ls7" firstAttribute="bottom" secondItem="gga-yW-LQu" secondAttribute="bottom" constant="20" id="fYl-hy-tja"/>
                             <constraint firstItem="Uj7-vX-lyT" firstAttribute="trailing" secondItem="4d1-9O-ls7" secondAttribute="trailing" id="fxv-dW-zKJ"/>
                             <constraint firstItem="t1V-H7-1on" firstAttribute="top" secondItem="4d1-9O-ls7" secondAttribute="top" id="h94-9i-BdS"/>
                             <constraint firstItem="9fR-ZK-YX0" firstAttribute="leading" secondItem="4d1-9O-ls7" secondAttribute="leading" id="urT-RW-2kr"/>
                             <constraint firstItem="Uj7-vX-lyT" firstAttribute="leading" secondItem="4d1-9O-ls7" secondAttribute="leading" id="z3V-j3-tHh"/>
+                            <constraint firstItem="4d1-9O-ls7" firstAttribute="bottom" secondItem="nN1-tO-iZJ" secondAttribute="bottom" constant="20" id="zKI-K1-ooU"/>
                             <constraint firstItem="t1V-H7-1on" firstAttribute="bottom" secondItem="Uj7-vX-lyT" secondAttribute="bottom" id="zYg-o4-vMo"/>
                         </constraints>
                     </view>
@@ -943,7 +981,9 @@
                         <outlet property="increaseFontSizeView" destination="8B7-lx-tp7" id="luQ-bp-uum"/>
                         <outlet property="largeLineSpacingView" destination="VDY-rn-MZG" id="Pxq-E9-b1N"/>
                         <outlet property="lightThemeView" destination="iIi-N6-wPs" id="RcE-uS-CHO"/>
+                        <outlet property="nextChapterView" destination="nN1-tO-iZJ" id="WdE-bS-9oi"/>
                         <outlet property="normalLineSpacingView" destination="Rgt-E9-ddo" id="JtJ-fy-04k"/>
+                        <outlet property="previousChapterView" destination="gga-yW-LQu" id="CgF-ed-uBW"/>
                         <outlet property="removeHighlightColorImageView" destination="Fy6-Dk-3J4" id="fGi-L8-syH"/>
                         <outlet property="selectedVersesLabel" destination="gVO-O9-LXM" id="czR-za-d3b"/>
                         <outlet property="shareView" destination="4R6-jD-qM0" id="dUH-8r-wbC"/>
@@ -1087,6 +1127,8 @@
     </scenes>
     <resources>
         <image name="arrow_icon" width="512" height="512"/>
+        <image name="arrow_left_icon" width="96" height="96"/>
+        <image name="arrow_right_icon" width="96" height="96"/>
         <image name="book" catalog="system" width="128" height="102"/>
         <image name="bookmark_icon" width="128" height="128"/>
         <image name="checkmark_icon" width="32" height="32"/>
@@ -1115,6 +1157,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

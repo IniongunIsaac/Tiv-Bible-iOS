@@ -195,6 +195,8 @@
 		148B0F4126BE5AB700B92B26 /* ReferenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148B0F4026BE5AB700B92B26 /* ReferenceView.xib */; };
 		148B0F4326BE5ACC00B92B26 /* ReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148B0F4226BE5ACC00B92B26 /* ReferenceView.swift */; };
 		148B0F4626BE5B1C00B92B26 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148B0F4526BE5B1C00B92B26 /* BaseView.swift */; };
+		1492E35726C08268008C9193 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492E35626C08268008C9193 /* IconView.swift */; };
+		1492E35926C08272008C9193 /* IconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1492E35826C08272008C9193 /* IconView.xib */; };
 		149531C62506773800A6E9DD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 149531C52506773800A6E9DD /* .gitignore */; };
 		149531CB2506783C00A6E9DD /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 149531CA2506783C00A6E9DD /* Podfile.lock */; };
 		149531CF2506792D00A6E9DD /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149531CE2506792D00A6E9DD /* R.generated.swift */; };
@@ -441,6 +443,8 @@
 		148B0F4026BE5AB700B92B26 /* ReferenceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReferenceView.xib; sourceTree = "<group>"; };
 		148B0F4226BE5ACC00B92B26 /* ReferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceView.swift; sourceTree = "<group>"; };
 		148B0F4526BE5B1C00B92B26 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		1492E35626C08268008C9193 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		1492E35826C08272008C9193 /* IconView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconView.xib; sourceTree = "<group>"; };
 		149531C52506773800A6E9DD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		149531CA2506783C00A6E9DD /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		149531CE2506792D00A6E9DD /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -1287,6 +1291,7 @@
 		148B0F3E26BE5A9200B92B26 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				1492E35526C0823A008C9193 /* Icon View */,
 				14BD529626C008D900AF3D80 /* Number View */,
 				148B0F4426BE5AD600B92B26 /* Base */,
 				148B0F3F26BE5AA100B92B26 /* Reference View */,
@@ -1309,6 +1314,15 @@
 				148B0F4526BE5B1C00B92B26 /* BaseView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		1492E35526C0823A008C9193 /* Icon View */ = {
+			isa = PBXGroup;
+			children = (
+				1492E35626C08268008C9193 /* IconView.swift */,
+				1492E35826C08272008C9193 /* IconView.xib */,
+			);
+			path = "Icon View";
 			sourceTree = "<group>";
 		};
 		14BD529626C008D900AF3D80 /* Number View */ = {
@@ -1539,6 +1553,7 @@
 				149531CB2506783C00A6E9DD /* Podfile.lock in Resources */,
 				148B0F2626BE357500B92B26 /* montserrat_regular.ttf in Resources */,
 				148B0F1B26BE357500B92B26 /* roboto_italic.ttf in Resources */,
+				1492E35926C08272008C9193 /* IconView.xib in Resources */,
 				148B0F1626BE357500B92B26 /* martel_sans_semibold.ttf in Resources */,
 				1440E082247D3CDE0037E68E /* More.storyboard in Resources */,
 				14377BFD246DE218005B0795 /* Assets.xcassets in Resources */,
@@ -1784,6 +1799,7 @@
 				14121D5624747A4D0073814F /* BaseName.swift in Sources */,
 				14121E2524792A5B0073814F /* PreferenceRepoImpl.swift in Sources */,
 				14121D65247515220073814F /* FontStyle.swift in Sources */,
+				1492E35726C08268008C9193 /* IconView.swift in Sources */,
 				14121D912476CAA20073814F /* IFontStyleDataSource.swift in Sources */,
 				14BD52A926C0184200AF3D80 /* ReferenceViewModelImpl.swift in Sources */,
 				14121DDE24772B130073814F /* ChapterRepoImpl.swift in Sources */,

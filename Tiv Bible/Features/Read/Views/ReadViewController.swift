@@ -40,6 +40,8 @@ class ReadViewController: BaseViewController {
     @IBOutlet weak var darkThemeView: UIView!
     @IBOutlet weak var lightThemeView: UIView!
     @IBOutlet weak var themesStackView: UIStackView!
+    @IBOutlet weak var previousChapterView: IconView!
+    @IBOutlet weak var nextChapterView: IconView!
     
     var readViewModel: IReadViewModel!
     override func getViewModel() -> BaseViewModel { readViewModel as! BaseViewModel }
@@ -49,6 +51,8 @@ class ReadViewController: BaseViewController {
     fileprivate var isShowingFontSettings = false
     fileprivate var shareableText: String { readViewModel.shareableSelectedVersesText }
     fileprivate var selectedVersesText = ""
+    fileprivate var showNextAndPreviousChapterViews = true
+    fileprivate lazy var nextAndPreviousChapterViews: [UIView] = { [previousChapterView, nextChapterView] }()
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -58,7 +62,8 @@ class ReadViewController: BaseViewController {
     override func configureViews() {
         super.configureViews()
         hideNavigationBar()
-        [tapActionsView, fontSettingsView].hideViews()
+        ([tapActionsView, fontSettingsView] + nextAndPreviousChapterViews).hideViews()
+        nextAndPreviousChapterViews.addClearBackground()
         switchAppTheme(type: readViewModel.currentTheme)
     }
     
@@ -137,6 +142,14 @@ class ReadViewController: BaseViewController {
         removeHighlightColorImageView.animateViewOnTapGesture { [weak self] in
             self?.readViewModel.removeHighlightsFromSelectedVerses()
         }
+        
+        previousChapterView.animateViewOnTapGesture(duration: 0.3) { [weak self] in
+            
+        }
+        
+        nextChapterView.animateViewOnTapGesture(duration: 0.3) { [weak self] in
+            
+        }
     }
     
     @IBAction func fontStyleButtonTapped(_ sender: UIButton) {
@@ -206,6 +219,32 @@ class ReadViewController: BaseViewController {
             
         }.disposed(by: disposeBag)
         
+//        versesTableView.rx.willBeginDragging.bind { [weak self] in
+//            guard let self = self else { return }
+//            [self.nextChapterView, self.previousChapterView].forEach {
+//                $0?.fadeIn()
+//            }
+//        }.disposed(by: disposeBag)
+        
+        versesTableView.rx.didEndDragging.bind { [weak self] _ in
+            self?.handleVersesTableDraggingEnded()
+        }.disposed(by: disposeBag)
+        
+    }
+    
+    fileprivate func handleVersesTableDraggingEnded() {
+        if showNextAndPreviousChapterViews {
+            
+            showNextAndPreviousChapterViews = false
+            nextAndPreviousChapterViews.forEach { $0.fadeIn() }
+            
+            runAfter(10) { [weak self] in
+                guard let self = self else { return }
+                self.nextAndPreviousChapterViews.forEach { $0.fadeOut() }
+                self.showNextAndPreviousChapterViews = true
+            }
+            
+        }
     }
     
     fileprivate func handleVerseTapped(_ verse: Verse) {

@@ -49,7 +49,6 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     var highlightColorsAndFontStyles: PublishSubject<(highlightColors: [HighlightColor], fontStyles: [FontStyle])> = PublishSubject()
     fileprivate var fontStyles = [FontStyle]()
     
-    //fileprivate var currentVerse: Verse?
     fileprivate var currentChapter: Chapter?
     fileprivate var currentBook: Book?
     fileprivate var newBookNameAndChapterNumber = "Genese:1"
@@ -167,23 +166,6 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     fileprivate func saveHistory(chapter: Chapter) {
         subscribe(historyRepo.insertHistory(history: [History(book: currentBook!, chapter: chapter)]))
     }
-    
-//    fileprivate func getSavedVerse() {
-//        getVersesHighlights()
-//
-//        if preferenceRepo.currentVerseId.isEmpty {
-//            verseNumber.onNext(0)
-//        } else {
-//            getVerse(verseId: preferenceRepo.currentVerseId)
-//        }
-//    }
-//
-//    fileprivate func getVerse(verseId: String) {
-//        subscribe(verseRepo.getVerseById(verseId: verseId), success: { [weak self] verse in
-//            self?.currentVerse = verse
-//            self?.verseNumber.onNext(verse.number)
-//        })
-//    }
     
     fileprivate func getVersesHighlights() {
         highlightsList.removeAll()
