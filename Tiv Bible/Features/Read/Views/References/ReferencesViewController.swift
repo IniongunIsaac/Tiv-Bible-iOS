@@ -6,18 +6,26 @@
 //  Copyright © 2021 Iniongun Group. All rights reserved.
 //
 
-import BottomPopup
+import UIKit
 
-class ReferencesViewController: BottomPopupViewController {
+class ReferencesViewController: BaseBottomPopupViewController {
     
     @IBOutlet weak var referencesStackView: UIStackView!
     @IBOutlet weak var booksView: ReferenceView!
     @IBOutlet weak var chaptersView: ReferenceView!
     @IBOutlet weak var versesView: ReferenceView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var readViewModel: IReadViewModel!
+    override func getViewModel() -> BaseViewModel { readViewModel as! BaseViewModel }
+    override var views: [UIView] { [booksView, chaptersView, versesView] }
+    override var horizontalProgressBarYPosition: CGFloat { referencesStackView.maxY - 5 }
+    
+    override func configureViews() {
+        super.configureViews()
         [booksView, chaptersView, versesView].addClearBackground()
+    }
+    
+    override func setupTapGestures() {
         booksView.animateViewOnTapGesture { [weak self] in
             self?.booksView.activate()
             self?.chaptersView.activate(false)
@@ -36,8 +44,4 @@ class ReferencesViewController: BottomPopupViewController {
             self?.versesView.activate()
         }
     }
-    
-    override var popupTopCornerRadius: CGFloat { 20 }
-    
-    override var popupHeight: CGFloat { height - 100 }
 }

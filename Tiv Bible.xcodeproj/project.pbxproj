@@ -198,6 +198,11 @@
 		149531C62506773800A6E9DD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 149531C52506773800A6E9DD /* .gitignore */; };
 		149531CB2506783C00A6E9DD /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 149531CA2506783C00A6E9DD /* Podfile.lock */; };
 		149531CF2506792D00A6E9DD /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149531CE2506792D00A6E9DD /* R.generated.swift */; };
+		14BD528A26BFFA8F00AF3D80 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD528926BFFA8F00AF3D80 /* BooksViewController.swift */; };
+		14BD528D26BFFADF00AF3D80 /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD528C26BFFADF00AF3D80 /* ChaptersViewController.swift */; };
+		14BD528F26BFFAF100AF3D80 /* VersesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD528E26BFFAF100AF3D80 /* VersesViewController.swift */; };
+		14BD529126BFFE3600AF3D80 /* BaseBottomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD529026BFFE3600AF3D80 /* BaseBottomPopupViewController.swift */; };
+		14BD529326BFFEC400AF3D80 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD529226BFFEC400AF3D80 /* ViewControllerType.swift */; };
 		14CD219E247D5D0B00EF0A32 /* IReadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD219D247D5D0B00EF0A32 /* IReadViewModel.swift */; };
 		14CD21A0247D5D3400EF0A32 /* ReadViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */; };
 		14CD21A3247D606C00EF0A32 /* ButtonWithBorderAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21A2247D606C00EF0A32 /* ButtonWithBorderAttributes.swift */; };
@@ -428,6 +433,11 @@
 		149531C52506773800A6E9DD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		149531CA2506783C00A6E9DD /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		149531CE2506792D00A6E9DD /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		14BD528926BFFA8F00AF3D80 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		14BD528C26BFFADF00AF3D80 /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
+		14BD528E26BFFAF100AF3D80 /* VersesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersesViewController.swift; sourceTree = "<group>"; };
+		14BD529026BFFE3600AF3D80 /* BaseBottomPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBottomPopupViewController.swift; sourceTree = "<group>"; };
+		14BD529226BFFEC400AF3D80 /* ViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerType.swift; sourceTree = "<group>"; };
 		14CD219D247D5D0B00EF0A32 /* IReadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IReadViewModel.swift; sourceTree = "<group>"; };
 		14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewModelImpl.swift; sourceTree = "<group>"; };
 		14CD21A2247D606C00EF0A32 /* ButtonWithBorderAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithBorderAttributes.swift; sourceTree = "<group>"; };
@@ -1087,6 +1097,7 @@
 			children = (
 				1440E0552479EF1A0037E68E /* BaseViewModel.swift */,
 				1440E06B247AB7A80037E68E /* BaseViewController.swift */,
+				14BD529026BFFE3600AF3D80 /* BaseBottomPopupViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1215,7 +1226,7 @@
 				1462CD332481C13E00063892 /* FontStyleCollectionViewCell.swift */,
 				1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */,
 				1470728026BBEC520088C8D3 /* TakeNotesDialogViewController.swift */,
-				148B0F3C26BE59A500B92B26 /* ReferencesViewController.swift */,
+				14BD528B26BFFAAC00AF3D80 /* References */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1244,6 +1255,7 @@
 				1488103426B9D692007096C4 /* ScopeFunctions.swift */,
 				1470728226BC06460088C8D3 /* TextViewWithPlaceholder.swift */,
 				1487476D26BD551700DA5155 /* Numbers+Extensions.swift */,
+				14BD529226BFFEC400AF3D80 /* ViewControllerType.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -1272,6 +1284,17 @@
 				148B0F4526BE5B1C00B92B26 /* BaseView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		14BD528B26BFFAAC00AF3D80 /* References */ = {
+			isa = PBXGroup;
+			children = (
+				148B0F3C26BE59A500B92B26 /* ReferencesViewController.swift */,
+				14BD528926BFFA8F00AF3D80 /* BooksViewController.swift */,
+				14BD528C26BFFADF00AF3D80 /* ChaptersViewController.swift */,
+				14BD528E26BFFAF100AF3D80 /* VersesViewController.swift */,
+			);
+			path = References;
 			sourceTree = "<group>";
 		};
 		14CD21A1247D605B00EF0A32 /* IBDesignables */ = {
@@ -1657,6 +1680,7 @@
 				1462CD3224819AB900063892 /* HighlightColorCollectionViewCell.swift in Sources */,
 				14121D842476700C0073814F /* BookDataSourceImpl.swift in Sources */,
 				14CD21B3247E2B5900EF0A32 /* SearchDependencyInjectionGraph.swift in Sources */,
+				14BD529126BFFE3600AF3D80 /* BaseBottomPopupViewController.swift in Sources */,
 				1462CD342481C13E00063892 /* FontStyleCollectionViewCell.swift in Sources */,
 				148862CD26B7E6FD0004F4C3 /* Preference+Utils.swift in Sources */,
 				14121D7C2475B43B0073814F /* AudioSpeedDataSourceImpl.swift in Sources */,
@@ -1689,6 +1713,7 @@
 				1440E068247AAF6F0037E68E /* IProgressLoader.swift in Sources */,
 				1440E08F247D422C0037E68E /* SearchViewController.swift in Sources */,
 				14121DA52476D6C50073814F /* INoteDataSource.swift in Sources */,
+				14BD528F26BFFAF100AF3D80 /* VersesViewController.swift in Sources */,
 				1440E0562479EF1A0037E68E /* BaseViewModel.swift in Sources */,
 				14121DAC2476FB220073814F /* OtherDataSourceImpl.swift in Sources */,
 				14121D7324752C8E0073814F /* Setting.swift in Sources */,
@@ -1704,6 +1729,7 @@
 				148B0F4626BE5B1C00B92B26 /* BaseView.swift in Sources */,
 				14121DC5247712A40073814F /* VerseDataSourceImpl.swift in Sources */,
 				14121D7124752C3A0073814F /* RecentSearch.swift in Sources */,
+				14BD528D26BFFADF00AF3D80 /* ChaptersViewController.swift in Sources */,
 				14121DFF247734010073814F /* IRecentSearchRepo.swift in Sources */,
 				14121E18247737BA0073814F /* IVersionRepo.swift in Sources */,
 				14CD21A9247DA61900EF0A32 /* SearchViewModelImpl.swift in Sources */,
@@ -1728,6 +1754,7 @@
 				14121D89247683D00073814F /* BookmarkDataSourceImpl.swift in Sources */,
 				148B0F3D26BE59A500B92B26 /* ReferencesViewController.swift in Sources */,
 				14CD21A3247D606C00EF0A32 /* ButtonWithBorderAttributes.swift in Sources */,
+				14BD529326BFFEC400AF3D80 /* ViewControllerType.swift in Sources */,
 				14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */,
 				14CD219E247D5D0B00EF0A32 /* IReadViewModel.swift in Sources */,
 				1440E08D247D420A0037E68E /* ReadViewController.swift in Sources */,
@@ -1740,6 +1767,7 @@
 				14121D8C2476AAF50073814F /* IChapterDataSource.swift in Sources */,
 				1462CD3024819AA100063892 /* TapActionCollectionViewCell.swift in Sources */,
 				14121DD22477262C0073814F /* IBookRepo.swift in Sources */,
+				14BD528A26BFFA8F00AF3D80 /* BooksViewController.swift in Sources */,
 				14121E2324792A310073814F /* IPreferenceRepo.swift in Sources */,
 				14CD21B1247E28F400EF0A32 /* ReadDependencyInjectionGraph.swift in Sources */,
 				14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */,

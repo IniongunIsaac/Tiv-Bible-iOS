@@ -58,12 +58,11 @@ class ReadViewController: BaseViewController {
     override func configureViews() {
         super.configureViews()
         hideNavigationBar()
-        setTapGestures()
         [tapActionsView, fontSettingsView].hideViews()
         switchAppTheme(type: readViewModel.currentTheme)
     }
     
-    fileprivate func setTapGestures() {
+    override func setupTapGestures() {
         bookChapterView.animateViewOnTapGesture { [weak self] in
             self?.presentViewController(R.storyboard.read.referencesViewController()!)
         }

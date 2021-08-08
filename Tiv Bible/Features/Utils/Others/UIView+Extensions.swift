@@ -177,6 +177,24 @@ extension UIView {
     
     var height: CGFloat { frame.size.height }
     
+    var minY: CGFloat { frame.minY }
+    
+    var maxY: CGFloat { frame.maxY }
+    
+    var minX: CGFloat { frame.minX }
+    
+    var maxX: CGFloat { frame.maxX }
+    
+    var x: CGFloat {
+        get { frame.origin.x }
+        set { frame.origin.x = newValue }
+    }
+    
+    var y: CGFloat {
+        get { frame.origin.y }
+        set { frame.origin.y = newValue }
+    }
+    
     func addClearBackground() {
         backgroundColor = .clear
     }

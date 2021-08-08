@@ -1,29 +1,35 @@
 //
-//  BaseViewController.swift
+//  BaseBottomPopupViewController.swift
 //  Tiv Bible
 //
-//  Created by Isaac Iniongun on 24/05/2020.
-//  Copyright © 2020 Iniongun Group. All rights reserved.
+//  Created by Isaac Iniongun on 08/08/2021.
+//  Copyright © 2021 Iniongun Group. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import BottomPopup
 import RxSwift
 import RxCocoa
 import HorizontalProgressBar
 import DeviceKit
 
-class BaseViewController: UIViewController {
+class BaseBottomPopupViewController: BottomPopupViewController {
     
-    let disposeBag = DisposeBag()
+    public let disposeBag = DisposeBag()
     var progressBar: HorizontalProgressbar?
-    var horizontalProgressBarYPosition: CGFloat {
-        Device.current.isOneOf(Device.allXSeriesDevices + Device.allSimulatorXSeriesDevices) ? 88 : 64
-    }
+    
     var views: [UIView] { [] }
+    
+    var horizontalProgressBarYPosition: CGFloat { 10 }
+    
     var progressBarColor: UIColor { .primaryColor }
     
+    override var popupHeight: CGFloat { height - 100 }
+    
+    override var popupTopCornerRadius: CGFloat { 20 }
+    
     func getViewModel() -> BaseViewModel {
-        preconditionFailure("BaseViewController subclass must provide a subclass of BaseViewModel")
+        preconditionFailure("BaseBottomPopupViewController subclass must provide a subclass of BaseViewModel")
     }
     
     override func viewDidLoad() {
@@ -48,7 +54,7 @@ class BaseViewController: UIViewController {
         view.addSubview(progressBar!)
         progressBar?.noOfChunks = 1  // You can provide number of Chunks/Strips appearing over the animation. By default it is 3
         progressBar?.kChunkWdith = Double(view.frame.width) - 20 // Adjust the width of Chunks/Strips
-        progressBar?.progressTintColor = .primaryColor  // To change the Chunks color
+        progressBar?.progressTintColor = progressBarColor  // To change the Chunks color
         progressBar?.trackTintColor = UIColor.darkGray  // To change background color of loading indicator
     }
     
@@ -67,20 +73,20 @@ class BaseViewController: UIViewController {
     private func setObservers() {
         observeLoadingState()
         observeErrorState()
-        observeAlerts()
+        observeAlertMessages()
         setChildViewControllerObservers()
     }
     
     func setChildViewControllerObservers() {}
     
-    private func observeAlerts() {
-        getViewModel().alertMessage.bind { [weak self] value in
+    private func observeAlertMessages() {
+        getViewModel().alertMessageOnBottomSheet.asObservable().bind { [weak self] value in
             self?.showAlert(message: value.message, type: value.type)
         }.disposed(by: disposeBag)
     }
     
     private func observeLoadingState() {
-        getViewModel().isLoading.bind { [weak self] value in
+        getViewModel().isLoadingOnBottomSheet.asObservable().bind { [weak self] value in
             if value {
                 self?.showLoading()
             } else {
@@ -90,21 +96,26 @@ class BaseViewController: UIViewController {
     }
     
     private func observeErrorState() {
-        getViewModel().error.asObserver().bind { [weak self] error in
-            self?.showAlert(message: error.localizedDescription, type: .error)
+        getViewModel().errorOnBottomSheet.asObserver().bind { [weak self] error in
+            let message = (error as NSError).code == 13 ? "It appears you're offline, please check your internet connection and try again!" : error.localizedDescription
+            self?.showAlert(message: message, type: .error)
         }.disposed(by: disposeBag)
     }
     
-    private func showLoading() {
+    func showLoading() {
+        enableSwipeBackToPopGesture(false)
+        views.disableUserInteraction()
+        hideLoading()
+        hideAlert()
         createHorizontalProgressBar()
         progressBar?.startAnimating()
-        views.disableUserInteraction()
         disableNavBar()
     }
     
-    private func hideLoading() {
-        progressBar?.stopAnimating()
+    func hideLoading() {
+        enableSwipeBackToPopGesture()
         views.enableUserInteraction()
+        progressBar?.stopAnimating()
         enableNavBar()
     }
     
@@ -130,5 +141,5 @@ class BaseViewController: UIViewController {
         hideAlert()
         getViewModel().didDisappear()
     }
-
+    
 }
