@@ -203,6 +203,11 @@
 		14BD528F26BFFAF100AF3D80 /* VersesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD528E26BFFAF100AF3D80 /* VersesViewController.swift */; };
 		14BD529126BFFE3600AF3D80 /* BaseBottomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD529026BFFE3600AF3D80 /* BaseBottomPopupViewController.swift */; };
 		14BD529326BFFEC400AF3D80 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD529226BFFEC400AF3D80 /* ViewControllerType.swift */; };
+		14BD529526C007B500AF3D80 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD529426C007B500AF3D80 /* BookTableViewCell.swift */; };
+		14BD529826C008EB00AF3D80 /* NumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14BD529726C008EB00AF3D80 /* NumberView.xib */; };
+		14BD529A26C0091900AF3D80 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD529926C0091900AF3D80 /* NumberView.swift */; };
+		14BD529C26C00D3900AF3D80 /* ChapterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD529B26C00D3900AF3D80 /* ChapterCollectionViewCell.swift */; };
+		14BD529E26C00E3C00AF3D80 /* VerseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD529D26C00E3C00AF3D80 /* VerseCollectionViewCell.swift */; };
 		14CD219E247D5D0B00EF0A32 /* IReadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD219D247D5D0B00EF0A32 /* IReadViewModel.swift */; };
 		14CD21A0247D5D3400EF0A32 /* ReadViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */; };
 		14CD21A3247D606C00EF0A32 /* ButtonWithBorderAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21A2247D606C00EF0A32 /* ButtonWithBorderAttributes.swift */; };
@@ -438,6 +443,11 @@
 		14BD528E26BFFAF100AF3D80 /* VersesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersesViewController.swift; sourceTree = "<group>"; };
 		14BD529026BFFE3600AF3D80 /* BaseBottomPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBottomPopupViewController.swift; sourceTree = "<group>"; };
 		14BD529226BFFEC400AF3D80 /* ViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerType.swift; sourceTree = "<group>"; };
+		14BD529426C007B500AF3D80 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		14BD529726C008EB00AF3D80 /* NumberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberView.xib; sourceTree = "<group>"; };
+		14BD529926C0091900AF3D80 /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		14BD529B26C00D3900AF3D80 /* ChapterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCollectionViewCell.swift; sourceTree = "<group>"; };
+		14BD529D26C00E3C00AF3D80 /* VerseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseCollectionViewCell.swift; sourceTree = "<group>"; };
 		14CD219D247D5D0B00EF0A32 /* IReadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IReadViewModel.swift; sourceTree = "<group>"; };
 		14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewModelImpl.swift; sourceTree = "<group>"; };
 		14CD21A2247D606C00EF0A32 /* ButtonWithBorderAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithBorderAttributes.swift; sourceTree = "<group>"; };
@@ -1263,6 +1273,7 @@
 		148B0F3E26BE5A9200B92B26 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				14BD529626C008D900AF3D80 /* Number View */,
 				148B0F4426BE5AD600B92B26 /* Base */,
 				148B0F3F26BE5AA100B92B26 /* Reference View */,
 			);
@@ -1293,8 +1304,20 @@
 				14BD528926BFFA8F00AF3D80 /* BooksViewController.swift */,
 				14BD528C26BFFADF00AF3D80 /* ChaptersViewController.swift */,
 				14BD528E26BFFAF100AF3D80 /* VersesViewController.swift */,
+				14BD529426C007B500AF3D80 /* BookTableViewCell.swift */,
+				14BD529B26C00D3900AF3D80 /* ChapterCollectionViewCell.swift */,
+				14BD529D26C00E3C00AF3D80 /* VerseCollectionViewCell.swift */,
 			);
 			path = References;
+			sourceTree = "<group>";
+		};
+		14BD529626C008D900AF3D80 /* Number View */ = {
+			isa = PBXGroup;
+			children = (
+				14BD529726C008EB00AF3D80 /* NumberView.xib */,
+				14BD529926C0091900AF3D80 /* NumberView.swift */,
+			);
+			path = "Number View";
 			sourceTree = "<group>";
 		};
 		14CD21A1247D605B00EF0A32 /* IBDesignables */ = {
@@ -1442,6 +1465,7 @@
 				148B0F1326BE357500B92B26 /* montserrat_alternates_bold.ttf in Resources */,
 				148B0F3926BE357500B92B26 /* martel_sans_light.ttf in Resources */,
 				1440E06E247ABA040037E68E /* Splash.storyboard in Resources */,
+				14BD529826C008EB00AF3D80 /* NumberView.xib in Resources */,
 				148B0F0E26BE357500B92B26 /* comfortaa_bold.ttf in Resources */,
 				148B0F2826BE357500B92B26 /* martel_sans_extralight.ttf in Resources */,
 				14377C00246DE218005B0795 /* LaunchScreen.storyboard in Resources */,
@@ -1641,6 +1665,7 @@
 				14121D8224766EB60073814F /* IBookDataSource.swift in Sources */,
 				14121DCA247717D70073814F /* VersionDataSourceImpl.swift in Sources */,
 				14121E1C24788F0D0073814F /* IPreference.swift in Sources */,
+				14BD529526C007B500AF3D80 /* BookTableViewCell.swift in Sources */,
 				148862CF26B7E92B0004F4C3 /* BaseRealmDatasource.swift in Sources */,
 				14121E2924792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift in Sources */,
 				14121E01247734270073814F /* RecentSearchRepoImpl.swift in Sources */,
@@ -1661,6 +1686,7 @@
 				14121D982476CD110073814F /* HighlightColorDataSourceImpl.swift in Sources */,
 				14121DEB24772E5A0073814F /* IHighlightRepo.swift in Sources */,
 				148862D126B7E9EE0004F4C3 /* UIViewController+Extensions.swift in Sources */,
+				14BD529E26C00E3C00AF3D80 /* VerseCollectionViewCell.swift in Sources */,
 				14121DB12477091A0073814F /* RecentSearchDataSourceImpl.swift in Sources */,
 				14121DF7247732D70073814F /* NoteRepoImpl.swift in Sources */,
 				14121DE124772C900073814F /* IFontStyleRepo.swift in Sources */,
@@ -1714,6 +1740,7 @@
 				1440E08F247D422C0037E68E /* SearchViewController.swift in Sources */,
 				14121DA52476D6C50073814F /* INoteDataSource.swift in Sources */,
 				14BD528F26BFFAF100AF3D80 /* VersesViewController.swift in Sources */,
+				14BD529A26C0091900AF3D80 /* NumberView.swift in Sources */,
 				1440E0562479EF1A0037E68E /* BaseViewModel.swift in Sources */,
 				14121DAC2476FB220073814F /* OtherDataSourceImpl.swift in Sources */,
 				14121D7324752C8E0073814F /* Setting.swift in Sources */,
@@ -1721,6 +1748,7 @@
 				1440E076247BF93B0037E68E /* SplashDependencyInjectionGraph.swift in Sources */,
 				1440E061247AACAA0037E68E /* UIView+Extensions.swift in Sources */,
 				14121D7A2475B41D0073814F /* IAudioSpeedDataSource.swift in Sources */,
+				14BD529C26C00D3900AF3D80 /* ChapterCollectionViewCell.swift in Sources */,
 				1488103526B9D692007096C4 /* ScopeFunctions.swift in Sources */,
 				14121E152477371A0073814F /* VerseRepoImpl.swift in Sources */,
 				1440E074247BBE850037E68E /* UIColor+Extension.swift in Sources */,

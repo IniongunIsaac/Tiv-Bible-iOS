@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import RxSwift
 
 class BooksViewController: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var booksTableView: UITableView!
+    
+    fileprivate let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

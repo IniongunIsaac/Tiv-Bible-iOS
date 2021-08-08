@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import RxSwift
 
 class VersesViewController: UIViewController {
 
+    @IBOutlet weak var versesCollectionView: UICollectionView!
+    
+    fileprivate let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
