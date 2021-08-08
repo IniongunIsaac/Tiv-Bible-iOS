@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h41-eU-RPg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HBa-F0-Bcn">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -23,24 +23,6 @@
     </customFonts>
     <scenes>
         <!--Read-->
-        <scene sceneID="DH9-Rr-Dfz">
-            <objects>
-                <navigationController id="h41-eU-RPg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Read" image="book" catalog="system" id="tj7-NT-17k"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LkO-ru-dhy">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="HBa-F0-Bcn" kind="relationship" relationship="rootViewController" id="E4Z-mW-Lb2"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kht-BK-rK1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-341" y="126"/>
-        </scene>
-        <!--Read View Controller-->
         <scene sceneID="FJO-lR-I22">
             <objects>
                 <viewController storyboardIdentifier="readViewController" id="HBa-F0-Bcn" customClass="ReadViewController" customModule="Tiv_Bible" customModuleProvider="target" sceneMemberID="viewController">
@@ -939,8 +921,10 @@
                             <constraint firstItem="t1V-H7-1on" firstAttribute="bottom" secondItem="Uj7-vX-lyT" secondAttribute="bottom" id="zYg-o4-vMo"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Read" image="book" catalog="system" id="uPB-n1-sbg"/>
                     <navigationItem key="navigationItem" id="VhH-Pm-uSv"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bookChapterLabel" destination="FSG-2f-3kF" id="Fi6-8U-MiA"/>
                         <outlet property="bookChapterView" destination="hRi-NX-C8y" id="yoR-gN-dXF"/>
