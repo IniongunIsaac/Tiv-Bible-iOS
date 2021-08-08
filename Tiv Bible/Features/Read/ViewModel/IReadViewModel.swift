@@ -58,4 +58,6 @@ protocol IReadViewModel: Scopable {
     
     func removeHighlightsFromSelectedVerses()
     
+    func getChapterVerses(number: Int)
+    
 }

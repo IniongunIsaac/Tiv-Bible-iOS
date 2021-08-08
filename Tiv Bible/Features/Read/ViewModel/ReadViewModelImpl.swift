@@ -311,4 +311,39 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         })
     }
     
+    func getChapterVerses(number: Int) {
+        guard let book = currentBook, let chapter = currentChapter else {
+            return
+        }
+        let chapterNumber = chapter.chapterNumber + number
+        
+        if chapterNumber <= 0 {
+            showMessage("You're currently on the first chapter!", type: .error)
+        } else if chapterNumber > chapters.count {
+            showMessage("You're currently on the last chapter!", type: .error)
+        } else {
+            
+            if let chapter = book.chapters.first(where: { $0.chapterNumber == chapterNumber }) {
+                currentChapter = chapter
+                preferenceRepo.shouldReloadVerses = true
+                preferenceRepo.currentChapterId = chapter.id
+                clearSelectedVerses()
+                getCurrentVerses(chapterId: chapter.id)
+                saveHistory()
+            }
+            
+        }
+    }
+    
+    fileprivate func clearSelectedVerses() {
+        selectedVerses.removeAll()
+        shareableSelectedVersesText = ""
+        selectedVersesText.onNext("")
+    }
+    
+    fileprivate func saveHistory() {
+        let history = History(book: currentBook!, chapter: currentChapter!)
+        subscribe(historyRepo.insertHistory(history: [history]))
+    }
+    
 }

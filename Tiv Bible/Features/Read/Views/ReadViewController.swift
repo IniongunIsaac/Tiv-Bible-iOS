@@ -45,7 +45,7 @@ class ReadViewController: BaseViewController {
     
     var readViewModel: IReadViewModel!
     override func getViewModel() -> BaseViewModel { readViewModel as! BaseViewModel }
-    override var views: [UIView] { [bookChapterView, tapActionsView, fontSettingsView, shareView, bookmarkView, copyView, takeNotesView, closeTapActionsImageView, closeFontSettingsImageView, systemThemeView, darkThemeView, lightThemeView, goToSettingsView, increaseFontSizeView, decreaseFontSizeView, smallLineSpacingView, normalLineSpacingView, largeLineSpacingView, removeHighlightColorImageView] }
+    override var views: [UIView] { [bookChapterView, tapActionsView, fontSettingsView, shareView, bookmarkView, copyView, takeNotesView, closeTapActionsImageView, closeFontSettingsImageView, systemThemeView, darkThemeView, lightThemeView, goToSettingsView, increaseFontSizeView, decreaseFontSizeView, smallLineSpacingView, normalLineSpacingView, largeLineSpacingView, removeHighlightColorImageView, previousChapterView, nextChapterView] }
     
     fileprivate var isShowingTapActions = false
     fileprivate var isShowingFontSettings = false
@@ -144,11 +144,11 @@ class ReadViewController: BaseViewController {
         }
         
         previousChapterView.animateViewOnTapGesture(duration: 0.3) { [weak self] in
-            
+            self?.readViewModel.getChapterVerses(number: -1)
         }
         
         nextChapterView.animateViewOnTapGesture(duration: 0.3) { [weak self] in
-            
+            self?.readViewModel.getChapterVerses(number: 1)
         }
     }
     
@@ -218,13 +218,6 @@ class ReadViewController: BaseViewController {
             }
             
         }.disposed(by: disposeBag)
-        
-//        versesTableView.rx.willBeginDragging.bind { [weak self] in
-//            guard let self = self else { return }
-//            [self.nextChapterView, self.previousChapterView].forEach {
-//                $0?.fadeIn()
-//            }
-//        }.disposed(by: disposeBag)
         
         versesTableView.rx.didEndDragging.bind { [weak self] _ in
             self?.handleVersesTableDraggingEnded()
