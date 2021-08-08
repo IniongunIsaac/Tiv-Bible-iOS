@@ -15,7 +15,10 @@ import RealmSwift
     dynamic var numberOfVerses = 0
     dynamic var testament: Testament?
     dynamic var version: Version?
+    dynamic var isSelected = false
     let chapters = List<Chapter>()
+    
+    override static func ignoredProperties() -> [String] { ["isSelected"] }
     
     var bookName: String {
         return name.lowercased().capitalized

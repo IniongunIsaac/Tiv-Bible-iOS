@@ -1,0 +1,62 @@
+//
+//  VersesViewController.swift
+//  Tiv Bible
+//
+//  Created by Isaac Iniongun on 08/08/2021.
+//  Copyright © 2021 Iniongun Group. All rights reserved.
+//
+
+import UIKit
+import RxSwift
+
+class VersesViewController: UIViewController {
+
+    @IBOutlet weak var versesCollectionView: UICollectionView!
+    
+    fileprivate let disposeBag = DisposeBag()
+    var verses = [Verse]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureViews()
+    }
+    
+    fileprivate func configureViews() {
+        setupVersesCollectionView()
+    }
+    
+    fileprivate func setupVersesCollectionView() {
+        versesCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
+        
+        verses.asObservable.map({ $0.isEmpty }).distinctUntilChanged().bind(to: versesCollectionView.rx.isEmpty(message: "Verses for selected chapter will be shown here!")).disposed(by: disposeBag)
+        
+        verses.asObservable.bind(to: versesCollectionView.rx.items(cellIdentifier: R.reuseIdentifier.verseCollectionViewCell.identifier, cellType: VerseCollectionViewCell.self)) { row, verse, cell in
+            
+            cell.configureView(verse: verse)
+            
+            cell.animateViewOnTapGesture { [weak self] in
+                
+            }
+            
+        }.disposed(by: disposeBag)
+    }
+
+}
+
+
+//MARK: - UICollectionViewDelegateFlowLayout
+extension VersesViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        15
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        15
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: 150, height: collectionView.height)
+    }
+    
+}

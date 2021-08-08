@@ -4,6 +4,7 @@ PODS:
   - BEMCheckBox (1.4.1)
   - BottomPopup (0.7.0)
   - DeviceKit (2.3.0)
+  - Differentiator (5.0.0)
   - DynamicBlurView (4.1.0)
   - HorizontalProgressBar (1.0.5)
   - IQKeyboardManagerSwift (6.5.6)
@@ -15,6 +16,10 @@ PODS:
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxRelay (6.2.0):
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
@@ -42,6 +47,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - PopupDialog
   - R.swift
+  - RxDataSources
   - RxSwiftExt
   - SwiftRandom
   - Swinject
@@ -55,6 +61,7 @@ SPEC REPOS:
     - BEMCheckBox
     - BottomPopup
     - DeviceKit
+    - Differentiator
     - DynamicBlurView
     - HorizontalProgressBar
     - IQKeyboardManagerSwift
@@ -62,6 +69,7 @@ SPEC REPOS:
     - R.swift
     - R.swift.Library
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
     - RxSwiftExt
@@ -85,6 +93,7 @@ SPEC CHECKSUMS:
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   BottomPopup: fe3e284628532f99093ae68c592c6b9d392c972d
   DeviceKit: da103891aa928d89f64ea8dd8aca738c5f3d8ac0
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   HorizontalProgressBar: f0e3d36051656651d1430d2cf5e0146fc4895f15
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
@@ -92,6 +101,7 @@ SPEC CHECKSUMS:
   R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
@@ -100,6 +110,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: fe54ea9494a75348b1f3126e5e278e674f5684ad
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: c0790110b105790c44cbee232bae7d82ee628878
+PODFILE CHECKSUM: 41b71af14be949261250c367c68ec752b922c315
 
 COCOAPODS: 1.10.2

@@ -208,6 +208,12 @@
 		14BD529A26C0091900AF3D80 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD529926C0091900AF3D80 /* NumberView.swift */; };
 		14BD529C26C00D3900AF3D80 /* ChapterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD529B26C00D3900AF3D80 /* ChapterCollectionViewCell.swift */; };
 		14BD529E26C00E3C00AF3D80 /* VerseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD529D26C00E3C00AF3D80 /* VerseCollectionViewCell.swift */; };
+		14BD52A126C012A400AF3D80 /* ReferenceSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD52A026C012A400AF3D80 /* ReferenceSegment.swift */; };
+		14BD52A726C0182900AF3D80 /* IReferenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD52A626C0182900AF3D80 /* IReferenceViewModel.swift */; };
+		14BD52A926C0184200AF3D80 /* ReferenceViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD52A826C0184200AF3D80 /* ReferenceViewModelImpl.swift */; };
+		14BD52AB26C0189600AF3D80 /* References.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BD52AA26C0189600AF3D80 /* References.storyboard */; };
+		14BD52AD26C01CF900AF3D80 /* ReferencesDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD52AC26C01CF900AF3D80 /* ReferencesDI.swift */; };
+		14BD52AF26C027C100AF3D80 /* RxView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD52AE26C027C100AF3D80 /* RxView+Extensions.swift */; };
 		14CD219E247D5D0B00EF0A32 /* IReadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD219D247D5D0B00EF0A32 /* IReadViewModel.swift */; };
 		14CD21A0247D5D3400EF0A32 /* ReadViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */; };
 		14CD21A3247D606C00EF0A32 /* ButtonWithBorderAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21A2247D606C00EF0A32 /* ButtonWithBorderAttributes.swift */; };
@@ -448,6 +454,12 @@
 		14BD529926C0091900AF3D80 /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
 		14BD529B26C00D3900AF3D80 /* ChapterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCollectionViewCell.swift; sourceTree = "<group>"; };
 		14BD529D26C00E3C00AF3D80 /* VerseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseCollectionViewCell.swift; sourceTree = "<group>"; };
+		14BD52A026C012A400AF3D80 /* ReferenceSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceSegment.swift; sourceTree = "<group>"; };
+		14BD52A626C0182900AF3D80 /* IReferenceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IReferenceViewModel.swift; sourceTree = "<group>"; };
+		14BD52A826C0184200AF3D80 /* ReferenceViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceViewModelImpl.swift; sourceTree = "<group>"; };
+		14BD52AA26C0189600AF3D80 /* References.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = References.storyboard; sourceTree = "<group>"; };
+		14BD52AC26C01CF900AF3D80 /* ReferencesDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesDI.swift; sourceTree = "<group>"; };
+		14BD52AE26C027C100AF3D80 /* RxView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxView+Extensions.swift"; sourceTree = "<group>"; };
 		14CD219D247D5D0B00EF0A32 /* IReadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IReadViewModel.swift; sourceTree = "<group>"; };
 		14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewModelImpl.swift; sourceTree = "<group>"; };
 		14CD21A2247D606C00EF0A32 /* ButtonWithBorderAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithBorderAttributes.swift; sourceTree = "<group>"; };
@@ -599,6 +611,7 @@
 		14121C7E247464E00073814F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				14BD52A226C017F600AF3D80 /* References */,
 				1440E07C247D3CBB0037E68E /* More */,
 				1440E07B247D3CB00037E68E /* Search */,
 				1440E07A247D3CA60037E68E /* Read */,
@@ -621,6 +634,7 @@
 				14CD21B0247E28F400EF0A32 /* ReadDependencyInjectionGraph.swift */,
 				14CD21B2247E2B5900EF0A32 /* SearchDependencyInjectionGraph.swift */,
 				14CD21B4247E2B7400EF0A32 /* MoreDependencyInjectionGraph.swift */,
+				14BD52AC26C01CF900AF3D80 /* ReferencesDI.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -1236,7 +1250,6 @@
 				1462CD332481C13E00063892 /* FontStyleCollectionViewCell.swift */,
 				1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */,
 				1470728026BBEC520088C8D3 /* TakeNotesDialogViewController.swift */,
-				14BD528B26BFFAAC00AF3D80 /* References */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1266,6 +1279,7 @@
 				1470728226BC06460088C8D3 /* TextViewWithPlaceholder.swift */,
 				1487476D26BD551700DA5155 /* Numbers+Extensions.swift */,
 				14BD529226BFFEC400AF3D80 /* ViewControllerType.swift */,
+				14BD52AE26C027C100AF3D80 /* RxView+Extensions.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -1297,7 +1311,43 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		14BD528B26BFFAAC00AF3D80 /* References */ = {
+		14BD529626C008D900AF3D80 /* Number View */ = {
+			isa = PBXGroup;
+			children = (
+				14BD529726C008EB00AF3D80 /* NumberView.xib */,
+				14BD529926C0091900AF3D80 /* NumberView.swift */,
+			);
+			path = "Number View";
+			sourceTree = "<group>";
+		};
+		14BD529F26C0126400AF3D80 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				14BD52A026C012A400AF3D80 /* ReferenceSegment.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		14BD52A226C017F600AF3D80 /* References */ = {
+			isa = PBXGroup;
+			children = (
+				14BD529F26C0126400AF3D80 /* Utils */,
+				14BD52A526C0180F00AF3D80 /* ViewModel */,
+				14BD52A426C0180A00AF3D80 /* Views */,
+				14BD52A326C0180100AF3D80 /* Storyboard */,
+			);
+			path = References;
+			sourceTree = "<group>";
+		};
+		14BD52A326C0180100AF3D80 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				14BD52AA26C0189600AF3D80 /* References.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		14BD52A426C0180A00AF3D80 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				148B0F3C26BE59A500B92B26 /* ReferencesViewController.swift */,
@@ -1308,16 +1358,16 @@
 				14BD529B26C00D3900AF3D80 /* ChapterCollectionViewCell.swift */,
 				14BD529D26C00E3C00AF3D80 /* VerseCollectionViewCell.swift */,
 			);
-			path = References;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		14BD529626C008D900AF3D80 /* Number View */ = {
+		14BD52A526C0180F00AF3D80 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				14BD529726C008EB00AF3D80 /* NumberView.xib */,
-				14BD529926C0091900AF3D80 /* NumberView.swift */,
+				14BD52A626C0182900AF3D80 /* IReferenceViewModel.swift */,
+				14BD52A826C0184200AF3D80 /* ReferenceViewModelImpl.swift */,
 			);
-			path = "Number View";
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		14CD21A1247D605B00EF0A32 /* IBDesignables */ = {
@@ -1513,6 +1563,7 @@
 				1440E079247D3C630037E68E /* HomeTabs.storyboard in Resources */,
 				148B0F3826BE357500B92B26 /* lato.ttf in Resources */,
 				148B0F3026BE357500B92B26 /* happy_monkey.ttf in Resources */,
+				14BD52AB26C0189600AF3D80 /* References.storyboard in Resources */,
 				1440E080247D3CD50037E68E /* Search.storyboard in Resources */,
 				149531C62506773800A6E9DD /* .gitignore in Resources */,
 				148B0F3626BE357500B92B26 /* roboto.ttf in Resources */,
@@ -1690,6 +1741,7 @@
 				14121DB12477091A0073814F /* RecentSearchDataSourceImpl.swift in Sources */,
 				14121DF7247732D70073814F /* NoteRepoImpl.swift in Sources */,
 				14121DE124772C900073814F /* IFontStyleRepo.swift in Sources */,
+				14BD52AD26C01CF900AF3D80 /* ReferencesDI.swift in Sources */,
 				1462CD2E2480469500063892 /* VerseTableViewCell.swift in Sources */,
 				14121D932476CBAF0073814F /* FontStyleDataSourceImpl.swift in Sources */,
 				14121D6324750F0D0073814F /* Date+Extensions.swift in Sources */,
@@ -1704,6 +1756,7 @@
 				14121E0B247735CF0073814F /* TestamentRepoImpl.swift in Sources */,
 				14121D9D2476CE6D0073814F /* HighlightDataSourceImpl.swift in Sources */,
 				1462CD3224819AB900063892 /* HighlightColorCollectionViewCell.swift in Sources */,
+				14BD52AF26C027C100AF3D80 /* RxView+Extensions.swift in Sources */,
 				14121D842476700C0073814F /* BookDataSourceImpl.swift in Sources */,
 				14CD21B3247E2B5900EF0A32 /* SearchDependencyInjectionGraph.swift in Sources */,
 				14BD529126BFFE3600AF3D80 /* BaseBottomPopupViewController.swift in Sources */,
@@ -1732,6 +1785,7 @@
 				14121E2524792A5B0073814F /* PreferenceRepoImpl.swift in Sources */,
 				14121D65247515220073814F /* FontStyle.swift in Sources */,
 				14121D912476CAA20073814F /* IFontStyleDataSource.swift in Sources */,
+				14BD52A926C0184200AF3D80 /* ReferenceViewModelImpl.swift in Sources */,
 				14121DDE24772B130073814F /* ChapterRepoImpl.swift in Sources */,
 				14121DC32477128A0073814F /* IVerseDataSource.swift in Sources */,
 				14121DA72476D6E40073814F /* NoteDataSourceImpl.swift in Sources */,
@@ -1754,6 +1808,7 @@
 				1440E074247BBE850037E68E /* UIColor+Extension.swift in Sources */,
 				14CD21A0247D5D3400EF0A32 /* ReadViewModelImpl.swift in Sources */,
 				14121DAF247709020073814F /* IRecentSearchDataSource.swift in Sources */,
+				14BD52A126C012A400AF3D80 /* ReferenceSegment.swift in Sources */,
 				148B0F4626BE5B1C00B92B26 /* BaseView.swift in Sources */,
 				14121DC5247712A40073814F /* VerseDataSourceImpl.swift in Sources */,
 				14121D7124752C3A0073814F /* RecentSearch.swift in Sources */,
@@ -1773,6 +1828,7 @@
 				14121E2024788F360073814F /* PreferenceConstants.swift in Sources */,
 				14121E04247734CF0073814F /* ISettingRepo.swift in Sources */,
 				1470728126BBEC530088C8D3 /* TakeNotesDialogViewController.swift in Sources */,
+				14BD52A726C0182900AF3D80 /* IReferenceViewModel.swift in Sources */,
 				1440E091247D42450037E68E /* MoreViewController.swift in Sources */,
 				14121DF5247732AD0073814F /* INoteRepo.swift in Sources */,
 				14121DED24772E8A0073814F /* HighlightRepoImpl.swift in Sources */,

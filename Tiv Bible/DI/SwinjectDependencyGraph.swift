@@ -15,6 +15,8 @@ extension SwinjectStoryboard {
     
     public static func setup() {
         
+        runRealmMigrations()
+        
         defaultContainer.register(Realm.self) { _ in try! Realm() }
         
         defaultContainer.register(IPreference.self) { _ in PreferenceImpl() }
@@ -33,6 +35,27 @@ extension SwinjectStoryboard {
         
         MoreDependencyInjectionGraph.setup(container: defaultContainer)
         
+        ReferencesDI.setup(container: defaultContainer)
+        
+    }
+    
+    fileprivate static func runRealmMigrations() {
+        let config = Realm.Configuration(
+            // Set the new schema version. This must be greater than the previously used
+            // version (if you've never set a schema version before, the version is 0).
+            schemaVersion: 1,
+            
+            // Set the block which will be called automatically when opening a Realm with
+            // a schema version lower than the one set above
+            migrationBlock: { migration, oldSchemaVersion in
+                // We haven’t migrated anything yet, so oldSchemaVersion == 0
+                if (oldSchemaVersion < 0) {
+                    
+                }
+            })
+        
+        // Tell Realm to use this new configuration object for the default Realm
+        Realm.Configuration.defaultConfiguration = config
     }
     
 }

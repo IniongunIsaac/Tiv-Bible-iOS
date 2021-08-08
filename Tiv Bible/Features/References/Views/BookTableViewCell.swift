@@ -15,5 +15,11 @@ class BookTableViewCell: UITableViewCell {
     @IBOutlet weak var checkmarkImageView: UIImageView!
     @IBOutlet weak var separatorView: UIView!
     
-
+    func configureView(book: Book) {
+        book.do {
+            bookNameLabel.text = $0.bookName
+            //checkmarkImageView.showView($0.isSelected)
+        }
+    }
+    
 }

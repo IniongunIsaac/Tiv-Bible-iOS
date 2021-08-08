@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import DeviceKit
+import RxSwift
 
 typealias NoParamHandler = (() -> Void)
 let currentDevice = Device.current
@@ -210,6 +211,8 @@ extension Sequence {
 
 extension Collection {
     var isNotEmpty: Bool { !self.isEmpty }
+    
+    var asObservable: Observable<[Element]> { Observable.just(self as! [Self.Element]) }
 }
 
 extension Optional {

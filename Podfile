@@ -9,6 +9,7 @@ target 'Tiv Bible' do
   pod 'Swinject'
   pod 'SwinjectStoryboard', :git => 'https://github.com/Swinject/SwinjectStoryboard.git', :branch => 'master'
   pod 'RxSwiftExt'
+  pod 'RxDataSources'
   
   #Other pods
   pod 'Alertift', '~> 4.1'

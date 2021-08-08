@@ -307,13 +307,13 @@ extension UIView {
 
 extension UICollectionView {
 
-    func setNoValuesFoundBackgroundMessage(_ message: String = AppConstants.DATA_NOT_FOUND) {
+    func setNoValuesFoundBackgroundMessage(_ message: String? = AppConstants.DATA_NOT_FOUND) {
         let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         messageLabel.text = message
         messageLabel.textColor = .darkGray
         messageLabel.numberOfLines = 0;
         messageLabel.textAlignment = .center;
-        messageLabel.font = .comfortaaLight()
+        messageLabel.font = .comfortaaMedium(size: 14)
         messageLabel.sizeToFit()
 
         self.backgroundView = messageLabel;
@@ -328,13 +328,13 @@ extension UICollectionView {
 
 extension UITableView {
 
-    func setNoValuesFoundBackgroundMessage(_ message: String = AppConstants.DATA_NOT_FOUND, separatorStyle: UITableViewCell.SeparatorStyle = .none) {
+    func setNoValuesFoundBackgroundMessage(_ message: String? = AppConstants.DATA_NOT_FOUND, separatorStyle: UITableViewCell.SeparatorStyle = .none) {
         let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         messageLabel.text = message
         messageLabel.textColor = .darkGray
         messageLabel.numberOfLines = 0
         messageLabel.textAlignment = .center
-        messageLabel.font = .comfortaaLight()
+        messageLabel.font = .comfortaaMedium(size: 14)
         messageLabel.sizeToFit()
 
         self.backgroundView = messageLabel
@@ -386,5 +386,26 @@ extension Array where Element == UIView {
     
     func addRoundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         forEach { $0.addRoundCorners(corners, radius: radius) }
+    }
+}
+
+extension UISearchBar {
+    
+    var textField : UITextField? {
+        if #available(iOS 13.0, *) {
+            return self.searchTextField
+        } else {
+            for view : UIView in (self.subviews[0]).subviews {
+                if let textField = view as? UITextField {
+                    return textField
+                }
+            }
+        }
+        return nil
+    }
+    
+    var font: UIFont? {
+        get { textField?.font }
+        set { textField?.font = newValue }
     }
 }
