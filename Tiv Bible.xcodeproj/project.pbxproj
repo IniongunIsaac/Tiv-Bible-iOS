@@ -233,6 +233,8 @@
 		14E2D0BB26C171610031BC75 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E2D0BA26C171610031BC75 /* FilterView.xib */; };
 		14E2D0BD26C171760031BC75 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2D0BC26C171760031BC75 /* FilterView.swift */; };
 		14E2D0BF26C17B490031BC75 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2D0BE26C17B490031BC75 /* SearchResultTableViewCell.swift */; };
+		14E2D0C126C18E1C0031BC75 /* SearchBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2D0C026C18E1C0031BC75 /* SearchBooksViewController.swift */; };
+		14E2D0C326C18E520031BC75 /* SearchChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2D0C226C18E520031BC75 /* SearchChaptersViewController.swift */; };
 		782A1015F03FB4919AD9AF56 /* Pods_Tiv_Bible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508BB88169156FC2AC989356 /* Pods_Tiv_Bible.framework */; };
 		BB63FCF3B11477E23C5A444E /* Pods_Tiv_BibleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73863042FFA5247433514F6 /* Pods_Tiv_BibleTests.framework */; };
 /* End PBXBuildFile section */
@@ -486,6 +488,8 @@
 		14E2D0BA26C171610031BC75 /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		14E2D0BC26C171760031BC75 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		14E2D0BE26C17B490031BC75 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		14E2D0C026C18E1C0031BC75 /* SearchBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewController.swift; sourceTree = "<group>"; };
+		14E2D0C226C18E520031BC75 /* SearchChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchChaptersViewController.swift; sourceTree = "<group>"; };
 		1AD5D722C254B9EE5E31CDD6 /* Pods_Tiv_Bible_Tiv_BibleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiv_Bible_Tiv_BibleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F62F3AF924B5A14F004EA9F /* Pods-Tiv Bible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv Bible.release.xcconfig"; path = "Target Support Files/Pods-Tiv Bible/Pods-Tiv Bible.release.xcconfig"; sourceTree = "<group>"; };
 		4BA3C525B6CCCB229B18F4E4 /* Pods-Tiv Bible-Tiv BibleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiv Bible-Tiv BibleUITests.release.xcconfig"; path = "Target Support Files/Pods-Tiv Bible-Tiv BibleUITests/Pods-Tiv Bible-Tiv BibleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1234,6 +1238,8 @@
 			children = (
 				1440E08E247D422C0037E68E /* SearchViewController.swift */,
 				14E2D0BE26C17B490031BC75 /* SearchResultTableViewCell.swift */,
+				14E2D0C026C18E1C0031BC75 /* SearchBooksViewController.swift */,
+				14E2D0C226C18E520031BC75 /* SearchChaptersViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1811,6 +1817,7 @@
 				14BD529126BFFE3600AF3D80 /* BaseBottomPopupViewController.swift in Sources */,
 				1462CD342481C13E00063892 /* FontStyleCollectionViewCell.swift in Sources */,
 				148862CD26B7E6FD0004F4C3 /* Preference+Utils.swift in Sources */,
+				14E2D0C326C18E520031BC75 /* SearchChaptersViewController.swift in Sources */,
 				14121D7C2475B43B0073814F /* AudioSpeedDataSourceImpl.swift in Sources */,
 				1440E05B247AABBE0037E68E /* AlertType.swift in Sources */,
 				14CD21A5247D609000EF0A32 /* ViewWithBorderAttributes.swift in Sources */,
@@ -1898,6 +1905,7 @@
 				14121D8E2476B0780073814F /* ChapterDataSourceImpl.swift in Sources */,
 				14121D5824747B6A0073814F /* AudioSpeed.swift in Sources */,
 				14121DFC247733870073814F /* OtherRepoImpl.swift in Sources */,
+				14E2D0C126C18E1C0031BC75 /* SearchBooksViewController.swift in Sources */,
 				14121DE324772CBE0073814F /* FontStyleRepoImpl.swift in Sources */,
 				14121E1E24788F280073814F /* PreferenceImpl.swift in Sources */,
 				14121D8C2476AAF50073814F /* IChapterDataSource.swift in Sources */,

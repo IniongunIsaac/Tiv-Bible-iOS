@@ -15,8 +15,7 @@ struct SearchDependencyInjectionGraph {
     static func setup(container: Container) {
         
         container.register(ISearchViewModel.self) { res in
-            
-            SearchViewModelImpl()
+            SearchViewModelImpl(booksRepo: res.resolve(IBookRepo.self)!, chaptersRepo: res.resolve(IChapterRepo.self)!, preferenceRepo: res.resolve(IPreferenceRepo.self)!)
         }
         
         container.storyboardInitCompleted(SearchViewController.self) { res, cntrl in

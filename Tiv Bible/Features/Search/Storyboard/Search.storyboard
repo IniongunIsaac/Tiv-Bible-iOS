@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MCC-c0-ExJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cLT-Gk-G5s">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="comfortaa.ttf">
             <string>Comfortaa-Regular</string>
+        </array>
+        <array key="comfortaa_bold.ttf">
+            <string>Comfortaa-Bold</string>
         </array>
         <array key="comfortaa_medium.ttf">
             <string>Comfortaa-Medium</string>
@@ -21,24 +26,6 @@
     </customFonts>
     <scenes>
         <!--Search-->
-        <scene sceneID="E9a-zS-gWQ">
-            <objects>
-                <navigationController id="MCC-c0-ExJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="search_icon" id="5vE-3e-D0K"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1BX-34-sXy">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="cLT-Gk-G5s" kind="relationship" relationship="rootViewController" id="VKC-Oo-gyp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s4v-4K-XCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-268" y="119"/>
-        </scene>
-        <!--Search View Controller-->
         <scene sceneID="Ykd-J8-4w1">
             <objects>
                 <viewController storyboardIdentifier="searchViewController" id="cLT-Gk-G5s" customClass="SearchViewController" customModule="Tiv_Bible" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,11 +34,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="gxR-Tp-XSk">
-                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <rect key="frame" x="10" y="44" width="394" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gbE-pn-97v" userLabel="Filter Container Stack View">
-                                <rect key="frame" x="20" y="105" width="374" height="105"/>
+                                <rect key="frame" x="20" y="105" width="374" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PuF-5P-Fhn" userLabel="Filters Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
@@ -97,23 +84,23 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yzL-BW-rCO">
-                                        <rect key="frame" x="0.0" y="55" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="55" width="374" height="45"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqx-dD-U2t" customClass="DropdownView" customModule="Tiv_Bible" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="215.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="215.5" height="45"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="OaS-nM-2SE"/>
+                                                    <constraint firstAttribute="height" constant="45" id="OaS-nM-2SE"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Choose Book"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pI4-ol-Lqp" customClass="DropdownView" customModule="Tiv_Bible" customModuleProvider="target">
-                                                <rect key="frame" x="230.5" y="0.0" width="143.5" height="50"/>
+                                                <rect key="frame" x="230.5" y="0.0" width="143.5" height="45"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="V7c-VQ-hmh"/>
+                                                    <constraint firstAttribute="height" constant="45" id="V7c-VQ-hmh"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Choose Chapter"/>
@@ -127,7 +114,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XKD-j3-ca0">
-                                <rect key="frame" x="20" y="230" width="374" height="583"/>
+                                <rect key="frame" x="20" y="225" width="374" height="588"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResultTableViewCell" rowHeight="106" id="I7j-Vs-Mlr" customClass="SearchResultTableViewCell" customModule="Tiv_Bible" customModuleProvider="target">
@@ -209,16 +196,18 @@
                             <constraint firstItem="gxR-Tp-XSk" firstAttribute="top" secondItem="vsi-hE-GIs" secondAttribute="top" id="5QG-MD-5Na"/>
                             <constraint firstItem="XKD-j3-ca0" firstAttribute="top" secondItem="gbE-pn-97v" secondAttribute="bottom" constant="20" id="86Q-gG-Xba"/>
                             <constraint firstItem="gbE-pn-97v" firstAttribute="top" secondItem="gxR-Tp-XSk" secondAttribute="bottom" constant="10" id="FEM-uf-0cz"/>
-                            <constraint firstItem="gxR-Tp-XSk" firstAttribute="leading" secondItem="vsi-hE-GIs" secondAttribute="leading" id="IeT-qy-Ekl"/>
-                            <constraint firstItem="gxR-Tp-XSk" firstAttribute="trailing" secondItem="vsi-hE-GIs" secondAttribute="trailing" id="RzQ-B4-Ikm"/>
+                            <constraint firstItem="gxR-Tp-XSk" firstAttribute="leading" secondItem="vsi-hE-GIs" secondAttribute="leading" constant="10" id="IeT-qy-Ekl"/>
+                            <constraint firstItem="vsi-hE-GIs" firstAttribute="trailing" secondItem="gxR-Tp-XSk" secondAttribute="trailing" constant="10" id="RzQ-B4-Ikm"/>
                             <constraint firstItem="XKD-j3-ca0" firstAttribute="leading" secondItem="vsi-hE-GIs" secondAttribute="leading" constant="20" id="hK9-F5-Ndo"/>
                             <constraint firstItem="gbE-pn-97v" firstAttribute="leading" secondItem="vsi-hE-GIs" secondAttribute="leading" constant="20" id="pzr-NN-8Sk"/>
                             <constraint firstItem="vsi-hE-GIs" firstAttribute="trailing" secondItem="gbE-pn-97v" secondAttribute="trailing" constant="20" id="qGS-It-KSu"/>
                             <constraint firstItem="XKD-j3-ca0" firstAttribute="bottom" secondItem="vsi-hE-GIs" secondAttribute="bottom" id="uCN-cg-edD"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="search_icon" id="tRX-X7-bVy"/>
                     <navigationItem key="navigationItem" id="KId-Jt-3Je"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bookDropdownView" destination="oqx-dD-U2t" id="xnO-FO-oKw"/>
                         <outlet property="chapterDropdownView" destination="pI4-ol-Lqp" id="IyX-9s-120"/>
@@ -232,9 +221,195 @@
             </objects>
             <point key="canvasLocation" x="653.62318840579712" y="118.52678571428571"/>
         </scene>
+        <!--Search Books View Controller-->
+        <scene sceneID="P30-wb-T6Q">
+            <objects>
+                <viewController storyboardIdentifier="searchBooksViewController" id="UGU-lU-i30" customClass="SearchBooksViewController" customModule="Tiv_Bible" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bM3-lk-KL0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="search" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-1W-NHE">
+                                <rect key="frame" x="10" y="103" width="394" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Goq-bJ-UZz">
+                                <rect key="frame" x="20" y="164" width="374" height="698"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchBookTableViewCell" rowHeight="70" id="hJM-j6-ec0" customClass="BookTableViewCell" customModule="Tiv_Bible" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="374" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hJM-j6-ec0" id="zC3-Kb-KAX">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tC-Nj-mFq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SAr-qn-gPD">
+                                                            <rect key="frame" x="15" y="25" width="344" height="20"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="xSL-mc-g7H">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="QaK-ht-WrU">
+                                                                    <rect key="frame" x="324" y="0.0" width="20" height="20"/>
+                                                                    <color key="tintColor" name="AccentColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="FpI-u0-8mS"/>
+                                                                        <constraint firstAttribute="width" constant="20" id="c7R-5e-0BS"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="7FM-BM-utt"/>
+                                                        <constraint firstItem="SAr-qn-gPD" firstAttribute="centerY" secondItem="6tC-Nj-mFq" secondAttribute="centerY" id="W6a-La-vOn"/>
+                                                        <constraint firstAttribute="trailing" secondItem="SAr-qn-gPD" secondAttribute="trailing" constant="15" id="hNR-LM-s0Z"/>
+                                                        <constraint firstItem="SAr-qn-gPD" firstAttribute="leading" secondItem="6tC-Nj-mFq" secondAttribute="leading" constant="15" id="mRj-0a-lIs"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="6tC-Nj-mFq" firstAttribute="leading" secondItem="zC3-Kb-KAX" secondAttribute="leading" id="kx2-n2-sYt"/>
+                                                <constraint firstAttribute="trailing" secondItem="6tC-Nj-mFq" secondAttribute="trailing" id="mFc-uE-p0T"/>
+                                                <constraint firstAttribute="bottom" secondItem="6tC-Nj-mFq" secondAttribute="bottom" id="uMn-cb-lOa"/>
+                                                <constraint firstItem="6tC-Nj-mFq" firstAttribute="top" secondItem="zC3-Kb-KAX" secondAttribute="top" id="xxc-ac-wlb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="bookNameLabel" destination="xSL-mc-g7H" id="Fkn-70-pTU"/>
+                                            <outlet property="checkmarkImageView" destination="QaK-ht-WrU" id="UwV-ss-JJB"/>
+                                            <outlet property="detailsView" destination="6tC-Nj-mFq" id="HQW-2w-kgk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Filter Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egy-PL-Qog">
+                                <rect key="frame" x="138.5" y="74" width="137.5" height="19"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vnH-dZ-9rk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hNa-1W-NHE" firstAttribute="top" secondItem="egy-PL-Qog" secondAttribute="bottom" constant="10" id="0Lu-IY-Uow"/>
+                            <constraint firstItem="hNa-1W-NHE" firstAttribute="leading" secondItem="vnH-dZ-9rk" secondAttribute="leading" constant="10" id="4LD-2n-IHq"/>
+                            <constraint firstItem="Goq-bJ-UZz" firstAttribute="leading" secondItem="vnH-dZ-9rk" secondAttribute="leading" constant="20" id="6D1-Vq-nZH"/>
+                            <constraint firstItem="egy-PL-Qog" firstAttribute="centerX" secondItem="bM3-lk-KL0" secondAttribute="centerX" id="G5M-k9-xRD"/>
+                            <constraint firstItem="egy-PL-Qog" firstAttribute="top" secondItem="vnH-dZ-9rk" secondAttribute="top" constant="30" id="UzC-QA-XT2"/>
+                            <constraint firstItem="Goq-bJ-UZz" firstAttribute="bottom" secondItem="vnH-dZ-9rk" secondAttribute="bottom" id="bSm-Ep-sRm"/>
+                            <constraint firstItem="vnH-dZ-9rk" firstAttribute="trailing" secondItem="hNa-1W-NHE" secondAttribute="trailing" constant="10" id="cFt-f0-AER"/>
+                            <constraint firstItem="vnH-dZ-9rk" firstAttribute="trailing" secondItem="Goq-bJ-UZz" secondAttribute="trailing" constant="20" id="gpc-RV-wIP"/>
+                            <constraint firstItem="Goq-bJ-UZz" firstAttribute="top" secondItem="hNa-1W-NHE" secondAttribute="bottom" constant="10" id="jwo-1d-gew"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="booksTableView" destination="Goq-bJ-UZz" id="TU6-qx-GnT"/>
+                        <outlet property="searchBar" destination="hNa-1W-NHE" id="w5n-oQ-dFZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4lO-Yq-HSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1633" y="119"/>
+        </scene>
+        <!--Search Chapters View Controller-->
+        <scene sceneID="6P5-56-edF">
+            <objects>
+                <viewController storyboardIdentifier="searchChaptersViewController" id="pIQ-p9-bBg" customClass="SearchChaptersViewController" customModule="Tiv_Bible" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dye-Mf-mOi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0st-Uo-lfZ">
+                                <rect key="frame" x="20" y="112" width="374" height="750"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x8o-x0-rpS">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchChapterCollectionViewCell" id="V35-ei-9ib" customClass="ChapterCollectionViewCell" customModule="Tiv_Bible" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dgY-en-TWo">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTR-SH-dsL" customClass="NumberView" customModule="Tiv_Bible" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="PTR-SH-dsL" firstAttribute="leading" secondItem="dgY-en-TWo" secondAttribute="leading" id="7ma-sD-NmP"/>
+                                                <constraint firstAttribute="trailing" secondItem="PTR-SH-dsL" secondAttribute="trailing" id="B13-Cj-ULS"/>
+                                                <constraint firstItem="PTR-SH-dsL" firstAttribute="top" secondItem="dgY-en-TWo" secondAttribute="top" id="eqk-x8-vre"/>
+                                                <constraint firstAttribute="bottom" secondItem="PTR-SH-dsL" secondAttribute="bottom" id="ozs-cZ-vfT"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="numberView" destination="PTR-SH-dsL" id="IiM-WN-Fge"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Filter Chapter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdj-74-dm8">
+                                <rect key="frame" x="114" y="74" width="186.5" height="18"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XST-bB-GtC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XST-bB-GtC" firstAttribute="trailing" secondItem="0st-Uo-lfZ" secondAttribute="trailing" constant="20" id="COf-Zh-nhI"/>
+                            <constraint firstItem="0st-Uo-lfZ" firstAttribute="top" secondItem="Zdj-74-dm8" secondAttribute="bottom" constant="20" id="CQY-Cf-B4M"/>
+                            <constraint firstItem="0st-Uo-lfZ" firstAttribute="bottom" secondItem="XST-bB-GtC" secondAttribute="bottom" id="O1F-8Z-me0"/>
+                            <constraint firstItem="Zdj-74-dm8" firstAttribute="top" secondItem="XST-bB-GtC" secondAttribute="top" constant="30" id="UqT-Hb-eT1"/>
+                            <constraint firstItem="Zdj-74-dm8" firstAttribute="centerX" secondItem="Dye-Mf-mOi" secondAttribute="centerX" id="VLL-wd-JRA"/>
+                            <constraint firstItem="0st-Uo-lfZ" firstAttribute="leading" secondItem="XST-bB-GtC" secondAttribute="leading" constant="20" id="X8z-w7-9W5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chaptersCollectionView" destination="0st-Uo-lfZ" id="Ty8-uS-aDv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X2z-8D-1lJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2549" y="119"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="checkmark_icon" width="32" height="32"/>
         <image name="search_icon" width="24" height="24"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.5220000147819519" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
