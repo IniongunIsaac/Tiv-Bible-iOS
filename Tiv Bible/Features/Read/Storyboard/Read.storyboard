@@ -115,7 +115,7 @@
                                 <rect key="frame" x="0.0" y="102.5" width="414" height="710.5"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7dS-jP-YDg">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="710.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="135.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="verseTableViewCell" rowHeight="67" id="RDv-cP-fqd" customClass="VerseTableViewCell" customModule="Tiv_Bible" customModuleProvider="target">
@@ -157,8 +157,8 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jea-rI-tpi" userLabel="Tap Actions View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jea-rI-tpi" userLabel="Tap Actions View">
+                                        <rect key="frame" x="0.0" y="140.5" width="414" height="216"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontal_line" translatesAutoresizingMaskIntoConstraints="NO" id="IxU-dj-uzN">
                                                 <rect key="frame" x="182" y="10" width="50" height="20"/>
@@ -184,13 +184,13 @@
                                                                 <rect key="frame" x="0.0" y="27" width="374" height="40"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ClR-hD-hiJ" userLabel="Tap Actions Stack View">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="523" height="40"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="522" height="40"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4R6-jD-qM0" customClass="ViewWithBorderAttributes" customModule="Tiv_Bible" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="40"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="40"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kRX-zt-TVq">
-                                                                                        <rect key="frame" x="15" y="4" width="74.5" height="32"/>
+                                                                                        <rect key="frame" x="15" y="4" width="73.5" height="32"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qm-5D-AlB">
                                                                                                 <rect key="frame" x="0.0" y="7.5" width="46.5" height="17"/>
@@ -198,12 +198,12 @@
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
-                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="share_icon" translatesAutoresizingMaskIntoConstraints="NO" id="tov-Sa-5kI">
-                                                                                                <rect key="frame" x="54.5" y="6" width="20" height="20"/>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="share_icon_" translatesAutoresizingMaskIntoConstraints="NO" id="tov-Sa-5kI">
+                                                                                                <rect key="frame" x="54.5" y="6.5" width="19" height="19"/>
                                                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                                                 <constraints>
-                                                                                                    <constraint firstAttribute="width" constant="20" id="H5D-Cq-A8h"/>
-                                                                                                    <constraint firstAttribute="height" constant="20" id="PhG-ry-VXQ"/>
+                                                                                                    <constraint firstAttribute="width" constant="19" id="H5D-Cq-A8h"/>
+                                                                                                    <constraint firstAttribute="height" constant="19" id="PhG-ry-VXQ"/>
                                                                                                 </constraints>
                                                                                             </imageView>
                                                                                         </subviews>
@@ -224,7 +224,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPu-bZ-BB1" customClass="ViewWithBorderAttributes" customModule="Tiv_Bible" customModuleProvider="target">
-                                                                                <rect key="frame" x="119.5" y="0.0" width="135.5" height="40"/>
+                                                                                <rect key="frame" x="118.5" y="0.0" width="135.5" height="40"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5wg-y7-QXM">
                                                                                         <rect key="frame" x="15" y="4" width="105.5" height="32"/>
@@ -261,7 +261,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odH-C6-6EX" customClass="ViewWithBorderAttributes" customModule="Tiv_Bible" customModuleProvider="target">
-                                                                                <rect key="frame" x="270" y="0.0" width="94.5" height="40"/>
+                                                                                <rect key="frame" x="269" y="0.0" width="94.5" height="40"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dE5-sf-puG">
                                                                                         <rect key="frame" x="15" y="4" width="64.5" height="32"/>
@@ -298,7 +298,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcm-Wu-owv" customClass="ViewWithBorderAttributes" customModule="Tiv_Bible" customModuleProvider="target">
-                                                                                <rect key="frame" x="379.5" y="0.0" width="143.5" height="40"/>
+                                                                                <rect key="frame" x="378.5" y="0.0" width="143.5" height="40"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uj1-bk-RdI">
                                                                                         <rect key="frame" x="15" y="4" width="113.5" height="32"/>
@@ -418,8 +418,8 @@
                                             <constraint firstAttribute="trailing" secondItem="gQP-WR-apS" secondAttribute="trailing" constant="20" id="opk-n3-Rbt"/>
                                         </constraints>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sur-bF-YPL" userLabel="Font Settings View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="349"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sur-bF-YPL" userLabel="Font Settings View">
+                                        <rect key="frame" x="0.0" y="361.5" width="414" height="349"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontal_line" translatesAutoresizingMaskIntoConstraints="NO" id="R3g-1h-niJ">
                                                 <rect key="frame" x="182" y="10" width="50" height="20"/>
@@ -959,7 +959,7 @@
                             <constraint firstItem="t1V-H7-1on" firstAttribute="bottom" secondItem="Uj7-vX-lyT" secondAttribute="bottom" id="zYg-o4-vMo"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Read" image="book" catalog="system" id="uPB-n1-sbg"/>
+                    <tabBarItem key="tabBarItem" title="Read" image="book_icon" id="uPB-n1-sbg"/>
                     <navigationItem key="navigationItem" id="VhH-Pm-uSv"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -1129,7 +1129,7 @@
         <image name="arrow_icon" width="512" height="512"/>
         <image name="arrow_left_icon" width="96" height="96"/>
         <image name="arrow_right_icon" width="96" height="96"/>
-        <image name="book" catalog="system" width="128" height="102"/>
+        <image name="book_icon" width="32" height="32"/>
         <image name="bookmark_icon" width="128" height="128"/>
         <image name="checkmark_icon" width="32" height="32"/>
         <image name="copy_icon" width="50" height="50"/>
@@ -1139,7 +1139,7 @@
         <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>
         <image name="notes_icon" width="100" height="100"/>
         <image name="plus_icon" width="700" height="700"/>
-        <image name="share_icon" width="48" height="48"/>
+        <image name="share_icon_" width="24" height="24"/>
         <image name="spacing_icon_large" width="96" height="96"/>
         <image name="spacing_icon_normal" width="96" height="96"/>
         <image name="spacing_icon_small" width="32" height="32"/>
