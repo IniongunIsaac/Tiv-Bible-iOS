@@ -15,7 +15,6 @@ struct MoreDI {
     static func setup(container: Container) {
         
         container.register(IMoreViewModel.self) { res in
-            
             MoreViewModelImpl()
         }
         

@@ -10,14 +10,31 @@ import UIKit
 
 class MoreViewController: BaseViewController {
 
-    var moreViewModel: IMoreViewModel!
+    @IBOutlet weak var moreItemsTableView: UITableView!
     
-    override func getViewModel() -> BaseViewModel {
-        return moreViewModel as! BaseViewModel
+    var moreViewModel: IMoreViewModel!
+    override func getViewModel() -> BaseViewModel { moreViewModel as! BaseViewModel }
+    
+    override func configureViews() {
+        super.configureViews()
+        hideNavBar()
+        setupMoreItemsTableView()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    fileprivate func setupMoreItemsTableView() {
+        MoreItem.allCases.asObservable.bind(to: moreItemsTableView.rx.items(cellIdentifier: R.reuseIdentifier.moreItemTableViewCell.identifier, cellType: MoreItemTableViewCell.self)) { index, item, cell in
+            
+            cell.configureView(item: item)
+            
+            cell.animateViewOnTapGesture { [weak self] in
+                self?.handleItemSelected(item)
+            }
+            
+        }.disposed(by: disposeBag)
+    }
+    
+    fileprivate func handleItemSelected(_ item: MoreItem) {
+        
     }
 
 }

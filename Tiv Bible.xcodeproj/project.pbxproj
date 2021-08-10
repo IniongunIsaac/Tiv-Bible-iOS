@@ -134,6 +134,8 @@
 		1470728126BBEC530088C8D3 /* TakeNotesDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470728026BBEC520088C8D3 /* TakeNotesDialogViewController.swift */; };
 		1470728326BC06460088C8D3 /* TextViewWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470728226BC06460088C8D3 /* TextViewWithPlaceholder.swift */; };
 		1477B59C26C276B700E736C2 /* BookChapterVerse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B59B26C276B700E736C2 /* BookChapterVerse.swift */; };
+		1477B59E26C28E6700E736C2 /* MoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B59D26C28E6700E736C2 /* MoreItem.swift */; };
+		1477B5A126C29C8A00E736C2 /* MoreItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B5A026C29C8A00E736C2 /* MoreItemTableViewCell.swift */; };
 		1487476C26BCA4F500DA5155 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487476B26BCA4F500DA5155 /* Theme.swift */; };
 		1487476E26BD551800DA5155 /* Numbers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487476D26BD551700DA5155 /* Numbers+Extensions.swift */; };
 		1487477026BD6A4800DA5155 /* LineSpacingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487476F26BD6A4800DA5155 /* LineSpacingType.swift */; };
@@ -391,6 +393,8 @@
 		1470728026BBEC520088C8D3 /* TakeNotesDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeNotesDialogViewController.swift; sourceTree = "<group>"; };
 		1470728226BC06460088C8D3 /* TextViewWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithPlaceholder.swift; sourceTree = "<group>"; };
 		1477B59B26C276B700E736C2 /* BookChapterVerse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookChapterVerse.swift; sourceTree = "<group>"; };
+		1477B59D26C28E6700E736C2 /* MoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreItem.swift; sourceTree = "<group>"; };
+		1477B5A026C29C8A00E736C2 /* MoreItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreItemTableViewCell.swift; sourceTree = "<group>"; };
 		1487476B26BCA4F500DA5155 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1487476D26BD551700DA5155 /* Numbers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numbers+Extensions.swift"; sourceTree = "<group>"; };
 		1487476F26BD6A4800DA5155 /* LineSpacingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSpacingType.swift; sourceTree = "<group>"; };
@@ -1196,6 +1200,7 @@
 		1440E07C247D3CBB0037E68E /* More */ = {
 			isa = PBXGroup;
 			children = (
+				1477B59F26C2966000E736C2 /* Utils */,
 				1440E085247D41A40037E68E /* ViewModel */,
 				1440E084247D419E0037E68E /* Views */,
 				1440E083247D41920037E68E /* Storyboard */,
@@ -1215,6 +1220,7 @@
 			isa = PBXGroup;
 			children = (
 				1440E090247D42450037E68E /* MoreViewController.swift */,
+				1477B5A026C29C8A00E736C2 /* MoreItemTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1306,6 +1312,14 @@
 				14BD52AE26C027C100AF3D80 /* RxView+Extensions.swift */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		1477B59F26C2966000E736C2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1477B59D26C28E6700E736C2 /* MoreItem.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		148B0F3E26BE5A9200B92B26 /* Custom Views */ = {
@@ -1855,6 +1869,7 @@
 				1440E08F247D422C0037E68E /* SearchViewController.swift in Sources */,
 				14121DA52476D6C50073814F /* INoteDataSource.swift in Sources */,
 				14BD528F26BFFAF100AF3D80 /* VersesViewController.swift in Sources */,
+				1477B5A126C29C8A00E736C2 /* MoreItemTableViewCell.swift in Sources */,
 				14BD529A26C0091900AF3D80 /* NumberView.swift in Sources */,
 				1440E0562479EF1A0037E68E /* BaseViewModel.swift in Sources */,
 				14121DAC2476FB220073814F /* OtherDataSourceImpl.swift in Sources */,
@@ -1887,6 +1902,7 @@
 				14E2D0B626C15F700031BC75 /* DropdownView.swift in Sources */,
 				1487476C26BCA4F500DA5155 /* Theme.swift in Sources */,
 				14121DDC24772ADF0073814F /* IChapterRepo.swift in Sources */,
+				1477B59E26C28E6700E736C2 /* MoreItem.swift in Sources */,
 				1462CD362481C15100063892 /* ThemeCollectionViewCell.swift in Sources */,
 				14121E2024788F360073814F /* PreferenceConstants.swift in Sources */,
 				14121E04247734CF0073814F /* ISettingRepo.swift in Sources */,
