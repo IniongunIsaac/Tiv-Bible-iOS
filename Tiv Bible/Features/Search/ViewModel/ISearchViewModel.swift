@@ -24,10 +24,10 @@ protocol ISearchViewModel: Scopable {
     
     var selectedBook: Book? { get set }
     
+    var selectedChapter: Chapter? { get set }
+    
     func getBooks(showBookReferences: Bool)
     
     func getBookChapters(_ book: Book, showChapterReferences: Bool)
-    
-    func handleChapterSelected(_ chapter: Chapter)
     
 }

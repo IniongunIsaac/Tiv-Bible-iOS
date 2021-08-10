@@ -27,6 +27,7 @@ class SearchViewController: BaseViewController {
     override func configureViews() {
         super.configureViews()
         [bookDropdownView, chapterDropdownView].addClearBackground()
+        filtersContentStackView.removeAllArrangedSubviews()
         filtersContainerStackView.hideView()
         configureSearchBar()
         setupSearchResultsTableView()
@@ -56,7 +57,6 @@ class SearchViewController: BaseViewController {
         presentViewController(R.storyboard.search.searchBooksViewController()!.apply {
             $0.books = books
             $0.bookSelectedHandler = { [weak self] book in
-                self?.searchViewModel.getBookChapters(book, showChapterReferences: false)
                 self?.addBookFilter(book)
             }
         })
@@ -78,7 +78,6 @@ class SearchViewController: BaseViewController {
         presentViewController(R.storyboard.search.searchChaptersViewController()!.apply {
             $0.chapters = chapters
             $0.chapterSelectedHandler = { [weak self] chapter in
-                self?.searchViewModel.handleChapterSelected(chapter)
                 self?.addChapterFilter(chapter)
             }
         })
@@ -86,10 +85,56 @@ class SearchViewController: BaseViewController {
     
     fileprivate func addBookFilter(_ book: Book) {
         
+        let vmBook = searchViewModel.selectedBook
+        
+        if vmBook?.id != book.id {
+            filtersContentStackView.removeAllArrangedSubviews()
+            chapterDropdownView.placeholderText = "Choose Chapter"
+            searchViewModel.getBookChapters(book, showChapterReferences: false)
+            let filterView = FilterView().apply {
+                $0.text = book.bookName
+                $0.removeFilterHandler = removeBookFilter
+            }
+            bookDropdownView.text = book.name
+            filtersContentStackView.addArrangedSubview(filterView)
+            filtersContainerStackView.showView()
+        }
+        
+    }
+    
+    fileprivate func removeBookFilter() {
+        searchViewModel.selectedBook = nil
+        searchViewModel.selectedChapter = nil
+        filtersContentStackView.removeAllArrangedSubviews()
+        filtersContainerStackView.hideView()
+        bookDropdownView.placeholderText = "Choose Book"
+        chapterDropdownView.placeholderText = "Choose Chapter"
     }
     
     fileprivate func addChapterFilter(_ chapter: Chapter) {
+        let vmChapter = searchViewModel.selectedChapter
         
+        if vmChapter?.id != chapter.id {
+            removeChapterFilter()
+            searchViewModel.selectedChapter = chapter
+            let chapterText = "Chapter \(chapter.chapterNumber)"
+            let filterView = FilterView().apply {
+                $0.text = chapterText
+                $0.removeFilterHandler = removeChapterFilter
+            }
+            chapterDropdownView.text = chapterText
+            filtersContentStackView.addArrangedSubview(filterView)
+        }
+    }
+    
+    fileprivate func removeChapterFilter() {
+        searchViewModel.selectedChapter = nil
+        filtersContentStackView.removeAllArrangedSubviews()
+        let bookFilterView = FilterView().apply {
+            $0.text = searchViewModel.selectedBook!.bookName
+            $0.removeFilterHandler = removeBookFilter
+        }
+        filtersContentStackView.addArrangedSubview(bookFilterView)
     }
     
     fileprivate func configureSearchBar() {
@@ -98,6 +143,21 @@ class SearchViewController: BaseViewController {
     
     fileprivate func setupSearchResultsTableView() {
         
+    }
+    
+    override func setChildViewControllerObservers() {
+        super.setChildViewControllerObservers()
+        observeShowReferenceSegment()
+    }
+    
+    fileprivate func observeShowReferenceSegment() {
+        searchViewModel.showReferenceSegment.bind { [weak self] segment in
+            if segment == .books {
+                self?.showSearchBooksViewController()
+            } else {
+                self?.showSearchChaptersViewController()
+            }
+        }.disposed(by: disposeBag)
     }
 
 }

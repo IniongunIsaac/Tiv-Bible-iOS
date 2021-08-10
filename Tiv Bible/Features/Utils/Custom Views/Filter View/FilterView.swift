@@ -27,6 +27,9 @@ class FilterView: BaseView {
     
     override func configureViews() {
         super.configureViews()
+        detailsView.backgroundColor = .accentColor?.withAlphaComponent(0.1)
+        textLabel.textColor = .accentColor
+        closeImageView.tintColor = .accentColor
         closeImageView.animateViewOnTapGesture { [weak self] in
             self?.removeFilterHandler?()
         }

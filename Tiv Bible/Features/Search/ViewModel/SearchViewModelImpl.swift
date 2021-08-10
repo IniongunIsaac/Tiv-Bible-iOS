@@ -21,7 +21,7 @@ class SearchViewModelImpl: BaseViewModel, ISearchViewModel {
     fileprivate let chaptersRepo: IChapterRepo
     fileprivate var preferenceRepo: IPreferenceRepo
     
-    fileprivate var selectedChapter: Chapter?
+    var selectedChapter: Chapter? = nil
     var selectedBook: Book? = nil
     fileprivate var selectedVerse: Verse?
     
@@ -51,10 +51,6 @@ class SearchViewModelImpl: BaseViewModel, ISearchViewModel {
         if showChapterReferences {
             showReferenceSegment.onNext(.chapters)
         }
-    }
-    
-    func handleChapterSelected(_ chapter: Chapter) {
-        selectedChapter = chapter
     }
     
 }
