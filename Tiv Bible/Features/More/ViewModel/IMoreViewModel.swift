@@ -14,8 +14,12 @@ protocol IMoreViewModel {
     
     var bookmarks: PublishSubject<[Bookmark]> { get set }
     
+    var showReaderView: PublishSubject<Bool> { get }
+    
     func getBookmarks()
     
     func deleteBookmark(_ bookmark: Bookmark)
+    
+    func readFullChapter(bookId: String, chapterId: String, verseId: String, verseNumber: Int)
     
 }

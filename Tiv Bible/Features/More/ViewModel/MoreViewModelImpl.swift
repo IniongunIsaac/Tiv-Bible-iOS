@@ -12,6 +12,7 @@ import RxSwift
 class MoreViewModelImpl: BaseViewModel, IMoreViewModel {
     
     var bookmarks: PublishSubject<[Bookmark]> = PublishSubject()
+    var showReaderView: PublishSubject<Bool> = PublishSubject()
     
     fileprivate let bookmarksRepo: IBookmarkRepo
     fileprivate let notesRepo: INoteRepo
@@ -41,6 +42,16 @@ class MoreViewModelImpl: BaseViewModel, IMoreViewModel {
         subscribe(bookmarksRepo.deleteBookmarks(bookmarks: [bookmark]), success: { [weak self] in
             self?.getBookmarks()
         })
+    }
+    
+    func readFullChapter(bookId: String, chapterId: String, verseId: String, verseNumber: Int) {
+        preferenceRepo.currentBookId = bookId
+        preferenceRepo.currentChapterId = chapterId
+        preferenceRepo.currentVerseId = verseId
+        preferenceRepo.selectedVerseNumber = verseNumber
+        preferenceRepo.shouldScrollToVerse = true
+        preferenceRepo.shouldReloadVerses = true
+        showReaderView.onNext(true)
     }
     
 }

@@ -55,14 +55,30 @@ class BookmarksViewController: BaseViewController {
     fileprivate func handleTapActionSelected(_ action: TapAction) {
         switch action {
         case .readFullChapter:
-            break
+            selectedBookmark.do {
+                moreViewModel.readFullChapter(bookId: $0.book!.id, chapterId: $0.chapter!.id, verseId: $0.verse!.id, verseNumber: $0.verse!.number)
+            }
         case .share:
-            break
+            share(content: selectedBookmark.shareableText)
         case .copy:
-            break
+            selectedBookmark.shareableText.copyToClipboard()
+            showAlert(message: "Bookmark copied!", type: .success)
         case .delete, .dismiss:
             break
         }
+    }
+    
+    override func setChildViewControllerObservers() {
+        super.setChildViewControllerObservers()
+        observeShowReaderView()
+    }
+    
+    fileprivate func observeShowReaderView() {
+        moreViewModel.showReaderView.bind { [weak self] show in
+            if show {
+                self?.navigateToTab(.read)
+            }
+        }.disposed(by: disposeBag)
     }
 
 }

@@ -93,7 +93,7 @@ class SearchViewModelImpl: BaseViewModel, ISearchViewModel {
         preferenceRepo.shouldReloadVerses = true
         
         let history = History(book: book, chapter: chapter)
-        subscribe(historyRepo.insertHistory(history: [history]), viewControllerType: .bottomSheet, success: { [weak self] in
+        subscribe(historyRepo.insertHistory(history: [history]), success: { [weak self] in
             self?.showReaderView.onNext(true)
         })
     }
