@@ -9,7 +9,7 @@
 import Foundation
 import Swinject
 
-struct RepositoryDependencyInjectionGraph {
+struct RepositoryDI {
     
     static func setup(container: Container) {
         

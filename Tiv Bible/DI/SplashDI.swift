@@ -10,7 +10,7 @@ import Foundation
 import Swinject
 import SwinjectStoryboard
 
-struct SplashDependencyInjectionGraph {
+struct SplashDI {
     
     static func setup(container: Container) {
         

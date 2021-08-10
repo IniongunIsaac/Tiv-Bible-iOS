@@ -10,7 +10,7 @@ import Foundation
 import Swinject
 import RealmSwift
 
-struct LocalDataSourceDependencyInjectionGraph {
+struct LocalDatasourceDI {
     
     static func setup(container: Container) {
         

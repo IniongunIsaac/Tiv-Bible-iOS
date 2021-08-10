@@ -10,7 +10,7 @@ import Foundation
 import Swinject
 import SwinjectStoryboard
 
-struct SearchDependencyInjectionGraph {
+struct SearchDI {
     
     static func setup(container: Container) {
         

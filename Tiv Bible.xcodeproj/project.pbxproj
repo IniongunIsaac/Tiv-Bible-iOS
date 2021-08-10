@@ -93,9 +93,9 @@
 		14121E2024788F360073814F /* PreferenceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E1F24788F360073814F /* PreferenceConstants.swift */; };
 		14121E2324792A310073814F /* IPreferenceRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2224792A310073814F /* IPreferenceRepo.swift */; };
 		14121E2524792A5B0073814F /* PreferenceRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2424792A5B0073814F /* PreferenceRepoImpl.swift */; };
-		14121E2724792BDD0073814F /* SwinjectDependencyGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2624792BDD0073814F /* SwinjectDependencyGraph.swift */; };
-		14121E2924792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2824792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift */; };
-		14121E2B24792F320073814F /* RepositoryDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2A24792F320073814F /* RepositoryDependencyInjectionGraph.swift */; };
+		14121E2724792BDD0073814F /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2624792BDD0073814F /* DIContainer.swift */; };
+		14121E2924792C850073814F /* LocalDatasourceDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2824792C850073814F /* LocalDatasourceDI.swift */; };
+		14121E2B24792F320073814F /* RepositoryDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2A24792F320073814F /* RepositoryDI.swift */; };
 		14121E2D24793B210073814F /* tivBibleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 14121E2C24793B200073814F /* tivBibleData.json */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
@@ -118,7 +118,7 @@
 		1440E070247AC0C60037E68E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E06F247AC0C60037E68E /* SplashViewModel.swift */; };
 		1440E072247AF64D0037E68E /* ISplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E071247AF64D0037E68E /* ISplashViewModel.swift */; };
 		1440E074247BBE850037E68E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E073247BBE850037E68E /* UIColor+Extension.swift */; };
-		1440E076247BF93B0037E68E /* SplashDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E075247BF93B0037E68E /* SplashDependencyInjectionGraph.swift */; };
+		1440E076247BF93B0037E68E /* SplashDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440E075247BF93B0037E68E /* SplashDI.swift */; };
 		1440E079247D3C630037E68E /* HomeTabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440E078247D3C630037E68E /* HomeTabs.storyboard */; };
 		1440E07E247D3CC90037E68E /* Read.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440E07D247D3CC90037E68E /* Read.storyboard */; };
 		1440E080247D3CD50037E68E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440E07F247D3CD50037E68E /* Search.storyboard */; };
@@ -226,9 +226,9 @@
 		14CD21AB247DA65600EF0A32 /* IMoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21AA247DA65600EF0A32 /* IMoreViewModel.swift */; };
 		14CD21AD247DA67400EF0A32 /* MoreViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21AC247DA67400EF0A32 /* MoreViewModelImpl.swift */; };
 		14CD21AF247E229900EF0A32 /* Reactive+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21AE247E229900EF0A32 /* Reactive+Extensions.swift */; };
-		14CD21B1247E28F400EF0A32 /* ReadDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21B0247E28F400EF0A32 /* ReadDependencyInjectionGraph.swift */; };
-		14CD21B3247E2B5900EF0A32 /* SearchDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21B2247E2B5900EF0A32 /* SearchDependencyInjectionGraph.swift */; };
-		14CD21B5247E2B7400EF0A32 /* MoreDependencyInjectionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21B4247E2B7400EF0A32 /* MoreDependencyInjectionGraph.swift */; };
+		14CD21B1247E28F400EF0A32 /* ReadDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21B0247E28F400EF0A32 /* ReadDI.swift */; };
+		14CD21B3247E2B5900EF0A32 /* SearchDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21B2247E2B5900EF0A32 /* SearchDI.swift */; };
+		14CD21B5247E2B7400EF0A32 /* MoreDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD21B4247E2B7400EF0A32 /* MoreDI.swift */; };
 		14E2D0B626C15F700031BC75 /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2D0B526C15F700031BC75 /* DropdownView.swift */; };
 		14E2D0B826C161070031BC75 /* DropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E2D0B726C161070031BC75 /* DropdownView.xib */; };
 		14E2D0BB26C171610031BC75 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E2D0BA26C171610031BC75 /* FilterView.xib */; };
@@ -344,9 +344,9 @@
 		14121E1F24788F360073814F /* PreferenceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceConstants.swift; sourceTree = "<group>"; };
 		14121E2224792A310073814F /* IPreferenceRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPreferenceRepo.swift; sourceTree = "<group>"; };
 		14121E2424792A5B0073814F /* PreferenceRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceRepoImpl.swift; sourceTree = "<group>"; };
-		14121E2624792BDD0073814F /* SwinjectDependencyGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectDependencyGraph.swift; sourceTree = "<group>"; };
-		14121E2824792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceDependencyInjectionGraph.swift; sourceTree = "<group>"; };
-		14121E2A24792F320073814F /* RepositoryDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDependencyInjectionGraph.swift; sourceTree = "<group>"; };
+		14121E2624792BDD0073814F /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		14121E2824792C850073814F /* LocalDatasourceDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatasourceDI.swift; sourceTree = "<group>"; };
+		14121E2A24792F320073814F /* RepositoryDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDI.swift; sourceTree = "<group>"; };
 		14121E2C24793B200073814F /* tivBibleData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tivBibleData.json; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -375,7 +375,7 @@
 		1440E06F247AC0C60037E68E /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		1440E071247AF64D0037E68E /* ISplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISplashViewModel.swift; sourceTree = "<group>"; };
 		1440E073247BBE850037E68E /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		1440E075247BF93B0037E68E /* SplashDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDependencyInjectionGraph.swift; sourceTree = "<group>"; };
+		1440E075247BF93B0037E68E /* SplashDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDI.swift; sourceTree = "<group>"; };
 		1440E078247D3C630037E68E /* HomeTabs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTabs.storyboard; sourceTree = "<group>"; };
 		1440E07D247D3CC90037E68E /* Read.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Read.storyboard; sourceTree = "<group>"; };
 		1440E07F247D3CD50037E68E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -482,9 +482,9 @@
 		14CD21AA247DA65600EF0A32 /* IMoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMoreViewModel.swift; sourceTree = "<group>"; };
 		14CD21AC247DA67400EF0A32 /* MoreViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModelImpl.swift; sourceTree = "<group>"; };
 		14CD21AE247E229900EF0A32 /* Reactive+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extensions.swift"; sourceTree = "<group>"; };
-		14CD21B0247E28F400EF0A32 /* ReadDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadDependencyInjectionGraph.swift; sourceTree = "<group>"; };
-		14CD21B2247E2B5900EF0A32 /* SearchDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDependencyInjectionGraph.swift; sourceTree = "<group>"; };
-		14CD21B4247E2B7400EF0A32 /* MoreDependencyInjectionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDependencyInjectionGraph.swift; sourceTree = "<group>"; };
+		14CD21B0247E28F400EF0A32 /* ReadDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadDI.swift; sourceTree = "<group>"; };
+		14CD21B2247E2B5900EF0A32 /* SearchDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDI.swift; sourceTree = "<group>"; };
+		14CD21B4247E2B7400EF0A32 /* MoreDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDI.swift; sourceTree = "<group>"; };
 		14E2D0B526C15F700031BC75 /* DropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
 		14E2D0B726C161070031BC75 /* DropdownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownView.xib; sourceTree = "<group>"; };
 		14E2D0BA26C171610031BC75 /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
@@ -648,13 +648,13 @@
 		14121C7F247464F10073814F /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				14121E2624792BDD0073814F /* SwinjectDependencyGraph.swift */,
-				14121E2824792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift */,
-				14121E2A24792F320073814F /* RepositoryDependencyInjectionGraph.swift */,
-				1440E075247BF93B0037E68E /* SplashDependencyInjectionGraph.swift */,
-				14CD21B0247E28F400EF0A32 /* ReadDependencyInjectionGraph.swift */,
-				14CD21B2247E2B5900EF0A32 /* SearchDependencyInjectionGraph.swift */,
-				14CD21B4247E2B7400EF0A32 /* MoreDependencyInjectionGraph.swift */,
+				14121E2624792BDD0073814F /* DIContainer.swift */,
+				14121E2824792C850073814F /* LocalDatasourceDI.swift */,
+				14121E2A24792F320073814F /* RepositoryDI.swift */,
+				1440E075247BF93B0037E68E /* SplashDI.swift */,
+				14CD21B0247E28F400EF0A32 /* ReadDI.swift */,
+				14CD21B2247E2B5900EF0A32 /* SearchDI.swift */,
+				14CD21B4247E2B7400EF0A32 /* MoreDI.swift */,
 				14BD52AC26C01CF900AF3D80 /* ReferencesDI.swift */,
 			);
 			path = DI;
@@ -1775,7 +1775,7 @@
 				14121E1C24788F0D0073814F /* IPreference.swift in Sources */,
 				14BD529526C007B500AF3D80 /* BookTableViewCell.swift in Sources */,
 				148862CF26B7E92B0004F4C3 /* BaseRealmDatasource.swift in Sources */,
-				14121E2924792C850073814F /* LocalDataSourceDependencyInjectionGraph.swift in Sources */,
+				14121E2924792C850073814F /* LocalDatasourceDI.swift in Sources */,
 				14121E01247734270073814F /* RecentSearchRepoImpl.swift in Sources */,
 				14121DB624770A3D0073814F /* SettingDataSourceImpl.swift in Sources */,
 				14121DCD247719B90073814F /* IAudioSpeedRepo.swift in Sources */,
@@ -1790,7 +1790,7 @@
 				14121DD72477271A0073814F /* IBookmarkRepo.swift in Sources */,
 				14121D52247471FF0073814F /* Version.swift in Sources */,
 				14121DB924770E6F0073814F /* ITestamentDataSource.swift in Sources */,
-				14121E2724792BDD0073814F /* SwinjectDependencyGraph.swift in Sources */,
+				14121E2724792BDD0073814F /* DIContainer.swift in Sources */,
 				14CD21A7247DA5F400EF0A32 /* ISearchViewModel.swift in Sources */,
 				14121D982476CD110073814F /* HighlightColorDataSourceImpl.swift in Sources */,
 				14121DEB24772E5A0073814F /* IHighlightRepo.swift in Sources */,
@@ -1803,7 +1803,7 @@
 				1462CD2E2480469500063892 /* VerseTableViewCell.swift in Sources */,
 				14121D932476CBAF0073814F /* FontStyleDataSourceImpl.swift in Sources */,
 				14121D6324750F0D0073814F /* Date+Extensions.swift in Sources */,
-				14121E2B24792F320073814F /* RepositoryDependencyInjectionGraph.swift in Sources */,
+				14121E2B24792F320073814F /* RepositoryDI.swift in Sources */,
 				1440E063247AACC90037E68E /* AppConstants.swift in Sources */,
 				14121DD92477274D0073814F /* BookmarkRepoImpl.swift in Sources */,
 				14121D6D2475247B0073814F /* Note.swift in Sources */,
@@ -1816,7 +1816,7 @@
 				1462CD3224819AB900063892 /* HighlightColorCollectionViewCell.swift in Sources */,
 				14BD52AF26C027C100AF3D80 /* RxView+Extensions.swift in Sources */,
 				14121D842476700C0073814F /* BookDataSourceImpl.swift in Sources */,
-				14CD21B3247E2B5900EF0A32 /* SearchDependencyInjectionGraph.swift in Sources */,
+				14CD21B3247E2B5900EF0A32 /* SearchDI.swift in Sources */,
 				14BD529126BFFE3600AF3D80 /* BaseBottomPopupViewController.swift in Sources */,
 				1462CD342481C13E00063892 /* FontStyleCollectionViewCell.swift in Sources */,
 				148862CD26B7E6FD0004F4C3 /* Preference+Utils.swift in Sources */,
@@ -1832,7 +1832,7 @@
 				1440E070247AC0C60037E68E /* SplashViewModel.swift in Sources */,
 				1440E072247AF64D0037E68E /* ISplashViewModel.swift in Sources */,
 				14121E1A247737E30073814F /* VersionRepoImpl.swift in Sources */,
-				14CD21B5247E2B7400EF0A32 /* MoreDependencyInjectionGraph.swift in Sources */,
+				14CD21B5247E2B7400EF0A32 /* MoreDI.swift in Sources */,
 				14121DF2247731A10073814F /* HistoryRepoImpl.swift in Sources */,
 				14121D87247683A60073814F /* IBookmarkDataSource.swift in Sources */,
 				14121DFA2477335C0073814F /* IOtherRepo.swift in Sources */,
@@ -1860,7 +1860,7 @@
 				14121DAC2476FB220073814F /* OtherDataSourceImpl.swift in Sources */,
 				14121D7324752C8E0073814F /* Setting.swift in Sources */,
 				14377BF8246DE214005B0795 /* SplashViewController.swift in Sources */,
-				1440E076247BF93B0037E68E /* SplashDependencyInjectionGraph.swift in Sources */,
+				1440E076247BF93B0037E68E /* SplashDI.swift in Sources */,
 				1440E061247AACAA0037E68E /* UIView+Extensions.swift in Sources */,
 				14121D7A2475B41D0073814F /* IAudioSpeedDataSource.swift in Sources */,
 				14BD529C26C00D3900AF3D80 /* ChapterCollectionViewCell.swift in Sources */,
@@ -1917,7 +1917,7 @@
 				14121DD22477262C0073814F /* IBookRepo.swift in Sources */,
 				14BD528A26BFFA8F00AF3D80 /* BooksViewController.swift in Sources */,
 				14121E2324792A310073814F /* IPreferenceRepo.swift in Sources */,
-				14CD21B1247E28F400EF0A32 /* ReadDependencyInjectionGraph.swift in Sources */,
+				14CD21B1247E28F400EF0A32 /* ReadDI.swift in Sources */,
 				14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */,
 				14121DBB24770E950073814F /* TestamentDataSourceImpl.swift in Sources */,
 				14121D9B2476CE4E0073814F /* IHighlightDataSource.swift in Sources */,

@@ -23,17 +23,17 @@ extension SwinjectStoryboard {
         
         defaultContainer.register(IPreferenceRepo.self) { res in PreferenceRepoImpl(preference: res.resolve(IPreference.self)!) }
         
-        LocalDataSourceDependencyInjectionGraph.setup(container: defaultContainer)
+        LocalDatasourceDI.setup(container: defaultContainer)
         
-        RepositoryDependencyInjectionGraph.setup(container: defaultContainer)
+        RepositoryDI.setup(container: defaultContainer)
         
-        SplashDependencyInjectionGraph.setup(container: defaultContainer)
+        SplashDI.setup(container: defaultContainer)
         
-        ReadDependencyInjectionGraph.setup(container: defaultContainer)
+        ReadDI.setup(container: defaultContainer)
         
-        SearchDependencyInjectionGraph.setup(container: defaultContainer)
+        SearchDI.setup(container: defaultContainer)
         
-        MoreDependencyInjectionGraph.setup(container: defaultContainer)
+        MoreDI.setup(container: defaultContainer)
         
         ReferencesDI.setup(container: defaultContainer)
         
