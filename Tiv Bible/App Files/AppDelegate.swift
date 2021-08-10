@@ -12,19 +12,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     fileprivate func configureGlobalAppAppearance() {
-        let iPadAttributes = [NSAttributedString.Key.font : UIFont.comfortaaRegular(size: 16)]
+        let iPadAttributes = [NSAttributedString.Key.font : UIFont.comfortaaBold(size: 16)]
         let iPadTraitCollection = UITraitCollection.init(traitsFrom: [.init(horizontalSizeClass: .regular), .init(verticalSizeClass: .regular)])
         let iPhoneTraitCollection = UITraitCollection.init(traitsFrom: [.init(horizontalSizeClass: .compact), .init(verticalSizeClass: .regular)])
         
         //configurations for iPads: wRhR
         UIBarButtonItem.appearance(for: iPadTraitCollection).setTitleTextAttributes(iPadAttributes, for: .normal)
         UITabBarItem.appearance(for: iPadTraitCollection).setTitleTextAttributes(iPadAttributes, for: .normal)
-        UINavigationBar.appearance(for: iPadTraitCollection).titleTextAttributes = [NSAttributedString.Key.font : UIFont.comfortaaRegular(size: 18)]
+        UINavigationBar.appearance(for: iPadTraitCollection).titleTextAttributes = [NSAttributedString.Key.font : UIFont.comfortaaBold(size: 18)]
         
         //configurations for iPhones: wChR
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont.comfortaaRegular(size: 16), NSAttributedString.Key.foregroundColor : UIColor.aLabel], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont.comfortaaRegular(size: 12)], for: .normal)
-        UINavigationBar.appearance(for: iPhoneTraitCollection).titleTextAttributes = [NSAttributedString.Key.font : UIFont.comfortaaRegular(size: 16)]
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont.comfortaaBold(size: 16), NSAttributedString.Key.foregroundColor : UIColor.aLabel], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont.comfortaaBold(size: 12)], for: .normal)
+        UINavigationBar.appearance(for: iPhoneTraitCollection).titleTextAttributes = [NSAttributedString.Key.font : UIFont.comfortaaBold(size: 16)]
         UINavigationBar.appearance(for: iPhoneTraitCollection).tintColor = UIColor.aLabel
         
     }

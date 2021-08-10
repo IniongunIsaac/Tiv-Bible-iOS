@@ -216,6 +216,10 @@
 		149531C62506773800A6E9DD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 149531C52506773800A6E9DD /* .gitignore */; };
 		149531CB2506783C00A6E9DD /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 149531CA2506783C00A6E9DD /* Podfile.lock */; };
 		149531CF2506792D00A6E9DD /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149531CE2506792D00A6E9DD /* R.generated.swift */; };
+		14AF5E6D26C2C6B100490106 /* TapActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF5E6C26C2C6B100490106 /* TapActionTableViewCell.swift */; };
+		14AF5E6F26C2C6D200490106 /* TapActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF5E6E26C2C6D200490106 /* TapActionsViewController.swift */; };
+		14AF5E7126C2C75C00490106 /* TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF5E7026C2C75C00490106 /* TapAction.swift */; };
+		14AF5E7326C2C9D600490106 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF5E7226C2C9D600490106 /* ConfirmationViewController.swift */; };
 		14BD528A26BFFA8F00AF3D80 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD528926BFFA8F00AF3D80 /* BooksViewController.swift */; };
 		14BD528D26BFFADF00AF3D80 /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD528C26BFFADF00AF3D80 /* ChaptersViewController.swift */; };
 		14BD528F26BFFAF100AF3D80 /* VersesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD528E26BFFAF100AF3D80 /* VersesViewController.swift */; };
@@ -487,6 +491,10 @@
 		149531C52506773800A6E9DD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		149531CA2506783C00A6E9DD /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		149531CE2506792D00A6E9DD /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		14AF5E6C26C2C6B100490106 /* TapActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapActionTableViewCell.swift; sourceTree = "<group>"; };
+		14AF5E6E26C2C6D200490106 /* TapActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapActionsViewController.swift; sourceTree = "<group>"; };
+		14AF5E7026C2C75C00490106 /* TapAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapAction.swift; sourceTree = "<group>"; };
+		14AF5E7226C2C9D600490106 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		14BD528926BFFA8F00AF3D80 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		14BD528C26BFFADF00AF3D80 /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
 		14BD528E26BFFAF100AF3D80 /* VersesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersesViewController.swift; sourceTree = "<group>"; };
@@ -1350,6 +1358,7 @@
 			isa = PBXGroup;
 			children = (
 				1477B59D26C28E6700E736C2 /* MoreItem.swift */,
+				14AF5E7026C2C75C00490106 /* TapAction.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1388,6 +1397,9 @@
 				1477B5B426C2A8E400E736C2 /* CommandmentsViewController.swift */,
 				1477B5B626C2A8FC00E736C2 /* LordsPrayerViewController.swift */,
 				1477B5B826C2A91C00E736C2 /* SettingsViewController.swift */,
+				14AF5E6C26C2C6B100490106 /* TapActionTableViewCell.swift */,
+				14AF5E6E26C2C6D200490106 /* TapActionsViewController.swift */,
+				14AF5E7226C2C9D600490106 /* ConfirmationViewController.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -1968,7 +1980,9 @@
 				14121E152477371A0073814F /* VerseRepoImpl.swift in Sources */,
 				1440E074247BBE850037E68E /* UIColor+Extension.swift in Sources */,
 				1477B5AA26C2A7C400E736C2 /* NoteTableViewCell.swift in Sources */,
+				14AF5E7126C2C75C00490106 /* TapAction.swift in Sources */,
 				14CD21A0247D5D3400EF0A32 /* ReadViewModelImpl.swift in Sources */,
+				14AF5E6D26C2C6B100490106 /* TapActionTableViewCell.swift in Sources */,
 				14121DAF247709020073814F /* IRecentSearchDataSource.swift in Sources */,
 				14BD52A126C012A400AF3D80 /* ReferenceSegment.swift in Sources */,
 				148B0F4626BE5B1C00B92B26 /* BaseView.swift in Sources */,
@@ -2004,7 +2018,9 @@
 				1440E059247AABB20037E68E /* AlertMessage.swift in Sources */,
 				14121D5A24747BB20073814F /* Book.swift in Sources */,
 				14121D6F24752B9A0073814F /* Other.swift in Sources */,
+				14AF5E7326C2C9D600490106 /* ConfirmationViewController.swift in Sources */,
 				14121D89247683D00073814F /* BookmarkDataSourceImpl.swift in Sources */,
+				14AF5E6F26C2C6D200490106 /* TapActionsViewController.swift in Sources */,
 				148B0F3D26BE59A500B92B26 /* ReferencesViewController.swift in Sources */,
 				14CD21A3247D606C00EF0A32 /* ButtonWithBorderAttributes.swift in Sources */,
 				14BD529326BFFEC400AF3D80 /* ViewControllerType.swift in Sources */,

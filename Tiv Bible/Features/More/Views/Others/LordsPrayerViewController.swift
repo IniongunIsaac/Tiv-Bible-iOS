@@ -13,5 +13,11 @@ class LordsPrayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hideNavBar(false)
+        title = "Msen U Ter Wase"
+    }
 
 }

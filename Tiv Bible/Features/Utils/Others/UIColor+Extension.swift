@@ -40,7 +40,7 @@ extension UIColor {
     
     static var appInfo: UIColor { UIColor("#171d46") }
     
-    static var appRed: UIColor { UIColor("#EE4848") }
+    static var appRed: UIColor { R.color.appRedColor()! }
     
     static var accentColor: UIColor? { R.color.accentColor() }
     

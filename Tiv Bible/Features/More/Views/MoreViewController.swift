@@ -17,8 +17,12 @@ class MoreViewController: BaseViewController {
     
     override func configureViews() {
         super.configureViews()
-        hideNavBar()
         setupMoreItemsTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hideNavBar()
     }
     
     fileprivate func setupMoreItemsTableView() {

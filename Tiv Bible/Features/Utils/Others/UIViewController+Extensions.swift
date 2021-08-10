@@ -169,4 +169,22 @@ extension UIViewController {
         UIScreen.main.bounds.height
     }
     
+    func showTapActionsViewController(actionChosenHandler: ((TapAction) -> Void)? = nil, deleteConfirmationHandler: NoParamHandler? = nil) {
+        presentViewController(R.storyboard.others.tapActionsViewController()!.apply {
+            $0.actionChosenHandler = { [weak self] action in
+                if action == .delete {
+                    self?.showConfirmationViewController(confirmationHandler: deleteConfirmationHandler)
+                } else {
+                    actionChosenHandler?(action)
+                }
+            }
+        })
+    }
+    
+    func showConfirmationViewController(prompt: String? = nil, confirmationHandler: NoParamHandler? = nil) {
+        showDialog(for: R.storyboard.others.confirmationViewController()!.apply {
+            $0.confirmationHandler = confirmationHandler
+        })
+    }
+    
 }

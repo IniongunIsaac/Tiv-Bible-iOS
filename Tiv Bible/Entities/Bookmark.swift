@@ -21,7 +21,7 @@ import RealmSwift
     }
     
     var bookNameAndChapterNumberAndVerseNumberString: String {
-        return "\(book!.name) \(chapter!.chapterNumber) \(verse!.number)"
+        return "\(book!.name) \(chapter!.chapterNumber) : \(verse!.number)"
     }
     
     var dateString: String {

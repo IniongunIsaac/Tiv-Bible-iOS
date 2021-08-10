@@ -12,4 +12,10 @@ import RxSwift
 
 protocol IMoreViewModel {
     
+    var bookmarks: PublishSubject<[Bookmark]> { get set }
+    
+    func getBookmarks()
+    
+    func deleteBookmark(_ bookmark: Bookmark)
+    
 }
