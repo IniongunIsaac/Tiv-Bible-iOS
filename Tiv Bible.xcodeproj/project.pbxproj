@@ -133,6 +133,7 @@
 		1462CD362481C15100063892 /* ThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */; };
 		1470728126BBEC530088C8D3 /* TakeNotesDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470728026BBEC520088C8D3 /* TakeNotesDialogViewController.swift */; };
 		1470728326BC06460088C8D3 /* TextViewWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470728226BC06460088C8D3 /* TextViewWithPlaceholder.swift */; };
+		1477B59C26C276B700E736C2 /* BookChapterVerse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B59B26C276B700E736C2 /* BookChapterVerse.swift */; };
 		1487476C26BCA4F500DA5155 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487476B26BCA4F500DA5155 /* Theme.swift */; };
 		1487476E26BD551800DA5155 /* Numbers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487476D26BD551700DA5155 /* Numbers+Extensions.swift */; };
 		1487477026BD6A4800DA5155 /* LineSpacingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487476F26BD6A4800DA5155 /* LineSpacingType.swift */; };
@@ -389,6 +390,7 @@
 		1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		1470728026BBEC520088C8D3 /* TakeNotesDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeNotesDialogViewController.swift; sourceTree = "<group>"; };
 		1470728226BC06460088C8D3 /* TextViewWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithPlaceholder.swift; sourceTree = "<group>"; };
+		1477B59B26C276B700E736C2 /* BookChapterVerse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookChapterVerse.swift; sourceTree = "<group>"; };
 		1487476B26BCA4F500DA5155 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1487476D26BD551700DA5155 /* Numbers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numbers+Extensions.swift"; sourceTree = "<group>"; };
 		1487476F26BD6A4800DA5155 /* LineSpacingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSpacingType.swift; sourceTree = "<group>"; };
@@ -565,6 +567,7 @@
 				14121D7624752DE10073814F /* TivBibleData.swift */,
 				1487476B26BCA4F500DA5155 /* Theme.swift */,
 				1487476F26BD6A4800DA5155 /* LineSpacingType.swift */,
+				1477B59B26C276B700E736C2 /* BookChapterVerse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1871,6 +1874,7 @@
 				14121DC5247712A40073814F /* VerseDataSourceImpl.swift in Sources */,
 				14121D7124752C3A0073814F /* RecentSearch.swift in Sources */,
 				14BD528D26BFFADF00AF3D80 /* ChaptersViewController.swift in Sources */,
+				1477B59C26C276B700E736C2 /* BookChapterVerse.swift in Sources */,
 				14121DFF247734010073814F /* IRecentSearchRepo.swift in Sources */,
 				14121E18247737BA0073814F /* IVersionRepo.swift in Sources */,
 				14CD21A9247DA61900EF0A32 /* SearchViewModelImpl.swift in Sources */,

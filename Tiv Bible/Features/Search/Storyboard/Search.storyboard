@@ -20,9 +20,6 @@
         <array key="comfortaa_medium.ttf">
             <string>Comfortaa-Medium</string>
         </array>
-        <array key="comfortaa_semi_bold.ttf">
-            <string>Comfortaa-SemiBold</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Search-->
@@ -141,7 +138,7 @@
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MM-Hj-d36">
                                                                             <rect key="frame" x="0.0" y="39" width="344" height="17"/>
-                                                                            <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="15"/>
+                                                                            <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -230,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="search" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-1W-NHE">
-                                <rect key="frame" x="10" y="103" width="394" height="51"/>
+                                <rect key="frame" x="10" y="102" width="394" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -238,7 +235,7 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Goq-bJ-UZz">
-                                <rect key="frame" x="20" y="164" width="374" height="698"/>
+                                <rect key="frame" x="20" y="163" width="374" height="699"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchBookTableViewCell" rowHeight="70" id="hJM-j6-ec0" customClass="BookTableViewCell" customModule="Tiv_Bible" customModuleProvider="target">
@@ -303,7 +300,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Filter Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egy-PL-Qog">
-                                <rect key="frame" x="138.5" y="74" width="137.5" height="19"/>
+                                <rect key="frame" x="127.5" y="74" width="159" height="18"/>
                                 <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

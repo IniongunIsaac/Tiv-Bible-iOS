@@ -16,7 +16,7 @@ protocol ISearchViewModel: Scopable {
     
     var chapters: [Chapter] { get set }
     
-    var verses: [Verse] { get set }
+    var verses: PublishSubject<[Verse]> { get }
     
     var showReaderView: PublishSubject<Bool> { get }
     
@@ -29,5 +29,9 @@ protocol ISearchViewModel: Scopable {
     func getBooks(showBookReferences: Bool)
     
     func getBookChapters(_ book: Book, showChapterReferences: Bool)
+    
+    func search(text: String)
+    
+    func handleVerseSelected(_ verse: Verse)
     
 }

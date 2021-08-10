@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class SearchViewController: BaseViewController {
     
@@ -98,6 +99,8 @@ class SearchViewController: BaseViewController {
             bookDropdownView.text = book.name
             filtersContentStackView.addArrangedSubview(filterView)
             filtersContainerStackView.showView()
+            
+            search()
         }
         
     }
@@ -109,6 +112,7 @@ class SearchViewController: BaseViewController {
         filtersContainerStackView.hideView()
         bookDropdownView.placeholderText = "Choose Book"
         chapterDropdownView.placeholderText = "Choose Chapter"
+        search()
     }
     
     fileprivate func addChapterFilter(_ chapter: Chapter) {
@@ -124,6 +128,7 @@ class SearchViewController: BaseViewController {
             }
             chapterDropdownView.text = chapterText
             filtersContentStackView.addArrangedSubview(filterView)
+            search()
         }
     }
     
@@ -135,19 +140,44 @@ class SearchViewController: BaseViewController {
             $0.removeFilterHandler = removeBookFilter
         }
         filtersContentStackView.addArrangedSubview(bookFilterView)
+        search()
+    }
+    
+    fileprivate func search() {
+        if let text = searchBar.text, text.isNotEmpty {
+            searchViewModel.search(text: text)
+        }
     }
     
     fileprivate func configureSearchBar() {
         searchBar.font = .comfortaaMedium(size: 15)
+        searchBar.rx.text.orEmpty
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .observe(on: MainScheduler.instance)
+            .bind { [weak self] _ in
+                self?.search()
+            }.disposed(by: disposeBag)
     }
     
     fileprivate func setupSearchResultsTableView() {
+        searchViewModel.verses.map({ $0.isEmpty }).distinctUntilChanged().bind(to: searchResultsTableView.rx.isEmpty(message: "Search results will be shown here!")).disposed(by: disposeBag)
         
+        searchViewModel.verses.bind(to: searchResultsTableView.rx.items(cellIdentifier: R.reuseIdentifier.searchResultTableViewCell.identifier, cellType: SearchResultTableViewCell.self)) { index, verse, cell in
+            
+            cell.configureView(verse: verse)
+            
+            cell.animateViewOnTapGesture { [weak self] in
+                self?.searchViewModel.handleVerseSelected(verse)
+            }
+            
+        }.disposed(by: disposeBag)
     }
     
     override func setChildViewControllerObservers() {
         super.setChildViewControllerObservers()
         observeShowReferenceSegment()
+        observeShowReadView()
     }
     
     fileprivate func observeShowReferenceSegment() {
@@ -156,6 +186,14 @@ class SearchViewController: BaseViewController {
                 self?.showSearchBooksViewController()
             } else {
                 self?.showSearchChaptersViewController()
+            }
+        }.disposed(by: disposeBag)
+    }
+    
+    fileprivate func observeShowReadView() {
+        searchViewModel.showReaderView.bind { [weak self] show in
+            if show {
+                self?.navigateToTab(.read)
             }
         }.disposed(by: disposeBag)
     }

@@ -14,5 +14,11 @@ class SearchResultTableViewCell: UITableViewCell {
     @IBOutlet weak var verseTextLabel: UILabel!
     @IBOutlet weak var referenceLabel: UILabel!
     
+    func configureView(verse: Verse) {
+        verse.do {
+            verseTextLabel.text = $0.text
+            referenceLabel.text = $0.bookNameChapterNumberVerseNumber
+        }
+    }
 
 }

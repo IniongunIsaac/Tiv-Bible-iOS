@@ -19,8 +19,13 @@ import RealmSwift
     dynamic var highlight: Highlight?
     
     let chapters = LinkingObjects(fromType: Chapter.self, property: "verses")
-    var chapter: Chapter {
-        return chapters.first!
+    
+    var chapter: Chapter { chapters.first! }
+    
+    var book: Book { chapter.book }
+    
+    var bookNameChapterNumberVerseNumber: String {
+        "\(chapter.book.bookName) \(chapter.chapterNumber) : \(number)"
     }
     
     override static func ignoredProperties() -> [String] {
