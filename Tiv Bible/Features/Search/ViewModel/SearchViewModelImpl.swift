@@ -40,6 +40,7 @@ class SearchViewModelImpl: BaseViewModel, ISearchViewModel {
         super.didLoad()
         getBooks(showBookReferences: false)
         getAllVerses()
+        verses.onNext([])
     }
     
     fileprivate func getAllVerses() {

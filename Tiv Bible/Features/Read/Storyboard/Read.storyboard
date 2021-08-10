@@ -198,7 +198,7 @@
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
-                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="share_icon_" translatesAutoresizingMaskIntoConstraints="NO" id="tov-Sa-5kI">
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="share_icon" translatesAutoresizingMaskIntoConstraints="NO" id="tov-Sa-5kI">
                                                                                                 <rect key="frame" x="54.5" y="6.5" width="19" height="19"/>
                                                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                                                 <constraints>
@@ -1139,7 +1139,7 @@
         <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>
         <image name="notes_icon" width="100" height="100"/>
         <image name="plus_icon" width="700" height="700"/>
-        <image name="share_icon_" width="24" height="24"/>
+        <image name="share_icon" width="24" height="24"/>
         <image name="spacing_icon_large" width="96" height="96"/>
         <image name="spacing_icon_normal" width="96" height="96"/>
         <image name="spacing_icon_small" width="32" height="32"/>

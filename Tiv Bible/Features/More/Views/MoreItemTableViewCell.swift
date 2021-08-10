@@ -9,16 +9,16 @@
 import UIKit
 
 class MoreItemTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBOutlet weak var detailsView: UIView!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var itemLabel: UILabel!
+        
+    func configureView(item: MoreItem) {
+        item.do {
+            iconImageView.image = $0.icon
+            itemLabel.text = $0.rawValue
+        }
     }
 
 }

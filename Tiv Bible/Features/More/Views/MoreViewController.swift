@@ -34,7 +34,28 @@ class MoreViewController: BaseViewController {
     }
     
     fileprivate func handleItemSelected(_ item: MoreItem) {
-        
+        switch item {
+        case .bookmarks:
+            pushViewController(R.storyboard.more.bookmarksViewController()!)
+        case .highlights:
+            pushViewController(R.storyboard.more.highlightsViewController()!)
+        case .notes:
+            pushViewController(R.storyboard.more.notesViewController()!)
+        case .history:
+            pushViewController(R.storyboard.more.historyViewController()!)
+        case .apostlesCreed:
+            pushViewController(R.storyboard.others.apostlesCreedViewController()!)
+        case .commandments:
+            pushViewController(R.storyboard.others.commandmentsViewController()!)
+        case .lordsPrayer:
+            pushViewController(R.storyboard.others.lordsPrayerViewController()!)
+        case .share:
+            break
+        case .rating:
+            break
+        case .settings:
+            pushViewController(R.storyboard.others.settingsViewController()!)
+        }
     }
 
 }
