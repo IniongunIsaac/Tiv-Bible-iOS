@@ -20,7 +20,7 @@ class NotesViewController: BaseViewController {
             btn.title = "Clear All"
             btn.textColor = .appRed
             btn.addTarget(self, action: #selector(clearAllButtonTapped), for: .touchUpInside)
-            btn.font = .andesRoundedRegular(size: 14)
+            btn.font = .comfortaaMedium(size: 15)
         }
     }
     

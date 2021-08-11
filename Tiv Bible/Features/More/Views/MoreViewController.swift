@@ -26,7 +26,7 @@ class MoreViewController: BaseViewController {
     }
     
     fileprivate func setupMoreItemsTableView() {
-        MoreItem.allCases.asObservable.bind(to: moreItemsTableView.rx.items(cellIdentifier: R.reuseIdentifier.moreItemTableViewCell.identifier, cellType: MoreItemTableViewCell.self)) { index, item, cell in
+        MoreItem.allCases.filter { $0 != .history }.asObservable.bind(to: moreItemsTableView.rx.items(cellIdentifier: R.reuseIdentifier.moreItemTableViewCell.identifier, cellType: MoreItemTableViewCell.self)) { index, item, cell in
             
             cell.configureView(item: item)
             

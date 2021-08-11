@@ -10,15 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Andes Rounded W03 Light.ttf">
-            <string>AndesRoundedW03-Light</string>
-        </array>
-        <array key="Andes Rounded W03 Medium.ttf">
-            <string>AndesRoundedW03-Medium</string>
-        </array>
-        <array key="Andes Rounded W03 Regular.ttf">
-            <string>AndesRoundedW03-Regular</string>
-        </array>
         <array key="comfortaa.ttf">
             <string>Comfortaa-Regular</string>
         </array>
@@ -350,14 +341,14 @@
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </view>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Baa-fW-8Bc">
-                                                                                    <rect key="frame" x="30" y="0.0" width="230" height="20"/>
-                                                                                    <fontDescription key="fontDescription" name="AndesRoundedW03-Medium" family="AndesRoundedW03-Medium" pointSize="15"/>
+                                                                                    <rect key="frame" x="30" y="0.0" width="238" height="20"/>
+                                                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="10.10.2021" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9m-fS-mkg">
-                                                                                    <rect key="frame" x="270" y="0.0" width="74" height="20"/>
-                                                                                    <fontDescription key="fontDescription" name="AndesRoundedW03-Medium" family="AndesRoundedW03-Medium" pointSize="15"/>
+                                                                                    <rect key="frame" x="278" y="0.0" width="66" height="20"/>
+                                                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
@@ -365,7 +356,7 @@
                                                                         </stackView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCt-bN-g9j">
                                                                             <rect key="frame" x="0.0" y="28" width="344" height="75"/>
-                                                                            <fontDescription key="fontDescription" name="AndesRoundedW03-Regular" family="AndesRoundedW03-Regular" pointSize="15"/>
+                                                                            <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -461,25 +452,25 @@
                                                                     <rect key="frame" x="15" y="15" width="344" height="198"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aZ7-1X-m7f">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="344" height="19.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="344" height="17"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0id-Xt-Lqg">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="19.5"/>
-                                                                                    <fontDescription key="fontDescription" name="AndesRoundedW03-Medium" family="AndesRoundedW03-Medium" pointSize="15"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="266.5" height="17"/>
+                                                                                    <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="15"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="10.10.2021" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fec-Io-cwh">
-                                                                                    <rect key="frame" x="270" y="0.0" width="74" height="19.5"/>
-                                                                                    <fontDescription key="fontDescription" name="AndesRoundedW03-Medium" family="AndesRoundedW03-Medium" pointSize="15"/>
+                                                                                    <rect key="frame" x="276.5" y="0.0" width="67.5" height="17"/>
+                                                                                    <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="15"/>
                                                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
                                                                         </stackView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fd-tN-W12">
-                                                                            <rect key="frame" x="0.0" y="27.5" width="344" height="102.5"/>
-                                                                            <fontDescription key="fontDescription" name="AndesRoundedW03-Regular" family="AndesRoundedW03-Regular" pointSize="15"/>
+                                                                            <rect key="frame" x="0.0" y="25" width="344" height="105"/>
+                                                                            <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -487,17 +478,17 @@
                                                                             <rect key="frame" x="0.0" y="138" width="344" height="60"/>
                                                                             <subviews>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="uxe-1x-qwB">
-                                                                                    <rect key="frame" x="15" y="13" width="314" height="34.5"/>
+                                                                                    <rect key="frame" x="15" y="15" width="314" height="30.5"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywY-Mz-jbO">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="314" height="16"/>
-                                                                                            <fontDescription key="fontDescription" name="AndesRoundedW03-Light" family="AndesRoundedW03-Light" pointSize="13"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="314" height="13.5"/>
+                                                                                            <fontDescription key="fontDescription" name="Comfortaa-Light" family="Comfortaa" pointSize="12"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONv-BS-Tmx">
-                                                                                            <rect key="frame" x="0.0" y="16" width="314" height="18.5"/>
-                                                                                            <fontDescription key="fontDescription" name="AndesRoundedW03-Regular" family="AndesRoundedW03-Regular" pointSize="15"/>
+                                                                                            <rect key="frame" x="0.0" y="13.5" width="314" height="17"/>
+                                                                                            <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
@@ -589,7 +580,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genese 5:1-10, 20-25, 30, 40-51" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="gd1-LI-jd9">
-                                <rect key="frame" x="20" y="134" width="374" height="19"/>
+                                <rect key="frame" x="20" y="134" width="374" height="18"/>
                                 <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -675,34 +666,34 @@
                                 </subviews>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqq-EC-MNE">
-                                <rect key="frame" x="20" y="173" width="374" height="555"/>
+                                <rect key="frame" x="20" y="172" width="374" height="556"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iT4-je-9UP" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="90.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bZ5-2W-gs0" userLabel="Details Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="90.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oZ-bd-AJF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
                                                         <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSO-En-dMR">
-                                                        <rect key="frame" x="0.0" y="27.5" width="374" height="63"/>
+                                                        <rect key="frame" x="0.0" y="27" width="374" height="63"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="NjM-DX-SX0">
                                                                 <rect key="frame" x="15" y="15" width="344" height="33"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abv-cQ-Hbe">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="344" height="15.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="344" height="15"/>
                                                                         <fontDescription key="fontDescription" name="Comfortaa-Light" family="Comfortaa" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQS-wp-I9F">
-                                                                        <rect key="frame" x="0.0" y="15.5" width="344" height="17.5"/>
+                                                                        <rect key="frame" x="0.0" y="15" width="344" height="18"/>
                                                                         <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>

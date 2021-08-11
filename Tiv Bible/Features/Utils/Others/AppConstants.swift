@@ -17,7 +17,7 @@ struct AppConstants {
     static let INVALID_INPUT_FIELD = "Invalid input field."
     static let DATA_NOT_FOUND = "No data found!"
     static let BACKGROUND_THREAD_LABEL = "com.iniongungroup.tivbible.background.thread"
-    static let APPSTORE_LINK = ""
+    static let APPSTORE_LINK = "https://itunes.apple.com/us/app/gigm-com/{APP_ID_HERE}?action=write-review"
     
     static let minFontSize = currentDevice.isPhone ? 13 : 16
     static let maxFontSize = currentDevice.isPhone ? 17 : 20
