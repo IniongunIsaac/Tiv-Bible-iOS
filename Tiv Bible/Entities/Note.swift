@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import AttributedStringBuilder
 
 @objcMembers class Note: Base {
     dynamic var takenOn = Date()
@@ -26,10 +27,24 @@ import RealmSwift
     var bookNameAndChapterNumberAndVerseNumbersString: String { "\(book!.name) \(chapter!.chapterNumber):\(getFormattedVerseNumbers())" }
     
     var formattedVersesText: String {
-        return verses.sorted { $0.number < $1.number }
+        return verses
             .map { "\($0.number).\t\($0.text)" }
             .joined(separator: "\n")
     }
+    
+    var attributedFormattedVersesText: NSAttributedString {
+        let attrs = AttributedStringBuilder()
+        
+        verses.forEach {
+            attrs.text("\($0.number).\t", attributes: [.font(.comfortaaBold(size: 15)), .textColor(.aLabel)])
+            attrs.text("\($0.text)", attributes: [.font(.comfortaaRegular(size: 15)), .textColor(.aLabel)])
+            attrs.newlines(2)
+        }
+        
+        return attrs.attributedString
+    }
+    
+    var shareableText: String { "\(bookNameAndChapterNumberAndVerseNumbersString)\n\(formattedVersesText)\n\nComment:\n\(comment)" }
     
     var dateString: String {
         return takenOn.dateOnly(format: "dd.MM.yyyy")

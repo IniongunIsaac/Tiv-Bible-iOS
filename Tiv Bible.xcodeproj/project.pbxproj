@@ -107,6 +107,7 @@
 		142BFFB526C36BC0008380F8 /* Andes Rounded W03 Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142BFFAB26C36BC0008380F8 /* Andes Rounded W03 Book.ttf */; };
 		142BFFB626C36BC0008380F8 /* Andes Rounded W03 ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142BFFAC26C36BC0008380F8 /* Andes Rounded W03 ExtraBold.ttf */; };
 		142BFFB726C36BC0008380F8 /* Andes Rounded W03 SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142BFFAD26C36BC0008380F8 /* Andes Rounded W03 SemiBold.ttf */; };
+		142BFFB926C389C0008380F8 /* NoteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142BFFB826C389C0008380F8 /* NoteDetailsViewController.swift */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* SplashViewController.swift */; };
@@ -387,6 +388,7 @@
 		142BFFAB26C36BC0008380F8 /* Andes Rounded W03 Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andes Rounded W03 Book.ttf"; sourceTree = "<group>"; };
 		142BFFAC26C36BC0008380F8 /* Andes Rounded W03 ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andes Rounded W03 ExtraBold.ttf"; sourceTree = "<group>"; };
 		142BFFAD26C36BC0008380F8 /* Andes Rounded W03 SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andes Rounded W03 SemiBold.ttf"; sourceTree = "<group>"; };
+		142BFFB826C389C0008380F8 /* NoteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewController.swift; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1416,6 +1418,7 @@
 			children = (
 				1477B5A926C2A7C400E736C2 /* NoteTableViewCell.swift */,
 				1477B5AF26C2A88000E736C2 /* NotesViewController.swift */,
+				142BFFB826C389C0008380F8 /* NoteDetailsViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -2015,6 +2018,7 @@
 				1440E076247BF93B0037E68E /* SplashDI.swift in Sources */,
 				1440E061247AACAA0037E68E /* UIView+Extensions.swift in Sources */,
 				14121D7A2475B41D0073814F /* IAudioSpeedDataSource.swift in Sources */,
+				142BFFB926C389C0008380F8 /* NoteDetailsViewController.swift in Sources */,
 				14BD529C26C00D3900AF3D80 /* ChapterCollectionViewCell.swift in Sources */,
 				1488103526B9D692007096C4 /* ScopeFunctions.swift in Sources */,
 				14121E152477371A0073814F /* VerseRepoImpl.swift in Sources */,

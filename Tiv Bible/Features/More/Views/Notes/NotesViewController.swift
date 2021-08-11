@@ -23,6 +23,8 @@ class NotesViewController: BaseViewController {
             btn.font = .andesRoundedRegular(size: 14)
         }
     }
+    
+    fileprivate var selectedNote: Note!
 
     override func configureViews() {
         super.configureViews()
@@ -53,9 +55,42 @@ class NotesViewController: BaseViewController {
             cell.configureView(note: note)
             
             cell.animateViewOnTapGesture { [weak self] in
-                //self?.handleBookmarkSelected()
+                self?.selectedNote = note
+                self?.handleNoteSelected()
             }
             
+        }.disposed(by: disposeBag)
+    }
+    
+    fileprivate func handleNoteSelected() {
+        presentViewController(R.storyboard.more.noteDetailsViewController()!.apply {
+            $0.note = selectedNote
+            
+            $0.deleteNoteHandler = { [weak self] in
+                guard let self = self else { return }
+                self.moreViewModel.deleteNote(self.selectedNote)
+            }
+            
+            $0.readFullChapterHandler = readFullChapter
+        })
+    }
+    
+    fileprivate func readFullChapter() {
+        selectedNote.do {
+            moreViewModel.readFullChapter(bookId: $0.book!.id, chapterId: $0.chapter!.id, verseId: $0.verses.first!.id, verseNumber: $0.verses.first!.number)
+        }
+    }
+    
+    override func setChildViewControllerObservers() {
+        super.setChildViewControllerObservers()
+        observeShowReaderView()
+    }
+    
+    fileprivate func observeShowReaderView() {
+        moreViewModel.showReaderView.bind { [weak self] show in
+            if show {
+                self?.navigateToTab(.read)
+            }
         }.disposed(by: disposeBag)
     }
 

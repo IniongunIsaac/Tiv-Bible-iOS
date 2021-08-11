@@ -250,6 +250,7 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     
     func saveNotes(_ notes: String) {
         let note = Note(comment: notes, book: currentBook!, chapter: currentChapter!)
+        note.verses.append(objectsIn: selectedVerses.sorted { $0.number < $1.number })
         subscribe(noteRepo.insertNotes(notes: [note]), success: { [weak self] in
             self?.showMessage("Notes saved successfully!")
         })
