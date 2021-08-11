@@ -13,6 +13,10 @@ import Foundation
     dynamic var subTitle = ""
     dynamic var text = ""
     
+    var shareableContent: String {
+        "\(title)\n\n\(subTitle)\n\n\(text)"
+    }
+    
     convenience required init(title: String, subTitle: String, text: String) {
         self.init()
         self.title = title

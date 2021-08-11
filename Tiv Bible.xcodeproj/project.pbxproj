@@ -142,6 +142,7 @@
 		1462CD3224819AB900063892 /* HighlightColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462CD3124819AB900063892 /* HighlightColorCollectionViewCell.swift */; };
 		1462CD342481C13E00063892 /* FontStyleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462CD332481C13E00063892 /* FontStyleCollectionViewCell.swift */; };
 		1462CD362481C15100063892 /* ThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */; };
+		1466B84826C3CCF300A0DBFA /* OthersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466B84726C3CCF300A0DBFA /* OthersViewController.swift */; };
 		1470728126BBEC530088C8D3 /* TakeNotesDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470728026BBEC520088C8D3 /* TakeNotesDialogViewController.swift */; };
 		1470728326BC06460088C8D3 /* TextViewWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470728226BC06460088C8D3 /* TextViewWithPlaceholder.swift */; };
 		1477B59C26C276B700E736C2 /* BookChapterVerse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B59B26C276B700E736C2 /* BookChapterVerse.swift */; };
@@ -153,9 +154,6 @@
 		1477B5AC26C2A85800E736C2 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B5AB26C2A85800E736C2 /* BookmarksViewController.swift */; };
 		1477B5AE26C2A86D00E736C2 /* HighlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B5AD26C2A86D00E736C2 /* HighlightsViewController.swift */; };
 		1477B5B026C2A88000E736C2 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B5AF26C2A88000E736C2 /* NotesViewController.swift */; };
-		1477B5B226C2A8B500E736C2 /* ApostlesCreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B5B126C2A8B500E736C2 /* ApostlesCreedViewController.swift */; };
-		1477B5B526C2A8E400E736C2 /* CommandmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B5B426C2A8E400E736C2 /* CommandmentsViewController.swift */; };
-		1477B5B726C2A8FC00E736C2 /* LordsPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B5B626C2A8FC00E736C2 /* LordsPrayerViewController.swift */; };
 		1477B5B926C2A91C00E736C2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B5B826C2A91C00E736C2 /* SettingsViewController.swift */; };
 		1477B5BC26C2A93700E736C2 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B5BB26C2A93700E736C2 /* HistoryViewController.swift */; };
 		1477B5BE26C2A95900E736C2 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477B5BD26C2A95900E736C2 /* HistoryTableViewCell.swift */; };
@@ -429,6 +427,7 @@
 		1462CD3124819AB900063892 /* HighlightColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		1462CD332481C13E00063892 /* FontStyleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyleCollectionViewCell.swift; sourceTree = "<group>"; };
 		1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		1466B84726C3CCF300A0DBFA /* OthersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersViewController.swift; sourceTree = "<group>"; };
 		1470728026BBEC520088C8D3 /* TakeNotesDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeNotesDialogViewController.swift; sourceTree = "<group>"; };
 		1470728226BC06460088C8D3 /* TextViewWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithPlaceholder.swift; sourceTree = "<group>"; };
 		1477B59B26C276B700E736C2 /* BookChapterVerse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookChapterVerse.swift; sourceTree = "<group>"; };
@@ -440,9 +439,6 @@
 		1477B5AB26C2A85800E736C2 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		1477B5AD26C2A86D00E736C2 /* HighlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsViewController.swift; sourceTree = "<group>"; };
 		1477B5AF26C2A88000E736C2 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
-		1477B5B126C2A8B500E736C2 /* ApostlesCreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApostlesCreedViewController.swift; sourceTree = "<group>"; };
-		1477B5B426C2A8E400E736C2 /* CommandmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandmentsViewController.swift; sourceTree = "<group>"; };
-		1477B5B626C2A8FC00E736C2 /* LordsPrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LordsPrayerViewController.swift; sourceTree = "<group>"; };
 		1477B5B826C2A91C00E736C2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1477B5BB26C2A93700E736C2 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		1477B5BD26C2A95900E736C2 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -1426,13 +1422,11 @@
 		1477B5B326C2A8C700E736C2 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				1477B5B126C2A8B500E736C2 /* ApostlesCreedViewController.swift */,
-				1477B5B426C2A8E400E736C2 /* CommandmentsViewController.swift */,
-				1477B5B626C2A8FC00E736C2 /* LordsPrayerViewController.swift */,
 				1477B5B826C2A91C00E736C2 /* SettingsViewController.swift */,
 				14AF5E6C26C2C6B100490106 /* TapActionTableViewCell.swift */,
 				14AF5E6E26C2C6D200490106 /* TapActionsViewController.swift */,
 				14AF5E7226C2C9D600490106 /* ConfirmationViewController.swift */,
+				1466B84726C3CCF300A0DBFA /* OthersViewController.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -1930,7 +1924,6 @@
 				14121DCD247719B90073814F /* IAudioSpeedRepo.swift in Sources */,
 				14121DF0247731670073814F /* IHistoryRepo.swift in Sources */,
 				1440E06C247AB7A80037E68E /* BaseViewController.swift in Sources */,
-				1477B5B226C2A8B500E736C2 /* ApostlesCreedViewController.swift in Sources */,
 				14121D6B247517110073814F /* History.swift in Sources */,
 				14E2D0BF26C17B490031BC75 /* SearchResultTableViewCell.swift in Sources */,
 				14121DC8247717B90073814F /* IVersionDataSource.swift in Sources */,
@@ -1957,7 +1950,6 @@
 				1440E063247AACC90037E68E /* AppConstants.swift in Sources */,
 				1477B5BE26C2A95900E736C2 /* HistoryTableViewCell.swift in Sources */,
 				14121DD92477274D0073814F /* BookmarkRepoImpl.swift in Sources */,
-				1477B5B726C2A8FC00E736C2 /* LordsPrayerViewController.swift in Sources */,
 				14121D6D2475247B0073814F /* Note.swift in Sources */,
 				1470728326BC06460088C8D3 /* TextViewWithPlaceholder.swift in Sources */,
 				14121E06247735030073814F /* SettingRepoImpl.swift in Sources */,
@@ -1984,6 +1976,7 @@
 				1440E070247AC0C60037E68E /* SplashViewModel.swift in Sources */,
 				1440E072247AF64D0037E68E /* ISplashViewModel.swift in Sources */,
 				14121E1A247737E30073814F /* VersionRepoImpl.swift in Sources */,
+				1466B84826C3CCF300A0DBFA /* OthersViewController.swift in Sources */,
 				14CD21B5247E2B7400EF0A32 /* MoreDI.swift in Sources */,
 				14121DF2247731A10073814F /* HistoryRepoImpl.swift in Sources */,
 				14121D87247683A60073814F /* IBookmarkDataSource.swift in Sources */,
@@ -2001,7 +1994,6 @@
 				14121D912476CAA20073814F /* IFontStyleDataSource.swift in Sources */,
 				14BD52A926C0184200AF3D80 /* ReferenceViewModelImpl.swift in Sources */,
 				14121DDE24772B130073814F /* ChapterRepoImpl.swift in Sources */,
-				1477B5B526C2A8E400E736C2 /* CommandmentsViewController.swift in Sources */,
 				14121DC32477128A0073814F /* IVerseDataSource.swift in Sources */,
 				14121DA72476D6E40073814F /* NoteDataSourceImpl.swift in Sources */,
 				14121D962476CD030073814F /* IHighlightColorDataSource.swift in Sources */,

@@ -13,6 +13,9 @@
         <array key="comfortaa_bold.ttf">
             <string>Comfortaa-Bold</string>
         </array>
+        <array key="comfortaa_light.ttf">
+            <string>Comfortaa-Light</string>
+        </array>
         <array key="comfortaa_medium.ttf">
             <string>Comfortaa-Medium</string>
         </array>
@@ -21,50 +24,128 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Apostles Creed View Controller-->
+        <!--Others View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="apostlesCreedViewController" id="Y6W-OH-hqX" customClass="ApostlesCreedViewController" customModule="Tiv_Bible" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="othersViewController" id="Y6W-OH-hqX" customClass="OthersViewController" customModule="Tiv_Bible" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sL5-Bo-2LJ">
+                                <rect key="frame" x="20" y="74" width="374" height="19"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icj-jc-ezI">
+                                <rect key="frame" x="20" y="113" width="374" height="659"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0EB-ES-flB" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="klU-Y1-uH3" userLabel="Details Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-rL-GFB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Light" family="Comfortaa" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WG-2w-3qm">
+                                                        <rect key="frame" x="0.0" y="27" width="374" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="klU-Y1-uH3" firstAttribute="leading" secondItem="0EB-ES-flB" secondAttribute="leading" id="QdQ-xU-oN1"/>
+                                            <constraint firstAttribute="trailing" secondItem="klU-Y1-uH3" secondAttribute="trailing" id="kWt-9w-itX"/>
+                                            <constraint firstAttribute="bottom" secondItem="klU-Y1-uH3" secondAttribute="bottom" id="rML-bo-pau"/>
+                                            <constraint firstItem="klU-Y1-uH3" firstAttribute="top" secondItem="0EB-ES-flB" secondAttribute="top" id="un8-UJ-LzX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0EB-ES-flB" firstAttribute="width" secondItem="HKS-rg-U05" secondAttribute="width" id="39B-qR-e9B"/>
+                                    <constraint firstItem="0EB-ES-flB" firstAttribute="bottom" secondItem="9Zt-Yg-KBZ" secondAttribute="bottom" id="4Bb-Bv-Jx7"/>
+                                    <constraint firstItem="0EB-ES-flB" firstAttribute="top" secondItem="9Zt-Yg-KBZ" secondAttribute="top" id="g93-sq-LF9"/>
+                                    <constraint firstItem="0EB-ES-flB" firstAttribute="leading" secondItem="9Zt-Yg-KBZ" secondAttribute="leading" id="kdU-fh-G4k"/>
+                                    <constraint firstItem="0EB-ES-flB" firstAttribute="trailing" secondItem="9Zt-Yg-KBZ" secondAttribute="trailing" id="lB1-iK-Z8X"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="9Zt-Yg-KBZ"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="HKS-rg-U05"/>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eBB-JQ-Rli">
+                                <rect key="frame" x="149.5" y="792" width="115" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuP-G7-diB" customClass="IconView" customModule="Tiv_Bible" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Zkq-rh-0bx"/>
+                                            <constraint firstAttribute="width" constant="50" id="hx4-DM-Nr2"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="share_icon"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5B4-jE-fba" customClass="IconView" customModule="Tiv_Bible" customModuleProvider="target">
+                                        <rect key="frame" x="65" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9fd-36-NkU"/>
+                                            <constraint firstAttribute="width" constant="50" id="wTF-Jy-QP3"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="copy_icon"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Icj-jc-ezI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="4fI-8h-dhM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sL5-Bo-2LJ" secondAttribute="trailing" constant="20" id="K7Q-4J-NyA"/>
+                            <constraint firstItem="eBB-JQ-Rli" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Ork-i9-CTq"/>
+                            <constraint firstItem="Icj-jc-ezI" firstAttribute="top" secondItem="sL5-Bo-2LJ" secondAttribute="bottom" constant="20" id="YD9-y2-rgq"/>
+                            <constraint firstItem="sL5-Bo-2LJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="aAu-2V-B2j"/>
+                            <constraint firstItem="eBB-JQ-Rli" firstAttribute="top" secondItem="Icj-jc-ezI" secondAttribute="bottom" constant="20" id="fxs-Pe-htZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="eBB-JQ-Rli" secondAttribute="bottom" constant="20" id="mQ1-Np-0wH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Icj-jc-ezI" secondAttribute="trailing" constant="20" id="p0l-oY-DMl"/>
+                            <constraint firstItem="sL5-Bo-2LJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="rJ3-Zq-gEc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentLabel" destination="4WG-2w-3qm" id="jAM-jj-V6D"/>
+                        <outlet property="copyView" destination="5B4-jE-fba" id="MVe-OK-F1k"/>
+                        <outlet property="otherTitleLabel" destination="sL5-Bo-2LJ" id="5DZ-tH-BQe"/>
+                        <outlet property="shareView" destination="zuP-G7-diB" id="Wm5-l6-WLq"/>
+                        <outlet property="subtitleLabel" destination="cW4-rL-GFB" id="sfn-PH-8ps"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="119"/>
-        </scene>
-        <!--Commandments View Controller-->
-        <scene sceneID="jtY-yP-Lxf">
-            <objects>
-                <viewController storyboardIdentifier="commandmentsViewController" id="18C-zn-9mm" customClass="CommandmentsViewController" customModule="Tiv_Bible" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JBo-dJ-l31">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="SZZ-6Y-vcq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fWY-ww-bI0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="797" y="119"/>
-        </scene>
-        <!--Lords Prayer View Controller-->
-        <scene sceneID="5gu-e2-DwW">
-            <objects>
-                <viewController storyboardIdentifier="lordsPrayerViewController" id="sef-wq-Gg1" customClass="LordsPrayerViewController" customModule="Tiv_Bible" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dK1-Cz-iOj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="8z3-ra-K0p"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9dV-au-bjk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1575" y="119"/>
+            <point key="canvasLocation" x="66.666666666666671" y="118.52678571428571"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="NfD-Hb-WJu">
@@ -79,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8RO-ze-Idf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2404" y="119"/>
+            <point key="canvasLocation" x="807" y="119"/>
         </scene>
         <!--Tap Actions View Controller-->
         <scene sceneID="Tcy-oE-cWS">
@@ -293,12 +374,14 @@
     </scenes>
     <resources>
         <image name="angle_right_icon" width="32" height="32"/>
+        <image name="copy_icon" width="50" height="50"/>
         <image name="filled_close_icon" width="128" height="128"/>
+        <image name="share_icon" width="24" height="24"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.5220000147819519" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppRedColor">
-            <color red="1" green="0.031372549019607843" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.030999999493360519" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -311,6 +394,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

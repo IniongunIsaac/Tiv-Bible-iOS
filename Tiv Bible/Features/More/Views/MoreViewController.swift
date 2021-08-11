@@ -48,11 +48,29 @@ class MoreViewController: BaseViewController {
         case .history:
             pushViewController(R.storyboard.more.historyViewController()!)
         case .apostlesCreed:
-            pushViewController(R.storyboard.others.apostlesCreedViewController()!)
+            let creed = AppConstants.CREED
+            let other = Other(title: creed.title, subTitle: creed.subTitle, text: creed.content)
+            
+            presentViewController(R.storyboard.others.othersViewController()!.apply {
+                $0.other = other
+            })
+            
         case .commandments:
-            pushViewController(R.storyboard.others.commandmentsViewController()!)
+            let creed = AppConstants.COMMANDMENTS
+            let other = Other(title: creed.title, subTitle: creed.subTitle, text: creed.content)
+            
+            presentViewController(R.storyboard.others.othersViewController()!.apply {
+                $0.other = other
+            })
+            
         case .lordsPrayer:
-            pushViewController(R.storyboard.others.lordsPrayerViewController()!)
+            let creed = AppConstants.LORDS_PRAYER
+            let other = Other(title: creed.title, subTitle: creed.subTitle, text: creed.content)
+            
+            presentViewController(R.storyboard.others.othersViewController()!.apply {
+                $0.other = other
+            })
+            
         case .share:
             break
         case .rating:

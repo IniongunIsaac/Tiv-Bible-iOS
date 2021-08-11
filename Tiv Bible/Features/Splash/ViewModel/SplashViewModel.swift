@@ -86,7 +86,7 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
         
         let highlightColors = AppConstants.colorHexCodes.map { HighlightColor(hexCode: $0) }
         
-        let others = AppConstants.others.map { Other(title: $0.title, subTitle: $0.subTitle, text: $0.content) }
+        //let others = AppConstants.others.map { Other(title: $0.title, subTitle: $0.subTitle, text: $0.content) }
         
         var fontSize_lineSpacing = (0,0)
         if currentDevice.isPhone {
@@ -104,7 +104,6 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
             audioSpeedRepo.insertAudioSpeeds(audioSpeeds: audioSpeeds),
             fontStyleRepo.insertFontStyles(fontStyles: fontStyles),
             highlightColorRepo.insertHighlightColors(highlightColors: highlightColors),
-            otherRepo.insertOthers(others: others),
             settingsRepo.insertSettings(settings: settings),
             versionRepo.insertVersions(versions: versions),
             testamentRepo.insertTestaments(testaments: testaments))

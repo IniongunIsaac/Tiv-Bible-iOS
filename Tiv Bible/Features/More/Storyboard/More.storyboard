@@ -589,7 +589,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genese 5:1-10, 20-25, 30, 40-51" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="gd1-LI-jd9">
-                                <rect key="frame" x="20" y="134" width="374" height="18"/>
+                                <rect key="frame" x="20" y="134" width="374" height="19"/>
                                 <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -675,34 +675,34 @@
                                 </subviews>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqq-EC-MNE">
-                                <rect key="frame" x="20" y="172" width="374" height="556"/>
+                                <rect key="frame" x="20" y="173" width="374" height="555"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iT4-je-9UP" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="88.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="90.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bZ5-2W-gs0" userLabel="Details Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="88.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="90.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oZ-bd-AJF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSO-En-dMR">
-                                                        <rect key="frame" x="0.0" y="27" width="374" height="61.5"/>
+                                                        <rect key="frame" x="0.0" y="27.5" width="374" height="63"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="NjM-DX-SX0">
-                                                                <rect key="frame" x="15" y="15" width="344" height="31.5"/>
+                                                                <rect key="frame" x="15" y="15" width="344" height="33"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abv-cQ-Hbe">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="344" height="14.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="344" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="Comfortaa-Light" family="Comfortaa" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQS-wp-I9F">
-                                                                        <rect key="frame" x="0.0" y="14.5" width="344" height="17"/>
+                                                                        <rect key="frame" x="0.0" y="15.5" width="344" height="17.5"/>
                                                                         <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
