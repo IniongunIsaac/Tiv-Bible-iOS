@@ -97,6 +97,16 @@
 		14121E2924792C850073814F /* LocalDatasourceDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2824792C850073814F /* LocalDatasourceDI.swift */; };
 		14121E2B24792F320073814F /* RepositoryDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14121E2A24792F320073814F /* RepositoryDI.swift */; };
 		14121E2D24793B210073814F /* tivBibleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 14121E2C24793B200073814F /* tivBibleData.json */; };
+		142BFFAE26C36BC0008380F8 /* Andes Rounded W03 Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142BFFA426C36BBF008380F8 /* Andes Rounded W03 Medium.ttf */; };
+		142BFFAF26C36BC0008380F8 /* Andes Rounded W03 Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142BFFA526C36BBF008380F8 /* Andes Rounded W03 Light.ttf */; };
+		142BFFB026C36BC0008380F8 /* Andes Rounded W03 Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142BFFA626C36BBF008380F8 /* Andes Rounded W03 Bold.ttf */; };
+		142BFFB126C36BC0008380F8 /* Andes Rounded W03 ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142BFFA726C36BBF008380F8 /* Andes Rounded W03 ExtraLight.ttf */; };
+		142BFFB226C36BC0008380F8 /* Andes Rounded W03 Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142BFFA826C36BBF008380F8 /* Andes Rounded W03 Black.ttf */; };
+		142BFFB326C36BC0008380F8 /* Andes Rounded W03 UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142BFFA926C36BBF008380F8 /* Andes Rounded W03 UltraLight.ttf */; };
+		142BFFB426C36BC0008380F8 /* Andes Rounded W03 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142BFFAA26C36BC0008380F8 /* Andes Rounded W03 Regular.ttf */; };
+		142BFFB526C36BC0008380F8 /* Andes Rounded W03 Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142BFFAB26C36BC0008380F8 /* Andes Rounded W03 Book.ttf */; };
+		142BFFB626C36BC0008380F8 /* Andes Rounded W03 ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142BFFAC26C36BC0008380F8 /* Andes Rounded W03 ExtraBold.ttf */; };
+		142BFFB726C36BC0008380F8 /* Andes Rounded W03 SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142BFFAD26C36BC0008380F8 /* Andes Rounded W03 SemiBold.ttf */; };
 		14377BF4246DE214005B0795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF3246DE214005B0795 /* AppDelegate.swift */; };
 		14377BF6246DE214005B0795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF5246DE214005B0795 /* SceneDelegate.swift */; };
 		14377BF8246DE214005B0795 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377BF7246DE214005B0795 /* SplashViewController.swift */; };
@@ -367,6 +377,16 @@
 		14121E2824792C850073814F /* LocalDatasourceDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatasourceDI.swift; sourceTree = "<group>"; };
 		14121E2A24792F320073814F /* RepositoryDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDI.swift; sourceTree = "<group>"; };
 		14121E2C24793B200073814F /* tivBibleData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tivBibleData.json; sourceTree = "<group>"; };
+		142BFFA426C36BBF008380F8 /* Andes Rounded W03 Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andes Rounded W03 Medium.ttf"; sourceTree = "<group>"; };
+		142BFFA526C36BBF008380F8 /* Andes Rounded W03 Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andes Rounded W03 Light.ttf"; sourceTree = "<group>"; };
+		142BFFA626C36BBF008380F8 /* Andes Rounded W03 Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andes Rounded W03 Bold.ttf"; sourceTree = "<group>"; };
+		142BFFA726C36BBF008380F8 /* Andes Rounded W03 ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andes Rounded W03 ExtraLight.ttf"; sourceTree = "<group>"; };
+		142BFFA826C36BBF008380F8 /* Andes Rounded W03 Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andes Rounded W03 Black.ttf"; sourceTree = "<group>"; };
+		142BFFA926C36BBF008380F8 /* Andes Rounded W03 UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andes Rounded W03 UltraLight.ttf"; sourceTree = "<group>"; };
+		142BFFAA26C36BC0008380F8 /* Andes Rounded W03 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andes Rounded W03 Regular.ttf"; sourceTree = "<group>"; };
+		142BFFAB26C36BC0008380F8 /* Andes Rounded W03 Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andes Rounded W03 Book.ttf"; sourceTree = "<group>"; };
+		142BFFAC26C36BC0008380F8 /* Andes Rounded W03 ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andes Rounded W03 ExtraBold.ttf"; sourceTree = "<group>"; };
+		142BFFAD26C36BC0008380F8 /* Andes Rounded W03 SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andes Rounded W03 SemiBold.ttf"; sourceTree = "<group>"; };
 		14377BF0246DE214005B0795 /* Tiv Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiv Bible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14377BF3246DE214005B0795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14377BF5246DE214005B0795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -739,6 +759,16 @@
 		14121C84247465900073814F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				142BFFA826C36BBF008380F8 /* Andes Rounded W03 Black.ttf */,
+				142BFFA626C36BBF008380F8 /* Andes Rounded W03 Bold.ttf */,
+				142BFFAB26C36BC0008380F8 /* Andes Rounded W03 Book.ttf */,
+				142BFFAC26C36BC0008380F8 /* Andes Rounded W03 ExtraBold.ttf */,
+				142BFFA726C36BBF008380F8 /* Andes Rounded W03 ExtraLight.ttf */,
+				142BFFA526C36BBF008380F8 /* Andes Rounded W03 Light.ttf */,
+				142BFFA426C36BBF008380F8 /* Andes Rounded W03 Medium.ttf */,
+				142BFFAA26C36BC0008380F8 /* Andes Rounded W03 Regular.ttf */,
+				142BFFAD26C36BC0008380F8 /* Andes Rounded W03 SemiBold.ttf */,
+				142BFFA926C36BBF008380F8 /* Andes Rounded W03 UltraLight.ttf */,
 				148B0EFE26BE357300B92B26 /* amatic_sc.ttf */,
 				148B0EDA26BE356E00B92B26 /* comfortaa_bold.ttf */,
 				148B0F0726BE357500B92B26 /* comfortaa_light.ttf */,
@@ -1678,6 +1708,7 @@
 				14BD529826C008EB00AF3D80 /* NumberView.xib in Resources */,
 				148B0F0E26BE357500B92B26 /* comfortaa_bold.ttf in Resources */,
 				148B0F2826BE357500B92B26 /* martel_sans_extralight.ttf in Resources */,
+				142BFFB026C36BC0008380F8 /* Andes Rounded W03 Bold.ttf in Resources */,
 				14377C00246DE218005B0795 /* LaunchScreen.storyboard in Resources */,
 				148B0F1126BE357500B92B26 /* comfortaa.ttf in Resources */,
 				148B0F2426BE357500B92B26 /* montserrat_extra_light.ttf in Resources */,
@@ -1699,6 +1730,7 @@
 				149531CB2506783C00A6E9DD /* Podfile.lock in Resources */,
 				148B0F2626BE357500B92B26 /* montserrat_regular.ttf in Resources */,
 				148B0F1B26BE357500B92B26 /* roboto_italic.ttf in Resources */,
+				142BFFB626C36BC0008380F8 /* Andes Rounded W03 ExtraBold.ttf in Resources */,
 				1492E35926C08272008C9193 /* IconView.xib in Resources */,
 				148B0F1626BE357500B92B26 /* martel_sans_semibold.ttf in Resources */,
 				1440E082247D3CDE0037E68E /* More.storyboard in Resources */,
@@ -1718,18 +1750,26 @@
 				148B0F3526BE357500B92B26 /* roboto_bold_italic.ttf in Resources */,
 				148B0F0826BE357500B92B26 /* montserrat_bold_italic.ttf in Resources */,
 				148B0F2326BE357500B92B26 /* comfortaa_semi_bold.ttf in Resources */,
+				142BFFB526C36BC0008380F8 /* Andes Rounded W03 Book.ttf in Resources */,
 				148B0F0F26BE357500B92B26 /* indie_flower.ttf in Resources */,
 				148B0F0926BE357500B92B26 /* montserrat_medium.ttf in Resources */,
 				148B0F3B26BE357500B92B26 /* comfortaa_light.ttf in Resources */,
 				148B0F2026BE357500B92B26 /* roboto_condensed_regular.ttf in Resources */,
 				148B0F2D26BE357500B92B26 /* comfortaa_medium.ttf in Resources */,
+				142BFFB326C36BC0008380F8 /* Andes Rounded W03 UltraLight.ttf in Resources */,
 				1440E079247D3C630037E68E /* HomeTabs.storyboard in Resources */,
+				142BFFB226C36BC0008380F8 /* Andes Rounded W03 Black.ttf in Resources */,
 				148B0F3826BE357500B92B26 /* lato.ttf in Resources */,
+				142BFFAF26C36BC0008380F8 /* Andes Rounded W03 Light.ttf in Resources */,
 				148B0F3026BE357500B92B26 /* happy_monkey.ttf in Resources */,
+				142BFFB126C36BC0008380F8 /* Andes Rounded W03 ExtraLight.ttf in Resources */,
+				142BFFAE26C36BC0008380F8 /* Andes Rounded W03 Medium.ttf in Resources */,
 				14BD52AB26C0189600AF3D80 /* References.storyboard in Resources */,
 				1440E080247D3CD50037E68E /* Search.storyboard in Resources */,
 				149531C62506773800A6E9DD /* .gitignore in Resources */,
 				148B0F3626BE357500B92B26 /* roboto.ttf in Resources */,
+				142BFFB426C36BC0008380F8 /* Andes Rounded W03 Regular.ttf in Resources */,
+				142BFFB726C36BC0008380F8 /* Andes Rounded W03 SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

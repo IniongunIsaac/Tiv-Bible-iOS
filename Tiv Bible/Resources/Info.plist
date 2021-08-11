@@ -36,6 +36,16 @@
 		<string>Jost.ttf</string>
 		<string>Lato.ttf</string>
 		<string>Lobster.ttf</string>
+        <string>AndesRoundedW03UltraLight.ttf</string>
+        <string>AndesRoundedW03Black.ttf</string>
+        <string>AndesRoundedW03Bold.ttf</string>
+        <string>AndesRoundedW03Book.ttf</string>
+        <string>AndesRoundedW03ExtraBold.ttf</string>
+        <string>AndesRoundedW03ExtraLight.ttf</string>
+        <string>AndesRoundedW03Light.ttf</string>
+        <string>AndesRoundedW03Medium.ttf</string>
+        <string>AndesRoundedW03Regular.ttf</string>
+        <string>AndesRoundedW03SemiBold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

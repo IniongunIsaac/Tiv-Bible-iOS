@@ -21,13 +21,11 @@ import RealmSwift
         return "compositePrimaryKey"
     }
     
-    var bookNameAndChapterNumberAndVerseNumberString: String {
-        return "\(book!.name) \(chapter!.chapterNumber) \(verse!.number)"
-    }
+    var bookNameAndChapterNumberAndVerseNumberString: String { "\(book!.name) \(chapter!.chapterNumber):\(verse!.number)" }
     
-    var dateString: String {
-        return highlightedOn.dateOnly(format: "dd.MM.yyyy")
-    }
+    var dateString: String { highlightedOn.dateOnly(format: "dd.MM.yyyy") }
+    
+    var shareableText: String { "\(bookNameAndChapterNumberAndVerseNumberString)\n\(verse!.text)" }
     
     convenience required init(book: Book, chapter: Chapter, verse: Verse, color: HighlightColor) {
         self.init()

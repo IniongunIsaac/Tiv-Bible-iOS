@@ -13,6 +13,9 @@ class MoreViewModelImpl: BaseViewModel, IMoreViewModel {
     
     var bookmarks: PublishSubject<[Bookmark]> = PublishSubject()
     var showReaderView: PublishSubject<Bool> = PublishSubject()
+    var highlights: PublishSubject<[Highlight]> = PublishSubject()
+    var notes: PublishSubject<[Note]> = PublishSubject()
+    var history: PublishSubject<[History]> = PublishSubject()
     
     fileprivate let bookmarksRepo: IBookmarkRepo
     fileprivate let notesRepo: INoteRepo
@@ -44,14 +47,74 @@ class MoreViewModelImpl: BaseViewModel, IMoreViewModel {
         })
     }
     
+    func deleteAllBookmarks() {
+        subscribe(bookmarksRepo.deleteAllBookmarks(), success: { [weak self] in
+            self?.getBookmarks()
+        })
+    }
+    
     func readFullChapter(bookId: String, chapterId: String, verseId: String, verseNumber: Int) {
         preferenceRepo.currentBookId = bookId
         preferenceRepo.currentChapterId = chapterId
         preferenceRepo.currentVerseId = verseId
         preferenceRepo.selectedVerseNumber = verseNumber
         preferenceRepo.shouldScrollToVerse = true
-        preferenceRepo.shouldReloadVerses = true
+        updateReloadVersesPreference()
         showReaderView.onNext(true)
+    }
+    
+    func getHighlights() {
+        subscribe(highlightsRepo.getAllHighlights(), success: { [weak self] highlights in
+            self?.highlights.onNext(highlights)
+        })
+    }
+    
+    func deleteHighlight(_ highlight: Highlight) {
+        subscribe(highlightsRepo.deleteHighlights(highlights: [highlight]), success: { [weak self] in
+            self?.updateReloadVersesPreference()
+            self?.getHighlights()
+        })
+    }
+    
+    func deleteAllHighlights() {
+        subscribe(highlightsRepo.deleteAllHighlights(), success: { [weak self] in
+            self?.updateReloadVersesPreference()
+            self?.getHighlights()
+        })
+    }
+    
+    func getNotes() {
+        subscribe(notesRepo.getNotes(), success: { [weak self] notes in
+            self?.notes.onNext(notes)
+        })
+    }
+    
+    func deleteNote(_ note: Note) {
+        subscribe(notesRepo.deleteNotes(notes: [note]), success: { [weak self] in
+            self?.getNotes()
+        })
+    }
+    
+    func deleteAllNotes() {
+        subscribe(notesRepo.deleteAllNotes(), success: { [weak self] in
+            self?.getNotes()
+        })
+    }
+    
+    func getHistory() {
+        
+    }
+    
+    func deleteHistory(_ history: History) {
+        
+    }
+    
+    func deleteAllHistory() {
+        
+    }
+    
+    fileprivate func updateReloadVersesPreference(reload: Bool = true) {
+        preferenceRepo.shouldReloadVerses = reload
     }
     
 }

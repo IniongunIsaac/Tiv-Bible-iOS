@@ -69,8 +69,8 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         getHighlightColorsAndFontStyles()
     }
     
-    override func didAppear() {
-        super.didAppear()
+    override func willAppear() {
+        super.willAppear()
         getBookFromSavedPreferencesOrInitializeWithGenese()
     }
     

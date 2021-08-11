@@ -26,6 +26,10 @@ struct MoreDI {
             cntrl.moreViewModel = res.resolve(IMoreViewModel.self)
         }
         
+        container.storyboardInitCompleted(HighlightsViewController.self) { res, cntrl in
+            cntrl.moreViewModel = res.resolve(IMoreViewModel.self)
+        }
+        
     }
     
 }

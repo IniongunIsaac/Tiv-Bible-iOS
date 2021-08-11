@@ -20,9 +20,7 @@ import RealmSwift
         return "compositePrimaryKey"
     }
     
-    var bookNameAndChapterNumberAndVerseNumberString: String {
-        return "\(book!.name) \(chapter!.chapterNumber) : \(verse!.number)"
-    }
+    var bookNameAndChapterNumberAndVerseNumberString: String { "\(book!.name) \(chapter!.chapterNumber):\(verse!.number)" }
     
     var dateString: String { bookmarkedOn.dateOnly(format: "dd.MM.yyyy") }
     

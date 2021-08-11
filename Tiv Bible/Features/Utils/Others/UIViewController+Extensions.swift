@@ -183,6 +183,7 @@ extension UIViewController {
     
     func showConfirmationViewController(prompt: String? = nil, confirmationHandler: NoParamHandler? = nil) {
         showDialog(for: R.storyboard.others.confirmationViewController()!.apply {
+            $0.prompt = prompt
             $0.confirmationHandler = confirmationHandler
         })
     }

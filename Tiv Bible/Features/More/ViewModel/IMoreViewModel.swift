@@ -16,10 +16,36 @@ protocol IMoreViewModel {
     
     var showReaderView: PublishSubject<Bool> { get }
     
+    var highlights: PublishSubject<[Highlight]> { get set }
+    
+    var notes: PublishSubject<[Note]> { get set }
+    
+    var history: PublishSubject<[History]> { get set }
+    
     func getBookmarks()
     
     func deleteBookmark(_ bookmark: Bookmark)
     
+    func deleteAllBookmarks()
+    
     func readFullChapter(bookId: String, chapterId: String, verseId: String, verseNumber: Int)
+    
+    func getHighlights()
+    
+    func deleteHighlight(_ highlight: Highlight)
+    
+    func deleteAllHighlights()
+    
+    func getNotes()
+    
+    func deleteNote(_ note: Note)
+    
+    func deleteAllNotes()
+    
+    func getHistory()
+    
+    func deleteHistory(_ history: History)
+    
+    func deleteAllHistory()
     
 }

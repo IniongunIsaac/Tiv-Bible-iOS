@@ -17,8 +17,18 @@ class BookmarksViewController: BaseViewController {
     
     fileprivate var selectedBookmark: Bookmark!
     
+    fileprivate var clearAllButton: UIButton {
+        UIButton(frame: CGRect(x: 0, y: 0, width: 80, height: 30)).apply { btn in
+            btn.title = "Clear All"
+            btn.textColor = .appRed
+            btn.addTarget(self, action: #selector(clearAllButtonTapped), for: .touchUpInside)
+            btn.font = .andesRoundedRegular(size: 14)
+        }
+    }
+    
     override func configureViews() {
         super.configureViews()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: clearAllButton)
         setupBookmarksTableView()
         moreViewModel.getBookmarks()
     }
@@ -27,6 +37,12 @@ class BookmarksViewController: BaseViewController {
         super.viewWillAppear(animated)
         hideNavBar(false)
         title = "Bookmarks"
+    }
+    
+    @objc fileprivate func clearAllButtonTapped() {
+        showConfirmationViewController(prompt: "Are you sure you want to delete all your bookmarks?") { [weak self] in
+            self?.moreViewModel.deleteAllBookmarks()
+        }
     }
     
     fileprivate func setupBookmarksTableView() {

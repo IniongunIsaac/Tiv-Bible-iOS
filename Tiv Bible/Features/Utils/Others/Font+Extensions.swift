@@ -28,6 +28,24 @@ extension UIFont {
     
     class func comfortaaSemiBold(size: CGFloat = 16) -> UIFont { R.font.comfortaaBold(size: size)! }
     
+    class func andesRoundedRegular(size: CGFloat = 16) -> UIFont { R.font.andesRoundedW03Regular(size: size)! }
+    
+    class func andesRoundedBlack(size: CGFloat = 16) -> UIFont { R.font.andesRoundedW03Black(size: size)! }
+    
+    class func andesRoundedBold(size: CGFloat = 16) -> UIFont { R.font.andesRoundedW03Bold(size: size)! }
+    
+    class func andesRoundedBook(size: CGFloat = 16) -> UIFont { R.font.andesRoundedW03Book(size: size)! }
+    
+    class func andesRoundedExtraBold(size: CGFloat = 16) -> UIFont { R.font.andesRoundedW03ExtraBold(size: size)! }
+    
+    class func andesRoundedLight(size: CGFloat = 16) -> UIFont { R.font.andesRoundedW03Light(size: size)! }
+    
+    class func andesRoundedMedium(size: CGFloat = 16) -> UIFont { R.font.andesRoundedW03Medium(size: size)! }
+    
+    class func andesRoundedSemiBold(size: CGFloat = 16) -> UIFont { R.font.andesRoundedW03SemiBold(size: size)! }
+    
+    class func andesRoundedUltraLight(size: CGFloat = 16) -> UIFont { R.font.andesRoundedW03UltraLight(size: size)! }
+    
     var bold: UIFont { with(traits: .traitBold) }
     
     var italic: UIFont { with(traits: .traitItalic) }
@@ -38,7 +56,7 @@ extension UIFont {
     func with(traits: UIFontDescriptor.SymbolicTraits) -> UIFont {
         guard let descriptor = self.fontDescriptor.withSymbolicTraits(traits) else {
             return self
-        } 
+        }
         
         return UIFont(descriptor: descriptor, size: 0)
     }
