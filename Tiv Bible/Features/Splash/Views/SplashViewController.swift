@@ -10,22 +10,20 @@ import UIKit
 
 class SplashViewController: BaseViewController {
     
-    var splashViewModel: ISplashViewModel!
-    
-    override func getViewModel() -> BaseViewModel {
-        splashViewModel as! BaseViewModel
-    }
-
     @IBOutlet weak var setupInProgressLabel: UILabel!
     @IBOutlet weak var versionLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var splashViewModel: ISplashViewModel!
+    override func getViewModel() -> BaseViewModel { splashViewModel as! BaseViewModel }
+    
+    override func configureViews() {
+        super.configureViews()
         hideNavigationBar()
         splashViewModel.setupDB()
     }
     
     override func setChildViewControllerObservers() {
+        super.setChildViewControllerObservers()
         observeShowHome()
         observeShowSetupInProgress()
     }

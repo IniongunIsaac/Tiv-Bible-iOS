@@ -36,4 +36,14 @@ import UIKit
         }
     }
     
+    var lineSpacingType: LineSpacingType {
+        if (currentDevice.isPhone && lineSpacing == 8) || (currentDevice.isPad && lineSpacing == 9) {
+            return .small
+        } else if (currentDevice.isPhone && lineSpacing == 9) || (currentDevice.isPad && lineSpacing == 10) {
+            return .normal
+        } else {
+            return .large
+        }
+    }
+    
 }

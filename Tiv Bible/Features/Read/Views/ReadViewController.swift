@@ -64,7 +64,11 @@ class ReadViewController: BaseViewController {
         hideNavigationBar()
         ([tapActionsView, fontSettingsView] + nextAndPreviousChapterViews).hideViews()
         nextAndPreviousChapterViews.addClearBackground()
-        switchAppTheme(type: readViewModel.currentTheme)
+        
+        runAfter(0.2) { [weak self] in
+            guard let self = self else { return }
+            self.switchAppTheme(type: self.readViewModel.currentTheme)
+        }
     }
     
     override func setupTapGestures() {

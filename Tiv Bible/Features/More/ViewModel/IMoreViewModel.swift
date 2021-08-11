@@ -10,7 +10,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-protocol IMoreViewModel {
+protocol IMoreViewModel: Scopable {
     
     var bookmarks: PublishSubject<[Bookmark]> { get set }
     
@@ -21,6 +21,14 @@ protocol IMoreViewModel {
     var notes: PublishSubject<[Note]> { get set }
     
     var history: PublishSubject<[History]> { get set }
+    
+    var currentSettings: Setting? { get set }
+    
+    var updateUIWithCurrentSettings: PublishSubject<Bool> { get }
+    
+    var fontStyles: PublishSubject<[FontStyle]> { get }
+    
+    var currentTheme: Theme { get set }
     
     func getBookmarks()
     
@@ -47,5 +55,17 @@ protocol IMoreViewModel {
     func deleteHistory(_ history: History)
     
     func deleteAllHistory()
+    
+    func getFontStyles()
+    
+    func getUserSettings()
+    
+    func increaseFontSize()
+    
+    func decreaseFontSize()
+    
+    func updateLineSpacing(type: LineSpacingType)
+    
+    func updateSelectedFontStyle(_ fontStyle: FontStyle)
     
 }

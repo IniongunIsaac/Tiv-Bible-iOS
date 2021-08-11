@@ -15,7 +15,7 @@ struct MoreDI {
     static func setup(container: Container) {
         
         container.register(IMoreViewModel.self) {
-            MoreViewModelImpl(bookmarksRepo: $0.resolve(IBookmarkRepo.self)!, notesRepo: $0.resolve(INoteRepo.self)!, highlightsRepo: $0.resolve(IHighlightRepo.self)!, historyRepo: $0.resolve(IHistoryRepo.self)!, settingsRepo: $0.resolve(ISettingRepo.self)!, othersRepo: $0.resolve(IOtherRepo.self)!, preferenceRepo: $0.resolve(IPreferenceRepo.self)!)
+            MoreViewModelImpl(bookmarksRepo: $0.resolve(IBookmarkRepo.self)!, notesRepo: $0.resolve(INoteRepo.self)!, highlightsRepo: $0.resolve(IHighlightRepo.self)!, historyRepo: $0.resolve(IHistoryRepo.self)!, settingsRepo: $0.resolve(ISettingRepo.self)!, othersRepo: $0.resolve(IOtherRepo.self)!, preferenceRepo: $0.resolve(IPreferenceRepo.self)!, fontStylesRepo: $0.resolve(IFontStyleRepo.self)!)
         }
         
         container.storyboardInitCompleted(MoreViewController.self) { res, cntrl in

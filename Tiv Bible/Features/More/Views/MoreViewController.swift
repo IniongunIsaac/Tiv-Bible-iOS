@@ -41,12 +41,16 @@ class MoreViewController: BaseViewController {
         switch item {
         case .bookmarks:
             pushViewController(R.storyboard.more.bookmarksViewController()!)
+            
         case .highlights:
             pushViewController(R.storyboard.more.highlightsViewController()!)
+            
         case .notes:
             pushViewController(R.storyboard.more.notesViewController()!)
+            
         case .history:
             pushViewController(R.storyboard.more.historyViewController()!)
+            
         case .apostlesCreed:
             let creed = AppConstants.CREED
             let other = Other(title: creed.title, subTitle: creed.subTitle, text: creed.content)
@@ -72,11 +76,15 @@ class MoreViewController: BaseViewController {
             })
             
         case .share:
-            break
+            share(content: AppConstants.SHARE_TIV_BIBLE_APP_CONTENT)
+            
         case .rating:
-            break
+            openURL(url: AppConstants.APPSTORE_LINK)
+            
         case .settings:
-            pushViewController(R.storyboard.others.settingsViewController()!)
+            presentViewController(R.storyboard.others.settingsViewController()!.apply {
+                $0.moreViewModel = moreViewModel
+            })
         }
     }
 

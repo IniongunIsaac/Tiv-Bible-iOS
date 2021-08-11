@@ -234,3 +234,16 @@ extension Optional where Wrapped == String {
         String(describing: self)
     }
 }
+
+func openURL(url: String) {
+    if let url = URL(string: url) {
+        UIApplication.shared.open(url)
+    }
+}
+
+func canOpenURL(url: String) -> Bool {
+    if let url = URL(string: url) {
+        return UIApplication.shared.canOpenURL(url)
+    }
+    return false
+}

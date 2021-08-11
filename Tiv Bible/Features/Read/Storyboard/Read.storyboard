@@ -20,6 +20,9 @@
         <array key="comfortaa_medium.ttf">
             <string>Comfortaa-Medium</string>
         </array>
+        <array key="comfortaa_semi_bold.ttf">
+            <string>Comfortaa-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Read-->
@@ -520,7 +523,7 @@
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14px" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIA-i6-ujf">
                                                                         <rect key="frame" x="170" y="0.0" width="65" height="42"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
