@@ -37,4 +37,7 @@ struct PreferenceImpl: IPreference {
     @UserDefaultStorage(key: PreferenceConstants.SHOULD_SCROLL_TO_VERSE, default: false)
     var shouldScrollToVerse: Bool
     
+    @UserDefaultStorage(key: PreferenceConstants.STAY_AWAKE, default: false)
+    var stayAwake: Bool
+    
 }

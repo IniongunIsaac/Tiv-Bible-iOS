@@ -28,4 +28,6 @@ protocol IPreference {
     
     var shouldScrollToVerse: Bool { get set }
     
+    var stayAwake: Bool { get set }
+    
 }

@@ -23,6 +23,7 @@ class SettingsViewController: BaseBottomPopupViewController {
     @IBOutlet weak var darkThemeView: UIView!
     @IBOutlet weak var lightThemeView: UIView!
     @IBOutlet weak var themesStackView: UIStackView!
+    @IBOutlet weak var stayAwakeSwitch: UISwitch!
     
     var moreViewModel: IMoreViewModel!
     override func getViewModel() -> BaseViewModel { moreViewModel as! BaseViewModel }
@@ -45,6 +46,8 @@ class SettingsViewController: BaseBottomPopupViewController {
             guard let self = self else { return }
             self.updateThemeViews(theme: self.moreViewModel.currentTheme)
         }
+        
+        stayAwakeSwitch.isOn = moreViewModel.stayAwake
     }
     
     override func setupTapGestures() {
@@ -82,6 +85,10 @@ class SettingsViewController: BaseBottomPopupViewController {
         }
     }
     
+    @IBAction func stayAwakeSwitchValueChanged(_ sender: UISwitch) {
+        moreViewModel.stayAwake = sender.isOn
+    }
+    
     fileprivate func switchAppTheme(type theme: Theme) {
         if #available(iOS 13.0, *) {
             view.window?.do {
@@ -111,7 +118,7 @@ class SettingsViewController: BaseBottomPopupViewController {
         ((themeView.subviews.first as? UIStackView)?.subviews.filter { $0 is UIImageView }.first as? UIImageView)?.showView(isActive)
     }
     
-    override var popupHeight: CGFloat { 360 }
+    override var popupHeight: CGFloat { 480 }
     
     fileprivate func setupFontStylesCollectionView() {
         fontStyleCollectionView.rx.setDelegate(self).disposed(by: disposeBag)

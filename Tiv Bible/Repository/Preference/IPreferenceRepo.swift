@@ -28,4 +28,6 @@ protocol IPreferenceRepo: Scopable {
     
     var shouldScrollToVerse: Bool { get set }
     
+    var stayAwake: Bool { get set }
+    
 }

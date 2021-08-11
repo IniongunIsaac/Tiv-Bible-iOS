@@ -24,4 +24,6 @@ struct PreferenceConstants {
     static let SELECTED_VERSE_NUMBER = "SelectedVerseNumber"
     
     static let SHOULD_SCROLL_TO_VERSE = "ShouldScrollToVerse"
+    
+    static let STAY_AWAKE = "StayAwake"
 }

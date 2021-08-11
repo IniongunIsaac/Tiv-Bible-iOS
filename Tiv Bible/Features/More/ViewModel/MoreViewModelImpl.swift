@@ -50,6 +50,14 @@ class MoreViewModelImpl: BaseViewModel, IMoreViewModel {
         }
     }
     
+    var stayAwake: Bool {
+        get { preferenceRepo.stayAwake }
+        set {
+            preferenceRepo.stayAwake = newValue
+            keepDeviceAwake(newValue)
+        }
+    }
+    
     func getBookmarks() {
         subscribe(bookmarksRepo.getBookmarks(), success: { [weak self] bookmarks in
             self?.bookmarks.onNext(bookmarks)

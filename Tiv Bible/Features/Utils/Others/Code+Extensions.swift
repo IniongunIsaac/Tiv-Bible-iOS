@@ -247,3 +247,7 @@ func canOpenURL(url: String) -> Bool {
     }
     return false
 }
+
+func keepDeviceAwake(_ keepAwake: Bool) {
+    UIApplication.shared.isIdleTimerDisabled = keepAwake
+}

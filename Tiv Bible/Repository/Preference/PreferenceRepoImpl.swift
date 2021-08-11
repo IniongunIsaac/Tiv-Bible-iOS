@@ -57,4 +57,9 @@ struct PreferenceRepoImpl: IPreferenceRepo {
         set { preference.shouldScrollToVerse = newValue }
     }
     
+    var stayAwake: Bool {
+        get { preference.stayAwake }
+        set { preference.stayAwake = newValue }
+    }
+    
 }

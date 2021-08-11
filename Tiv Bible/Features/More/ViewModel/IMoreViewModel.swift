@@ -30,6 +30,8 @@ protocol IMoreViewModel: Scopable {
     
     var currentTheme: Theme { get set }
     
+    var stayAwake: Bool { get set }
+    
     func getBookmarks()
     
     func deleteBookmark(_ bookmark: Bookmark)
