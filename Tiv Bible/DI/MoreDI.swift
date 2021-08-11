@@ -30,6 +30,14 @@ struct MoreDI {
             cntrl.moreViewModel = res.resolve(IMoreViewModel.self)
         }
         
+        container.storyboardInitCompleted(NotesViewController.self) { res, cntrl in
+            cntrl.moreViewModel = res.resolve(IMoreViewModel.self)
+        }
+        
+        container.storyboardInitCompleted(HistoryViewController.self) { res, cntrl in
+            cntrl.moreViewModel = res.resolve(IMoreViewModel.self)
+        }
+        
     }
     
 }

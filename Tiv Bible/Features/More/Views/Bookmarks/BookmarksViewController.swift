@@ -40,8 +40,10 @@ class BookmarksViewController: BaseViewController {
     }
     
     @objc fileprivate func clearAllButtonTapped() {
-        showConfirmationViewController(prompt: "Are you sure you want to delete all your bookmarks?") { [weak self] in
-            self?.moreViewModel.deleteAllBookmarks()
+        clearAllButton.animateView { [weak self] in
+            self?.showConfirmationViewController(prompt: "Are you sure you want to delete all your bookmarks?") { [weak self] in
+                self?.moreViewModel.deleteAllBookmarks()
+            }
         }
     }
     

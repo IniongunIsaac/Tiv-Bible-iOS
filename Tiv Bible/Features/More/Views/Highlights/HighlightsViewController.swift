@@ -78,8 +78,10 @@ class HighlightsViewController: BaseViewController {
     }
     
     @objc fileprivate func clearAllButtonTapped() {
-        showConfirmationViewController(prompt: "Are you sure you want to delete all your highlights?") { [weak self] in
-            self?.moreViewModel.deleteAllHighlights()
+        clearAllButton.animateView { [weak self] in
+            self?.showConfirmationViewController(prompt: "Are you sure you want to delete all your highlights?") { [weak self] in
+                self?.moreViewModel.deleteAllHighlights()
+            }
         }
     }
     

@@ -23,12 +23,12 @@ import RealmSwift
         self.chapter = chapter
     }
     
-    var bookNameAndChapterNumberAndVerseNumbersString: String {
-        return "\(book!.name) \(chapter!.chapterNumber):\(getFormattedVerseNumbers())"
-    }
+    var bookNameAndChapterNumberAndVerseNumbersString: String { "\(book!.name) \(chapter!.chapterNumber):\(getFormattedVerseNumbers())" }
     
     var formattedVersesText: String {
-        return verses.sorted { $0.number < $1.number }.map { "\($0.number).\t\($0.text)" }.joined(separator: "\n")
+        return verses.sorted { $0.number < $1.number }
+            .map { "\($0.number).\t\($0.text)" }
+            .joined(separator: "\n")
     }
     
     var dateString: String {
