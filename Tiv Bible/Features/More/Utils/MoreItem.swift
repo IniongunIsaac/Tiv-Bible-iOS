@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 enum MoreItem: String, CaseIterable, Scopable {
-    case bookmarks = "Bookmarks", highlights = "Highlights", notes = "Notes", history = "History", apostlesCreed = "Akar a Puekarahar", commandments = "Atindi a Pue", lordsPrayer = "Msen U Ter Wase", share = "Share with friends", rating = "Rate on Appstore", settings = "Settings"
+    case bookmarks = "Bookmarks", highlights = "Highlights", notes = "Notes", history = "Reading History", apostlesCreed = "Akar a Puekarahar", commandments = "Atindi a Pue", lordsPrayer = "Msen U Ter Wase", share = "Share with friends", rating = "Rate on Appstore", settings = "Settings"
     
     var icon: UIImage? {
         switch self {

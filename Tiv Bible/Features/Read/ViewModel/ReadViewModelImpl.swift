@@ -64,14 +64,15 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
     
     override func didLoad() {
         super.didLoad()
-        self.preferenceRepo.shouldReloadVerses = true
-        getUserSettings()
+        preferenceRepo.shouldReloadVerses = true
         getHighlightColorsAndFontStyles()
     }
     
     override func willAppear() {
         super.willAppear()
         getBookFromSavedPreferencesOrInitializeWithGenese()
+        getUserSettings()
+        keepDeviceAwake(preferenceRepo.stayAwake)
     }
     
     func getHighlightColorsAndFontStyles() {
