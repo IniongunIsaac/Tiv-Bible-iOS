@@ -428,6 +428,8 @@
 		1462CD332481C13E00063892 /* FontStyleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyleCollectionViewCell.swift; sourceTree = "<group>"; };
 		1462CD352481C15100063892 /* ThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		1466B84726C3CCF300A0DBFA /* OthersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersViewController.swift; sourceTree = "<group>"; };
+		1466B84926C49C5100A0DBFA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1466B84B26C49F2C00A0DBFA /* appstore-badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appstore-badge.png"; sourceTree = "<group>"; };
 		1470728026BBEC520088C8D3 /* TakeNotesDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeNotesDialogViewController.swift; sourceTree = "<group>"; };
 		1470728226BC06460088C8D3 /* TextViewWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithPlaceholder.swift; sourceTree = "<group>"; };
 		1477B59B26C276B700E736C2 /* BookChapterVerse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookChapterVerse.swift; sourceTree = "<group>"; };
@@ -504,6 +506,19 @@
 		148B0F4026BE5AB700B92B26 /* ReferenceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReferenceView.xib; sourceTree = "<group>"; };
 		148B0F4226BE5ACC00B92B26 /* ReferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceView.swift; sourceTree = "<group>"; };
 		148B0F4526BE5B1C00B92B26 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		148BD01526CDE64100DDC49D /* screenshot_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_1.png; sourceTree = "<group>"; };
+		148BD01626CDE64100DDC49D /* screenshot_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_7.png; sourceTree = "<group>"; };
+		148BD01726CDE64100DDC49D /* screenshot_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_5.png; sourceTree = "<group>"; };
+		148BD01826CDE64100DDC49D /* screenshot_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_3.png; sourceTree = "<group>"; };
+		148BD01926CDE64200DDC49D /* screenshot_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_10.png; sourceTree = "<group>"; };
+		148BD01A26CDE64200DDC49D /* screenshot_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_2.png; sourceTree = "<group>"; };
+		148BD01B26CDE64200DDC49D /* screenshot_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_4.png; sourceTree = "<group>"; };
+		148BD01C26CDE64200DDC49D /* screenshot_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_8.png; sourceTree = "<group>"; };
+		148BD01D26CDE64200DDC49D /* screenshot_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_9.png; sourceTree = "<group>"; };
+		148BD01E26CDE64200DDC49D /* screenshot_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_11.png; sourceTree = "<group>"; };
+		148BD01F26CDE64300DDC49D /* screenshot_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_12.png; sourceTree = "<group>"; };
+		148BD02026CDE64300DDC49D /* screenshot_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_6.png; sourceTree = "<group>"; };
+		148BD02126CDE65200DDC49D /* google-play-badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-play-badge.png"; sourceTree = "<group>"; };
 		1492E35626C08268008C9193 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		1492E35826C08272008C9193 /* IconView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconView.xib; sourceTree = "<group>"; };
 		149531C52506773800A6E9DD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -1123,6 +1138,7 @@
 		14377BE7246DE213005B0795 = {
 			isa = PBXGroup;
 			children = (
+				1466B84926C49C5100A0DBFA /* README.md */,
 				149531CE2506792D00A6E9DD /* R.generated.swift */,
 				149531CA2506783C00A6E9DD /* Podfile.lock */,
 				149531C52506773800A6E9DD /* .gitignore */,
@@ -1148,6 +1164,7 @@
 		14377BF2246DE214005B0795 /* Tiv Bible */ = {
 			isa = PBXGroup;
 			children = (
+				1466B84A26C49C8400A0DBFA /* Screenshots */,
 				14121C81247465070073814F /* App Files */,
 				14121C80247464F80073814F /* Resources */,
 				14121C7F247464F10073814F /* DI */,
@@ -1359,6 +1376,27 @@
 				14CD219F247D5D3400EF0A32 /* ReadViewModelImpl.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1466B84A26C49C8400A0DBFA /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				148BD02126CDE65200DDC49D /* google-play-badge.png */,
+				148BD01526CDE64100DDC49D /* screenshot_1.png */,
+				148BD01A26CDE64200DDC49D /* screenshot_2.png */,
+				148BD01826CDE64100DDC49D /* screenshot_3.png */,
+				148BD01B26CDE64200DDC49D /* screenshot_4.png */,
+				148BD01726CDE64100DDC49D /* screenshot_5.png */,
+				148BD02026CDE64300DDC49D /* screenshot_6.png */,
+				148BD01626CDE64100DDC49D /* screenshot_7.png */,
+				148BD01C26CDE64200DDC49D /* screenshot_8.png */,
+				148BD01D26CDE64200DDC49D /* screenshot_9.png */,
+				148BD01926CDE64200DDC49D /* screenshot_10.png */,
+				148BD01E26CDE64200DDC49D /* screenshot_11.png */,
+				148BD01F26CDE64300DDC49D /* screenshot_12.png */,
+				1466B84B26C49F2C00A0DBFA /* appstore-badge.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 		1470727F26BBD4C60088C8D3 /* Others */ = {
