@@ -62,4 +62,6 @@ struct PreferenceRepoImpl: IPreferenceRepo {
         set { preference.stayAwake = newValue }
     }
     
+    var appVersion: String { preference.appVersion }
+    
 }

@@ -26,4 +26,6 @@ struct PreferenceConstants {
     static let SHOULD_SCROLL_TO_VERSE = "ShouldScrollToVerse"
     
     static let STAY_AWAKE = "StayAwake"
+    
+    static let APP_VERSION = "iosAppVersion"
 }

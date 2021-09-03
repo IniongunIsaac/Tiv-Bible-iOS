@@ -30,4 +30,6 @@ protocol IPreferenceRepo: Scopable {
     
     var stayAwake: Bool { get set }
     
+    var appVersion: String { get }
+    
 }

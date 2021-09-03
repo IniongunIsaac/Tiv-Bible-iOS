@@ -62,10 +62,13 @@ class ReadViewModelImpl: BaseViewModel, IReadViewModel {
         set { preferenceRepo.currentTheme = newValue }
     }
     
+    var hasUpdate: Bool { preferenceRepo.appVersion > appVersion }
+    
     override func didLoad() {
         super.didLoad()
         preferenceRepo.shouldReloadVerses = true
         getHighlightColorsAndFontStyles()
+        print("AppVersion: ", preferenceRepo.appVersion)
     }
     
     override func willAppear() {

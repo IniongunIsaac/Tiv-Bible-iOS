@@ -34,6 +34,8 @@ protocol IReadViewModel: Scopable {
     
     var currentTheme: Theme { get set }
     
+    var hasUpdate: Bool { get }
+    
     func getBookFromSavedPreferencesOrInitializeWithGenese()
     
     func toggleSelectedVerse(verse: Verse)

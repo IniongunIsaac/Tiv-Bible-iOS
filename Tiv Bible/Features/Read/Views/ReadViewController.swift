@@ -69,6 +69,10 @@ class ReadViewController: BaseViewController {
             guard let self = self else { return }
             self.switchAppTheme(type: self.readViewModel.currentTheme)
         }
+        
+        if readViewModel.hasUpdate {
+            showDialog(for: R.storyboard.homeTabs.appUpdateDialogViewController()!)
+        }
     }
     
     override func setupTapGestures() {

@@ -11,6 +11,16 @@ target 'Tiv Bible' do
   pod 'RxSwiftExt'
   pod 'RxDataSources'
   
+  # Firebase pods
+  pod 'Firebase'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Performance'
+  pod 'Firebase/RemoteConfig'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/InAppMessaging'
+  pod 'Firebase/Functions'
+  pod 'Firebase/Crashlytics'
+  
   #Other pods
   pod 'Alertift', '~> 4.1'
   pod 'BottomPopup'

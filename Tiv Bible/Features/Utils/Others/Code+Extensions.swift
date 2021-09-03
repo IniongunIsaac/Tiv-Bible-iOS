@@ -251,3 +251,7 @@ func canOpenURL(url: String) -> Bool {
 func keepDeviceAwake(_ keepAwake: Bool) {
     UIApplication.shared.isIdleTimerDisabled = keepAwake
 }
+
+var appVersion: String {
+    Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+}

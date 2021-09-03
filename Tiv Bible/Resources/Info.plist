@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -36,16 +36,16 @@
 		<string>Jost.ttf</string>
 		<string>Lato.ttf</string>
 		<string>Lobster.ttf</string>
-        <string>AndesRoundedW03UltraLight.ttf</string>
-        <string>AndesRoundedW03Black.ttf</string>
-        <string>AndesRoundedW03Bold.ttf</string>
-        <string>AndesRoundedW03Book.ttf</string>
-        <string>AndesRoundedW03ExtraBold.ttf</string>
-        <string>AndesRoundedW03ExtraLight.ttf</string>
-        <string>AndesRoundedW03Light.ttf</string>
-        <string>AndesRoundedW03Medium.ttf</string>
-        <string>AndesRoundedW03Regular.ttf</string>
-        <string>AndesRoundedW03SemiBold.ttf</string>
+		<string>AndesRoundedW03UltraLight.ttf</string>
+		<string>AndesRoundedW03Black.ttf</string>
+		<string>AndesRoundedW03Bold.ttf</string>
+		<string>AndesRoundedW03Book.ttf</string>
+		<string>AndesRoundedW03ExtraBold.ttf</string>
+		<string>AndesRoundedW03ExtraLight.ttf</string>
+		<string>AndesRoundedW03Light.ttf</string>
+		<string>AndesRoundedW03Medium.ttf</string>
+		<string>AndesRoundedW03Regular.ttf</string>
+		<string>AndesRoundedW03SemiBold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
