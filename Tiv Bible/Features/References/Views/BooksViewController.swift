@@ -24,7 +24,7 @@ class BooksViewController: UIViewController {
     }
     
     fileprivate func configureViews() {
-        searchBar.font = .comfortaaMedium(size: 14)
+        searchBar.font = .comfortaaMedium(size: (currentDevice.isPad ? 18 : 14).cgfloat)
         setupBooksTableView()
     }
     

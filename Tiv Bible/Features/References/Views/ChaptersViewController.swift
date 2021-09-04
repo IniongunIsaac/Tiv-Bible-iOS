@@ -68,7 +68,7 @@ extension ChaptersViewController: UICollectionViewDelegateFlowLayout {
         ///15 => spacing between cells
         let cellWidth = width.int! - (40 + (15 * cellsPerRow))
         
-        return CGSize(width: (cellWidth / cellsPerRow), height: 60)
+        return CGSize(width: (cellWidth / cellsPerRow), height: (currentDevice.isPad ? 80 : 60))
     }
     
 }

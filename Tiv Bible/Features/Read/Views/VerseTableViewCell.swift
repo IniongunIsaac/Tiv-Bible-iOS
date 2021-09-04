@@ -19,7 +19,8 @@ class VerseTableViewCell: UITableViewCell {
         
         titleLabel.showView(verse.hasTitle)
         titleLabel.text = verse.title
-        titleLabel.font = getFont(name: settings.fontStyle!.name, size: 12).italic
+        let titleFontSize = currentDevice.isPad ? 16 : 12
+        titleLabel.font = getFont(name: settings.fontStyle!.name, size: titleFontSize).italic
         
         let text = "\(verse.number). \(verse.text)"
         

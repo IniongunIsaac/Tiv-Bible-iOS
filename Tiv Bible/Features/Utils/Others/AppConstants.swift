@@ -19,8 +19,8 @@ struct AppConstants {
     static let BACKGROUND_THREAD_LABEL = "com.iniongungroup.tivbible.background.thread"
     static let APPSTORE_LINK = "https://itunes.apple.com/us/app/gigm-com/{APP_ID_HERE}?action=write-review"
     
-    static let minFontSize = currentDevice.isPhone ? 13 : 16
-    static let maxFontSize = currentDevice.isPhone ? 17 : 20
+    static let minFontSize = currentDevice.isPhone ? 13 : 18
+    static let maxFontSize = currentDevice.isPhone ? 17 : 24
     static var numberItemsPerRow: Int {
         var items = 4
         switch currentDevice {
@@ -35,7 +35,7 @@ struct AppConstants {
         case .iPadPro9Inch, .iPadPro12Inch, .iPadPro12Inch2, .iPadPro10Inch, .iPadPro11Inch, .iPadPro12Inch3:
             items = 10
         case .simulator(_):
-            items = 5
+            items = 7
         default:
             break
         }

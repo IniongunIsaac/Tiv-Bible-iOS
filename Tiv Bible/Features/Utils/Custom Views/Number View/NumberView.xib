@@ -34,6 +34,9 @@
                             <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="16"/>
                             <color key="textColor" systemColor="secondaryLabelColor"/>
                             <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
+                            </variation>
                         </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>

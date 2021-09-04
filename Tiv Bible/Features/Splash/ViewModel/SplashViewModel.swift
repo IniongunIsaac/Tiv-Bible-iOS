@@ -80,19 +80,15 @@ class SplashViewModel: BaseViewModel, ISplashViewModel {
         var fontNames = ["Comfortaa-Regular"]
         UIFont.familyNames.forEach { fontNames.append(contentsOf: UIFont.fontNames(forFamilyName: $0)) }
         
-        //let fontStyles = [FontStyle(name: "Comfortaa"), FontStyle(name: "Happy-Monkey"), FontStyle(name: "Metamorphous"), FontStyle(name: "Roboto"), FontStyle(name: "Montserrat"), FontStyle(name: "Amatic-Sc"), FontStyle(name: "Inconsolata-Expanded"), FontStyle(name: "Indie-Flower"), FontStyle(name: "Jost"), FontStyle(name: "Lato"), FontStyle(name: "Lobster")]
-        
         let fontStyles = fontNames.map { FontStyle(name: $0) }
         
         let highlightColors = AppConstants.colorHexCodes.map { HighlightColor(hexCode: $0) }
-        
-        //let others = AppConstants.others.map { Other(title: $0.title, subTitle: $0.subTitle, text: $0.content) }
         
         var fontSize_lineSpacing = (0,0)
         if currentDevice.isPhone {
             fontSize_lineSpacing = (13, 8)
         } else if currentDevice.isPad {
-            fontSize_lineSpacing = (18, 10)
+            fontSize_lineSpacing = (20, 10)
         }
         
         let settings = [Setting(fontSize: fontSize_lineSpacing.0, lineSpacing: fontSize_lineSpacing.1, fontStyle: fontStyles[0], stayAwake: true, audioSpeed: audioSpeeds.last!)]

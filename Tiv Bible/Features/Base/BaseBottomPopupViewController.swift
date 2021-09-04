@@ -24,7 +24,7 @@ class BaseBottomPopupViewController: BottomPopupViewController {
     
     var progressBarColor: UIColor { .primaryColor }
     
-    override var popupHeight: CGFloat { height - 100 }
+    override var popupHeight: CGFloat { height - (currentDevice.isPad ? 200 : 100) }
     
     override var popupTopCornerRadius: CGFloat { 20 }
     

@@ -15,6 +15,8 @@ import FirebaseMessaging
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    var window: UIWindow?
+    
     let gcmMessageIDKey = "gcm.message_id"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -99,14 +101,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     fileprivate func configureGlobalAppAppearance() {
-        let iPadAttributes = [NSAttributedString.Key.font : UIFont.comfortaaBold(size: 16)]
+        let iPadAttributes = [NSAttributedString.Key.font : UIFont.comfortaaBold(size: (currentDevice.isPad ? 18 : 16))]
         let iPadTraitCollection = UITraitCollection.init(traitsFrom: [.init(horizontalSizeClass: .regular), .init(verticalSizeClass: .regular)])
         let iPhoneTraitCollection = UITraitCollection.init(traitsFrom: [.init(horizontalSizeClass: .compact), .init(verticalSizeClass: .regular)])
         
         //configurations for iPads: wRhR
         UIBarButtonItem.appearance(for: iPadTraitCollection).setTitleTextAttributes(iPadAttributes, for: .normal)
         UITabBarItem.appearance(for: iPadTraitCollection).setTitleTextAttributes(iPadAttributes, for: .normal)
-        UINavigationBar.appearance(for: iPadTraitCollection).titleTextAttributes = [NSAttributedString.Key.font : UIFont.comfortaaBold(size: 18)]
+        UINavigationBar.appearance(for: iPadTraitCollection).titleTextAttributes = [NSAttributedString.Key.font : UIFont.comfortaaBold(size: (currentDevice.isPad ? 20 : 18))]
         
         //configurations for iPhones: wChR
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont.comfortaaBold(size: 16), NSAttributedString.Key.foregroundColor : UIColor.aLabel], for: .normal)

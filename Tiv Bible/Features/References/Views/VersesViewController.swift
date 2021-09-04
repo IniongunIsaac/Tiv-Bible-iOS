@@ -64,7 +64,13 @@ extension VersesViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: (width - (40 + (15 * 5))) / 5, height: 60)
+        //CGSize(width: (width - (40 + (15 * 5))) / 5, height: 60)
+        let cellsPerRow = AppConstants.numberItemsPerRow
+        ///40 => paddingRight(20) + paddingLeft(20)
+        ///15 => spacing between cells
+        let cellWidth = width.int! - (40 + (15 * cellsPerRow))
+        
+        return CGSize(width: (cellWidth / cellsPerRow), height: (currentDevice.isPad ? 80 : 60))
     }
     
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HBa-F0-Bcn">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -30,34 +30,41 @@
             <objects>
                 <viewController storyboardIdentifier="readViewController" id="HBa-F0-Bcn" customClass="ReadViewController" customModule="Tiv_Bible" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g9D-0l-Bkp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uj7-vX-lyT" userLabel="Top Background View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="90"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1V-H7-1on">
-                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="90"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRi-NX-C8y">
-                                        <rect key="frame" x="16" y="5" width="117.5" height="40"/>
+                                        <rect key="frame" x="16" y="15" width="154.5" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uWm-vZ-D0d">
-                                                <rect key="frame" x="15" y="11" width="87.5" height="18"/>
+                                                <rect key="frame" x="15" y="16.5" width="124.5" height="27"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSG-2f-3kF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="18"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="27"/>
                                                         <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="24"/>
+                                                        </variation>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_icon" translatesAutoresizingMaskIntoConstraints="NO" id="asc-aZ-mKk">
-                                                        <rect key="frame" x="69" y="0.0" width="18.5" height="18"/>
+                                                        <rect key="frame" x="99.5" y="1" width="25" height="25"/>
                                                         <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="18" id="310-Cf-G3Z"/>
-                                                            <constraint firstAttribute="width" constant="18.5" id="YUH-a9-89S"/>
+                                                            <constraint firstAttribute="height" constant="18" id="310-Cf-G3Z">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="18" id="YUH-a9-89S">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                            </constraint>
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
@@ -66,7 +73,9 @@
                                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="uWm-vZ-D0d" firstAttribute="centerY" secondItem="hRi-NX-C8y" secondAttribute="centerY" id="6gW-56-bVc"/>
-                                            <constraint firstAttribute="height" constant="40" id="gQz-2q-TaM"/>
+                                            <constraint firstAttribute="height" constant="40" id="gQz-2q-TaM">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                            </constraint>
                                             <constraint firstAttribute="trailing" secondItem="uWm-vZ-D0d" secondAttribute="trailing" constant="15" id="pCT-zs-RVz"/>
                                             <constraint firstItem="uWm-vZ-D0d" firstAttribute="leading" secondItem="hRi-NX-C8y" secondAttribute="leading" constant="15" id="yt9-CY-GrA"/>
                                         </constraints>
@@ -77,11 +86,15 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoE-V3-llR">
-                                        <rect key="frame" x="348" y="5" width="50" height="40"/>
+                                        <rect key="frame" x="928" y="15" width="80" height="60"/>
                                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="HIn-MK-qrJ"/>
-                                            <constraint firstAttribute="width" constant="50" id="uQM-ag-ieD"/>
+                                            <constraint firstAttribute="height" constant="40" id="HIn-MK-qrJ">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="50" id="uQM-ag-ieD">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                            </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="16"/>
                                         <color key="tintColor" systemColor="labelColor"/>
@@ -93,6 +106,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="22"/>
+                                        </variation>
                                         <connections>
                                             <action selector="fontStyleButtonTapped:" destination="HBa-F0-Bcn" eventType="touchUpInside" id="qpn-gD-bJu"/>
                                         </connections>
@@ -100,7 +116,9 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="BTl-nm-kMO"/>
+                                    <constraint firstAttribute="height" constant="50" id="BTl-nm-kMO">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="90"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="SoE-V3-llR" secondAttribute="trailing" constant="16" id="Igz-Ec-X4S"/>
                                     <constraint firstItem="hRi-NX-C8y" firstAttribute="leading" secondItem="t1V-H7-1on" secondAttribute="leading" constant="16" id="Pag-Qi-7UO"/>
                                     <constraint firstItem="SoE-V3-llR" firstAttribute="centerY" secondItem="t1V-H7-1on" secondAttribute="centerY" id="Zwc-Ge-JeR"/>
@@ -108,37 +126,37 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fR-ZK-YX0" userLabel="Line View">
-                                <rect key="frame" x="0.0" y="94" width="414" height="0.5"/>
+                                <rect key="frame" x="0.0" y="90" width="1024" height="0.5"/>
                                 <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="cvs-gp-pDS"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0u9-CV-0pc" userLabel="Content Stack View">
-                                <rect key="frame" x="0.0" y="102.5" width="414" height="710.5"/>
+                                <rect key="frame" x="0.0" y="98.5" width="1024" height="1202.5"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7dS-jP-YDg">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="135.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="410.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="verseTableViewCell" rowHeight="67" id="RDv-cP-fqd" customClass="VerseTableViewCell" customModule="Tiv_Bible" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="24.5" width="414" height="67"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="1024" height="67"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RDv-cP-fqd" id="9zY-HR-7vc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="67"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="e6z-BS-S9w">
-                                                            <rect key="frame" x="20" y="10" width="374" height="47"/>
+                                                            <rect key="frame" x="20" y="10" width="984" height="47"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11C-rS-YXB">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="13.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="984" height="13.5"/>
                                                                     <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="XbJ-5b-stZ">
-                                                                    <rect key="frame" x="0.0" y="15.5" width="374" height="31.5"/>
+                                                                    <rect key="frame" x="0.0" y="15.5" width="984" height="31.5"/>
                                                                     <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -161,52 +179,66 @@
                                         </prototypes>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jea-rI-tpi" userLabel="Tap Actions View">
-                                        <rect key="frame" x="0.0" y="140.5" width="414" height="216"/>
+                                        <rect key="frame" x="0.0" y="415.5" width="1024" height="297"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontal_line" translatesAutoresizingMaskIntoConstraints="NO" id="IxU-dj-uzN">
-                                                <rect key="frame" x="182" y="10" width="50" height="20"/>
+                                                <rect key="frame" x="482" y="10" width="60" height="30"/>
                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="eXx-Xo-VFl"/>
-                                                    <constraint firstAttribute="height" constant="20" id="fRn-7x-TjW"/>
+                                                    <constraint firstAttribute="width" constant="50" id="eXx-Xo-VFl">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="20" id="fRn-7x-TjW">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                                    </constraint>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gQP-WR-apS" userLabel="Tap Actions Stack View">
-                                                <rect key="frame" x="20" y="50" width="374" height="158"/>
+                                                <rect key="frame" x="20" y="60" width="984" height="197"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rSh-WW-R0B" userLabel="Tap Actions Container Stack View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="67"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="984" height="92.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Aerenakaa a Mbaapostoli 20 : 1-4, 7, 5, 8, 11 - 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVO-O9-LXM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="984" height="22.5"/>
                                                                 <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="20"/>
+                                                                </variation>
                                                             </label>
                                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u32-Jd-Zom" userLabel="Tap Actions Scroll View">
-                                                                <rect key="frame" x="0.0" y="27" width="374" height="40"/>
+                                                                <rect key="frame" x="0.0" y="32.5" width="984" height="60"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ClR-hD-hiJ" userLabel="Tap Actions Stack View">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="522" height="40"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="581" height="60"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4R6-jD-qM0" customClass="ViewWithBorderAttributes" customModule="Tiv_Bible" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="40"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="60"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kRX-zt-TVq">
-                                                                                        <rect key="frame" x="15" y="4" width="73.5" height="32"/>
+                                                                                        <rect key="frame" x="15" y="4" width="84.5" height="52"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qm-5D-AlB">
-                                                                                                <rect key="frame" x="0.0" y="7.5" width="46.5" height="17"/>
+                                                                                                <rect key="frame" x="0.0" y="16" width="55.5" height="20.5"/>
                                                                                                 <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
+                                                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="18"/>
+                                                                                                </variation>
                                                                                             </label>
                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="share_icon" translatesAutoresizingMaskIntoConstraints="NO" id="tov-Sa-5kI">
-                                                                                                <rect key="frame" x="54.5" y="6.5" width="19" height="19"/>
+                                                                                                <rect key="frame" x="63.5" y="15.5" width="21" height="21"/>
                                                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                                                 <constraints>
-                                                                                                    <constraint firstAttribute="width" constant="19" id="H5D-Cq-A8h"/>
-                                                                                                    <constraint firstAttribute="height" constant="19" id="PhG-ry-VXQ"/>
+                                                                                                    <constraint firstAttribute="width" constant="19" id="H5D-Cq-A8h">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="21"/>
+                                                                                                    </constraint>
+                                                                                                    <constraint firstAttribute="height" constant="19" id="PhG-ry-VXQ">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="21"/>
+                                                                                                    </constraint>
                                                                                                 </constraints>
                                                                                             </imageView>
                                                                                         </subviews>
@@ -218,7 +250,9 @@
                                                                                     <constraint firstItem="kRX-zt-TVq" firstAttribute="top" secondItem="4R6-jD-qM0" secondAttribute="top" constant="4" id="gAQ-JG-ulG"/>
                                                                                     <constraint firstItem="kRX-zt-TVq" firstAttribute="leading" secondItem="4R6-jD-qM0" secondAttribute="leading" constant="15" id="ke3-U2-YXe"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="kRX-zt-TVq" secondAttribute="bottom" constant="4" id="l2r-q5-6rP"/>
-                                                                                    <constraint firstAttribute="height" constant="40" id="wMw-LL-8vy"/>
+                                                                                    <constraint firstAttribute="height" constant="40" id="wMw-LL-8vy">
+                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                                                    </constraint>
                                                                                 </constraints>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -227,23 +261,30 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPu-bZ-BB1" customClass="ViewWithBorderAttributes" customModule="Tiv_Bible" customModuleProvider="target">
-                                                                                <rect key="frame" x="118.5" y="0.0" width="135.5" height="40"/>
+                                                                                <rect key="frame" x="129.5" y="0.0" width="153.5" height="60"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5wg-y7-QXM">
-                                                                                        <rect key="frame" x="15" y="4" width="105.5" height="32"/>
+                                                                                        <rect key="frame" x="15" y="4" width="123.5" height="52"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Bookmark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOb-NM-dmk">
-                                                                                                <rect key="frame" x="0.0" y="7.5" width="79.5" height="17"/>
+                                                                                                <rect key="frame" x="0.0" y="16" width="95.5" height="20.5"/>
                                                                                                 <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
+                                                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="18"/>
+                                                                                                </variation>
                                                                                             </label>
                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="bookmark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="pxa-qy-yo9">
-                                                                                                <rect key="frame" x="87.5" y="7" width="18" height="18"/>
+                                                                                                <rect key="frame" x="103.5" y="16" width="20" height="20"/>
                                                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                                                 <constraints>
-                                                                                                    <constraint firstAttribute="height" constant="18" id="KLL-bj-wDX"/>
-                                                                                                    <constraint firstAttribute="width" constant="18" id="bj4-PF-oUa"/>
+                                                                                                    <constraint firstAttribute="height" constant="18" id="KLL-bj-wDX">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                                                                                    </constraint>
+                                                                                                    <constraint firstAttribute="width" constant="18" id="bj4-PF-oUa">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                                                                                    </constraint>
                                                                                                 </constraints>
                                                                                             </imageView>
                                                                                         </subviews>
@@ -255,7 +296,9 @@
                                                                                     <constraint firstItem="5wg-y7-QXM" firstAttribute="leading" secondItem="dPu-bZ-BB1" secondAttribute="leading" constant="15" id="9nd-2y-pET"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="5wg-y7-QXM" secondAttribute="trailing" constant="15" id="GAr-h5-L6a"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="5wg-y7-QXM" secondAttribute="bottom" constant="4" id="ILx-yj-MT4"/>
-                                                                                    <constraint firstAttribute="height" constant="40" id="TkS-KF-H7X"/>
+                                                                                    <constraint firstAttribute="height" constant="40" id="TkS-KF-H7X">
+                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                                                    </constraint>
                                                                                 </constraints>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -264,23 +307,30 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odH-C6-6EX" customClass="ViewWithBorderAttributes" customModule="Tiv_Bible" customModuleProvider="target">
-                                                                                <rect key="frame" x="269" y="0.0" width="94.5" height="40"/>
+                                                                                <rect key="frame" x="298" y="0.0" width="104.5" height="60"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dE5-sf-puG">
-                                                                                        <rect key="frame" x="15" y="4" width="64.5" height="32"/>
+                                                                                        <rect key="frame" x="15" y="4" width="74.5" height="52"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Copy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaQ-Bm-9k0">
-                                                                                                <rect key="frame" x="0.0" y="7.5" width="39.5" height="17"/>
+                                                                                                <rect key="frame" x="0.0" y="16" width="47.5" height="20.5"/>
                                                                                                 <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
+                                                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="18"/>
+                                                                                                </variation>
                                                                                             </label>
                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="copy_icon" translatesAutoresizingMaskIntoConstraints="NO" id="h03-M1-KIW">
-                                                                                                <rect key="frame" x="47.5" y="7.5" width="17" height="17"/>
+                                                                                                <rect key="frame" x="55.5" y="16.5" width="19" height="19"/>
                                                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                                                 <constraints>
-                                                                                                    <constraint firstAttribute="height" constant="17" id="mHZ-Yn-621"/>
-                                                                                                    <constraint firstAttribute="width" constant="17" id="yJy-ZJ-4bI"/>
+                                                                                                    <constraint firstAttribute="height" constant="17" id="mHZ-Yn-621">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="19"/>
+                                                                                                    </constraint>
+                                                                                                    <constraint firstAttribute="width" constant="17" id="yJy-ZJ-4bI">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="19"/>
+                                                                                                    </constraint>
                                                                                                 </constraints>
                                                                                             </imageView>
                                                                                         </subviews>
@@ -291,7 +341,9 @@
                                                                                     <constraint firstAttribute="bottom" secondItem="dE5-sf-puG" secondAttribute="bottom" constant="4" id="J43-zV-mSf"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="dE5-sf-puG" secondAttribute="trailing" constant="15" id="MPC-rm-ItN"/>
                                                                                     <constraint firstItem="dE5-sf-puG" firstAttribute="leading" secondItem="odH-C6-6EX" secondAttribute="leading" constant="15" id="V4I-R3-Kww"/>
-                                                                                    <constraint firstAttribute="height" constant="40" id="deU-49-Abz"/>
+                                                                                    <constraint firstAttribute="height" constant="40" id="deU-49-Abz">
+                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                                                    </constraint>
                                                                                     <constraint firstItem="dE5-sf-puG" firstAttribute="top" secondItem="odH-C6-6EX" secondAttribute="top" constant="4" id="krT-x5-LlR"/>
                                                                                 </constraints>
                                                                                 <userDefinedRuntimeAttributes>
@@ -301,23 +353,30 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcm-Wu-owv" customClass="ViewWithBorderAttributes" customModule="Tiv_Bible" customModuleProvider="target">
-                                                                                <rect key="frame" x="378.5" y="0.0" width="143.5" height="40"/>
+                                                                                <rect key="frame" x="417.5" y="0.0" width="163.5" height="60"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uj1-bk-RdI">
-                                                                                        <rect key="frame" x="15" y="4" width="113.5" height="32"/>
+                                                                                        <rect key="frame" x="15" y="4" width="133.5" height="52"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Take Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGH-dk-dXQ">
-                                                                                                <rect key="frame" x="0.0" y="7.5" width="85.5" height="17"/>
+                                                                                                <rect key="frame" x="0.0" y="16" width="102.5" height="20.5"/>
                                                                                                 <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
+                                                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="18"/>
+                                                                                                </variation>
                                                                                             </label>
                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="notes_icon" translatesAutoresizingMaskIntoConstraints="NO" id="n7E-Ga-8mZ">
-                                                                                                <rect key="frame" x="93.5" y="6" width="20" height="20"/>
+                                                                                                <rect key="frame" x="110.5" y="14.5" width="23" height="23"/>
                                                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                                                 <constraints>
-                                                                                                    <constraint firstAttribute="height" constant="20" id="5P0-ff-fEQ"/>
-                                                                                                    <constraint firstAttribute="width" constant="20" id="XcY-Pp-eDg"/>
+                                                                                                    <constraint firstAttribute="height" constant="20" id="5P0-ff-fEQ">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="23"/>
+                                                                                                    </constraint>
+                                                                                                    <constraint firstAttribute="width" constant="20" id="XcY-Pp-eDg">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="23"/>
+                                                                                                    </constraint>
                                                                                                 </constraints>
                                                                                             </imageView>
                                                                                         </subviews>
@@ -326,7 +385,9 @@
                                                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstItem="uj1-bk-RdI" firstAttribute="leading" secondItem="lcm-Wu-owv" secondAttribute="leading" constant="15" id="1bI-uW-kU0"/>
-                                                                                    <constraint firstAttribute="height" constant="40" id="9hV-Lg-ZOq"/>
+                                                                                    <constraint firstAttribute="height" constant="40" id="9hV-Lg-ZOq">
+                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                                                    </constraint>
                                                                                     <constraint firstItem="uj1-bk-RdI" firstAttribute="top" secondItem="lcm-Wu-owv" secondAttribute="top" constant="4" id="K1f-Zd-Mub"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="uj1-bk-RdI" secondAttribute="trailing" constant="15" id="nS2-Wp-UNI"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="uj1-bk-RdI" secondAttribute="bottom" constant="4" id="tGa-Aa-p5d"/>
@@ -353,30 +414,37 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4JX-CE-Gbq" userLabel="Highlight Colors Container Stack View">
-                                                        <rect key="frame" x="0.0" y="87" width="374" height="71"/>
+                                                        <rect key="frame" x="0.0" y="112.5" width="984" height="84.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Highlight with:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfm-h3-dCH">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="984" height="20.5"/>
                                                                 <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="18"/>
+                                                                </variation>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8FU-QB-Afj" userLabel="Highlight Colors Stack View">
-                                                                <rect key="frame" x="0.0" y="27" width="374" height="44"/>
+                                                                <rect key="frame" x="0.0" y="30.5" width="984" height="54"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="multiply.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fy6-Dk-3J4">
-                                                                        <rect key="frame" x="0.0" y="0.5" width="44" height="43"/>
+                                                                        <rect key="frame" x="0.0" y="0.5" width="54" height="53"/>
                                                                         <color key="tintColor" systemColor="labelColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="44" id="snB-nF-YXm"/>
-                                                                            <constraint firstAttribute="height" constant="44" id="zwe-h6-Ae7"/>
+                                                                            <constraint firstAttribute="width" constant="44" id="snB-nF-YXm">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="54"/>
+                                                                            </constraint>
+                                                                            <constraint firstAttribute="height" constant="44" id="zwe-h6-Ae7">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="54"/>
+                                                                            </constraint>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82f-Gj-GRO" userLabel="Highlight Colors Scroll View">
-                                                                        <rect key="frame" x="52" y="0.0" width="322" height="44"/>
+                                                                        <rect key="frame" x="62" y="0.0" width="922" height="54"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Urv-XD-3Pm" userLabel="Colors Stack View">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="54"/>
                                                                                 <subviews>
                                                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lw9-rw-P5b" customClass="ViewWithBorderAttributes" customModule="Tiv_Bible" customModuleProvider="target">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -414,7 +482,9 @@
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="IxU-dj-uzN" firstAttribute="centerX" secondItem="jea-rI-tpi" secondAttribute="centerX" id="29a-7q-irs"/>
-                                            <constraint firstAttribute="bottom" secondItem="gQP-WR-apS" secondAttribute="bottom" constant="8" id="Ngo-GH-omj"/>
+                                            <constraint firstAttribute="bottom" secondItem="gQP-WR-apS" secondAttribute="bottom" constant="8" id="Ngo-GH-omj">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                            </constraint>
                                             <constraint firstItem="gQP-WR-apS" firstAttribute="leading" secondItem="jea-rI-tpi" secondAttribute="leading" constant="20" id="T6s-c9-a7h"/>
                                             <constraint firstItem="IxU-dj-uzN" firstAttribute="top" secondItem="jea-rI-tpi" secondAttribute="top" constant="10" id="e0J-xZ-iv5"/>
                                             <constraint firstItem="gQP-WR-apS" firstAttribute="top" secondItem="IxU-dj-uzN" secondAttribute="bottom" constant="20" id="eh8-xO-ZWC"/>
@@ -422,45 +492,55 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sur-bF-YPL" userLabel="Font Settings View">
-                                        <rect key="frame" x="0.0" y="361.5" width="414" height="349"/>
+                                        <rect key="frame" x="0.0" y="717.5" width="1024" height="485"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontal_line" translatesAutoresizingMaskIntoConstraints="NO" id="R3g-1h-niJ">
-                                                <rect key="frame" x="182" y="10" width="50" height="20"/>
+                                                <rect key="frame" x="482" y="10" width="60" height="30"/>
                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="akW-9o-YAM"/>
-                                                    <constraint firstAttribute="height" constant="20" id="cey-3y-LtR"/>
+                                                    <constraint firstAttribute="width" constant="50" id="akW-9o-YAM">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="20" id="cey-3y-LtR">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                                    </constraint>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gWl-Kj-TmB" userLabel="Font Settings Stack View">
-                                                <rect key="frame" x="20" y="50" width="374" height="279"/>
+                                                <rect key="frame" x="20" y="60" width="984" height="385"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xwi-c8-ITc" userLabel="Font Size Stack View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="984" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Font Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bu-SJ-iI5">
-                                                                <rect key="frame" x="0.0" y="0.0" width="129" height="42"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="664" height="65"/>
                                                                 <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="18"/>
+                                                                </variation>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wg8-pb-2rI">
-                                                                <rect key="frame" x="139" y="0.0" width="235" height="42"/>
+                                                                <rect key="frame" x="674" y="0.0" width="310" height="65"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLc-Tu-24G">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="42"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="65"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="da4-x9-YR6">
-                                                                                <rect key="frame" x="7" y="9" width="51" height="24"/>
+                                                                                <rect key="frame" x="16" y="20.5" width="58" height="24"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9h-Px-egr">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="22" height="24"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="24"/>
                                                                                         <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="16"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
+                                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                                            <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="21"/>
+                                                                                        </variation>
                                                                                     </label>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minus_icon" translatesAutoresizingMaskIntoConstraints="NO" id="aha-zF-XZD">
-                                                                                        <rect key="frame" x="27" y="0.0" width="24" height="24"/>
+                                                                                        <rect key="frame" x="34" y="0.0" width="24" height="24"/>
                                                                                         <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                                                     </imageView>
                                                                                 </subviews>
@@ -469,8 +549,12 @@
                                                                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                                         <constraints>
                                                                             <constraint firstItem="da4-x9-YR6" firstAttribute="centerY" secondItem="dLc-Tu-24G" secondAttribute="centerY" id="1Ex-VO-jo4"/>
-                                                                            <constraint firstAttribute="height" constant="42" id="KR6-tD-5Tl"/>
-                                                                            <constraint firstAttribute="width" constant="65" id="epb-oL-XDV"/>
+                                                                            <constraint firstAttribute="height" constant="42" id="KR6-tD-5Tl">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="65"/>
+                                                                            </constraint>
+                                                                            <constraint firstAttribute="width" constant="65" id="epb-oL-XDV">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="90"/>
+                                                                            </constraint>
                                                                             <constraint firstItem="da4-x9-YR6" firstAttribute="centerX" secondItem="dLc-Tu-24G" secondAttribute="centerX" id="tJf-cx-Irk"/>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
@@ -483,19 +567,22 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8B7-lx-tp7">
-                                                                        <rect key="frame" x="85" y="0.0" width="65" height="42"/>
+                                                                        <rect key="frame" x="110" y="0.0" width="90" height="65"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tSr-wY-OeV">
-                                                                                <rect key="frame" x="11.5" y="13.5" width="42" height="15"/>
+                                                                                <rect key="frame" x="20.5" y="25" width="49" height="15"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ng-e0-GPg">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="22" height="15"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="16"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
+                                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                                            <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="21"/>
+                                                                                        </variation>
                                                                                     </label>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus_icon" translatesAutoresizingMaskIntoConstraints="NO" id="q25-yh-vWN">
-                                                                                        <rect key="frame" x="27" y="0.0" width="15" height="15"/>
+                                                                                        <rect key="frame" x="34" y="0.0" width="15" height="15"/>
                                                                                         <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="width" constant="15" id="HAv-Hr-Lh1"/>
@@ -507,8 +594,12 @@
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="65" id="3GA-s5-hEZ"/>
-                                                                            <constraint firstAttribute="height" constant="42" id="oME-p7-cTZ"/>
+                                                                            <constraint firstAttribute="width" constant="65" id="3GA-s5-hEZ">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="90"/>
+                                                                            </constraint>
+                                                                            <constraint firstAttribute="height" constant="42" id="oME-p7-cTZ">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="65"/>
+                                                                            </constraint>
                                                                             <constraint firstItem="tSr-wY-OeV" firstAttribute="centerY" secondItem="8B7-lx-tp7" secondAttribute="centerY" id="pm3-6D-1rd"/>
                                                                             <constraint firstItem="tSr-wY-OeV" firstAttribute="centerX" secondItem="8B7-lx-tp7" secondAttribute="centerX" id="pq2-gT-ogY"/>
                                                                         </constraints>
@@ -522,41 +613,51 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14px" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIA-i6-ujf">
-                                                                        <rect key="frame" x="170" y="0.0" width="65" height="42"/>
+                                                                        <rect key="frame" x="220" y="0.0" width="90" height="65"/>
                                                                         <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="20"/>
+                                                                        </variation>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kdI-Io-rgJ" userLabel="Line Spacing Stack View">
-                                                        <rect key="frame" x="0.0" y="62" width="374" height="42"/>
+                                                        <rect key="frame" x="0.0" y="85" width="984" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line Spacing:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJy-2z-DSV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="129" height="42"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="664" height="65"/>
                                                                 <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="18"/>
+                                                                </variation>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RtR-RP-zIE">
-                                                                <rect key="frame" x="139" y="0.0" width="235" height="42"/>
+                                                                <rect key="frame" x="674" y="0.0" width="310" height="65"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0NE-74-5bs">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="42"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="65"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spacing_icon_small" translatesAutoresizingMaskIntoConstraints="NO" id="8io-hG-LaV">
-                                                                                <rect key="frame" x="16.5" y="5" width="32" height="32"/>
+                                                                                <rect key="frame" x="29" y="16.5" width="32" height="32"/>
                                                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                                             </imageView>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="42" id="MzQ-4D-99R"/>
+                                                                            <constraint firstAttribute="height" constant="42" id="MzQ-4D-99R">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="65"/>
+                                                                            </constraint>
                                                                             <constraint firstItem="8io-hG-LaV" firstAttribute="centerY" secondItem="0NE-74-5bs" secondAttribute="centerY" id="aIy-Ab-7wB"/>
                                                                             <constraint firstItem="8io-hG-LaV" firstAttribute="centerX" secondItem="0NE-74-5bs" secondAttribute="centerX" id="p6f-GP-9ll"/>
-                                                                            <constraint firstAttribute="width" constant="65" id="uTp-lI-Tc5"/>
+                                                                            <constraint firstAttribute="width" constant="65" id="uTp-lI-Tc5">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="90"/>
+                                                                            </constraint>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -565,10 +666,10 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rgt-E9-ddo">
-                                                                        <rect key="frame" x="85" y="0.0" width="65" height="42"/>
+                                                                        <rect key="frame" x="110" y="0.0" width="90" height="65"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spacing_icon_normal" translatesAutoresizingMaskIntoConstraints="NO" id="e2U-UF-PLd">
-                                                                                <rect key="frame" x="17.5" y="6" width="30" height="30"/>
+                                                                                <rect key="frame" x="30" y="17.5" width="30" height="30"/>
                                                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="30" id="1XD-np-fxt"/>
@@ -579,9 +680,13 @@
                                                                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                                         <constraints>
                                                                             <constraint firstItem="e2U-UF-PLd" firstAttribute="centerX" secondItem="Rgt-E9-ddo" secondAttribute="centerX" id="5se-vn-6Nl"/>
-                                                                            <constraint firstAttribute="height" constant="42" id="7Jx-Cm-G8X"/>
+                                                                            <constraint firstAttribute="height" constant="42" id="7Jx-Cm-G8X">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="65"/>
+                                                                            </constraint>
                                                                             <constraint firstItem="e2U-UF-PLd" firstAttribute="centerY" secondItem="Rgt-E9-ddo" secondAttribute="centerY" id="geV-7o-gSt"/>
-                                                                            <constraint firstAttribute="width" constant="65" id="oiu-Jm-Lhs"/>
+                                                                            <constraint firstAttribute="width" constant="65" id="oiu-Jm-Lhs">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="90"/>
+                                                                            </constraint>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -590,10 +695,10 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDY-rn-MZG">
-                                                                        <rect key="frame" x="170" y="0.0" width="65" height="42"/>
+                                                                        <rect key="frame" x="220" y="0.0" width="90" height="65"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spacing_icon_large" translatesAutoresizingMaskIntoConstraints="NO" id="IFE-TC-o07">
-                                                                                <rect key="frame" x="17.5" y="6" width="30" height="30"/>
+                                                                                <rect key="frame" x="30" y="17.5" width="30" height="30"/>
                                                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="30" id="gxc-y9-Twv"/>
@@ -603,10 +708,14 @@
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="42" id="9yt-sC-U49"/>
+                                                                            <constraint firstAttribute="height" constant="42" id="9yt-sC-U49">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="65"/>
+                                                                            </constraint>
                                                                             <constraint firstItem="IFE-TC-o07" firstAttribute="centerY" secondItem="VDY-rn-MZG" secondAttribute="centerY" id="Q49-tu-Y6L"/>
                                                                             <constraint firstItem="IFE-TC-o07" firstAttribute="centerX" secondItem="VDY-rn-MZG" secondAttribute="centerX" id="UQ4-9r-OgP"/>
-                                                                            <constraint firstAttribute="width" constant="65" id="tRd-1B-xWd"/>
+                                                                            <constraint firstAttribute="width" constant="65" id="tRd-1B-xWd">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="90"/>
+                                                                            </constraint>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -619,19 +728,24 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="meK-H5-t7J" userLabel="Font Style Stack View">
-                                                        <rect key="frame" x="0.0" y="124" width="374" height="35"/>
+                                                        <rect key="frame" x="0.0" y="170" width="984" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Font Style:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yku-Mv-Zf9">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80.5" height="35"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="97" height="60"/>
                                                                 <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="18"/>
+                                                                </variation>
                                                             </label>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kUw-qc-jnE">
-                                                                <rect key="frame" x="100.5" y="0.0" width="273.5" height="35"/>
+                                                                <rect key="frame" x="117" y="0.0" width="867" height="60"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="35" id="K7f-IC-LyC"/>
+                                                                    <constraint firstAttribute="height" constant="35" id="K7f-IC-LyC">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                                    </constraint>
                                                                 </constraints>
                                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Z6h-zy-ZyA">
                                                                     <size key="itemSize" width="140" height="31"/>
@@ -641,7 +755,7 @@
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
                                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fontStyleCollectionViewCell" id="oFX-Fo-WoR" customClass="FontStyleCollectionViewCell" customModule="Tiv_Bible" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="2" width="140" height="31"/>
+                                                                        <rect key="frame" x="0.0" y="14.5" width="140" height="31"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="S5z-hp-x57">
                                                                             <rect key="frame" x="0.0" y="0.0" width="140" height="31"/>
@@ -654,18 +768,25 @@
                                                                                             <rect key="frame" x="15" y="5" width="110" height="21"/>
                                                                                             <subviews>
                                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="9Yg-uv-3LI">
-                                                                                                    <rect key="frame" x="0.0" y="0.5" width="20" height="20"/>
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="22" height="21"/>
                                                                                                     <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                                                                     <constraints>
-                                                                                                        <constraint firstAttribute="width" constant="20" id="WWC-yq-iaU"/>
-                                                                                                        <constraint firstAttribute="height" constant="20" id="qVH-uI-hgj"/>
+                                                                                                        <constraint firstAttribute="width" constant="20" id="WWC-yq-iaU">
+                                                                                                            <variation key="heightClass=regular-widthClass=regular" constant="22"/>
+                                                                                                        </constraint>
+                                                                                                        <constraint firstAttribute="height" constant="20" id="qVH-uI-hgj">
+                                                                                                            <variation key="heightClass=regular-widthClass=regular" constant="22"/>
+                                                                                                        </constraint>
                                                                                                     </constraints>
                                                                                                 </imageView>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comfortaa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="V2f-pS-8ry">
-                                                                                                    <rect key="frame" x="25" y="2" width="85" height="17"/>
+                                                                                                    <rect key="frame" x="27" y="0.5" width="83" height="20.5"/>
                                                                                                     <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                                                     <nil key="textColor"/>
                                                                                                     <nil key="highlightedColor"/>
+                                                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="18"/>
+                                                                                                    </variation>
                                                                                                 </label>
                                                                                             </subviews>
                                                                                         </stackView>
@@ -705,46 +826,58 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1aP-C8-kQd" userLabel="Theme Stack View">
-                                                        <rect key="frame" x="0.0" y="179" width="374" height="35"/>
+                                                        <rect key="frame" x="0.0" y="250" width="984" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Theme:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVo-Sy-8Og">
-                                                                <rect key="frame" x="0.0" y="0.0" width="56" height="35"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                                 <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="18"/>
+                                                                </variation>
                                                             </label>
                                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpt-r7-wFI" userLabel="Themes Scroll View">
-                                                                <rect key="frame" x="76" y="0.0" width="298" height="35"/>
+                                                                <rect key="frame" x="87" y="0.0" width="897" height="60"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="k5V-gK-iI9" userLabel="Themes Stack View">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="35"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="448" height="60"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mfk-gs-yRA">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="172" height="35"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="198.5" height="60"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8Gf-Me-l2b">
-                                                                                        <rect key="frame" x="15" y="5" width="142" height="25"/>
+                                                                                        <rect key="frame" x="15" y="5" width="168.5" height="50"/>
                                                                                         <subviews>
                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="2aJ-tn-Cdj">
-                                                                                                <rect key="frame" x="0.0" y="2.5" width="20" height="20"/>
+                                                                                                <rect key="frame" x="0.0" y="14" width="22" height="22"/>
                                                                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                                                                 <constraints>
-                                                                                                    <constraint firstAttribute="width" constant="20" id="1y9-FZ-Ufj"/>
-                                                                                                    <constraint firstAttribute="height" constant="20" id="aPq-iw-0lh"/>
+                                                                                                    <constraint firstAttribute="width" constant="20" id="1y9-FZ-Ufj">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="22"/>
+                                                                                                    </constraint>
+                                                                                                    <constraint firstAttribute="height" constant="20" id="aPq-iw-0lh">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="22"/>
+                                                                                                    </constraint>
                                                                                                 </constraints>
                                                                                             </imageView>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="System Default" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apt-08-JSV">
-                                                                                                <rect key="frame" x="25" y="4" width="117" height="17"/>
+                                                                                                <rect key="frame" x="27" y="15" width="141.5" height="20.5"/>
                                                                                                 <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
+                                                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="18"/>
+                                                                                                </variation>
                                                                                             </label>
                                                                                         </subviews>
                                                                                     </stackView>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="height" constant="35" id="KKV-P3-4nT"/>
+                                                                                    <constraint firstAttribute="height" constant="35" id="KKV-P3-4nT">
+                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                                                    </constraint>
                                                                                     <constraint firstAttribute="trailing" secondItem="8Gf-Me-l2b" secondAttribute="trailing" constant="15" id="XFc-Rv-tV4"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="8Gf-Me-l2b" secondAttribute="bottom" constant="5" id="Yv9-oF-kzm"/>
                                                                                     <constraint firstItem="8Gf-Me-l2b" firstAttribute="top" secondItem="Mfk-gs-yRA" secondAttribute="top" constant="5" id="ct8-Ej-P2g"/>
@@ -757,24 +890,31 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KoV-gi-fGO">
-                                                                                <rect key="frame" x="192" y="0.0" width="92.5" height="35"/>
+                                                                                <rect key="frame" x="218.5" y="0.0" width="103" height="60"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jEZ-4f-jxI">
-                                                                                        <rect key="frame" x="15" y="5" width="62.5" height="25"/>
+                                                                                        <rect key="frame" x="15" y="5" width="73" height="50"/>
                                                                                         <subviews>
                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="smF-sl-xbs">
-                                                                                                <rect key="frame" x="0.0" y="2.5" width="20" height="20"/>
+                                                                                                <rect key="frame" x="0.0" y="14" width="22" height="22"/>
                                                                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                                                                 <constraints>
-                                                                                                    <constraint firstAttribute="height" constant="20" id="AsD-r3-Wql"/>
-                                                                                                    <constraint firstAttribute="width" constant="20" id="Gyn-y1-dR7"/>
+                                                                                                    <constraint firstAttribute="height" constant="20" id="AsD-r3-Wql">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="22"/>
+                                                                                                    </constraint>
+                                                                                                    <constraint firstAttribute="width" constant="20" id="Gyn-y1-dR7">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="22"/>
+                                                                                                    </constraint>
                                                                                                 </constraints>
                                                                                             </imageView>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="me0-UN-c38">
-                                                                                                <rect key="frame" x="25" y="4" width="37.5" height="17"/>
+                                                                                                <rect key="frame" x="27" y="15" width="46" height="20.5"/>
                                                                                                 <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
+                                                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="18"/>
+                                                                                                </variation>
                                                                                             </label>
                                                                                         </subviews>
                                                                                     </stackView>
@@ -784,7 +924,9 @@
                                                                                     <constraint firstItem="jEZ-4f-jxI" firstAttribute="leading" secondItem="KoV-gi-fGO" secondAttribute="leading" constant="15" id="EfD-mL-bdK"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="jEZ-4f-jxI" secondAttribute="trailing" constant="15" id="Kk4-Nz-JAi"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="jEZ-4f-jxI" secondAttribute="bottom" constant="5" id="WgM-Gz-hG7"/>
-                                                                                    <constraint firstAttribute="height" constant="35" id="YyU-UI-HpS"/>
+                                                                                    <constraint firstAttribute="height" constant="35" id="YyU-UI-HpS">
+                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                                                    </constraint>
                                                                                     <constraint firstItem="jEZ-4f-jxI" firstAttribute="top" secondItem="KoV-gi-fGO" secondAttribute="top" constant="5" id="iAF-rg-Hdr"/>
                                                                                 </constraints>
                                                                                 <userDefinedRuntimeAttributes>
@@ -794,31 +936,40 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIi-N6-wPs">
-                                                                                <rect key="frame" x="304.5" y="0.0" width="95.5" height="35"/>
+                                                                                <rect key="frame" x="341.5" y="0.0" width="106.5" height="60"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gah-jG-Ztx">
-                                                                                        <rect key="frame" x="15" y="5" width="65.5" height="25"/>
+                                                                                        <rect key="frame" x="15" y="5" width="76.5" height="50"/>
                                                                                         <subviews>
                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="r9Y-dz-bK1">
-                                                                                                <rect key="frame" x="0.0" y="2.5" width="20" height="20"/>
+                                                                                                <rect key="frame" x="0.0" y="14" width="22" height="22"/>
                                                                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                                                                 <constraints>
-                                                                                                    <constraint firstAttribute="height" constant="20" id="AiC-bs-4b9"/>
-                                                                                                    <constraint firstAttribute="width" constant="20" id="sFI-xx-BXU"/>
+                                                                                                    <constraint firstAttribute="height" constant="20" id="AiC-bs-4b9">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="22"/>
+                                                                                                    </constraint>
+                                                                                                    <constraint firstAttribute="width" constant="20" id="sFI-xx-BXU">
+                                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="22"/>
+                                                                                                    </constraint>
                                                                                                 </constraints>
                                                                                             </imageView>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLC-52-z9e">
-                                                                                                <rect key="frame" x="25" y="4" width="40.5" height="17"/>
+                                                                                                <rect key="frame" x="27" y="15" width="49.5" height="20.5"/>
                                                                                                 <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
+                                                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="18"/>
+                                                                                                </variation>
                                                                                             </label>
                                                                                         </subviews>
                                                                                     </stackView>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="height" constant="35" id="8oc-c0-cps"/>
+                                                                                    <constraint firstAttribute="height" constant="35" id="8oc-c0-cps">
+                                                                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                                                    </constraint>
                                                                                     <constraint firstItem="gah-jG-Ztx" firstAttribute="leading" secondItem="iIi-N6-wPs" secondAttribute="leading" constant="15" id="9Rq-33-Lot"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="gah-jG-Ztx" secondAttribute="trailing" constant="15" id="T7o-kY-6Gz"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="gah-jG-Ztx" secondAttribute="bottom" constant="5" id="ZI2-bo-0Jc"/>
@@ -846,22 +997,25 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="GVj-Ba-q4y">
-                                                        <rect key="frame" x="0.0" y="234" width="374" height="45"/>
+                                                        <rect key="frame" x="0.0" y="330" width="984" height="55"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78f-V0-q7Y">
-                                                                <rect key="frame" x="204" y="0.0" width="170" height="45"/>
+                                                                <rect key="frame" x="784" y="0.0" width="200" height="55"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7DI-ti-5Zj">
-                                                                        <rect key="frame" x="16.5" y="11.5" width="137.5" height="22"/>
+                                                                        <rect key="frame" x="20.5" y="16.5" width="159.5" height="22"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPQ-3I-JzC">
-                                                                                <rect key="frame" x="0.0" y="2.5" width="110.5" height="17"/>
+                                                                                <rect key="frame" x="0.0" y="1" width="132.5" height="20.5"/>
                                                                                 <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
+                                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="18"/>
+                                                                                </variation>
                                                                             </label>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gear_icon" translatesAutoresizingMaskIntoConstraints="NO" id="d6s-JL-Iag">
-                                                                                <rect key="frame" x="115.5" y="0.0" width="22" height="22"/>
+                                                                                <rect key="frame" x="137.5" y="0.0" width="22" height="22"/>
                                                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="22" id="3Yt-wM-eFf"/>
@@ -873,10 +1027,14 @@
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="170" id="CDo-9y-8yy"/>
+                                                                    <constraint firstAttribute="width" constant="170" id="CDo-9y-8yy">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                                                    </constraint>
                                                                     <constraint firstItem="7DI-ti-5Zj" firstAttribute="centerX" secondItem="78f-V0-q7Y" secondAttribute="centerX" id="EWj-iE-coN"/>
                                                                     <constraint firstItem="7DI-ti-5Zj" firstAttribute="centerY" secondItem="78f-V0-q7Y" secondAttribute="centerY" id="LU5-PT-Arq"/>
-                                                                    <constraint firstAttribute="height" constant="45" id="Z5N-xm-naB"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="Z5N-xm-naB">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="55"/>
+                                                                    </constraint>
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -894,7 +1052,9 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="gWl-Kj-TmB" secondAttribute="bottom" constant="20" id="Anp-Eb-Eis"/>
+                                            <constraint firstAttribute="bottom" secondItem="gWl-Kj-TmB" secondAttribute="bottom" constant="20" id="Anp-Eb-Eis">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                            </constraint>
                                             <constraint firstItem="R3g-1h-niJ" firstAttribute="centerX" secondItem="Sur-bF-YPL" secondAttribute="centerX" id="F82-jl-xRn"/>
                                             <constraint firstItem="gWl-Kj-TmB" firstAttribute="leading" secondItem="Sur-bF-YPL" secondAttribute="leading" constant="20" id="Ih1-e7-s0s"/>
                                             <constraint firstAttribute="trailing" secondItem="gWl-Kj-TmB" secondAttribute="trailing" constant="20" id="cbX-AO-imU"/>
@@ -905,7 +1065,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gga-yW-LQu" customClass="IconView" customModule="Tiv_Bible" customModuleProvider="target">
-                                <rect key="frame" x="20" y="733" width="60" height="60"/>
+                                <rect key="frame" x="20" y="1221" width="60" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="edE-BX-E38"/>
@@ -922,7 +1082,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nN1-tO-iZJ" customClass="IconView" customModule="Tiv_Bible" customModuleProvider="target">
-                                <rect key="frame" x="334" y="733" width="60" height="60"/>
+                                <rect key="frame" x="944" y="1221" width="60" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="0zQ-hI-fzF"/>
@@ -1019,6 +1179,9 @@
                                         <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="18"/>
+                                        </variation>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yx3-YY-ORg" userLabel="Notes View">
                                         <rect key="frame" x="0.0" y="78.5" width="374" height="160"/>
@@ -1032,6 +1195,9 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Enter your notes here"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="17"/>
+                                                </variation>
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1077,6 +1243,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="18"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="dismissButtonTapped:" destination="Rrj-gb-LWH" eventType="touchUpInside" id="9HK-Le-WOG"/>
                                                 </connections>
@@ -1096,6 +1265,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="18"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="saveButtonTapped:" destination="Rrj-gb-LWH" eventType="touchUpInside" id="JXR-Ej-9ys"/>
                                                 </connections>

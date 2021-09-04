@@ -73,6 +73,9 @@ class ReadViewController: BaseViewController {
         if readViewModel.hasUpdate {
             showDialog(for: R.storyboard.homeTabs.appUpdateDialogViewController()!)
         }
+        
+        let themeViewsCornerRadius = (currentDevice.isPad ? 30 : 20).cgfloat
+        [systemThemeView, lightThemeView, darkThemeView].forEach { $0?.cornerRadius = themeViewsCornerRadius }
     }
     
     override func setupTapGestures() {
@@ -308,10 +311,12 @@ class ReadViewController: BaseViewController {
         highlightColors.forEach { [weak self] color in
             
             let view = UIView().apply {
-                $0.heightAnchor.constraint(equalToConstant: 40).isActive = true
-                $0.widthAnchor.constraint(equalToConstant: 40).isActive = true
+                let size = (currentDevice.isPad ? 50 : 40).cgfloat
+                let radius = (currentDevice.isPad ? 25 : 20).cgfloat
+                $0.heightAnchor.constraint(equalToConstant: size).isActive = true
+                $0.widthAnchor.constraint(equalToConstant: size).isActive = true
                 $0.backgroundColor = UIColor(color.hexCode)
-                $0.addCornerRadius(radius: 20)
+                $0.addCornerRadius(radius: radius)
                 $0.animateViewOnTapGesture { [weak self] in
                     self?.readViewModel.setHighlightColorForSelectedVerses(color)
                 }
@@ -385,7 +390,8 @@ extension ReadViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 150, height: collectionView.height)
+        let cellWidth = (currentDevice.isPad ? 170 : 150).cgfloat
+        return CGSize(width: cellWidth, height: collectionView.height)
     }
     
 }

@@ -31,8 +31,12 @@
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="H9n-vW-WF0"/>
-                                            <constraint firstAttribute="height" constant="45" id="qya-jx-dbh"/>
+                                            <constraint firstAttribute="width" constant="100" id="H9n-vW-WF0">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="45" id="qya-jx-dbh">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="65"/>
+                                            </constraint>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Books"/>
@@ -43,8 +47,12 @@
                                         <rect key="frame" x="110" y="0.0" width="110" height="45"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="110" id="04K-TT-6m6"/>
-                                            <constraint firstAttribute="height" constant="45" id="GpU-Zl-bgN"/>
+                                            <constraint firstAttribute="width" constant="110" id="04K-TT-6m6">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="45" id="GpU-Zl-bgN">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="65"/>
+                                            </constraint>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Chapters"/>
@@ -54,8 +62,12 @@
                                         <rect key="frame" x="230" y="0.0" width="100" height="45"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="cGA-xe-mse"/>
-                                            <constraint firstAttribute="width" constant="100" id="hsm-pM-UUE"/>
+                                            <constraint firstAttribute="height" constant="45" id="cGA-xe-mse">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="65"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="100" id="hsm-pM-UUE">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                            </constraint>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Verses"/>
@@ -113,20 +125,23 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yh2-0V-lrc">
-                                                            <rect key="frame" x="15" y="25" width="384" height="20"/>
+                                                            <rect key="frame" x="15" y="24" width="384" height="22"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fzo-UO-5mB">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="352" height="22"/>
                                                                     <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Medium" family="Comfortaa" pointSize="20"/>
+                                                                    </variation>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ffm-gH-KcS">
-                                                                    <rect key="frame" x="364" y="0.0" width="20" height="20"/>
+                                                                    <rect key="frame" x="362" y="0.0" width="22" height="22"/>
                                                                     <color key="tintColor" name="AccentColor"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="20" id="KYT-6c-sQw"/>
-                                                                        <constraint firstAttribute="width" constant="20" id="f0y-5i-2h2"/>
+                                                                        <constraint firstAttribute="height" constant="22" id="KYT-6c-sQw"/>
+                                                                        <constraint firstAttribute="width" constant="22" id="f0y-5i-2h2"/>
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
